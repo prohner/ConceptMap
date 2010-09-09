@@ -3,7 +3,7 @@
 //  ConceptMap
 //
 //  Created by Preston Rohner on 9/8/10.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Copyright Cool Tool Apps 2010. All rights reserved.
 //
 
 #import "ConceptMapViewController.h"

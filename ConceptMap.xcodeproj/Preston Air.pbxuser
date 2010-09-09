@@ -1,5 +1,12 @@
 // !$*UTF8*$!
 {
+	1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 845}}";
+			sepNavSelRange = "{104, 17}";
+			sepNavVisRange = "{0, 1735}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* ConceptMap */ = {
 		activeExec = 0;
 		executables = (
@@ -20,7 +27,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					415,
+					530,
 					20,
 					48.16259765625,
 					43,
