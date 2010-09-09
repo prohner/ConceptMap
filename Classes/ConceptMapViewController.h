@@ -11,9 +11,6 @@
 #import "ConceptMapView.h"
 
 @interface ConceptMapViewController : UIViewController <UIScrollViewDelegate> {
-	UIView *myContentView;
-    CGPDFDocumentRef myDocumentRef;
-    CGPDFPageRef myPageRef;
 	
 }
 

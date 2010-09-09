@@ -36,8 +36,7 @@
     CGRect viewFrame = self.view.frame;
     viewFrame.origin = CGPointZero;
     ConceptMapView *conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
-    conceptMapView.contentSize = CGSizeMake(2000, 2000);
-    conceptMapView.maximumZoomScale = 1000;
+    conceptMapView.contentSize = [conceptMapView idealContentSize];
 
     [self.view addSubview:conceptMapView];
 }

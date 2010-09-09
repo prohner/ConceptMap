@@ -13,4 +13,6 @@
 
 }
 
+- (CGSize)idealContentSize;
+
 @end

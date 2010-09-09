@@ -64,5 +64,8 @@
     [super dealloc];
 }
 
+- (CGSize)idealContentSize {
+	return CGSizeMake(2000, 2000);
+}
 
 @end
