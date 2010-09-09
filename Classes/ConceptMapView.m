@@ -45,7 +45,7 @@
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
 
-	CGPoint tapPoint = [sender locationInView:self];
+	CGPoint tapPoint = [sender locationInView:nil];
 	CALayer *hitLayer = [self.layer hitTest:tapPoint];
 
 	if (selectedConceptObject && selectedConceptObject != hitLayer) {
