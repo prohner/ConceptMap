@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ConceptMapView.h"
 
-@interface ConceptMapViewController : UIViewController {
-
+@interface ConceptMapViewController : UIViewController <UIScrollViewDelegate> {
+	UIView *myContentView;
+    CGPDFDocumentRef myDocumentRef;
+    CGPDFPageRef myPageRef;
+	
 }
 
 @end

@@ -28,13 +28,19 @@
 */
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-*/
+	
+    CGRect viewFrame = self.view.frame;
+    viewFrame.origin = CGPointZero;
+    ConceptMapView *conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
+    conceptMapView.contentSize = CGSizeMake(2000, 2000);
+    conceptMapView.maximumZoomScale = 1000;
 
+    [self.view addSubview:conceptMapView];
+}
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
