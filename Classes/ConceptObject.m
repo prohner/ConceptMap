@@ -66,11 +66,12 @@
 	if (selected) {
 		self.borderColor = [[UIColor yellowColor] CGColor];
 		self.borderWidth = 8;
-		deleteBox.hidden = NO;
 		
 		CGPoint pt = deleteBox.position;
 		pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
 		deleteBox.position = pt;
+
+		deleteBox.hidden = NO;
 	} else {
 		self.borderColor = [[UIColor blackColor] CGColor];
 		self.borderWidth = 5;

@@ -37,6 +37,13 @@
 												  initWithTarget:self action:@selector(handleObjectPinchGesture:)];
 		[self addGestureRecognizer:pinchGesture];
 		[pinchGesture release];
+
+//		UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]
+//											  initWithTarget:self 
+//											  action:@selector(handlePanGesture:)];
+//		[self addGestureRecognizer:panGesture];
+//		[panGesture release];
+		
 	}
 
 	return self;
@@ -62,6 +69,13 @@
 
 - (IBAction)handleObjectPinchGesture:(UIPinchGestureRecognizer *)sender {
 	FUNCTION_LOG();
+}
+
+- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender {
+	FUNCTION_LOG(@"panned");
+	CGPoint tapPoint = [sender locationInView:nil];
+	CALayer *hitLayer = [self.layer hitTest:tapPoint];
+	
 }
 
 - (void)dealloc {
