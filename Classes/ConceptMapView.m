@@ -44,9 +44,23 @@
 
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
+
+	CGPoint tapPoint = [sender locationInView:self];
+	CALayer *hitLayer = [self.layer hitTest:tapPoint];
+
+	if (selectedConceptObject && selectedConceptObject != hitLayer) {
+		[selectedConceptObject setSelected:NO];
+		selectedConceptObject = nil;
+	}
+
+	if ([hitLayer respondsToSelector:@selector(setSelected:)]) {
+		selectedConceptObject = (ConceptObject *)hitLayer;
+		[selectedConceptObject setSelected:YES];
+	}
+
 }
 
-- (IBAction)handleObjectPinchGesture:(UITapGestureRecognizer *)sender {
+- (IBAction)handleObjectPinchGesture:(UIPinchGestureRecognizer *)sender {
 	FUNCTION_LOG();
 }
 

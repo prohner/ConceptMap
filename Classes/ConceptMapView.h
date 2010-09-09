@@ -11,7 +11,7 @@
 #import "ConceptObject.h"
 
 @interface ConceptMapView : UIScrollView <UIScrollViewDelegate> {
-
+	ConceptObject *selectedConceptObject;
 }
 
 - (CGSize)idealContentSize;

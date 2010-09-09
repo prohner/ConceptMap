@@ -12,7 +12,12 @@
 
 @interface ConceptObject : CALayer {
 	UIView *myContainingView;
+	BOOL selected;
+	
+	CATextLayer *deleteBox;
 }
+
+@property (nonatomic) BOOL selected;
 
 - (void)addToView:(UIView *)view;
 
