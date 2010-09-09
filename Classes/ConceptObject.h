@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Utility.h"
 
 @interface ConceptObject : CALayer {
-
+	UIView *myContainingView;
 }
 
 @end

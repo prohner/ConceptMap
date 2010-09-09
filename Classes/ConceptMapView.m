@@ -20,14 +20,13 @@
 		co.frame = CGRectMake(0, 0, 200, 200);
 		co.position = CGPointMake(200, 200);
 		co.backgroundColor = [[UIColor purpleColor] CGColor];
-		[self.layer addSublayer:co];
+		[co addToView:self];
 
 		co = [ConceptObject layer];
 		co.frame = CGRectMake(700, 700, 200, 200);
 		co.position = CGPointMake(700, 700);
 		co.backgroundColor = [[UIColor redColor] CGColor];
-		[self.layer addSublayer:co];
-		
+		[co addToView:self];
 	}
 
 	return self;
