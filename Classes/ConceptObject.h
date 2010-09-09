@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Utility.h"
 
-@interface ConceptObject : CALayer {
+@interface ConceptObject : UIView {
 	UIView *myContainingView;
 	BOOL selected;
 	
@@ -19,6 +19,6 @@
 
 @property (nonatomic) BOOL selected;
 
-- (void)addToView:(UIView *)view;
+//- (void)addToView:(UIView *)view;
 
 @end

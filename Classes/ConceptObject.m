@@ -16,8 +16,8 @@
 
 - (id)init {
 	[super init];
-    self.borderWidth = 5;
-    self.cornerRadius = 12;
+    self.layer.borderWidth = 5;
+    self.layer.cornerRadius = 12;
 	
 	CGRect r;
 	CGPoint pt;
@@ -49,23 +49,27 @@
 
 	deleteBox.hidden = YES;
 	
-	[self addSublayer:deleteBox];
+	[self.layer addSublayer:deleteBox];
 	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
+	[self addGestureRecognizer:tapGesture];
+	[tapGesture release];
 	
 	return self;
 }
 
-- (void)addToView:(UIView *)view {
-	myContainingView = view;
-	[view.layer addSublayer:self];
-
-}
+//- (void)addToView:(UIView *)view {
+//	myContainingView = view;
+//	[view.layer addSublayer:self];
+//
+//}
 
 - (void)setSelected:(BOOL)isSelected {
 	selected = isSelected;
 	if (selected) {
-		self.borderColor = [[UIColor yellowColor] CGColor];
-		self.borderWidth = 8;
+		self.layer.borderColor = [[UIColor yellowColor] CGColor];
+		self.layer.borderWidth = 8;
 		
 		CGPoint pt = deleteBox.position;
 		pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
@@ -73,10 +77,28 @@
 
 		deleteBox.hidden = NO;
 	} else {
-		self.borderColor = [[UIColor blackColor] CGColor];
-		self.borderWidth = 5;
+		self.layer.borderColor = [[UIColor blackColor] CGColor];
+		self.layer.borderWidth = 5;
 		deleteBox.hidden = YES;
 	}
+
+}
+
+- (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
+	FUNCTION_LOG();
+
+	CGPoint tapPoint = [sender locationInView:nil];
+	CALayer *hitLayer = [self.layer hitTest:tapPoint];
+
+//	if (selectedConceptObject && selectedConceptObject != hitLayer) {
+//		[selectedConceptObject setSelected:NO];
+//		selectedConceptObject = nil;
+//	}
+//
+//	if ([hitLayer respondsToSelector:@selector(setSelected:)]) {
+//		selectedConceptObject = (ConceptObject *)hitLayer;
+//		[selectedConceptObject setSelected:YES];
+//	}
 
 }
 
