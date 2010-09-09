@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* ConceptMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */; };
 		E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
+		E7F87F4E1238AC90003F63CA /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		E7F87E4612388B1C003F63CA /* ConceptMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapView.h; sourceTree = "<group>"; };
 		E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapView.m; sourceTree = "<group>"; };
 		E7F87E4C12388BA9003F63CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObject.h; sourceTree = "<group>"; };
+		E7F87F4D1238AC90003F63CA /* ConceptObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E7F87F4B1238AC7C003F63CA /* Concept Object */,
 				1D3623240D0F684500981E51 /* ConceptMapAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */,
@@ -114,6 +118,15 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7F87F4B1238AC7C003F63CA /* Concept Object */ = {
+			isa = PBXGroup;
+			children = (
+				E7F87F4C1238AC90003F63CA /* ConceptObject.h */,
+				E7F87F4D1238AC90003F63CA /* ConceptObject.m */,
+			);
+			name = "Concept Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 				1D3623260D0F684500981E51 /* ConceptMapAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ConceptMapViewController.m in Sources */,
 				E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */,
+				E7F87F4E1238AC90003F63CA /* ConceptObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

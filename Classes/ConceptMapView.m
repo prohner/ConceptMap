@@ -15,31 +15,19 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-	CALayer *mainLayer = [CALayer layer];
-	
-	CGRect newBounds = self.bounds; 
-	newBounds.origin = CGPointMake(0, 0);
-	newBounds.size = CGSizeMake(200, 200);
-	newBounds = [mainLayer convertRect:newBounds toLayer:self.layer];
-	mainLayer.frame = newBounds;
-	mainLayer.position = CGPointMake(200, 200);
-	
-	mainLayer.backgroundColor = [[UIColor purpleColor] CGColor];
-	
-	[self.layer addSublayer:mainLayer];
-	[mainLayer setNeedsDisplay];
-	
-	mainLayer = [CALayer layer];
-	newBounds.origin = CGPointMake(700, 700);
-	newBounds.size = CGSizeMake(200, 200);
-	newBounds = [mainLayer convertRect:newBounds toLayer:self.layer];
-	mainLayer.frame = newBounds;
-	mainLayer.position = CGPointMake(700, 700);
-	
-	mainLayer.backgroundColor = [[UIColor redColor] CGColor];
-	
-	[self.layer addSublayer:mainLayer];
-	[mainLayer setNeedsDisplay];
+		
+		ConceptObject *co = [ConceptObject layer];
+		co.frame = CGRectMake(0, 0, 200, 200);
+		co.position = CGPointMake(200, 200);
+		co.backgroundColor = [[UIColor purpleColor] CGColor];
+		[self.layer addSublayer:co];
+
+		co = [ConceptObject layer];
+		co.frame = CGRectMake(700, 700, 200, 200);
+		co.position = CGPointMake(700, 700);
+		co.backgroundColor = [[UIColor redColor] CGColor];
+		[self.layer addSublayer:co];
+		
 	}
 
 	return self;
