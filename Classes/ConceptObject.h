@@ -14,4 +14,6 @@
 	UIView *myContainingView;
 }
 
+- (void)addToView:(UIView *)view;
+
 @end

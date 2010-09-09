@@ -27,25 +27,28 @@
 		co.position = CGPointMake(700, 700);
 		co.backgroundColor = [[UIColor redColor] CGColor];
 		[co addToView:self];
+
+		UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+											  initWithTarget:self action:@selector(handleObjectTapGesture:)];
+		[self addGestureRecognizer:tapGesture];
+		[tapGesture release];
+		
+		UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] 
+												  initWithTarget:self action:@selector(handleObjectPinchGesture:)];
+		[self addGestureRecognizer:pinchGesture];
+		[pinchGesture release];
 	}
 
 	return self;
 }
-//
-//- (void)drawRect:(CGRect)rect {
-//	
-//}
 
-//
-//-(void) touchesEnded: (NSSet *) touches withEvent: (UIEvent *) event 
-//{	
-//	NSLog(@"Touches Ended");
-//	if (!self.dragging) {
-//		[self.nextResponder touchesEnded: touches withEvent:event]; 
-//	}		
-//	
-//	[super touchesEnded: touches withEvent: event];
-//}
+- (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
+	FUNCTION_LOG();
+}
+
+- (IBAction)handleObjectPinchGesture:(UITapGestureRecognizer *)sender {
+	FUNCTION_LOG();
+}
 
 - (void)dealloc {
     [super dealloc];
