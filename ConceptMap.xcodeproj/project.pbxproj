@@ -37,6 +37,7 @@
 		E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
 		E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */; };
+		E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABDFD1239F77C004A5C76 /* GeneralTests.m */; };
 		E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
 		E7F87F4E1238AC90003F63CA /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
@@ -79,6 +80,8 @@
 		E75ABCC21239F4BE004A5C76 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolbox-for-mac-read-only/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
 		E75ABCC31239F4BE004A5C76 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolbox-for-mac-read-only/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
 		E75ABCC61239F4D0004A5C76 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-read-only/GTMDefines.h"; sourceTree = "<group>"; };
+		E75ABDFC1239F77C004A5C76 /* GeneralTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralTests.h; sourceTree = "<group>"; };
+		E75ABDFD1239F77C004A5C76 /* GeneralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTests.m; sourceTree = "<group>"; };
 		E7F87E4612388B1C003F63CA /* ConceptMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapView.h; sourceTree = "<group>"; };
 		E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapView.m; sourceTree = "<group>"; };
 		E7F87E4C12388BA9003F63CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -204,6 +207,16 @@
 		E75ABCB41239F44B004A5C76 /* ApplicationTesting */ = {
 			isa = PBXGroup;
 			children = (
+				E75ABDFB1239F74F004A5C76 /* Google */,
+				E75ABDFC1239F77C004A5C76 /* GeneralTests.h */,
+				E75ABDFD1239F77C004A5C76 /* GeneralTests.m */,
+			);
+			name = ApplicationTesting;
+			sourceTree = "<group>";
+		};
+		E75ABDFB1239F74F004A5C76 /* Google */ = {
+			isa = PBXGroup;
+			children = (
 				E75ABCC61239F4D0004A5C76 /* GTMDefines.h */,
 				E75ABCC01239F4BE004A5C76 /* GTMObjC2Runtime.h */,
 				E75ABCC11239F4BE004A5C76 /* GTMObjC2Runtime.m */,
@@ -217,7 +230,7 @@
 				E75ABCBA1239F48E004A5C76 /* GTMUnitTestDevLog.h */,
 				E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */,
 			);
-			name = ApplicationTesting;
+			name = Google;
 			sourceTree = "<group>";
 		};
 		E7F87F4B1238AC7C003F63CA /* Concept Object */ = {
@@ -357,6 +370,7 @@
 				E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */,
 				E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */,
 				E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */,
+				E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
