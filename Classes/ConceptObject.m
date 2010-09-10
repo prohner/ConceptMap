@@ -11,17 +11,15 @@
 
 @implementation ConceptObject
 
-@synthesize selected;
+@synthesize selected, delegate;
 
-
-- (id)init {
-	[super init];
+- (id)initWithFrame:(CGRect)frame {
+	[super initWithFrame:frame];
+//	[super init];
+	self.userInteractionEnabled = YES;
     self.layer.borderWidth = 5;
     self.layer.cornerRadius = 12;
 	
-	CGRect r;
-	CGPoint pt;
-
 	deleteBox = [CATextLayer layer];
 	deleteBox.borderColor = [[UIColor yellowColor] CGColor];
 	deleteBox.backgroundColor = [[UIColor redColor] CGColor];
@@ -32,6 +30,40 @@
 	deleteBox.fontSize = 25;
 	deleteBox.alignmentMode = kCAAlignmentCenter;
 	deleteBox.foregroundColor = [[UIColor blackColor] CGColor];
+	deleteBox.hidden = YES;
+	[self.layer addSublayer:deleteBox];
+	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
+	[self addGestureRecognizer:tapGesture];
+	[tapGesture release];
+
+	UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] 
+											  initWithTarget:self action:@selector(handlePinchGesture:)];
+	[self addGestureRecognizer:pinchGesture];
+	[pinchGesture release];
+
+	return self;
+}
+
+- (void)setSelected:(BOOL)isSelected {
+	selected = isSelected;
+	if (selected) {
+		self.layer.borderColor = [[UIColor yellowColor] CGColor];
+		deleteBox.hidden = NO;
+	} else {
+		self.layer.borderColor = self.layer.backgroundColor;
+		deleteBox.hidden = YES;
+	}
+
+	[delegate conceptObject:self isSelected:selected];
+}
+
+- (void)layoutSubviews {
+	FUNCTION_LOG();
+
+	CGRect r;
+	CGPoint pt;
 	
 	r = self.bounds;
 	r.origin.x -= 5;
@@ -47,59 +79,41 @@
 	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
 	deleteBox.backgroundColor = deleteBox.borderColor;
 
-	deleteBox.hidden = YES;
-	
-	[self.layer addSublayer:deleteBox];
-	
-	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
-										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
-	[self addGestureRecognizer:tapGesture];
-	[tapGesture release];
-	
-	return self;
 }
 
-//- (void)addToView:(UIView *)view {
-//	myContainingView = view;
-//	[view.layer addSublayer:self];
-//
-//}
-
-- (void)setSelected:(BOOL)isSelected {
-	selected = isSelected;
-	if (selected) {
-		self.layer.borderColor = [[UIColor yellowColor] CGColor];
-		self.layer.borderWidth = 8;
-		
-		CGPoint pt = deleteBox.position;
-		pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
-		deleteBox.position = pt;
-
-		deleteBox.hidden = NO;
-	} else {
-		self.layer.borderColor = [[UIColor blackColor] CGColor];
-		self.layer.borderWidth = 5;
-		deleteBox.hidden = YES;
-	}
-
-}
+#pragma mark Handling touches 
 
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
+	self.selected = !self.selected;
+}
 
-	CGPoint tapPoint = [sender locationInView:nil];
-	CALayer *hitLayer = [self.layer hitTest:tapPoint];
-
-//	if (selectedConceptObject && selectedConceptObject != hitLayer) {
-//		[selectedConceptObject setSelected:NO];
-//		selectedConceptObject = nil;
-//	}
-//
-//	if ([hitLayer respondsToSelector:@selector(setSelected:)]) {
-//		selectedConceptObject = (ConceptObject *)hitLayer;
-//		[selectedConceptObject setSelected:YES];
-//	}
-
+- (IBAction)handlePinchGesture:(UIPinchGestureRecognizer *)sender {
+	switch (sender.state) {
+		case UIGestureRecognizerStatePossible:
+		case UIGestureRecognizerStateBegan:
+			pinchScale = sender.scale;
+			break;
+		case UIGestureRecognizerStateChanged:
+			if (sender.scale > pinchScale) {
+				CGRect bounds = self.bounds;
+				bounds.size.height += 5;
+				bounds.size.width += 5;
+				self.bounds = bounds;
+			} else {
+				CGRect bounds = self.bounds;
+				bounds.size.height -= 5;
+				bounds.size.width -= 5;
+				self.bounds = bounds;
+			}
+//			[self layoutContentsOf:hitLayer];
+			break;
+			
+		default:
+			break;
+	}
+	pinchScale = sender.scale;
+	
 }
 
 @end
