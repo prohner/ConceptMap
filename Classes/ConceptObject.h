@@ -20,6 +20,7 @@
 	
 	CATextLayer *deleteBox;
 	CGFloat pinchScale;
+	CGPoint dragLastPoint;
 }
 
 @property (nonatomic) BOOL selected;

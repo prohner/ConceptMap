@@ -19,6 +19,7 @@
 	self.userInteractionEnabled = YES;
     self.layer.borderWidth = 5;
     self.layer.cornerRadius = 12;
+	self.layer.borderColor = [[UIColor clearColor] CGColor];
 	
 	deleteBox = [CATextLayer layer];
 	deleteBox.borderColor = [[UIColor yellowColor] CGColor];
@@ -43,6 +44,12 @@
 	[self addGestureRecognizer:pinchGesture];
 	[pinchGesture release];
 
+	UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]
+										  initWithTarget:self 
+										  action:@selector(handlePanGesture:)];
+	[self addGestureRecognizer:panGesture];
+	[panGesture release];
+
 	return self;
 }
 
@@ -52,7 +59,7 @@
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteBox.hidden = NO;
 	} else {
-		self.layer.borderColor = self.layer.backgroundColor;
+		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteBox.hidden = YES;
 	}
 
@@ -116,4 +123,40 @@
 	
 }
 
+- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender {
+	switch (sender.state) {
+		case UIGestureRecognizerStatePossible:
+		case UIGestureRecognizerStateBegan:
+			self.layer.zPosition = 2;
+			self.layer.shadowOffset = CGSizeMake(15.0f, 15.0f);
+			self.layer.shadowRadius = self.layer.cornerRadius;
+			self.layer.shadowOpacity = 0.35f;
+			self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+			[self.layer setValue:[NSNumber numberWithFloat:1.10f] forKeyPath:@"transform.scale"];
+			break;
+		case UIGestureRecognizerStateChanged:
+		{
+			
+			CGPoint viewPoint = [sender locationInView:self];
+			dragLastPoint = [self convertPoint:viewPoint toView:self.superview];
+
+			[CATransaction flush];
+			[CATransaction begin];
+			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+			self.layer.position = dragLastPoint;
+			[CATransaction commit];
+				
+		}
+			break;
+		case UIGestureRecognizerStateEnded:
+			NSLog(@"UIGestureRecognizerStateBegan 3");
+			CGPoint where = dragLastPoint;
+			
+			self.layer.position = where;
+			self.layer.zPosition = 0;
+			self.layer.shadowColor = [UIColor clearColor].CGColor;
+			[self.layer setValue:[NSNumber numberWithFloat:1.0f] forKeyPath:@"transform.scale"];
+			break;				
+	}
+}
 @end
