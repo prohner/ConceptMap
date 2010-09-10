@@ -20,6 +20,23 @@
 		E75ABC701239F24C004A5C76 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
 		E75ABC711239F24C004A5C76 /* Concept.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6E1239F24C004A5C76 /* Concept.m */; };
 		E75ABC7E1239F25F004A5C76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75ABC7D1239F25F004A5C76 /* CoreData.framework */; };
+		E75ABCBC1239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCB61239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m */; };
+		E75ABCBD1239F48E004A5C76 /* GTMIPhoneUnitTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCB71239F48E004A5C76 /* GTMIPhoneUnitTestMain.m */; };
+		E75ABCBE1239F48E004A5C76 /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCB91239F48E004A5C76 /* GTMSenTestCase.m */; };
+		E75ABCBF1239F48E004A5C76 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */; };
+		E75ABCC41239F4BE004A5C76 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCC11239F4BE004A5C76 /* GTMObjC2Runtime.m */; };
+		E75ABCC51239F4BE004A5C76 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCC31239F4BE004A5C76 /* GTMRegex.m */; };
+		E75ABCDC1239F5C5004A5C76 /* ConceptMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */; };
+		E75ABCDD1239F5C5004A5C76 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		E75ABDD61239F5F7004A5C76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
+		E75ABDD71239F5F7004A5C76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		E75ABDD81239F5F7004A5C76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		E75ABDD91239F5F7004A5C76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		E75ABDDA1239F5F7004A5C76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75ABC7D1239F25F004A5C76 /* CoreData.framework */; };
+		E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */; };
+		E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
+		E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
+		E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */; };
 		E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
 		E7F87F4E1238AC90003F63CA /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
@@ -48,6 +65,20 @@
 		E75ABC6D1239F24C004A5C76 /* Concept.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Concept.h; sourceTree = "<group>"; };
 		E75ABC6E1239F24C004A5C76 /* Concept.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Concept.m; sourceTree = "<group>"; };
 		E75ABC7D1239F25F004A5C76 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E75ABCAE1239F42B004A5C76 /* ApplicationTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75ABCB01239F42B004A5C76 /* ApplicationTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApplicationTesting-Info.plist"; sourceTree = "<group>"; };
+		E75ABCB51239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMIPhoneUnitTestDelegate.h; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMIPhoneUnitTestDelegate.h"; sourceTree = "<group>"; };
+		E75ABCB61239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestDelegate.m; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMIPhoneUnitTestDelegate.m"; sourceTree = "<group>"; };
+		E75ABCB71239F48E004A5C76 /* GTMIPhoneUnitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMIPhoneUnitTestMain.m; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMIPhoneUnitTestMain.m"; sourceTree = "<group>"; };
+		E75ABCB81239F48E004A5C76 /* GTMSenTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSenTestCase.h; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMSenTestCase.h"; sourceTree = "<group>"; };
+		E75ABCB91239F48E004A5C76 /* GTMSenTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSenTestCase.m; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMSenTestCase.m"; sourceTree = "<group>"; };
+		E75ABCBA1239F48E004A5C76 /* GTMUnitTestDevLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMUnitTestDevLog.h; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMUnitTestDevLog.h"; sourceTree = "<group>"; };
+		E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMUnitTestDevLog.m; path = "google-toolbox-for-mac-read-only/UnitTesting/GTMUnitTestDevLog.m"; sourceTree = "<group>"; };
+		E75ABCC01239F4BE004A5C76 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMObjC2Runtime.h; path = "google-toolbox-for-mac-read-only/Foundation/GTMObjC2Runtime.h"; sourceTree = "<group>"; };
+		E75ABCC11239F4BE004A5C76 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMObjC2Runtime.m; path = "google-toolbox-for-mac-read-only/Foundation/GTMObjC2Runtime.m"; sourceTree = "<group>"; };
+		E75ABCC21239F4BE004A5C76 /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMRegex.h; path = "google-toolbox-for-mac-read-only/Foundation/GTMRegex.h"; sourceTree = "<group>"; };
+		E75ABCC31239F4BE004A5C76 /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMRegex.m; path = "google-toolbox-for-mac-read-only/Foundation/GTMRegex.m"; sourceTree = "<group>"; };
+		E75ABCC61239F4D0004A5C76 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-read-only/GTMDefines.h"; sourceTree = "<group>"; };
 		E7F87E4612388B1C003F63CA /* ConceptMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapView.h; sourceTree = "<group>"; };
 		E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapView.m; sourceTree = "<group>"; };
 		E7F87E4C12388BA9003F63CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -67,6 +98,18 @@
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */,
 				E75ABC7E1239F25F004A5C76 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75ABCAC1239F42B004A5C76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75ABDD61239F5F7004A5C76 /* QuartzCore.framework in Frameworks */,
+				E75ABDD71239F5F7004A5C76 /* UIKit.framework in Frameworks */,
+				E75ABDD81239F5F7004A5C76 /* Foundation.framework in Frameworks */,
+				E75ABDD91239F5F7004A5C76 /* CoreGraphics.framework in Frameworks */,
+				E75ABDDA1239F5F7004A5C76 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* ConceptMap.app */,
+				E75ABCAE1239F42B004A5C76 /* ApplicationTesting.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,11 +145,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E75ABCB41239F44B004A5C76 /* ApplicationTesting */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				E75ABCB01239F42B004A5C76 /* ApplicationTesting-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -155,6 +201,25 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		E75ABCB41239F44B004A5C76 /* ApplicationTesting */ = {
+			isa = PBXGroup;
+			children = (
+				E75ABCC61239F4D0004A5C76 /* GTMDefines.h */,
+				E75ABCC01239F4BE004A5C76 /* GTMObjC2Runtime.h */,
+				E75ABCC11239F4BE004A5C76 /* GTMObjC2Runtime.m */,
+				E75ABCC21239F4BE004A5C76 /* GTMRegex.h */,
+				E75ABCC31239F4BE004A5C76 /* GTMRegex.m */,
+				E75ABCB51239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.h */,
+				E75ABCB61239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m */,
+				E75ABCB71239F48E004A5C76 /* GTMIPhoneUnitTestMain.m */,
+				E75ABCB81239F48E004A5C76 /* GTMSenTestCase.h */,
+				E75ABCB91239F48E004A5C76 /* GTMSenTestCase.m */,
+				E75ABCBA1239F48E004A5C76 /* GTMUnitTestDevLog.h */,
+				E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */,
+			);
+			name = ApplicationTesting;
+			sourceTree = "<group>";
+		};
 		E7F87F4B1238AC7C003F63CA /* Concept Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +249,24 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* ConceptMap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E75ABCAD1239F42B004A5C76 /* ApplicationTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E75ABCB31239F42C004A5C76 /* Build configuration list for PBXNativeTarget "ApplicationTesting" */;
+			buildPhases = (
+				E75ABCAA1239F42B004A5C76 /* Resources */,
+				E75ABCAB1239F42B004A5C76 /* Sources */,
+				E75ABCAC1239F42B004A5C76 /* Frameworks */,
+				E75ABCCC1239F52F004A5C76 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApplicationTesting;
+			productName = ApplicationTesting;
+			productReference = E75ABCAE1239F42B004A5C76 /* ApplicationTesting.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* ConceptMap */,
+				E75ABCAD1239F42B004A5C76 /* ApplicationTesting */,
 			);
 		};
 /* End PBXProject section */
@@ -214,7 +298,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E75ABCAA1239F42B004A5C76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75ABCDC1239F5C5004A5C76 /* ConceptMapViewController.xib in Resources */,
+				E75ABCDD1239F5C5004A5C76 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E75ABCCC1239F52F004A5C76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/google-toolbox-for-mac-read-only/UnitTesting/RunIPhoneUnitTest.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -231,6 +340,23 @@
 				E75ABC6F1239F24C004A5C76 /* Application.m in Sources */,
 				E75ABC701239F24C004A5C76 /* Document.m in Sources */,
 				E75ABC711239F24C004A5C76 /* Concept.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75ABCAB1239F42B004A5C76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */,
+				E75ABCBC1239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m in Sources */,
+				E75ABCBD1239F48E004A5C76 /* GTMIPhoneUnitTestMain.m in Sources */,
+				E75ABCBE1239F48E004A5C76 /* GTMSenTestCase.m in Sources */,
+				E75ABCBF1239F48E004A5C76 /* GTMUnitTestDevLog.m in Sources */,
+				E75ABCC41239F4BE004A5C76 /* GTMObjC2Runtime.m in Sources */,
+				E75ABCC51239F4BE004A5C76 /* GTMRegex.m in Sources */,
+				E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */,
+				E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */,
+				E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +419,55 @@
 			};
 			name = Release;
 		};
+		E75ABCB11239F42C004A5C76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "ApplicationTesting-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ApplicationTesting;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		E75ABCB21239F42C004A5C76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "ApplicationTesting-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ApplicationTesting;
+				SDKROOT = iphoneos4.0;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -310,6 +485,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E75ABCB31239F42C004A5C76 /* Build configuration list for PBXNativeTarget "ApplicationTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E75ABCB11239F42C004A5C76 /* Debug */,
+				E75ABCB21239F42C004A5C76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
