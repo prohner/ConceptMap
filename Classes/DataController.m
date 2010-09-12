@@ -172,7 +172,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"updated" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastSaved" ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -237,7 +237,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
     doc = [NSEntityDescription insertNewObjectForEntityForName:@"Document" inManagedObjectContext:[self managedObjectContext]];
 	doc.title = name;
 	doc.created = [NSDate date];
-	doc.updated = [NSDate date];
+	doc.lastSaved = [NSDate date];
 	[[self application] addDocumentsObject:doc];
 	return doc;
 }
