@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
+#import "Application.h"
+#import "Document.h"
+#import "Utility.h"
 
 @interface DataController : NSObject <NSFetchedResultsControllerDelegate> {
 	NSManagedObjectModel *managedObjectModel;
@@ -27,6 +29,12 @@
 
 + (DataController *)sharedDataController;
 - (NSString *)applicationDocumentsDirectory;
+- (void)saveManagedObjectContext;
+- (Application *)application;
+- (NSArray *)documents;
+- (Document *)currentDocument;
+- (Document *)newDocument;
+- (Document *)newDocumentTitled:(NSString *)name;
 
 #ifdef AUTOMATED_TESTING
 - (void)deletePersistentStore;

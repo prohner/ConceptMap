@@ -7,6 +7,7 @@
 
 #import "GTMSenTestCase.h"
 #import <CoreData/CoreData.h>
+#import "Utility.h"
 #import "DataController.h"
 
 @interface CoreDataTest : SenTestCase {
@@ -14,6 +15,8 @@
     NSManagedObjectContext *context;
     NSManagedObjectModel *model;
     NSPersistentStore *store;
+	
+	Application *theApplication;
 }
 
 @end

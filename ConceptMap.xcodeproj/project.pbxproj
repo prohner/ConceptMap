@@ -15,6 +15,9 @@
 		2899E5220DE3E06400AC0155 /* ConceptMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* ConceptMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */; };
+		E70D56F7123B2C6C00280E65 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6A1239F24C004A5C76 /* Application.m */; };
+		E70D56F8123B2C6C00280E65 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
+		E70D56F9123B2C6C00280E65 /* Concept.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6E1239F24C004A5C76 /* Concept.m */; };
 		E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD7641239F9B300B73998 /* CoreDataTest.m */; };
 		E72DD7701239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
 		E72DD7711239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
@@ -29,7 +32,6 @@
 		E75ABCBF1239F48E004A5C76 /* GTMUnitTestDevLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */; };
 		E75ABCC41239F4BE004A5C76 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCC11239F4BE004A5C76 /* GTMObjC2Runtime.m */; };
 		E75ABCC51239F4BE004A5C76 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABCC31239F4BE004A5C76 /* GTMRegex.m */; };
-		E75ABCDC1239F5C5004A5C76 /* ConceptMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */; };
 		E75ABCDD1239F5C5004A5C76 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		E75ABDD61239F5F7004A5C76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
 		E75ABDD71239F5F7004A5C76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -41,6 +43,9 @@
 		E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
 		E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */; };
 		E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABDFD1239F77C004A5C76 /* GeneralTests.m */; };
+		E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
+		E768BE36123C877100D149F7 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E768BE35123C877100D149F7 /* Application.m */; };
+		E768BEA7123C8F3800D149F7 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E768BEA5123C8F3800D149F7 /* Document.m */; };
 		E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
 		E7F87F4E1238AC90003F63CA /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
@@ -90,6 +95,8 @@
 		E75ABCC61239F4D0004A5C76 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-read-only/GTMDefines.h"; sourceTree = "<group>"; };
 		E75ABDFC1239F77C004A5C76 /* GeneralTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralTests.h; sourceTree = "<group>"; };
 		E75ABDFD1239F77C004A5C76 /* GeneralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTests.m; sourceTree = "<group>"; };
+		E768BE35123C877100D149F7 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		E768BEA5123C8F3800D149F7 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		E7F87E4612388B1C003F63CA /* ConceptMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapView.h; sourceTree = "<group>"; };
 		E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapView.m; sourceTree = "<group>"; };
 		E7F87E4C12388BA9003F63CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -202,6 +209,8 @@
 		E75ABC621239EFFF004A5C76 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E768BEA5123C8F3800D149F7 /* Document.m */,
+				E768BE35123C877100D149F7 /* Application.m */,
 				E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */,
 				E72DD76E1239FB0800B73998 /* DataController.h */,
 				E72DD76F1239FB0800B73998 /* DataController.m */,
@@ -328,7 +337,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75ABCDC1239F5C5004A5C76 /* ConceptMapViewController.xib in Resources */,
 				E75ABCDD1239F5C5004A5C76 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +375,8 @@
 				E75ABC701239F24C004A5C76 /* Document.m in Sources */,
 				E75ABC711239F24C004A5C76 /* Concept.m in Sources */,
 				E72DD7701239FB0800B73998 /* DataController.m in Sources */,
+				E768BE36123C877100D149F7 /* Application.m in Sources */,
+				E768BEA7123C8F3800D149F7 /* Document.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */,
+				E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */,
+				E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */,
+				E72DD7711239FB0800B73998 /* DataController.m in Sources */,
+				E70D56F7123B2C6C00280E65 /* Application.m in Sources */,
+				E70D56F8123B2C6C00280E65 /* Document.m in Sources */,
+				E70D56F9123B2C6C00280E65 /* Concept.m in Sources */,
 				E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */,
 				E75ABCBC1239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				E75ABCBD1239F48E004A5C76 /* GTMIPhoneUnitTestMain.m in Sources */,
@@ -384,9 +401,6 @@
 				E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */,
 				E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */,
 				E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */,
-				E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */,
-				E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */,
-				E72DD7711239FB0800B73998 /* DataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

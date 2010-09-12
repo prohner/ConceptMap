@@ -23,6 +23,9 @@
 	#define FUNCTION_LOG(fmt, ...) /* */
 #endif
 
+#define DATABASE	[DataController sharedDataController]
+
+
 @interface Utility : NSObject {
 
 }

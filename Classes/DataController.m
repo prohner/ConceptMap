@@ -165,14 +165,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Player" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Document" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"sequence" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"updated" ascending:NO];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -202,10 +202,47 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
     return fetchedResultsController_;
 }    
 
-- (NSArray *)players {
+
+- (Application *)application {
+	Application *app;
+	NSEntityDescription *settingsEntity = [[[self managedObjectModel] entitiesByName] objectForKey:@"Application"];
+	NSFetchRequest *request = [[NSFetchRequest alloc] init];
+	[request setEntity:settingsEntity];
+	
+	NSError *error = nil;
+	NSArray *array = [[self managedObjectContext] executeFetchRequest:request error:&error];
+	
+	if (array && [array count] == 1) {
+		app = (Application *)[array objectAtIndex:0];
+	} else {
+		app = (Application *)[NSEntityDescription insertNewObjectForEntityForName:@"Application" inManagedObjectContext:[self managedObjectContext]];
+	}
+	return app;
+}
+
+- (NSArray *)documents {
 	id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:0];
 	return sectionInfo.objects;
 	//	return [[NSArray alloc] init];
 }
 
+- (Document *)currentDocument {
+	Document *currentDocument = (Document *)[[DATABASE documents] objectAtIndex:0];
+	
+	return currentDocument;
+}
+
+- (Document *)newDocumentTitled:(NSString *)name {
+	Document *doc;
+    doc = [NSEntityDescription insertNewObjectForEntityForName:@"Document" inManagedObjectContext:[self managedObjectContext]];
+	doc.title = name;
+	doc.created = [NSDate date];
+	doc.updated = [NSDate date];
+	[[self application] addDocumentsObject:doc];
+	return doc;
+}
+
+- (Document *)newDocument {
+	return [self newDocumentTitled:@"My New Document"];
+}
 @end
