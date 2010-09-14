@@ -11,6 +11,7 @@
 #import "Application.h"
 #import "Document.h"
 #import "Utility.h"
+#import "Concept.h"
 
 @interface DataController : NSObject <NSFetchedResultsControllerDelegate> {
 	NSManagedObjectModel *managedObjectModel;
@@ -35,6 +36,7 @@
 - (Document *)currentDocument;
 - (Document *)newDocument;
 - (Document *)newDocumentTitled:(NSString *)name;
+- (Concept *)newConceptTitled:(NSString *)name toDocument:(Document *)doc;
 
 #ifdef AUTOMATED_TESTING
 - (void)deletePersistentStore;

@@ -245,4 +245,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 - (Document *)newDocument {
 	return [self newDocumentTitled:@"My New Document"];
 }
+
+- (Concept *)newConceptTitled:(NSString *)name toDocument:(Document *)doc {
+	Concept *concept;
+    concept = [NSEntityDescription insertNewObjectForEntityForName:@"Concept" inManagedObjectContext:[self managedObjectContext]];
+	concept.title = name;
+	[doc addConceptsObject:concept];
+	return concept;
+	
+}
+
 @end

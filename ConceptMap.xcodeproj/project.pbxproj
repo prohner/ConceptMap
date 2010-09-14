@@ -18,12 +18,17 @@
 		E70D56F7123B2C6C00280E65 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6A1239F24C004A5C76 /* Application.m */; };
 		E70D56F8123B2C6C00280E65 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
 		E70D56F9123B2C6C00280E65 /* Concept.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6E1239F24C004A5C76 /* Concept.m */; };
-		E716CD94123F25B2003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
 		E716CD95123F25B2003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
 		E716CDDA123F2A55003F21D3 /* image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD8123F2A55003F21D3 /* image2.jpeg */; };
 		E716CDDB123F2A55003F21D3 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD9123F2A55003F21D3 /* image1.jpeg */; };
 		E716CDDC123F2A55003F21D3 /* image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD8123F2A55003F21D3 /* image2.jpeg */; };
 		E716CDDD123F2A55003F21D3 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD9123F2A55003F21D3 /* image1.jpeg */; };
+		E716CE17123F3284003F21D3 /* ConceptMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */; };
+		E716CE1D123F3296003F21D3 /* ConceptMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */; };
+		E716CE26123F33D1003F21D3 /* DocumentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */; };
+		E716CE27123F33D6003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
+		E721DBC7123F359F00B39962 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
+		E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD7641239F9B300B73998 /* CoreDataTest.m */; };
 		E72DD7701239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
 		E72DD7711239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
@@ -44,17 +49,13 @@
 		E75ABDD81239F5F7004A5C76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		E75ABDD91239F5F7004A5C76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		E75ABDDA1239F5F7004A5C76 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75ABC7D1239F25F004A5C76 /* CoreData.framework */; };
-		E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */; };
 		E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */; };
 		E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */; };
 		E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABDFD1239F77C004A5C76 /* GeneralTests.m */; };
 		E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
-		E794E22B123DE84E002F0EF8 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
-		E794E22C123DE84E002F0EF8 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E794E22D123DE84E002F0EF8 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
 		E794E22E123DE84E002F0EF8 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
-		E794E25A123F2077002F0EF8 /* DocumentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */; };
 		E794E25B123F2077002F0EF8 /* DocumentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */; };
 		E7F87E4812388B1C003F63CA /* ConceptMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */; };
 		E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F87E4C12388BA9003F63CA /* QuartzCore.framework */; };
@@ -371,9 +372,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E716CE1D123F3296003F21D3 /* ConceptMapViewController.xib in Resources */,
+				E716CE27123F33D6003F21D3 /* DocumentTableViewCell.xib in Resources */,
+				E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */,
 				E75ABCDD1239F5C5004A5C76 /* MainWindow.xib in Resources */,
-				E794E22C123DE84E002F0EF8 /* DocumentsViewController.xib in Resources */,
-				E716CD94123F25B2003F21D3 /* DocumentTableViewCell.xib in Resources */,
 				E716CDDA123F2A55003F21D3 /* image2.jpeg in Resources */,
 				E716CDDB123F2A55003F21D3 /* image1.jpeg in Resources */,
 			);
@@ -425,11 +427,14 @@
 				E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */,
 				E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */,
 				E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */,
+				E721DBC7123F359F00B39962 /* DocumentsViewController.m in Sources */,
 				E72DD7711239FB0800B73998 /* DataController.m in Sources */,
+				E716CE26123F33D1003F21D3 /* DocumentTableViewCell.m in Sources */,
 				E70D56F7123B2C6C00280E65 /* Application.m in Sources */,
 				E70D56F8123B2C6C00280E65 /* Document.m in Sources */,
 				E70D56F9123B2C6C00280E65 /* Concept.m in Sources */,
 				E75ABDE91239F662004A5C76 /* ConceptObject.m in Sources */,
+				E716CE17123F3284003F21D3 /* ConceptMapViewController.m in Sources */,
 				E75ABCBC1239F48E004A5C76 /* GTMIPhoneUnitTestDelegate.m in Sources */,
 				E75ABCBD1239F48E004A5C76 /* GTMIPhoneUnitTestMain.m in Sources */,
 				E75ABCBE1239F48E004A5C76 /* GTMSenTestCase.m in Sources */,
@@ -437,10 +442,7 @@
 				E75ABCC41239F4BE004A5C76 /* GTMObjC2Runtime.m in Sources */,
 				E75ABCC51239F4BE004A5C76 /* GTMRegex.m in Sources */,
 				E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */,
-				E75ABDDF1239F637004A5C76 /* ConceptMapViewController.m in Sources */,
 				E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */,
-				E794E22B123DE84E002F0EF8 /* DocumentsViewController.m in Sources */,
-				E794E25A123F2077002F0EF8 /* DocumentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
