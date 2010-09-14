@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Utility.h"
+#import "DataController.h"
 
 @protocol ConceptObjectDelegate;
 
 @interface ConceptObject : UIView {
 	UIView *myContainingView;
 	BOOL selected;
+	
+	Concept *concept;
 	
     id <ConceptObjectDelegate> delegate;
 	
@@ -25,6 +28,8 @@
 
 @property (nonatomic) BOOL selected;
 @property (nonatomic, retain) id <ConceptObjectDelegate> delegate;
+
++ (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 
 @end
 

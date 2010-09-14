@@ -267,14 +267,15 @@
 								<string>E75ABCB41239F44B004A5C76</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>E75ABC621239EFFF004A5C76</string>
+								<string>E7F87F4B1238AC7C003F63CA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>1</integer>
+									<integer>23</integer>
+									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -316,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CoreDataTest.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,16 +325,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CoreDataTest.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E754AC92123F3BA2002801A3</string>
+										<string>E754ACE5123F4410002801A3</string>
 										<key>history</key>
 										<array>
-											<string>E763FC301239B4E9003E7B16</string>
 											<string>E75ABDED1239F667004A5C76</string>
-											<string>E75ABDF61239F693004A5C76</string>
 											<string>E75ABE0C1239F7F7004A5C76</string>
 											<string>E72DD7891239FC3700B73998</string>
 											<string>E768BE84123C8C2700D149F7</string>
@@ -341,24 +340,27 @@
 											<string>E768BEAE123C8F6900D149F7</string>
 											<string>E794E20A123DE694002F0EF8</string>
 											<string>E794E234123DE9CE002F0EF8</string>
-											<string>E794E236123DE9CE002F0EF8</string>
 											<string>E716CD9D123F2631003F21D3</string>
-											<string>E716CDC0123F27FB003F21D3</string>
-											<string>E716CDC2123F27FB003F21D3</string>
-											<string>E716CDF7123F3113003F21D3</string>
 											<string>E716CDF8123F3113003F21D3</string>
 											<string>E716CDFB123F3113003F21D3</string>
 											<string>E716CDFD123F3113003F21D3</string>
-											<string>E716CE00123F3113003F21D3</string>
 											<string>E716CE2C123F33DA003F21D3</string>
 											<string>E721DBCD123F35A900B39962</string>
 											<string>E721DBEA123F375200B39962</string>
 											<string>E754AC68123F394A002801A3</string>
 											<string>E754AC7F123F39C2002801A3</string>
 											<string>E754AC80123F39C2002801A3</string>
-											<string>E754AC88123F3B5E002801A3</string>
-											<string>E754AC90123F3BA2002801A3</string>
-											<string>E754AC91123F3BA2002801A3</string>
+											<string>E754AC96123F3C75002801A3</string>
+											<string>E754AC98123F3C75002801A3</string>
+											<string>E754AC99123F3C75002801A3</string>
+											<string>E754AC9A123F3C75002801A3</string>
+											<string>E754ACBD123F402E002801A3</string>
+											<string>E754ACBE123F402E002801A3</string>
+											<string>E754ACC0123F402E002801A3</string>
+											<string>E754ACC1123F402E002801A3</string>
+											<string>E754ACD9123F419A002801A3</string>
+											<string>E754ACDF123F41C4002801A3</string>
+											<string>E754ACE0123F41C4002801A3</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -556,7 +558,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>E754AC93123F3BA2002801A3</string>
 		<string>E754AC77123F3970002801A3</string>
 		<string>E754AC6F123F394A002801A3</string>
 		<string>1C78EAAD065D492600B07095</string>

@@ -23,16 +23,37 @@
     // Override point for customization after app launch. 
 	if ([[DATABASE documents] count] <= 0) {
 		Document *doc;
+		Concept *concept;
 		UIImage *image;
+		
+//		doc = [DATABASE newDocumentTitled:@"doc 2"];
+//		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image2" ofType:@"jpeg"]];
+//		doc.image = UIImageJPEGRepresentation(image, 1.0);
+//
+//		concept = [DATABASE newConceptTitled:@"concept 3" toDocument:doc];
+//		concept.originX = [NSNumber numberWithInt: 300];
+//		concept.originY = [NSNumber numberWithInt: 300];
+//		concept.height = [NSNumber numberWithInt: 200];
+//		concept.width = [NSNumber numberWithInt: 200];
+//		[DATABASE saveManagedObjectContext];
+		
 		doc = [DATABASE newDocumentTitled:@"doc 1"];
 		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image1" ofType:@"jpeg"]];
 		doc.image = UIImageJPEGRepresentation(image, 1.0);
+
+		concept = [DATABASE newConceptTitled:@"concept 1" toDocument:doc];
+		concept.originX = [NSNumber numberWithInt: 100];
+		concept.originY = [NSNumber numberWithInt: 100];
+		concept.height = [NSNumber numberWithInt: 200];
+		concept.width = [NSNumber numberWithInt: 200];
+		
+		concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
+		concept.originX = [NSNumber numberWithInt: 400];
+		concept.originY = [NSNumber numberWithInt: 400];
+		concept.height = [NSNumber numberWithInt: 200];
+		concept.width = [NSNumber numberWithInt: 200];
 		[DATABASE saveManagedObjectContext];
 
-		doc = [DATABASE newDocumentTitled:@"doc 2"];
-		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image2" ofType:@"jpeg"]];
-		doc.image = UIImageJPEGRepresentation(image, 1.0);
-		[DATABASE saveManagedObjectContext];
 	}
 	
     [window addSubview:viewController.view];

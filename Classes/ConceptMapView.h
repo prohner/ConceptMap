@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "ConceptObject.h"
+#import "DataController.h"
 
 @interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate> {
 	ConceptObject *selectedConceptObject;

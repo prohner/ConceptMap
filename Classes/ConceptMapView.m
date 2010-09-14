@@ -15,16 +15,13 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-		
-		ConceptObject *co1 = [[ConceptObject alloc] initWithFrame:CGRectMake(200, 200, 200, 200)];
-		co1.backgroundColor = [UIColor purpleColor];
-		co1.delegate = self;
-		[self addSubview:co1];
-
-		ConceptObject *co2 = [[ConceptObject alloc] initWithFrame:CGRectMake(700, 700, 200, 200)];
-		co2.backgroundColor = [UIColor redColor];
-		co2.delegate = self;
-		[self addSubview:co2];
+		Document *doc = [DATABASE currentDocument];
+		for (Concept *concept in [doc concepts]) {
+			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+			co.backgroundColor = [UIColor purpleColor];
+			//co.delegate = self;
+			[self addSubview:co];
+		}
 		
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 		[self addGestureRecognizer:singleTap];

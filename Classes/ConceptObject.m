@@ -13,6 +13,12 @@
 
 @synthesize selected, delegate;
 
++ (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
+	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
+	ConceptObject *newCO = [[ConceptObject alloc] initWithFrame:r];
+	return newCO;
+}
+
 - (id)initWithFrame:(CGRect)frame {
 	[super initWithFrame:frame];
 //	[super init];
