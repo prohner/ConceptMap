@@ -76,21 +76,9 @@
 		
 	NSArray *documents = [DATABASE documents];
 	doc = (Document *)[documents objectAtIndex:0];
-	NSDate *d = doc.created;
     STAssertNotNil(doc.created, @"The created date should have been set.");
     STAssertNotNil(doc.lastSaved, @"The updated date should have been set.");
 	
-	/*  Document.m should have:
-	 - (void)awakeFromInsert {
-	 [self setValue:[NSDate date] forKey:@"created"];
-	 [self setValue:[NSDate date] forKey:@"lastSaved"];
-	 }
-	 
-	 - (void)willSave {
-	 [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
-	 }
-	 
-	 */
 }
 
 - (void)testAddingConcepts {
@@ -100,16 +88,6 @@
     doc = [DATABASE newDocumentTitled:@"doc 1"];
 	concept = [DATABASE newConceptTitled:@"concept 1" toDocument:doc];
     STAssertNotNil(concept.created, @"The created date should have been set.");
-
-	/*  Concept.m should have:
-	 - (void)awakeFromInsert {
-	 [self setValue:[NSDate date] forKey:@"created"];
-	 }
-	 - (void)willSave {
-	 [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
-	 }
-	 */
-	
 	
 	concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
     [DATABASE saveManagedObjectContext];
