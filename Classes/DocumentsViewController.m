@@ -90,6 +90,8 @@
 	Document *doc;
 	doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
 	cell.title.text = doc.title;
+	UIImage *image = [UIImage imageWithData:doc.image];
+	cell.imageView.image = image;
     
     return cell;
 }

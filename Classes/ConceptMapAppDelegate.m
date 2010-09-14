@@ -23,10 +23,15 @@
     // Override point for customization after app launch. 
 	if ([[DATABASE documents] count] <= 0) {
 		Document *doc;
+		UIImage *image;
 		doc = [DATABASE newDocumentTitled:@"doc 1"];
+		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image1" ofType:@"jpeg"]];
+		doc.image = UIImageJPEGRepresentation(image, 1.0);
 		[DATABASE saveManagedObjectContext];
 
 		doc = [DATABASE newDocumentTitled:@"doc 2"];
+		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image2" ofType:@"jpeg"]];
+		doc.image = UIImageJPEGRepresentation(image, 1.0);
 		[DATABASE saveManagedObjectContext];
 	}
 	
