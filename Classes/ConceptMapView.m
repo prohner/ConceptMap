@@ -16,9 +16,16 @@
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
 		Document *doc = [DATABASE currentDocument];
+		int i = 0;
 		for (Concept *concept in [doc concepts]) {
+			FUNCTION_LOG(@"%@ (%@, %@) (%@, %@)", concept.title, concept.originX, concept.originY, concept.width, concept.height);
 			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-			co.backgroundColor = [UIColor purpleColor];
+			if (i++ % 2 == 0) {
+				co.backgroundColor = [UIColor purpleColor];
+			} else {
+				co.backgroundColor = [UIColor greenColor];
+			}
+
 			//co.delegate = self;
 			[self addSubview:co];
 		}

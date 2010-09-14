@@ -11,14 +11,15 @@
 
 @implementation ConceptObject
 
-@synthesize selected, delegate;
+@synthesize selected, delegate, concept;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
 	ConceptObject *newCO = [[ConceptObject alloc] initWithFrame:r];
+	newCO.concept = concept;
 	return newCO;
 }
-
+ 
 - (id)initWithFrame:(CGRect)frame {
 	[super initWithFrame:frame];
 //	[super init];
@@ -40,6 +41,9 @@
 	deleteBox.hidden = YES;
 	[self.layer addSublayer:deleteBox];
 	
+	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
+	[self.layer addSublayer:conceptObjectLabel];
+	
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
 										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
 	[self addGestureRecognizer:tapGesture];
@@ -55,8 +59,15 @@
 										  action:@selector(handlePanGesture:)];
 	[self addGestureRecognizer:panGesture];
 	[panGesture release];
+	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
 	return self;
+}
+
+- (void)setConcept:(Concept *)newConcept {
+	concept = newConcept;
+	conceptObjectLabel.title = concept.title;
+	[conceptObjectLabel setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)isSelected {
@@ -72,27 +83,27 @@
 	[delegate conceptObject:self isSelected:selected];
 }
 
-- (void)layoutSubviews {
-	FUNCTION_LOG();
-
-	CGRect r;
-	CGPoint pt;
-	
-	r = self.bounds;
-	r.origin.x -= 5;
-	r.origin.y -= 5;
-	r.size.height = 40;
-	r.size.width = 40;
-	deleteBox.bounds = r;
-	deleteBox.anchorPoint = CGPointZero;
-	
-	pt = deleteBox.position;
-	pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
-	deleteBox.position = pt;
-	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
-	deleteBox.backgroundColor = deleteBox.borderColor;
-
-}
+//- (void)layoutSubviews {
+//	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+//
+//	CGRect r;
+//	CGPoint pt;
+//	
+//	r = self.bounds;
+//	r.origin.x -= 5;
+//	r.origin.y -= 5;
+//	r.size.height = 40;
+//	r.size.width = 40;
+//	deleteBox.bounds = r;
+//	deleteBox.anchorPoint = CGPointZero;
+//	
+//	pt = deleteBox.position;
+//	pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
+//	deleteBox.position = pt;
+//	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
+//	deleteBox.backgroundColor = deleteBox.borderColor;
+//
+//}
 
 #pragma mark Handling touches 
 
@@ -121,7 +132,9 @@
 			}
 //			[self layoutContentsOf:hitLayer];
 			break;
-			
+		case UIGestureRecognizerStateEnded:
+			[concept setRect:self.bounds];
+			break;
 		default:
 			break;
 	}
@@ -162,6 +175,12 @@
 			self.layer.zPosition = 0;
 			self.layer.shadowColor = [UIColor clearColor].CGColor;
 			[self.layer setValue:[NSNumber numberWithFloat:1.0f] forKeyPath:@"transform.scale"];
+
+			CGRect rect = self.bounds;
+			rect.origin.x = dragLastPoint.x;
+			rect.origin.y = dragLastPoint.y;
+			[concept setRect:rect];
+
 			break;				
 	}
 }

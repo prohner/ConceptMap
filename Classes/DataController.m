@@ -257,6 +257,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 
 @end
 
+@interface Concept(AutoPopulateFields)
+- (void)setRect:(CGRect)r;
+@end
 
 @implementation Concept(AutoPopulateFields)
 - (void)awakeFromInsert {
@@ -265,7 +268,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 - (void)willSave {
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
-
+- (void)setRect:(CGRect)r {
+	FUNCTION_LOG();
+	self.originX = [NSNumber numberWithInt: r.origin.x];
+	self.originY = [NSNumber numberWithInt: r.origin.y];
+	self.height = [NSNumber numberWithInt: r.size.height];
+	self.width = [NSNumber numberWithInt: r.size.width];
+	[DATABASE saveManagedObjectContext];
+	FUNCTION_LOG(@"@i %@ (%@, %@) (%@, %@)", self, self.title, self.originX, self.originY, self.width, self.height);
+	
+}
 @end
 
 @implementation Document(AutoPopulateFields)

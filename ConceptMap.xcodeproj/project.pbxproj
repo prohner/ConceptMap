@@ -32,6 +32,8 @@
 		E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD7641239F9B300B73998 /* CoreDataTest.m */; };
 		E72DD7701239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
 		E72DD7711239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
+		E754AD91123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */; };
+		E754AD92123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */; };
 		E75ABC641239F054004A5C76 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
 		E75ABC6F1239F24C004A5C76 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6A1239F24C004A5C76 /* Application.m */; };
 		E75ABC701239F24C004A5C76 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
@@ -85,6 +87,8 @@
 		E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		E72DD76E1239FB0800B73998 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		E72DD76F1239FB0800B73998 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectLabel.h; sourceTree = "<group>"; };
+		E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectLabel.m; sourceTree = "<group>"; };
 		E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = ApplicationData.xcdatamodel; sourceTree = "<group>"; };
 		E75ABC691239F24C004A5C76 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		E75ABC6A1239F24C004A5C76 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 			children = (
 				E7F87F4C1238AC90003F63CA /* ConceptObject.h */,
 				E7F87F4D1238AC90003F63CA /* ConceptObject.m */,
+				E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */,
+				E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */,
 			);
 			name = "Concept Object";
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				E72DD7701239FB0800B73998 /* DataController.m in Sources */,
 				E794E22D123DE84E002F0EF8 /* DocumentsViewController.m in Sources */,
 				E794E25B123F2077002F0EF8 /* DocumentTableViewCell.m in Sources */,
+				E754AD92123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +450,7 @@
 				E75ABCC51239F4BE004A5C76 /* GTMRegex.m in Sources */,
 				E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */,
 				E75ABDE31239F64A004A5C76 /* ConceptMapView.m in Sources */,
+				E754AD91123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

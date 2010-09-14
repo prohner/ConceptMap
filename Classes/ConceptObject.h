@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Utility.h"
 #import "DataController.h"
+#import "ConceptObjectLabel.h"
 
 @protocol ConceptObjectDelegate;
 
@@ -22,12 +23,14 @@
     id <ConceptObjectDelegate> delegate;
 	
 	CATextLayer *deleteBox;
+	ConceptObjectLabel *conceptObjectLabel;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 }
 
 @property (nonatomic) BOOL selected;
 @property (nonatomic, retain) id <ConceptObjectDelegate> delegate;
+@property (nonatomic, retain) Concept *concept;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 
