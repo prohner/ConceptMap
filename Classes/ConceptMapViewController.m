@@ -10,6 +10,7 @@
 
 @implementation ConceptMapViewController
 
+@synthesize toolbar, documentsButton;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -34,7 +35,7 @@
     [super viewDidLoad];
 	
     CGRect viewFrame = self.view.frame;
-    viewFrame.origin = CGPointZero;
+    viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
     ConceptMapView *conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 
@@ -61,6 +62,17 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+- (IBAction)documentButtonTapped:(id)sender {
+	FUNCTION_LOG();
+	documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
+	
+	UIPopoverController *popover = [[[UIPopoverController alloc] 
+									 initWithContentViewController:documentsViewController] retain];
+	[popover presentPopoverFromBarButtonItem:documentsButton 
+					permittedArrowDirections:UIPopoverArrowDirectionAny 
+									animated:YES];
 }
 
 @end

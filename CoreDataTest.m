@@ -82,7 +82,11 @@
 	/*  Document.m should have:
 	 - (void)awakeFromInsert {
 	 [self setValue:[NSDate date] forKey:@"created"];
-	 [self setValue:[NSDate date] forKey:@"lastOpened"];
+	 [self setValue:[NSDate date] forKey:@"lastSaved"];
+	 }
+	 
+	 - (void)willSave {
+	 [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 	 }
 	 
 	 */

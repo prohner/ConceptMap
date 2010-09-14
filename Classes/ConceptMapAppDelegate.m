@@ -21,6 +21,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after app launch. 
+	if ([[DATABASE documents] count] <= 0) {
+		Document *doc;
+		doc = [DATABASE newDocumentTitled:@"doc 1"];
+		[DATABASE saveManagedObjectContext];
+
+		doc = [DATABASE newDocumentTitled:@"doc 2"];
+		[DATABASE saveManagedObjectContext];
+	}
+	
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
 

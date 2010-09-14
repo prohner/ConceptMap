@@ -3,7 +3,7 @@
 //  ConceptMap
 //
 //  Created by Preston Rohner on 9/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
 #import <CoreData/CoreData.h>

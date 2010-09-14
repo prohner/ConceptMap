@@ -2,8 +2,8 @@
 //  Document.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/13/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Preston Rohner on 9/12/10.
+//  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
 #import "Document.h"
@@ -16,7 +16,6 @@
 @dynamic created;
 @dynamic title;
 @dynamic lastSaved;
-@dynamic image;
 @dynamic application;
 @dynamic concepts;
 
@@ -28,6 +27,5 @@
 - (void)willSave {
     [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
-
 
 @end
