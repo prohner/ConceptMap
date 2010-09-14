@@ -256,3 +256,26 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 }
 
 @end
+
+
+@implementation Concept(AutoPopulateFields)
+- (void)awakeFromInsert {
+	[self setValue:[NSDate date] forKey:@"created"];
+}
+- (void)willSave {
+	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
+}
+
+@end
+
+@implementation Document(AutoPopulateFields)
+- (void)awakeFromInsert {
+	[self setValue:[NSDate date] forKey:@"created"];
+	[self setValue:[NSDate date] forKey:@"lastSaved"];
+}
+
+- (void)willSave {
+    [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
+}
+
+@end

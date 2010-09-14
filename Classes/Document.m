@@ -20,14 +20,6 @@
 @dynamic application;
 @dynamic concepts;
 
-- (void)awakeFromInsert {
-	[self setValue:[NSDate date] forKey:@"created"];
-	[self setValue:[NSDate date] forKey:@"lastSaved"];
-}
-
-- (void)willSave {
-    [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
-}
 
 
 @end

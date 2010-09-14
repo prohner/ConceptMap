@@ -23,7 +23,6 @@
 @property (nonatomic, retain) Concept * parentConcept;
 @property (nonatomic, retain) Document * document;
 @property (nonatomic, retain) NSSet* concepts;
-@property (nonatomic, retain) NSSet* connectedConcepts;
 
 @end
 
@@ -33,11 +32,6 @@
 - (void)removeConceptsObject:(Concept *)value;
 - (void)addConcepts:(NSSet *)value;
 - (void)removeConcepts:(NSSet *)value;
-
-- (void)addConnectedConceptsObject:(Concept *)value;
-- (void)removeConnectedConceptsObject:(Concept *)value;
-- (void)addConnectedConcepts:(NSSet *)value;
-- (void)removeConnectedConcepts:(NSSet *)value;
 
 @end
 

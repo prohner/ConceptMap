@@ -76,6 +76,7 @@
 		
 	NSArray *documents = [DATABASE documents];
 	doc = (Document *)[documents objectAtIndex:0];
+	NSDate *d = doc.created;
     STAssertNotNil(doc.created, @"The created date should have been set.");
     STAssertNotNil(doc.lastSaved, @"The updated date should have been set.");
 	

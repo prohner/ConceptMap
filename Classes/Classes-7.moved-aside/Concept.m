@@ -21,6 +21,12 @@
 @dynamic parentConcept;
 @dynamic document;
 @dynamic concepts;
-@dynamic connectedConcepts;
+
+- (void)awakeFromInsert {
+	[self setValue:[NSDate date] forKey:@"created"];
+}
+- (void)willSave {
+	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
+}
 
 @end
