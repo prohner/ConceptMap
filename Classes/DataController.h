@@ -43,3 +43,9 @@
 #endif
 
 @end
+
+@interface Concept(AutoPopulateFields)
+- (void)setRect:(CGRect)r;
+@end
+
+

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "Utility.h"
 
 @interface ConceptObjectLabel : CALayer {
 	NSString *title;

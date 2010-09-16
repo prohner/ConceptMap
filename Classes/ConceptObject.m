@@ -83,27 +83,27 @@
 	[delegate conceptObject:self isSelected:selected];
 }
 
-//- (void)layoutSubviews {
-//	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
-//
-//	CGRect r;
-//	CGPoint pt;
-//	
-//	r = self.bounds;
-//	r.origin.x -= 5;
-//	r.origin.y -= 5;
-//	r.size.height = 40;
-//	r.size.width = 40;
-//	deleteBox.bounds = r;
-//	deleteBox.anchorPoint = CGPointZero;
-//	
-//	pt = deleteBox.position;
-//	pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
-//	deleteBox.position = pt;
-//	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
-//	deleteBox.backgroundColor = deleteBox.borderColor;
-//
-//}
+- (void)layoutSubviews {
+	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+
+	CGRect r;
+	CGPoint pt;
+	
+	r = self.bounds;
+	r.origin.x -= 5;
+	r.origin.y -= 5;
+	r.size.height = 40;
+	r.size.width = 40;
+	deleteBox.bounds = r;
+	deleteBox.anchorPoint = CGPointZero;
+	
+	pt = deleteBox.position;
+	pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
+	deleteBox.position = pt;
+	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
+	deleteBox.backgroundColor = deleteBox.borderColor;
+
+}
 
 #pragma mark Handling touches 
 

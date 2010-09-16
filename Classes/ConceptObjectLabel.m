@@ -14,7 +14,7 @@
 @synthesize title;
 
 - (id)init {
-	NSLog(@"%s", __FUNCTION__);
+	FUNCTION_LOG();
 	[super init];
 	
 	titleIndentation = 1.0f;
@@ -29,6 +29,7 @@
 	r.size.height = 40;
 	r.size.width = self.superlayer.bounds.size.width - 85 - 30;
 	self.bounds = r;
+	FUNCTION_LOG(@"(%i, %i)", r.origin.x, r.origin.y);
 	
 	self.anchorPoint = CGPointZero;
 	self.position = CGPointMake(30, 0);
@@ -74,7 +75,6 @@
 	UIFont *font = [UIFont systemFontOfSize:fontSize];
 	CGSize size = [title sizeWithFont:font];
 	
-	NSLog(@"%s indentation==%i", __FUNCTION__, titleIndentation);
 	//	CGPoint pointStartOfText = CGPointMake(textX, textY);
 	CGContextSetTextPosition(theContext, 0, 0);
 	CGContextSetFillColorWithColor(theContext, [UIColor whiteColor].CGColor);
