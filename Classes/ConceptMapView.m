@@ -26,6 +26,7 @@
 				co.backgroundColor = [UIColor greenColor];
 			}
 
+			[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
 			//co.delegate = self;
 			[self addSubview:co];
 		}

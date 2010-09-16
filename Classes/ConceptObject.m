@@ -21,12 +21,14 @@
 }
  
 - (id)initWithFrame:(CGRect)frame {
-	[super initWithFrame:frame];
+	self = [super initWithFrame:frame];
 //	[super init];
 	self.userInteractionEnabled = YES;
     self.layer.borderWidth = 5;
     self.layer.cornerRadius = 12;
 	self.layer.borderColor = [[UIColor clearColor] CGColor];
+	
+	[self setFrame:frame];
 	
 	deleteBox = [CATextLayer layer];
 	deleteBox.borderColor = [[UIColor yellowColor] CGColor];
@@ -133,7 +135,7 @@
 //			[self layoutContentsOf:hitLayer];
 			break;
 		case UIGestureRecognizerStateEnded:
-			[concept setRect:self.bounds];
+			[concept setRect:self.frame];
 			break;
 		default:
 			break;
@@ -179,7 +181,7 @@
 			CGRect rect = self.bounds;
 			rect.origin.x = dragLastPoint.x;
 			rect.origin.y = dragLastPoint.y;
-			[concept setRect:rect];
+			[concept setRect:self.frame];
 
 			break;				
 	}
