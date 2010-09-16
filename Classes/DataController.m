@@ -270,8 +270,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	self.originY = [NSNumber numberWithInt: r.origin.y];
 	self.height = [NSNumber numberWithInt: r.size.height];
 	self.width = [NSNumber numberWithInt: r.size.width];
-	[DATABASE saveManagedObjectContext];
-	FUNCTION_LOG(@" %@ (%@, %@) (%@, %@)", self.title, self.originX, self.originY, self.width, self.height);
+
+//	FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@)", self, self.title, self.originX, self.originY, self.width, self.height);
 	
 }
 @end

@@ -12,6 +12,7 @@
 #import "Document.h"
 #import "Utility.h"
 #import "Concept.h"
+#import "DataController.h"
 
 @interface DataController : NSObject <NSFetchedResultsControllerDelegate> {
 	NSManagedObjectModel *managedObjectModel;
