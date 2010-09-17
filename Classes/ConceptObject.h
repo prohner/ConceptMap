@@ -26,6 +26,8 @@
 	ConceptObjectLabel *conceptObjectLabel;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
+	
+	BOOL holdSelected;
 }
 
 @property (nonatomic) BOOL selected;

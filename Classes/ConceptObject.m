@@ -86,8 +86,12 @@
 }
 
 - (void)layoutSubviews {
-	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
+	[CATransaction flush];
+	[CATransaction begin];
+	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+	
 	CGRect r;
 	CGPoint pt;
 	
@@ -105,6 +109,7 @@
 	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
 	deleteBox.backgroundColor = deleteBox.borderColor;
 
+	[CATransaction commit];
 }
 
 #pragma mark Handling touches 
@@ -119,6 +124,7 @@
 		case UIGestureRecognizerStatePossible:
 		case UIGestureRecognizerStateBegan:
 			pinchScale = sender.scale;
+			holdSelected = self.selected;
 			break;
 		case UIGestureRecognizerStateChanged:
 			if (sender.scale > pinchScale) {
@@ -136,6 +142,7 @@
 			break;
 		case UIGestureRecognizerStateEnded:
 			[concept setRect:self.frame];
+			self.selected = holdSelected;
 			break;
 		default:
 			break;
