@@ -28,9 +28,11 @@
 	CGPoint dragLastPoint;
 	
 	BOOL holdSelected;
+	BOOL isActiveDropTarget;
 }
 
 @property (nonatomic) BOOL selected;
+@property (nonatomic) BOOL isActiveDropTarget;
 @property (nonatomic, retain) id <ConceptObjectDelegate> delegate;
 @property (nonatomic, retain) Concept *concept;
 
@@ -41,6 +43,8 @@
 @protocol ConceptObjectDelegate 
 
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected;
+- (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender;
+
 
 @end
 

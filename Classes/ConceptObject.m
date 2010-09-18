@@ -11,7 +11,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, delegate, concept;
+@synthesize selected, delegate, concept, isActiveDropTarget;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -85,6 +85,16 @@
 	[delegate conceptObject:self isSelected:selected];
 }
 
+- (void)setIsActiveDropTarget:(BOOL)isTarget {
+	if (isTarget) {
+		FUNCTION_LOG(@"YES");
+		self.layer.borderColor = [[UIColor redColor] CGColor];
+	} else {
+		FUNCTION_LOG(@"NO");
+		self.layer.borderColor = [[UIColor clearColor] CGColor];
+	}
+}
+
 - (void)layoutSubviews {
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
@@ -155,6 +165,7 @@
 	switch (sender.state) {
 		case UIGestureRecognizerStatePossible:
 		case UIGestureRecognizerStateBegan:
+			//NSLog(@"UIGestureRecognizerStateBegan");
 			self.layer.zPosition = 2;
 			self.layer.shadowOffset = CGSizeMake(15.0f, 15.0f);
 			self.layer.shadowRadius = self.layer.cornerRadius;
@@ -164,6 +175,7 @@
 			break;
 		case UIGestureRecognizerStateChanged:
 		{
+			//NSLog(@"UIGestureRecognizerStateChanged");
 			
 			CGPoint viewPoint = [sender locationInView:self];
 			dragLastPoint = [self convertPoint:viewPoint toView:self.superview];
@@ -173,22 +185,25 @@
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 			self.layer.position = dragLastPoint;
 			[CATransaction commit];
+			[delegate conceptObject:self isPanning:sender];
 				
 		}
 			break;
 		case UIGestureRecognizerStateEnded:
-			NSLog(@"UIGestureRecognizerStateBegan 3");
+			//NSLog(@"UIGestureRecognizerStateEnded");
+		{
 			CGPoint where = dragLastPoint;
 			
 			self.layer.position = where;
 			self.layer.zPosition = 0;
 			self.layer.shadowColor = [UIColor clearColor].CGColor;
 			[self.layer setValue:[NSNumber numberWithFloat:1.0f] forKeyPath:@"transform.scale"];
-
+			
 			CGRect rect = self.bounds;
 			rect.origin.x = dragLastPoint.x;
 			rect.origin.y = dragLastPoint.y;
 			[concept setRect:self.frame];
+		}
 
 			break;				
 	}

@@ -13,8 +13,11 @@
 
 @interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate> {
 	ConceptObject *selectedConceptObject;
+	NSMutableArray *conceptObjects;
+	ConceptObject *possibleDropTarget;
 }
 
 - (CGSize)idealContentSize;
+- (void)addConceptObjectToView:(ConceptObject *)co;
 
 @end

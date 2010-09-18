@@ -274,8 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
-									<integer>19</integer>
+									<integer>29</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -318,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,44 +325,44 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7FA6BAA12432CA100E1084F</string>
+										<string>E7FA6C83124583D800E1084F</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
 											<string>E75ABE0C1239F7F7004A5C76</string>
 											<string>E72DD7891239FC3700B73998</string>
-											<string>E768BE84123C8C2700D149F7</string>
-											<string>E768BE86123C8C2700D149F7</string>
 											<string>E768BEAE123C8F6900D149F7</string>
 											<string>E794E20A123DE694002F0EF8</string>
 											<string>E794E234123DE9CE002F0EF8</string>
 											<string>E716CD9D123F2631003F21D3</string>
-											<string>E716CDF8123F3113003F21D3</string>
 											<string>E716CDFB123F3113003F21D3</string>
 											<string>E716CDFD123F3113003F21D3</string>
-											<string>E716CE2C123F33DA003F21D3</string>
 											<string>E721DBCD123F35A900B39962</string>
 											<string>E721DBEA123F375200B39962</string>
 											<string>E754AC68123F394A002801A3</string>
 											<string>E754AC80123F39C2002801A3</string>
-											<string>E754AC96123F3C75002801A3</string>
 											<string>E754AC98123F3C75002801A3</string>
 											<string>E754AC99123F3C75002801A3</string>
-											<string>E754AD28123FC11B002801A3</string>
 											<string>E754AD88123FCBAC002801A3</string>
 											<string>E754AD89123FCBAC002801A3</string>
-											<string>E7F7321B1241BF6C00B0A441</string>
 											<string>E7F7329512424DD300B0A441</string>
 											<string>E7F732A112424E0D00B0A441</string>
 											<string>E7F732A812424ED200B0A441</string>
-											<string>E7F732A912424ED200B0A441</string>
 											<string>E7FA6B9612432AB800E1084F</string>
-											<string>E7FA6B9D12432B1800E1084F</string>
-											<string>E7FA6B9E12432B1800E1084F</string>
+											<string>E7FA6BC7124330EA00E1084F</string>
+											<string>E7FA6BC8124330EA00E1084F</string>
+											<string>E7FA6BC9124330EA00E1084F</string>
+											<string>E7FA6BCA124330EA00E1084F</string>
+											<string>E7FA6C571245643100E1084F</string>
+											<string>E7FA6C581245643100E1084F</string>
+											<string>E7FA6C5B1245643100E1084F</string>
+											<string>E7FA6C721245831300E1084F</string>
+											<string>E7FA6C81124583D800E1084F</string>
+											<string>E7FA6C82124583D800E1084F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -563,9 +562,9 @@
 	<array>
 		<string>E7FA6B9912432AB800E1084F</string>
 		<string>E7FA6B9A12432AB800E1084F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7F87E2C12388412003F63CA</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -585,12 +584,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ConceptObject.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -893,6 +894,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -938,7 +941,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
