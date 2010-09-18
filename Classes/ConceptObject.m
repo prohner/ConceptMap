@@ -27,6 +27,8 @@
     self.layer.borderWidth = 5;
     self.layer.cornerRadius = 12;
 	self.layer.borderColor = [[UIColor clearColor] CGColor];
+	self.layer.masksToBounds = YES;
+
 	
 	[self setFrame:frame];
 	
@@ -203,6 +205,9 @@
 			rect.origin.x = dragLastPoint.x;
 			rect.origin.y = dragLastPoint.y;
 			[concept setRect:self.frame];
+			
+			[delegate conceptObject:self panningEnded:sender];
+
 		}
 
 			break;				

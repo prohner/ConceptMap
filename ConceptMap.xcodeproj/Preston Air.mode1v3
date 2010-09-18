@@ -274,13 +274,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
+									<integer>21</integer>
+									<integer>19</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {271, 718}}</string>
+							<string>{{0, 98}, {271, 718}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -317,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapView.m</string>
+								<string>ConceptObject.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapView.m</string>
+										<string>ConceptObject.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7FA6C83124583D800E1084F</string>
+										<string>E7FA6C9A1245854400E1084F</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -358,11 +359,11 @@
 											<string>E7FA6BC9124330EA00E1084F</string>
 											<string>E7FA6BCA124330EA00E1084F</string>
 											<string>E7FA6C571245643100E1084F</string>
-											<string>E7FA6C581245643100E1084F</string>
 											<string>E7FA6C5B1245643100E1084F</string>
 											<string>E7FA6C721245831300E1084F</string>
-											<string>E7FA6C81124583D800E1084F</string>
-											<string>E7FA6C82124583D800E1084F</string>
+											<string>E7FA6C8B1245848A00E1084F</string>
+											<string>E7FA6C92124584D600E1084F</string>
+											<string>E7FA6C991245854400E1084F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

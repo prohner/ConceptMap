@@ -44,6 +44,7 @@
 
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected;
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender;
+- (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender;
 
 
 @end

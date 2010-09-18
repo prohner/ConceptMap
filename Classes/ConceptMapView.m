@@ -103,4 +103,11 @@
 	
 }
 
+- (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
+	if (possibleDropTarget) {
+		[conceptObject removeFromSuperview];
+		[possibleDropTarget addSubview:conceptObject];
+	}
+}
+
 @end
