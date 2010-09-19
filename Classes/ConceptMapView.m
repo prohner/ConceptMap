@@ -109,21 +109,8 @@
 		CGPoint pt = conceptObject.layer.position;
 		pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
 		
-		[possibleDropTarget addSubview:conceptObject];
+		[possibleDropTarget addConceptObject:conceptObject];
 
-//		if (conceptObject.layer.position.x < 0 || conceptObject.layer.position.y < 0) {
-//			CGRect rect = conceptObject.frame;
-//			if (rect.origin.x < 0) {
-//				rect.origin.x = 0;
-//			}
-//			
-//			if (rect.origin.y < 0) {
-//				rect.origin.y = 0;
-//			}
-//			
-//			conceptObject.frame = rect;
-//		}
-		
 	} else {
 		if (conceptObject.superview != self) {
 			FUNCTION_LOG(@"Just drop it");

@@ -37,6 +37,7 @@
 @property (nonatomic, retain) Concept *concept;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
+- (void)addConceptObject:(ConceptObject *)newConceptObject;
 
 @end
 

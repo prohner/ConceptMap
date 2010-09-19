@@ -264,6 +264,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 - (void)willSave {
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
+@end
+
+@implementation Concept(SettingData)
+
+- (void)addConcept:(Concept *)newConcept {
+	[self addConceptsObject:newConcept];
+	newConcept.parentConcept = self;
+	
+}
+
 - (void)setRect:(CGRect)r {
 	FUNCTION_LOG();
 	self.originX = [NSNumber numberWithInt: r.origin.x];

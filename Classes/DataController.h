@@ -45,7 +45,8 @@
 
 @end
 
-@interface Concept(AutoPopulateFields)
+@interface Concept(SettingData)
+- (void)addConcept:(Concept *)newConcept;
 - (void)setRect:(CGRect)r;
 @end
 

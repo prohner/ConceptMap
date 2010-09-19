@@ -97,6 +97,10 @@
 	}
 }
 
+- (void)addConceptObject:(ConceptObject *)newConceptObject {
+	[self addSubview:newConceptObject];
+}
+
 - (void)layoutSubviews {
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 

@@ -93,4 +93,20 @@
     [DATABASE saveManagedObjectContext];
 }
 
+- (void)testContainingConcepts {
+	Document *doc;
+	Concept *conceptOuter;
+	Concept *conceptInner;
+	
+    doc = [DATABASE newDocumentTitled:@"doc 1"];
+	conceptOuter = [DATABASE newConceptTitled:@"concept outer" toDocument:doc];
+	conceptInner = [DATABASE newConceptTitled:@"concept inner" toDocument:doc];
+	
+	[conceptOuter addConcept:conceptInner];
+	STAssertTrue(conceptInner.parentConcept == conceptOuter, @"Contained concept's parent should be set");
+	
+	
+    [DATABASE saveManagedObjectContext];
+}
+
 @end
