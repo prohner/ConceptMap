@@ -105,6 +105,10 @@
 		FUNCTION_LOG(@"New position (%i, %i)", conceptObject.layer.position.x, conceptObject.layer.position.y);
 		possibleDropTarget.isActiveDropTarget = NO;
 		[conceptObject removeFromSuperview];
+
+		CGPoint pt = conceptObject.layer.position;
+		pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+		
 		[possibleDropTarget addSubview:conceptObject];
 
 //		if (conceptObject.layer.position.x < 0 || conceptObject.layer.position.y < 0) {
@@ -121,12 +125,17 @@
 //		}
 		
 	} else {
-		FUNCTION_LOG(@"Just drop it");
-		CGPoint pt = conceptObject.layer.position;
-		pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
-		[conceptObject removeFromSuperview];
-		conceptObject.layer.position = pt;
-		[self addSubview:conceptObject];
+		if (conceptObject.superview != self) {
+			FUNCTION_LOG(@"Just drop it");
+			CGPoint pt = conceptObject.layer.position;
+			pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
+			[conceptObject removeFromSuperview];
+			conceptObject.layer.position = pt;
+			[self addSubview:conceptObject];
+		} else {
+			FUNCTION_LOG(@"Do nothing special");
+		}
+
 	}
 
 }

@@ -151,6 +151,8 @@
 			E792D2C61245C4B200873C15 /* PBXTextBookmark */ = E792D2C61245C4B200873C15 /* PBXTextBookmark */;
 			E792D2C91245C4DE00873C15 /* PBXTextBookmark */ = E792D2C91245C4DE00873C15 /* PBXTextBookmark */;
 			E792D2D01245C5EA00873C15 /* PBXTextBookmark */ = E792D2D01245C5EA00873C15 /* PBXTextBookmark */;
+			E792D2D51245C7E200873C15 /* PBXTextBookmark */ = E792D2D51245C7E200873C15 /* PBXTextBookmark */;
+			E792D2D81245C96200873C15 /* PBXTextBookmark */ = E792D2D81245C96200873C15 /* PBXTextBookmark */;
 			E794E20A123DE694002F0EF8 = E794E20A123DE694002F0EF8 /* PBXTextBookmark */;
 			E794E234123DE9CE002F0EF8 = E794E234123DE9CE002F0EF8 /* PBXTextBookmark */;
 			E7F7329512424DD300B0A441 = E7F7329512424DD300B0A441 /* PBXTextBookmark */;
@@ -713,7 +715,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 110";
 		rLen = 299;
-		rLoc = 3475;
+		rLoc = 3589;
 		rType = 0;
 		vrLen = 1244;
 		vrLoc = 2624;
@@ -723,7 +725,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 124";
 		rLen = 0;
-		rLoc = 3929;
+		rLoc = 4258;
 		rType = 0;
 		vrLen = 1274;
 		vrLoc = 2624;
@@ -733,10 +735,30 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 128";
 		rLen = 0;
-		rLoc = 4005;
+		rLoc = 4258;
 		rType = 0;
 		vrLen = 1676;
 		vrLoc = 1883;
+	};
+	E792D2D51245C7E200873C15 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 110";
+		rLen = 0;
+		rLoc = 3527;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 2908;
+	};
+	E792D2D81245C96200873C15 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 136";
+		rLen = 0;
+		rLoc = 4252;
+		rType = 0;
+		vrLen = 1342;
+		vrLoc = 2911;
 	};
 	E794E20A123DE694002F0EF8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -880,9 +902,9 @@
 	};
 	E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1034, 1755}}";
-			sepNavSelRange = "{4005, 0}";
-			sepNavVisRange = "{1883, 1676}";
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 1872}}";
+			sepNavSelRange = "{4252, 0}";
+			sepNavVisRange = "{2911, 1342}";
 		};
 	};
 	E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {
@@ -1074,7 +1096,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 108";
 		rLen = 0;
-		rLoc = 3433;
+		rLoc = 3547;
 		rType = 0;
 		vrLen = 1092;
 		vrLoc = 2757;
