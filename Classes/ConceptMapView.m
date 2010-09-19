@@ -100,30 +100,32 @@
 
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
 	if (possibleDropTarget) {
-//		CGPoint dropPoint = [sender locationInView:self];
-//		dropPoint = [possibleDropTarget.layer convertPoint:dropPoint toLayer:possibleDropTarget.layer];
-//		conceptObject.layer.position = dropPoint;
+		// TODO keep track of items inside drop target so it knows who it owns
 		
 		FUNCTION_LOG(@"New position (%i, %i)", conceptObject.layer.position.x, conceptObject.layer.position.y);
 		possibleDropTarget.isActiveDropTarget = NO;
 		[conceptObject removeFromSuperview];
 		[possibleDropTarget addSubview:conceptObject];
 
-		if (conceptObject.layer.position.x < 0 || conceptObject.layer.position.y < 0) {
-			CGRect rect = conceptObject.frame;
-			if (rect.origin.x < 0) {
-				rect.origin.x = 0;
-			}
-			
-			if (rect.origin.y < 0) {
-				rect.origin.y = 0;
-			}
-			
-			conceptObject.frame = rect;
-		}
+//		if (conceptObject.layer.position.x < 0 || conceptObject.layer.position.y < 0) {
+//			CGRect rect = conceptObject.frame;
+//			if (rect.origin.x < 0) {
+//				rect.origin.x = 0;
+//			}
+//			
+//			if (rect.origin.y < 0) {
+//				rect.origin.y = 0;
+//			}
+//			
+//			conceptObject.frame = rect;
+//		}
 		
 	} else {
+		FUNCTION_LOG(@"Just drop it");
+		CGPoint pt = conceptObject.layer.position;
+		pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
 		[conceptObject removeFromSuperview];
+		conceptObject.layer.position = pt;
 		[self addSubview:conceptObject];
 	}
 
