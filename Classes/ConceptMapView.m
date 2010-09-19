@@ -80,7 +80,10 @@
 	
 	BOOL foundHomeForPanningObject = NO;
 	for (ConceptObject *possibleDropTargetCandidate in conceptObjects) {
-		if ([possibleDropTargetCandidate.layer containsPoint:panPoint] && possibleDropTargetCandidate != conceptObject) {
+		CGPoint receiverPoint = [self.layer convertPoint:panPoint toLayer:possibleDropTargetCandidate.layer];
+		if ([possibleDropTargetCandidate.layer containsPoint:receiverPoint] 
+			&& possibleDropTargetCandidate != conceptObject) {
+			
 			FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
 			possibleDropTargetCandidate.isActiveDropTarget = YES;
 			possibleDropTarget = possibleDropTargetCandidate;
@@ -97,11 +100,28 @@
 
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
 	if (possibleDropTarget) {
-		CGPoint dropPoint = [sender locationInView:self];
-		//conceptObject.layer.position = dropPoint;
+//		CGPoint dropPoint = [sender locationInView:self];
+//		dropPoint = [possibleDropTarget.layer convertPoint:dropPoint toLayer:possibleDropTarget.layer];
+//		conceptObject.layer.position = dropPoint;
+		
+		FUNCTION_LOG(@"New position (%i, %i)", conceptObject.layer.position.x, conceptObject.layer.position.y);
 		possibleDropTarget.isActiveDropTarget = NO;
 		[conceptObject removeFromSuperview];
 		[possibleDropTarget addSubview:conceptObject];
+
+		if (conceptObject.layer.position.x < 0 || conceptObject.layer.position.y < 0) {
+			CGRect rect = conceptObject.frame;
+			if (rect.origin.x < 0) {
+				rect.origin.x = 0;
+			}
+			
+			if (rect.origin.y < 0) {
+				rect.origin.y = 0;
+			}
+			
+			conceptObject.frame = rect;
+		}
+		
 	} else {
 		[conceptObject removeFromSuperview];
 		[self addSubview:conceptObject];

@@ -274,8 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>21</integer>
-									<integer>19</integer>
+									<integer>29</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -300,7 +299,7 @@
 							<real>271</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 401 1058 777 0 0 1920 1178 </string>
+						<string>0 401 1095 777 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -318,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7FA6CE912458AB700E1084F</string>
+										<string>E7FA6D361245B7A600E1084F</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -352,7 +351,6 @@
 											<string>E754AD89123FCBAC002801A3</string>
 											<string>E7F7329512424DD300B0A441</string>
 											<string>E7F732A112424E0D00B0A441</string>
-											<string>E7F732A812424ED200B0A441</string>
 											<string>E7FA6B9612432AB800E1084F</string>
 											<string>E7FA6BC7124330EA00E1084F</string>
 											<string>E7FA6BC8124330EA00E1084F</string>
@@ -362,8 +360,9 @@
 											<string>E7FA6C5B1245643100E1084F</string>
 											<string>E7FA6C721245831300E1084F</string>
 											<string>E7FA6CCD1245876B00E1084F</string>
-											<string>E7FA6CE812458AB700E1084F</string>
-											<string>E7FA6CDA124589D700E1084F</string>
+											<string>E7FA6CFF12458D0400E1084F</string>
+											<string>E7FA6D1F1245904000E1084F</string>
+											<string>E7FA6D201245904000E1084F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,9 +374,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {765, 619}}</string>
+								<string>{{0, 0}, {802, 619}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 401 1058 777 0 0 1920 1178 </string>
+								<string>0 401 1095 777 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -395,9 +394,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 624}, {765, 112}}</string>
+								<string>{{0, 624}, {802, 112}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 401 1058 777 0 0 1920 1178 </string>
+								<string>0 401 1095 777 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -406,7 +405,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>765pt</string>
+					<string>802pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -569,7 +568,7 @@
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 401 1058 777 0 0 1920 1178 </string>
+	<string>0 401 1095 777 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -907,9 +906,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {988, 248}}</string>
+								<string>{{0, 0}, {1094, 248}}</string>
 								<key>RubberWindowFrame</key>
-								<string>3 111 988 289 0 0 1920 1178 </string>
+								<string>3 111 1094 289 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -938,7 +937,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>3 111 988 289 0 0 1920 1178 </string>
+			<string>3 111 1094 289 0 0 1920 1178 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
