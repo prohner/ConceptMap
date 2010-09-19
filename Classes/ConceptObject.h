@@ -20,7 +20,7 @@
 	
 	Concept *concept;
 	
-    id <ConceptObjectDelegate> delegate;
+    id <ConceptObjectDelegate> myDelegate;
 	
 	CATextLayer *deleteBox;
 	ConceptObjectLabel *conceptObjectLabel;
@@ -33,7 +33,7 @@
 
 @property (nonatomic) BOOL selected;
 @property (nonatomic) BOOL isActiveDropTarget;
-@property (nonatomic, retain) id <ConceptObjectDelegate> delegate;
+@property (nonatomic, retain) id <ConceptObjectDelegate> myDelegate;
 @property (nonatomic, retain) Concept *concept;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;

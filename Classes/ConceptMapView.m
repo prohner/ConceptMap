@@ -45,7 +45,7 @@
 }
 
 - (void)addConceptObjectToView:(ConceptObject *)co {
-	co.delegate = self;
+	co.myDelegate = self;
 	[self addSubview:co];
 	[conceptObjects addObject:co];
 }
@@ -78,14 +78,6 @@
 
 	FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
 	
-//	CALayer *hitLayer = [self.layer hitTest:panPoint];
-//	if ([hitLayer isKindOfClass:[ConceptObject class]]) {
-//		FUNCTION_LOG(@"Floating over");
-//		ConceptObject *co = (ConceptObject *)hitLayer;
-//		[co setSelected:YES];
-//	} else {
-//		FUNCTION_LOG(@"obj=%i, hit=%i, self=%i %@", conceptObject, hitLayer, self.layer, [hitLayer class]);
-//	}
 	BOOL foundHomeForPanningObject = NO;
 	for (ConceptObject *possibleDropTargetCandidate in conceptObjects) {
 		if ([possibleDropTargetCandidate.layer containsPoint:panPoint] && possibleDropTargetCandidate != conceptObject) {
@@ -105,9 +97,16 @@
 
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
 	if (possibleDropTarget) {
+		CGPoint dropPoint = [sender locationInView:self];
+		//conceptObject.layer.position = dropPoint;
+		possibleDropTarget.isActiveDropTarget = NO;
 		[conceptObject removeFromSuperview];
 		[possibleDropTarget addSubview:conceptObject];
+	} else {
+		[conceptObject removeFromSuperview];
+		[self addSubview:conceptObject];
 	}
+
 }
 
 @end

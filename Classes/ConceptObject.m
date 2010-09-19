@@ -11,7 +11,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, delegate, concept, isActiveDropTarget;
+@synthesize selected, myDelegate, concept, isActiveDropTarget;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -84,7 +84,7 @@
 		deleteBox.hidden = YES;
 	}
 
-	[delegate conceptObject:self isSelected:selected];
+	[myDelegate conceptObject:self isSelected:selected];
 }
 
 - (void)setIsActiveDropTarget:(BOOL)isTarget {
@@ -168,12 +168,15 @@
 		case UIGestureRecognizerStatePossible:
 		case UIGestureRecognizerStateBegan:
 			//NSLog(@"UIGestureRecognizerStateBegan");
+			self.layer.superlayer.masksToBounds = NO;
+			
 			self.layer.zPosition = 2;
 			self.layer.shadowOffset = CGSizeMake(15.0f, 15.0f);
 			self.layer.shadowRadius = self.layer.cornerRadius;
 			self.layer.shadowOpacity = 0.35f;
 			self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
 			[self.layer setValue:[NSNumber numberWithFloat:1.10f] forKeyPath:@"transform.scale"];
+			
 			break;
 		case UIGestureRecognizerStateChanged:
 		{
@@ -187,7 +190,7 @@
 			[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 			self.layer.position = dragLastPoint;
 			[CATransaction commit];
-			[delegate conceptObject:self isPanning:sender];
+			[myDelegate conceptObject:self isPanning:sender];
 				
 		}
 			break;
@@ -196,6 +199,7 @@
 		{
 			CGPoint where = dragLastPoint;
 			
+			self.layer.superlayer.masksToBounds = YES;
 			self.layer.position = where;
 			self.layer.zPosition = 0;
 			self.layer.shadowColor = [UIColor clearColor].CGColor;
@@ -206,7 +210,7 @@
 			rect.origin.y = dragLastPoint.y;
 			[concept setRect:self.frame];
 			
-			[delegate conceptObject:self panningEnded:sender];
+			[myDelegate conceptObject:self panningEnded:sender];
 
 		}
 

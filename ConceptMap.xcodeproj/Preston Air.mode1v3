@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7FA6C9A1245854400E1084F</string>
+										<string>E7FA6CE912458AB700E1084F</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -361,9 +361,9 @@
 											<string>E7FA6C571245643100E1084F</string>
 											<string>E7FA6C5B1245643100E1084F</string>
 											<string>E7FA6C721245831300E1084F</string>
-											<string>E7FA6C8B1245848A00E1084F</string>
-											<string>E7FA6C92124584D600E1084F</string>
-											<string>E7FA6C991245854400E1084F</string>
+											<string>E7FA6CCD1245876B00E1084F</string>
+											<string>E7FA6CE812458AB700E1084F</string>
+											<string>E7FA6CDA124589D700E1084F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -592,7 +592,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptMapView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
