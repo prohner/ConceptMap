@@ -83,6 +83,7 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+	FUNCTION_LOG(@"Saving object context");
 	[DATABASE saveManagedObjectContext];
 }
 

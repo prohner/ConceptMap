@@ -63,7 +63,7 @@
 										  action:@selector(handlePanGesture:)];
 	[self addGestureRecognizer:panGesture];
 	[panGesture release];
-	FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
 	return self;
 }

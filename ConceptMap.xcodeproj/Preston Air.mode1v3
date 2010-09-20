@@ -274,8 +274,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>1</integer>
+									<integer>27</integer>
+									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -317,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CoreDataTest.m</string>
+								<string>ConceptMapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CoreDataTest.m</string>
+										<string>ConceptMapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E792D2FE1245D1B500873C15</string>
+										<string>E792D36E124712A100873C15</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -344,25 +344,25 @@
 											<string>E721DBCD123F35A900B39962</string>
 											<string>E721DBEA123F375200B39962</string>
 											<string>E754AC80123F39C2002801A3</string>
-											<string>E754AC98123F3C75002801A3</string>
 											<string>E754AC99123F3C75002801A3</string>
 											<string>E754AD88123FCBAC002801A3</string>
-											<string>E7F7329512424DD300B0A441</string>
 											<string>E7FA6B9612432AB800E1084F</string>
 											<string>E7FA6BC7124330EA00E1084F</string>
 											<string>E7FA6BC8124330EA00E1084F</string>
 											<string>E7FA6BC9124330EA00E1084F</string>
-											<string>E7FA6C571245643100E1084F</string>
-											<string>E7FA6C5B1245643100E1084F</string>
-											<string>E792D2E91245CDB500873C15</string>
 											<string>E792D2EA1245CDB500873C15</string>
 											<string>E792D2EB1245CDB500873C15</string>
-											<string>E792D2EC1245CDB500873C15</string>
 											<string>E792D2ED1245CDB500873C15</string>
-											<string>E792D2EE1245CDB500873C15</string>
-											<string>E792D2EF1245CDB500873C15</string>
-											<string>E792D2F61245CE5000873C15</string>
-											<string>E792D2F71245CE5000873C15</string>
+											<string>E792D31812465E1A00873C15</string>
+											<string>E792D32312465ED300873C15</string>
+											<string>E792D33812470ECE00873C15</string>
+											<string>E792D33912470ECE00873C15</string>
+											<string>E792D33A12470ECE00873C15</string>
+											<string>E792D34D12470F8100873C15</string>
+											<string>E792D3661247129300873C15</string>
+											<string>E792D3671247129300873C15</string>
+											<string>E792D3681247129300873C15</string>
+											<string>E792D3691247129300873C15</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -584,12 +584,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ConceptMapViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

@@ -15,7 +15,10 @@
 	ConceptObject *selectedConceptObject;
 	NSMutableArray *conceptObjects;
 	ConceptObject *possibleDropTarget;
+	Document *currentDocument;
 }
+
+@property (nonatomic, retain) Document *currentDocument;
 
 - (CGSize)idealContentSize;
 - (void)addConceptObjectToView:(ConceptObject *)co;

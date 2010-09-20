@@ -15,11 +15,14 @@
 	UIToolbar *toolbar;
 	UIBarButtonItem *documentsButton;
 	DocumentsViewController *documentsViewController;
+	ConceptMapView *conceptMapView;
 }
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *documentsButton;
 
 - (IBAction)documentButtonTapped:(id)sender;
+- (IBAction)addConcept:(id)sender;
+
 @end
 

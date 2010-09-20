@@ -36,7 +36,7 @@
 	
     CGRect viewFrame = self.view.frame;
     viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
-    ConceptMapView *conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
+    conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 
     [self.view addSubview:conceptMapView];
@@ -73,6 +73,19 @@
 	[popover presentPopoverFromBarButtonItem:documentsButton 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
+}
+
+- (IBAction)addConcept:(id)sender {
+	FUNCTION_LOG(@"View=(%i), Doc=(%i)", conceptMapView, conceptMapView.currentDocument);
+	Concept *concept = [DATABASE newConceptTitled:@"New Item" 
+									   toDocument:conceptMapView.currentDocument];
+
+	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+	co.backgroundColor = [UIColor darkGrayColor];
+	[co setFrame:CGRectMake(40, 40, 120, 120)];
+
+	[conceptMapView addConceptObjectToView:co];
+			
 }
 
 @end

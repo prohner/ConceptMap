@@ -11,27 +11,32 @@
 
 @implementation ConceptMapView
 
+@synthesize currentDocument;
+
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
 		conceptObjects = [[NSMutableArray alloc] init];
 		
         // Initialization code
-		Document *doc = [DATABASE currentDocument];
+		self.currentDocument = [DATABASE currentDocument];
 		int i = 0;
-		for (Concept *concept in [doc concepts]) {
-			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-			FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i", concept.title, concept.originX, concept.originY, concept.width, concept.height, co);
-			if (i++ % 2 == 0) {
-				co.backgroundColor = [UIColor purpleColor];
-			} else {
-				co.backgroundColor = [UIColor greenColor];
+		for (Concept *concept in [currentDocument concepts]) {
+			if ( ! concept.parentConcept) {
+				ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+				FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i", concept.title, concept.originX, concept.originY, concept.width, concept.height, co);
+				if (i++ % 2 == 0) {
+					co.backgroundColor = [UIColor purpleColor];
+				} else {
+					co.backgroundColor = [UIColor greenColor];
+				}
+				
+				[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
+				// TODO doublecheck the reference counts here...should I release after adding
+				[self addConceptObjectToView:co];
 			}
-
-			[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
-			// TODO doublecheck the reference counts here...should I release after adding
-			[self addConceptObjectToView:co];
 		}
 		
+		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 		[self addGestureRecognizer:singleTap];
 		[singleTap release];
@@ -61,6 +66,7 @@
 }
 
 #pragma mark ConceptObjectDelegate
+
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected {
 	FUNCTION_LOG();
 	if (isSelected) {
@@ -76,7 +82,7 @@
 	CGPoint panPoint = [sender locationInView:self];
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
-	FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
+	//FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
 	
 	BOOL foundHomeForPanningObject = NO;
 	for (ConceptObject *possibleDropTargetCandidate in conceptObjects) {
