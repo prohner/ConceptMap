@@ -39,12 +39,7 @@
 	self.backgroundColor = [[UIColor blackColor] CGColor];
 	self.borderColor = [[UIColor yellowColor] CGColor];
 	
-	
-	//	r = self.bounds;
-	//	r.size.width = 172;
-	//	r.size.height = 50;
-	//	self.bounds = r;
-	
+	[self setValue:LAYER_NAME_TITLE forKey:LAYER_NAME];
 	
 	return self;
 }

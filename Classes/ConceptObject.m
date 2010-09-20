@@ -28,6 +28,7 @@
     self.layer.cornerRadius = 12;
 	self.layer.borderColor = [[UIColor clearColor] CGColor];
 	self.layer.masksToBounds = YES;
+	[self.layer setValue:LAYER_NAME_OBJECT forKey:LAYER_NAME];
 
 	
 	[self setFrame:frame];
@@ -43,6 +44,7 @@
 	deleteBox.alignmentMode = kCAAlignmentCenter;
 	deleteBox.foregroundColor = [[UIColor blackColor] CGColor];
 	deleteBox.hidden = YES;
+	[deleteBox setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
 	[self.layer addSublayer:deleteBox];
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
@@ -132,7 +134,23 @@
 
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
-	self.selected = !self.selected;
+	CGPoint viewPoint = [sender locationInView:self.superview];
+	CALayer *hitLayer = [self.layer hitTest:viewPoint];
+	
+	NSString *layerName = (NSString *)[hitLayer valueForKey:LAYER_NAME];
+	FUNCTION_LOG(@"tapped on %@ (%i)", layerName, hitLayer);
+	
+	if ([layerName isEqualToString:LAYER_NAME_TITLE]) {
+		FUNCTION_LOG(@"Title tapped");
+		self.selected = YES;
+	} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
+		FUNCTION_LOG(@"Delete tapped");
+		self.selected = YES;
+	} else {
+		self.selected = !self.selected;
+	}
+
+
 }
 
 - (IBAction)handlePinchGesture:(UIPinchGestureRecognizer *)sender {

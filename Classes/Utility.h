@@ -25,6 +25,10 @@
 
 #define DATABASE	[DataController sharedDataController]
 
+#define LAYER_NAME			@"layerName"
+#define LAYER_NAME_OBJECT	@"conceptObject"
+#define LAYER_NAME_TITLE	@"titleLayer"
+#define LAYER_NAME_DELETE	@"deleteLayer"
 
 @interface Utility : NSObject {
 
