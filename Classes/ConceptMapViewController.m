@@ -77,12 +77,13 @@
 
 - (IBAction)addConcept:(id)sender {
 	FUNCTION_LOG(@"View=(%i), Doc=(%i)", conceptMapView, conceptMapView.currentDocument);
+	CGRect r = CGRectMake(40, 40, 120, 120);
 	Concept *concept = [DATABASE newConceptTitled:@"New Item" 
 									   toDocument:conceptMapView.currentDocument];
-
+	[concept setRect:r];
 	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
 	co.backgroundColor = [UIColor darkGrayColor];
-	[co setFrame:CGRectMake(40, 40, 120, 120)];
+	[co setFrame:r];
 
 	[conceptMapView addConceptObjectToView:co];
 			

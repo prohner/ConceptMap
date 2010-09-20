@@ -11,7 +11,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, myDelegate, concept, isActiveDropTarget;
+@synthesize selected, myDelegate, concept, isActiveDropTarget, conceptObjectLabel;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -143,10 +143,22 @@
 	if ([layerName isEqualToString:LAYER_NAME_TITLE]) {
 		FUNCTION_LOG(@"Title tapped");
 		self.selected = YES;
+		conceptObjectTitleViewController = [[ConceptObjectTitleViewController alloc] initWithNibName:@"ConceptObjectTitleViewController" bundle:nil];
+		conceptObjectTitleViewController.conceptObject = self;
+		
+		UIPopoverController *popover = [[[UIPopoverController alloc] 
+										 initWithContentViewController:conceptObjectTitleViewController] retain];
+		
+		[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
+								 inView:self 
+			   permittedArrowDirections:UIPopoverArrowDirectionAny 
+							   animated:YES];
+		
+		
 	} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
 		FUNCTION_LOG(@"Delete tapped");
 		self.selected = YES;
-		NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete this %@?", concept.title];
+		NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete %@?", concept.title];
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item"
 														message:msg
 													   delegate:self 

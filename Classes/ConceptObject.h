@@ -11,6 +11,7 @@
 #import "Utility.h"
 #import "DataController.h"
 #import "ConceptObjectLabel.h"
+#import "ConceptObjectTitleViewController.h"
 
 @protocol ConceptObjectDelegate;
 
@@ -24,6 +25,7 @@
 	
 	CATextLayer *deleteBox;
 	ConceptObjectLabel *conceptObjectLabel;
+	ConceptObjectTitleViewController *conceptObjectTitleViewController;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	
@@ -35,6 +37,7 @@
 @property (nonatomic) BOOL isActiveDropTarget;
 @property (nonatomic, retain) id <ConceptObjectDelegate> myDelegate;
 @property (nonatomic, retain) Concept *concept;
+@property (nonatomic, retain) ConceptObjectLabel *conceptObjectLabel;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;

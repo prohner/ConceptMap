@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Utility.h"
 
+@class ConceptObject;
+
 @interface ConceptObjectTitleViewController : UIViewController {
 	UITextField *objectTitle;
-
+	ConceptObject *conceptObject;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *objectTitle;
+@property (nonatomic, retain) ConceptObject *conceptObject;
 
 - (IBAction)titleTextHasChanged:(id)sender;
 

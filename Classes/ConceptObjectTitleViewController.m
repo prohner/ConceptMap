@@ -7,11 +7,11 @@
 //
 
 #import "ConceptObjectTitleViewController.h"
-
+#import "ConceptObject.h"
 
 @implementation ConceptObjectTitleViewController
 
-@synthesize objectTitle;
+@synthesize objectTitle, conceptObject;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -28,6 +28,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.contentSizeForViewInPopover = CGSizeMake(195.0, 70.0);
+
+	// No idea why, but wiring from IB wasn't working.  Went old school.
+	[objectTitle addTarget:self action:@selector(titleTextHasChanged:) forControlEvents:UIControlEventEditingChanged];	
+}
+
+- (void)viewWillAppear:(BOOL)animated { 
+	[super viewWillAppear: animated]; // My custom code here 
+	objectTitle.text = conceptObject.concept.title;
+	[objectTitle becomeFirstResponder];
 }
 
 
@@ -58,7 +67,10 @@
 }
 
 - (IBAction)titleTextHasChanged:(id)sender {
-	FUNCTION_LOG();
+	conceptObject.concept.title = objectTitle.text;
+	[conceptObject.conceptObjectLabel setTitle:conceptObject.concept.title];
+	FUNCTION_LOG(@"Title is now (%@)", conceptObject.concept.title);
+	[conceptObject.conceptObjectLabel setNeedsDisplay];
 }
 
 @end
