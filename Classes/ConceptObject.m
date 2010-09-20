@@ -146,11 +146,26 @@
 	} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
 		FUNCTION_LOG(@"Delete tapped");
 		self.selected = YES;
+		NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete this %@?", concept.title];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item"
+														message:msg
+													   delegate:self 
+											  cancelButtonTitle:@"No" 
+											  otherButtonTitles:@"Yes", nil];
+		[alert show];
+		[alert release];
 	} else {
 		self.selected = !self.selected;
 	}
+}
 
-
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	FUNCTION_LOG(@"Chose item %i", buttonIndex);
+	if (buttonIndex == 1) {
+		[self removeFromSuperview];
+		[[concept document] removeConceptsObject:self.concept];
+		// TODO is a pointer to this ConceptObject being held still in ConceptMapView?
+	}
 }
 
 - (IBAction)handlePinchGesture:(UIPinchGestureRecognizer *)sender {

@@ -14,7 +14,7 @@
 
 @protocol ConceptObjectDelegate;
 
-@interface ConceptObject : UIView {
+@interface ConceptObject : UIView <UIAlertViewDelegate> {
 	UIView *myContainingView;
 	BOOL selected;
 	

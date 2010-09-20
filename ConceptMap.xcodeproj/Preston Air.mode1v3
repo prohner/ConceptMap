@@ -282,7 +282,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 190}, {342, 718}}</string>
+							<string>{{0, 0}, {342, 718}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,7 +331,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E792D3E01247206900873C15</string>
+										<string>E792D3FD1247257A00873C15</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -341,7 +341,6 @@
 											<string>E794E234123DE9CE002F0EF8</string>
 											<string>E716CD9D123F2631003F21D3</string>
 											<string>E716CDFB123F3113003F21D3</string>
-											<string>E716CDFD123F3113003F21D3</string>
 											<string>E721DBCD123F35A900B39962</string>
 											<string>E721DBEA123F375200B39962</string>
 											<string>E754AC80123F39C2002801A3</string>
@@ -350,10 +349,7 @@
 											<string>E7FA6BC8124330EA00E1084F</string>
 											<string>E7FA6BC9124330EA00E1084F</string>
 											<string>E792D2EB1245CDB500873C15</string>
-											<string>E792D2ED1245CDB500873C15</string>
 											<string>E792D31812465E1A00873C15</string>
-											<string>E792D32312465ED300873C15</string>
-											<string>E792D33812470ECE00873C15</string>
 											<string>E792D33912470ECE00873C15</string>
 											<string>E792D3681247129300873C15</string>
 											<string>E792D37F1247195300873C15</string>
@@ -364,9 +360,13 @@
 											<string>E792D3C112471EC500873C15</string>
 											<string>E792D3C212471EC500873C15</string>
 											<string>E792D3C312471EC500873C15</string>
-											<string>E792D3CF12471FAA00873C15</string>
 											<string>E792D3D91247204E00873C15</string>
-											<string>E792D3DA1247204E00873C15</string>
+											<string>E792D3ED124724E900873C15</string>
+											<string>E792D3EE124724E900873C15</string>
+											<string>E792D3EF124724E900873C15</string>
+											<string>E792D3FA1247257A00873C15</string>
+											<string>E792D3FB1247257A00873C15</string>
+											<string>E792D3FC1247257A00873C15</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
