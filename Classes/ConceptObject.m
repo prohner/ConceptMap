@@ -33,17 +33,16 @@
 	
 	[self setFrame:frame];
 	
-	deleteBox = [CATextLayer layer];
-	deleteBox.borderColor = [[UIColor yellowColor] CGColor];
-	deleteBox.backgroundColor = [[UIColor redColor] CGColor];
-	deleteBox.borderWidth = 5;
-	deleteBox.cornerRadius = 25;
-	deleteBox.string = @"X";
-	deleteBox.font = CGFontCreateWithFontName((CFStringRef)[UIFont boldSystemFontOfSize:25].fontName); 
-	deleteBox.fontSize = 25;
-	deleteBox.alignmentMode = kCAAlignmentCenter;
-	deleteBox.foregroundColor = [[UIColor blackColor] CGColor];
+	deleteBox = [CALayer layer];
+	deleteBox.borderColor = [[UIColor clearColor] CGColor];
+	deleteBox.backgroundColor = [[UIColor clearColor] CGColor];
+	//deleteBox.borderWidth = 5;
+	//deleteBox.cornerRadius = 25;
+	deleteBox.masksToBounds = YES;
 	deleteBox.hidden = YES;
+	UIImage *c = [UIImage imageNamed:@"delete.jpg"];
+	deleteBox.contents = (id)c.CGImage;
+						  
 	[deleteBox setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
 	[self.layer addSublayer:deleteBox];
 	

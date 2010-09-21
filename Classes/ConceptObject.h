@@ -23,7 +23,7 @@
 	
     id <ConceptObjectDelegate> myDelegate;
 	
-	CATextLayer *deleteBox;
+	CALayer *deleteBox;
 	ConceptObjectLabel *conceptObjectLabel;
 	ConceptObjectTitleViewController *conceptObjectTitleViewController;
 	CGFloat pinchScale;
