@@ -21,6 +21,7 @@
 @property (nonatomic, retain) Document *currentDocument;
 
 - (CGSize)idealContentSize;
-- (void)addConceptObjectToView:(ConceptObject *)co;
+- (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view;
+- (ConceptObject *)getParentConceptObjectOf:(Concept *)concept;
 
 @end

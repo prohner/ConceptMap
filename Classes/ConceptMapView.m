@@ -21,19 +21,24 @@
 		self.currentDocument = [DATABASE currentDocument];
 		int i = 0;
 		for (Concept *concept in [currentDocument concepts]) {
-			if ( ! concept.parentConcept) {
-				ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-				FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i", concept.title, concept.originX, concept.originY, concept.width, concept.height, co);
-				if (i++ % 2 == 0) {
-					co.backgroundColor = [UIColor purpleColor];
-				} else {
-					co.backgroundColor = [UIColor greenColor];
-				}
-				
-				[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
-				// TODO doublecheck the reference counts here...should I release after adding
-				[self addConceptObjectToView:co];
+			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+			FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i", concept.title, concept.originX, concept.originY, concept.width, concept.height, co);
+			if (i++ % 2 == 0) {
+				co.backgroundColor = [UIColor purpleColor];
+			} else {
+				co.backgroundColor = [UIColor greenColor];
 			}
+			
+			[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
+			UIView *containerView;
+			if (concept.parentConcept) {
+				containerView = [self getParentConceptObjectOf:concept];
+			} else {
+				containerView = self;
+			}
+			// TODO doublecheck the reference counts here...should I release after adding
+			[self addConceptObject:co toView:containerView];
+
 		}
 		
 		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
@@ -49,9 +54,22 @@
     [super dealloc];
 }
 
-- (void)addConceptObjectToView:(ConceptObject *)co {
+- (ConceptObject *)getParentConceptObjectOf:(Concept *)concept {
+	FUNCTION_LOG();
+	ConceptObject *parentConceptObject = nil;
+	for (ConceptObject *co in conceptObjects) {
+		if (co.concept == concept.parentConcept) {
+			parentConceptObject	= co;
+			FUNCTION_LOG(@"%@ goes into %@", concept.title, parentConceptObject.concept.title);
+			break;
+		}
+	}
+	return parentConceptObject;
+}
+
+- (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view {
 	co.myDelegate = self;
-	[self addSubview:co];
+	[view addSubview:co];
 	[conceptObjects addObject:co];
 }
 

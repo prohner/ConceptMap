@@ -101,6 +101,7 @@
 
 - (void)addConceptObject:(ConceptObject *)newConceptObject {
 	[self addSubview:newConceptObject];
+	newConceptObject.concept.parentConcept = self.concept;
 }
 
 - (void)layoutSubviews {
