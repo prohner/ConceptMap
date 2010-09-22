@@ -68,7 +68,7 @@
 	STAssertEqualStrings(doc.title, currentDocumentTitle, @"Titles don't match.  Expected %@, but got %@", currentDocumentTitle, [(Document *)[[DATABASE documents] objectAtIndex:0] title]);
 }
 
-- (void)testUpdatedDateIsMaintained {
+- (void)testDocumentDatesAreMaintained {
 	Document *doc;
 	
     doc = [DATABASE newDocumentTitled:@"doc 1"];
@@ -105,8 +105,25 @@
 	[conceptOuter addConcept:conceptInner];
 	STAssertTrue(conceptInner.parentConcept == conceptOuter, @"Contained concept's parent should be set");
 	
-	
     [DATABASE saveManagedObjectContext];
+}
+
+- (void)testConceptDatesAreMaintained {
+	Document *doc;
+	Concept *concept;
+
+    doc = [DATABASE newDocumentTitled:@"doc 1"];
+	concept = [DATABASE newConceptTitled:@"concept" toDocument:doc];
+    [DATABASE saveManagedObjectContext];
+	
+	NSArray *documents = [DATABASE documents];
+	doc = (Document *)[documents objectAtIndex:0];
+	
+	concept = [[doc concepts] anyObject];
+	
+    STAssertNotNil(concept, @"The concept was not found.");
+    STAssertNotNil(concept.lastSaved, @"The last saved date should have been set.");
+	
 }
 
 @end

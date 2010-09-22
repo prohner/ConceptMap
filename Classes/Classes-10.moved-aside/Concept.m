@@ -12,17 +12,16 @@
 
 @implementation Concept 
 
-@dynamic bodyDisplayString;
+@dynamic height;
+@dynamic bodyString;
+@dynamic title;
+@dynamic created;
 @dynamic width;
 @dynamic originY;
-@dynamic title;
-@dynamic height;
-@dynamic created;
 @dynamic originX;
-@dynamic lastSaved;
-@dynamic concepts;
 @dynamic parentConcept;
-@dynamic connectedConcepts;
 @dynamic document;
+@dynamic concepts;
+@dynamic connectedConcepts;
 
 @end

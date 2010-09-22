@@ -18,8 +18,8 @@
 @dynamic title;
 @dynamic height;
 @dynamic created;
+@dynamic newAttribute;
 @dynamic originX;
-@dynamic lastSaved;
 @dynamic concepts;
 @dynamic parentConcept;
 @dynamic connectedConcepts;

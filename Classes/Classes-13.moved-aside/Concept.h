@@ -20,8 +20,8 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * height;
 @property (nonatomic, retain) NSDate * created;
+@property (nonatomic, retain) NSDate * newAttribute;
 @property (nonatomic, retain) NSNumber * originX;
-@property (nonatomic, retain) NSDate * lastSaved;
 @property (nonatomic, retain) NSSet* concepts;
 @property (nonatomic, retain) Concept * parentConcept;
 @property (nonatomic, retain) NSSet* connectedConcepts;

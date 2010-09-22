@@ -30,7 +30,7 @@
 	self.layer.masksToBounds = YES;
 	[self.layer setValue:LAYER_NAME_OBJECT forKey:LAYER_NAME];
 
-	
+
 	[self setFrame:frame];
 	
 	deleteBox = [CALayer layer];
@@ -40,7 +40,7 @@
 	//deleteBox.cornerRadius = 25;
 	deleteBox.masksToBounds = YES;
 	deleteBox.hidden = YES;
-	UIImage *c = [UIImage imageNamed:@"delete.jpg"];
+	UIImage *c = [UIImage imageNamed:@"delete.png"];
 	deleteBox.contents = (id)c.CGImage;
 						  
 	[deleteBox setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];

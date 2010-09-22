@@ -56,8 +56,8 @@
 		E75ABDF11239F68D004A5C76 /* ConceptMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */; };
 		E75ABDFE1239F77C004A5C76 /* GeneralTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABDFD1239F77C004A5C76 /* GeneralTests.m */; };
 		E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
-		E774F62B1248778200CC1918 /* delete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E774F62A1248778200CC1918 /* delete.jpg */; };
-		E774F62C1248778200CC1918 /* delete.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E774F62A1248778200CC1918 /* delete.jpg */; };
+		E774F6991249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
+		E774F69A1249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
 		E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
 		E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */; };
 		E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
@@ -119,7 +119,7 @@
 		E75ABCC61239F4D0004A5C76 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "google-toolbox-for-mac-read-only/GTMDefines.h"; sourceTree = "<group>"; };
 		E75ABDFC1239F77C004A5C76 /* GeneralTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralTests.h; sourceTree = "<group>"; };
 		E75ABDFD1239F77C004A5C76 /* GeneralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTests.m; sourceTree = "<group>"; };
-		E774F62A1248778200CC1918 /* delete.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = delete.jpg; path = Images/delete.jpg; sourceTree = "<group>"; };
+		E774F6981249B80C00CC1918 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = Images/delete.png; sourceTree = "<group>"; };
 		E792D373124718CA00873C15 /* ConceptObjectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectTitleViewController.h; sourceTree = "<group>"; };
 		E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectTitleViewController.m; sourceTree = "<group>"; };
 		E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectTitleViewController.xib; path = Classes/ConceptObjectTitleViewController.xib; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 		E716CDD6123F2983003F21D3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E774F62A1248778200CC1918 /* delete.jpg */,
+				E774F6981249B80C00CC1918 /* delete.png */,
 				E716CDD8123F2A55003F21D3 /* image2.jpeg */,
 				E716CDD9123F2A55003F21D3 /* image1.jpeg */,
 			);
@@ -394,7 +394,7 @@
 				E716CDDC123F2A55003F21D3 /* image2.jpeg in Resources */,
 				E716CDDD123F2A55003F21D3 /* image1.jpeg in Resources */,
 				E792D379124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */,
-				E774F62C1248778200CC1918 /* delete.jpg in Resources */,
+				E774F69A1249B80C00CC1918 /* delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +409,7 @@
 				E716CDDA123F2A55003F21D3 /* image2.jpeg in Resources */,
 				E716CDDB123F2A55003F21D3 /* image1.jpeg in Resources */,
 				E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */,
-				E774F62B1248778200CC1918 /* delete.jpg in Resources */,
+				E774F6991249B80C00CC1918 /* delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

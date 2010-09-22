@@ -35,6 +35,7 @@
 		concept.originY = [NSNumber numberWithInt: 300];
 		concept.height = [NSNumber numberWithInt: 200];
 		concept.width = [NSNumber numberWithInt: 200];
+		concept.bodyDisplayString = @"body string";
 		[DATABASE saveManagedObjectContext];
 		
 		doc = [DATABASE newDocumentTitled:@"doc 1"];
@@ -46,12 +47,14 @@
 		concept.originY = [NSNumber numberWithInt: 100];
 		concept.height = [NSNumber numberWithInt: 200];
 		concept.width = [NSNumber numberWithInt: 200];
+		concept.bodyDisplayString = @"body string";
 		
 		concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
 		concept.originX = [NSNumber numberWithInt: 400];
 		concept.originY = [NSNumber numberWithInt: 400];
 		concept.height = [NSNumber numberWithInt: 200];
 		concept.width = [NSNumber numberWithInt: 200];
+		concept.bodyDisplayString = @"body string";
 		[DATABASE saveManagedObjectContext];
 
 	}
