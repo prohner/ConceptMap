@@ -274,8 +274,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>13</integer>
-									<integer>10</integer>
+									<integer>19</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -318,7 +317,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptMapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptMapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E774F65012487E0A00CC1918</string>
+										<string>E774F6921249B45F00CC1918</string>
 										<key>history</key>
 										<array>
 											<string>E75ABDED1239F667004A5C76</string>
@@ -357,15 +356,15 @@
 											<string>E792D3EF124724E900873C15</string>
 											<string>E792D3FA1247257A00873C15</string>
 											<string>E792D3FB1247257A00873C15</string>
-											<string>E792D4131247293100873C15</string>
 											<string>E792D44912472DE700873C15</string>
 											<string>E725A8C2124730DC009C9451</string>
 											<string>E725A8C3124730DC009C9451</string>
 											<string>E774F5F31248559700CC1918</string>
 											<string>E774F60E12486F2C00CC1918</string>
-											<string>E774F63312487C0E00CC1918</string>
-											<string>E774F63B12487C7C00CC1918</string>
-											<string>E774F63C12487C7C00CC1918</string>
+											<string>E774F6551249B19B00CC1918</string>
+											<string>E774F65C1249B26100CC1918</string>
+											<string>E774F6811249B3E700CC1918</string>
+											<string>E774F6821249B3E700CC1918</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

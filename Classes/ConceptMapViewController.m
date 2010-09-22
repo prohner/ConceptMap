@@ -77,15 +77,26 @@
 
 - (IBAction)addConcept:(id)sender {
 	FUNCTION_LOG(@"View=(%i), Doc=(%i)", conceptMapView, conceptMapView.currentDocument);
-	CGRect r = CGRectMake(40, 40, 120, 120);
+
+	CGRect r = CGRectMake(40, 40, 200, 200);
 	Concept *concept = [DATABASE newConceptTitled:@"New Item" 
 									   toDocument:conceptMapView.currentDocument];
 	[concept setRect:r];
 	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-	co.backgroundColor = [UIColor darkGrayColor];
 	[co setFrame:r];
-
-	[conceptMapView addConceptObjectToView:co];
+	co.backgroundColor = [UIColor darkGrayColor];
+	
+	
+	CABasicAnimation *theAnimation;	
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+	theAnimation.duration=0.15;
+	theAnimation.repeatCount=2;
+	theAnimation.autoreverses=YES;
+	theAnimation.fromValue=[NSNumber numberWithFloat:20];
+	theAnimation.toValue=[NSNumber numberWithFloat:45];
+	[co.layer addAnimation:theAnimation forKey:@"animateLayer"];	
+	[conceptMapView addConceptObject:co toView:conceptMapView];
+	
 			
 }
 
