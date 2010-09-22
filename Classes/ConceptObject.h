@@ -29,6 +29,8 @@
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	
+	UITextField *bodyDisplayString;
+	
 	BOOL holdSelected;
 	BOOL isActiveDropTarget;
 }

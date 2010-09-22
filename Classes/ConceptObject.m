@@ -7,6 +7,8 @@
 //
 
 #import "ConceptObject.h"
+#define BODY_DISPLAY_STRING_INDENT_X		10
+#define BODY_DISPLAY_STRING_INDENT_Y		10
 
 
 @implementation ConceptObject
@@ -30,7 +32,6 @@
 	self.layer.masksToBounds = YES;
 	[self.layer setValue:LAYER_NAME_OBJECT forKey:LAYER_NAME];
 
-
 	[self setFrame:frame];
 	
 	deleteBox = [CALayer layer];
@@ -48,7 +49,16 @@
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
 	[self.layer addSublayer:conceptObjectLabel];
-	
+
+	CGRect bodyDisplayStringFrame = CGRectMake(BODY_DISPLAY_STRING_INDENT_X, 
+											   conceptObjectLabel.bounds.size.height, 
+											   frame.size.width - BODY_DISPLAY_STRING_INDENT_X * 2, 
+											   frame.size.height - conceptObjectLabel.bounds.size.height - BODY_DISPLAY_STRING_INDENT_Y);
+	bodyDisplayString = [[UITextField alloc] initWithFrame:bodyDisplayStringFrame];
+	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	bodyDisplayString.backgroundColor = [UIColor brownColor];
+	[self addSubview:bodyDisplayString];
+
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
 										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
 	[self addGestureRecognizer:tapGesture];
@@ -73,6 +83,9 @@
 	concept = newConcept;
 	conceptObjectLabel.title = concept.title;
 	[conceptObjectLabel setNeedsDisplay];
+
+	bodyDisplayString.text = concept.bodyDisplayString;
+	[bodyDisplayString setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)isSelected {
