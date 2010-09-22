@@ -93,9 +93,11 @@
 	if (selected) {
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteBox.hidden = NO;
+		[bodyDisplayString becomeFirstResponder];
 	} else {
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteBox.hidden = YES;
+		[bodyDisplayString resignFirstResponder];
 	}
 
 	[myDelegate conceptObject:self isSelected:selected];

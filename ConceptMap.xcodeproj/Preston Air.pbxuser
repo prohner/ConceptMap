@@ -274,6 +274,7 @@
 			E774F7541249C3CA00CC1918 /* PBXTextBookmark */ = E774F7541249C3CA00CC1918 /* PBXTextBookmark */;
 			E774F7591249C3FA00CC1918 /* PBXTextBookmark */ = E774F7591249C3FA00CC1918 /* PBXTextBookmark */;
 			E774F75C1249C41700CC1918 /* PBXTextBookmark */ = E774F75C1249C41700CC1918 /* PBXTextBookmark */;
+			E774F75F1249C45A00CC1918 /* PBXTextBookmark */ = E774F75F1249C45A00CC1918 /* PBXTextBookmark */;
 			E792D2EB1245CDB500873C15 = E792D2EB1245CDB500873C15 /* PBXTextBookmark */;
 			E792D31812465E1A00873C15 = E792D31812465E1A00873C15 /* PBXTextBookmark */;
 			E792D33912470ECE00873C15 = E792D33912470ECE00873C15 /* PBXTextBookmark */;
@@ -816,7 +817,7 @@
 		isa = PBXTextBookmark;
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		rLen = 1;
-		rLoc = 113;
+		rLoc = 115;
 		rType = 1;
 	};
 	E774F5F61248559700CC1918 /* PBXTextBookmark */ = {
@@ -824,7 +825,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 104";
 		rLen = 0;
-		rLoc = 3971;
+		rLoc = 4059;
 		rType = 0;
 		vrLen = 1157;
 		vrLoc = 2543;
@@ -834,7 +835,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 104";
 		rLen = 0;
-		rLoc = 3971;
+		rLoc = 4059;
 		rType = 0;
 		vrLen = 1435;
 		vrLoc = 0;
@@ -4097,6 +4098,16 @@
 		vrLen = 1096;
 		vrLoc = 3663;
 	};
+	E774F75F1249C45A00CC1918 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
+		name = "ConceptObject.m: 100";
+		rLen = 0;
+		rLoc = 3599;
+		rType = 0;
+		vrLen = 1206;
+		vrLoc = 2697;
+	};
 	E792D2EB1245CDB500873C15 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E75ABC6D1239F24C004A5C76 /* Concept.h */;
@@ -4400,9 +4411,9 @@
 	};
 	E7F87F4D1238AC90003F63CA /* ConceptObject.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1069, 3744}}";
-			sepNavSelRange = "{2099, 0}";
-			sepNavVisRange = "{3663, 1096}";
+			sepNavIntBoundsRect = "{{0, 0}, {1069, 3718}}";
+			sepNavSelRange = "{3599, 0}";
+			sepNavVisRange = "{2697, 1206}";
 		};
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {
