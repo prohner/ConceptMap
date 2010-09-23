@@ -315,6 +315,16 @@
 
 - (void)doSettings:(id)sender {
 	FUNCTION_LOG(@"Do settings");
+	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
+	//conceptObjectSettingsViewController.conceptObject = self;
+	UIPopoverController *popover = [[[UIPopoverController alloc] 
+									 initWithContentViewController:conceptObjectSettingsViewController] retain];
+	
+	[popover presentPopoverFromRect:[settingsButton.layer convertRect:settingsButton.bounds  
+													toLayer:self.layer]
+							 inView:self 
+		   permittedArrowDirections:UIPopoverArrowDirectionAny 
+						   animated:YES];
 }
 
 @end

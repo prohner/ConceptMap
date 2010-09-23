@@ -12,6 +12,7 @@
 #import "DataController.h"
 #import "ConceptObjectLabel.h"
 #import "ConceptObjectTitleViewController.h"
+#import "ConceptObjectSettingsViewController.h"
 
 @protocol ConceptObjectDelegate;
 
@@ -27,6 +28,7 @@
 	ConceptObjectLabel *conceptObjectLabel;
 	UIButton *settingsButton;
 	ConceptObjectTitleViewController *conceptObjectTitleViewController;
+	ConceptObjectSettingsViewController *conceptObjectSettingsViewController;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	
