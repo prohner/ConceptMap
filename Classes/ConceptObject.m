@@ -22,6 +22,33 @@
 	return newCO;
 }
  
+- (void)addDeleteButton {
+	deleteButton = [CALayer layer];
+	deleteButton.borderColor = [[UIColor clearColor] CGColor];
+	deleteButton.backgroundColor = [[UIColor whiteColor] CGColor];
+	//deleteButton.borderWidth = 5;
+	//deleteButton.cornerRadius = 25;
+	deleteButton.masksToBounds = YES;
+	deleteButton.hidden = YES;
+	UIImage *c = [UIImage imageNamed:@"delete.png"];
+	deleteButton.contents = (id)c.CGImage;
+	
+	[deleteButton setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
+	[self.layer addSublayer:deleteButton];
+}
+
+- (void)addSettingsButton {
+	settingsButton = [[UIButton buttonWithType:UIButtonTypeInfoDark] retain]; 
+	[settingsButton setFrame:CGRectMake(200, 0, 50, 50)];
+
+	[settingsButton addTarget:self action:@selector(doSettings:) forControlEvents:UIControlEventTouchUpInside];
+ 	settingsButton.enabled = YES;
+	settingsButton.hidden = YES;
+	settingsButton.userInteractionEnabled = YES;
+
+	[self.layer addSublayer:settingsButton.layer];
+}
+
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
 //	[super init];
@@ -34,18 +61,9 @@
 
 	[self setFrame:frame];
 	
-	deleteBox = [CALayer layer];
-	deleteBox.borderColor = [[UIColor clearColor] CGColor];
-	deleteBox.backgroundColor = [[UIColor clearColor] CGColor];
-	//deleteBox.borderWidth = 5;
-	//deleteBox.cornerRadius = 25;
-	deleteBox.masksToBounds = YES;
-	deleteBox.hidden = YES;
-	UIImage *c = [UIImage imageNamed:@"delete.png"];
-	deleteBox.contents = (id)c.CGImage;
-						  
-	[deleteBox setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
-	[self.layer addSublayer:deleteBox];
+	[self addDeleteButton];
+	[self addSettingsButton];
+
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
 	[self.layer addSublayer:conceptObjectLabel];
@@ -92,13 +110,15 @@
 	selected = isSelected;
 	if (selected) {
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
-		deleteBox.hidden = NO;
+		deleteButton.hidden = NO;
 		[bodyDisplayString becomeFirstResponder];
 	} else {
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
-		deleteBox.hidden = YES;
+		deleteButton.hidden = YES;
 		[bodyDisplayString resignFirstResponder];
 	}
+	settingsButton.hidden = deleteButton.hidden;
+ 	settingsButton.enabled = ! settingsButton.hidden;
 
 	[myDelegate conceptObject:self isSelected:selected];
 }
@@ -133,14 +153,23 @@
 	r.origin.y -= 5;
 	r.size.height = 40;
 	r.size.width = 40;
-	deleteBox.bounds = r;
-	deleteBox.anchorPoint = CGPointZero;
+	deleteButton.bounds = r;
+	deleteButton.anchorPoint = CGPointZero;
 	
-	pt = deleteBox.position;
-	pt.x = self.bounds.size.width - deleteBox.bounds.size.width - 10;
-	deleteBox.position = pt;
-	deleteBox.backgroundColor = [[UIColor brownColor] CGColor];
-	deleteBox.backgroundColor = deleteBox.borderColor;
+	pt = deleteButton.position;
+	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 10;
+	deleteButton.position = pt;
+	deleteButton.backgroundColor = [[UIColor brownColor] CGColor];
+	deleteButton.backgroundColor = deleteButton.borderColor;
+	
+	r = settingsButton.bounds;
+	r.origin.x -= 50;
+	settingsButton.bounds = r;
+	FUNCTION_LOG(@"(%i, %i) (%i, %i)", r.origin.x, r.origin.y, r.size.width, r.size.height
+				 );
+//	settingsButton.layer.anchorPoint = CGPointZero;
+//	pt = settingsButton.layer.position;
+//	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 20 - settingsButton.bounds.size.width;
 
 	[CATransaction commit];
 }
@@ -153,7 +182,7 @@
 	CALayer *hitLayer = [self.layer hitTest:viewPoint];
 	
 	NSString *layerName = (NSString *)[hitLayer valueForKey:LAYER_NAME];
-	FUNCTION_LOG(@"tapped on %@ (%i)", layerName, hitLayer);
+	FUNCTION_LOG(@" (%i)tapped on %@ (%i)", self, layerName, hitLayer);
 	
 	if ([layerName isEqualToString:LAYER_NAME_TITLE]) {
 		FUNCTION_LOG(@"Title tapped");
@@ -181,6 +210,8 @@
 											  otherButtonTitles:@"Yes", nil];
 		[alert show];
 		[alert release];
+	} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
+		FUNCTION_LOG(@"HIT SETTINGS");
 	} else {
 		self.selected = !self.selected;
 	}
@@ -281,4 +312,9 @@
 			break;				
 	}
 }
+
+- (void)doSettings:(id)sender {
+	FUNCTION_LOG(@"Do settings");
+}
+
 @end

@@ -11,7 +11,7 @@
 
 @implementation ConceptMapView
 
-@synthesize currentDocument;
+@synthesize currentDocument, propertyInspectorButton;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -86,14 +86,15 @@
 #pragma mark ConceptObjectDelegate
 
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected {
-	FUNCTION_LOG();
+	FUNCTION_LOG(@"btn=(%i)", propertyInspectorButton);
 	if (isSelected) {
 		[selectedConceptObject setSelected:NO];	// Unselect already selected one
 		selectedConceptObject = conceptObject;
 	} else {
-		
 		selectedConceptObject = nil;
 	}
+	
+	propertyInspectorButton.enabled = isSelected;
 }
 
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender {

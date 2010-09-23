@@ -16,9 +16,11 @@
 	NSMutableArray *conceptObjects;
 	ConceptObject *possibleDropTarget;
 	Document *currentDocument;
+	UIBarButtonItem *propertyInspectorButton;
 }
 
 @property (nonatomic, retain) Document *currentDocument;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *propertyInspectorButton;
 
 - (CGSize)idealContentSize;
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view;

@@ -23,8 +23,9 @@
 	
     id <ConceptObjectDelegate> myDelegate;
 	
-	CALayer *deleteBox;
+	CALayer *deleteButton;
 	ConceptObjectLabel *conceptObjectLabel;
+	UIButton *settingsButton;
 	ConceptObjectTitleViewController *conceptObjectTitleViewController;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
