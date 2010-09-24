@@ -24,7 +24,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 131.0);
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
 }
 
 
@@ -67,7 +67,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 
@@ -92,6 +92,9 @@
 			break;
 		case 2:
 			cell.textLabel.text = @"Background Picture";
+			break;
+		case 3:
+			cell.textLabel.text = @"Shape";
 			break;
 		default:
 			break;

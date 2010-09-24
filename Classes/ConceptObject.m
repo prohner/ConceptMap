@@ -45,6 +45,7 @@
  	settingsButton.enabled = YES;
 	settingsButton.hidden = YES;
 	settingsButton.userInteractionEnabled = YES;
+	//settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
 
 	[self.layer addSublayer:settingsButton.layer];
 }
