@@ -13,6 +13,7 @@
 #import "ConceptObjectLabel.h"
 #import "ConceptObjectTitleViewController.h"
 #import "ConceptObjectSettingsViewController.h"
+#import "ConceptObjectColorSet.h"
 
 @protocol ConceptObjectDelegate;
 
@@ -56,5 +57,9 @@
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender;
 
 
+@end
+
+@interface Concept(UserInterface)
+- (ConceptObjectColorSet *)conceptObjectColorSet;
 @end
 

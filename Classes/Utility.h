@@ -30,6 +30,13 @@
 #define LAYER_NAME_TITLE	@"titleLayer"
 #define LAYER_NAME_DELETE	@"deleteLayer"
 
+typedef enum ColorSchemeConstantValues {
+	ColorSchemeConstantBlue		= 0,
+	ColorSchemeConstantPurple	= 1,
+	ColorSchemeConstantYellow	= 2,
+	ColorSchemeConstantGreen	= 3	
+} ColorSchemeConstant;
+
 @interface Utility : NSObject {
 
 }

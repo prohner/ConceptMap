@@ -8,7 +8,7 @@
 
 #import "DataController.h"
 #import "SynthesizeSingleton.h"
-
+#import "ConceptObjectColorSet.h"
 
 @implementation DataController
 
@@ -264,6 +264,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 - (void)willSave {
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
+- (ConceptObjectColorSet *)colorSet {
+	ConceptObjectColorSet *cocs = [ConceptObjectColorSet alloc];
+	cocs.colorSchemeConstant = (ColorSchemeConstant)[self.colorSchemeConstant intValue];
+	return cocs;
+}
+
 @end
 
 @implementation Concept(SettingData)

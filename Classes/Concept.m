@@ -2,7 +2,7 @@
 //  Concept.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/21/10.
+//  Created by Preston Rohner on 9/23/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -18,6 +18,7 @@
 @dynamic title;
 @dynamic height;
 @dynamic created;
+@dynamic colorSchemeConstant;
 @dynamic originX;
 @dynamic lastSaved;
 @dynamic concepts;

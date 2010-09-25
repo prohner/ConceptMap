@@ -29,6 +29,8 @@
 		E716CE27123F33D6003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
 		E721DBC7123F359F00B39962 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
 		E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
+		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
+		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD7641239F9B300B73998 /* CoreDataTest.m */; };
 		E72DD7701239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
 		E72DD7711239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
@@ -92,6 +94,8 @@
 		E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentTableViewCell.xib; path = Classes/DocumentTableViewCell.xib; sourceTree = "<group>"; };
 		E716CDD8123F2A55003F21D3 /* image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpeg; path = Images/image2.jpeg; sourceTree = "<group>"; };
 		E716CDD9123F2A55003F21D3 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpeg; path = Images/image1.jpeg; sourceTree = "<group>"; };
+		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
+		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
 		E72DD7631239F9B300B73998 /* CoreDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTest.h; sourceTree = "<group>"; };
 		E72DD7641239F9B300B73998 /* CoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTest.m; sourceTree = "<group>"; };
 		E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */,
 				E7E6EB45124B115000276DA9 /* ConceptObjectSettingsViewController.h */,
 				E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */,
+				E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */,
+				E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				E754AD92123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */,
 				E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */,
 				E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
+				E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +500,7 @@
 				E754AD91123FCCD2002801A3 /* ConceptObjectLabel.m in Sources */,
 				E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */,
 				E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
+				E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -64,9 +64,9 @@
 	
 	[self addDeleteButton];
 	[self addSettingsButton];
-
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
+	//conceptObjectLabel.	= concept.conceptObjectColorSet.titleBackgroundColor;
 	[self.layer addSublayer:conceptObjectLabel];
 
 	CGRect bodyDisplayStringFrame = CGRectMake(BODY_DISPLAY_STRING_INDENT_X, 
@@ -75,7 +75,7 @@
 											   frame.size.height - conceptObjectLabel.bounds.size.height - BODY_DISPLAY_STRING_INDENT_Y);
 	bodyDisplayString = [[UITextField alloc] initWithFrame:bodyDisplayStringFrame];
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	bodyDisplayString.backgroundColor = [UIColor brownColor];
+	bodyDisplayString.backgroundColor = [UIColor clearColor];
 	[self addSubview:bodyDisplayString];
 
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -100,6 +100,11 @@
 
 - (void)setConcept:(Concept *)newConcept {
 	concept = newConcept;
+
+	self.backgroundColor = concept.conceptObjectColorSet.backgroundColor;
+	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
+	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
+	
 	conceptObjectLabel.title = concept.title;
 	[conceptObjectLabel setNeedsDisplay];
 
@@ -326,6 +331,15 @@
 							 inView:self 
 		   permittedArrowDirections:UIPopoverArrowDirectionAny 
 						   animated:YES];
+}
+
+@end
+
+@implementation Concept(UserInterface)
+- (ConceptObjectColorSet *)conceptObjectColorSet {
+	ConceptObjectColorSet *newColorSet = [[ConceptObjectColorSet alloc] init];
+	newColorSet.colorSchemeConstant = [self.colorSchemeConstant intValue];
+	return newColorSet;
 }
 
 @end

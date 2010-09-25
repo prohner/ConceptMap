@@ -21,13 +21,9 @@
 		self.currentDocument = [DATABASE currentDocument];
 		int i = 0;
 		for (Concept *concept in [currentDocument concepts]) {
+			concept.colorSchemeConstant = [NSNumber numberWithInt:++i % 3];
 			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
 			FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i", concept.title, concept.originX, concept.originY, concept.width, concept.height, co);
-			if (i++ % 2 == 0) {
-				co.backgroundColor = [UIColor purpleColor];
-			} else {
-				co.backgroundColor = [UIColor greenColor];
-			}
 			
 			[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
 			UIView *containerView;

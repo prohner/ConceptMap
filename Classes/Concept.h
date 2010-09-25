@@ -2,7 +2,7 @@
 //  Concept.h
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/21/10.
+//  Created by Preston Rohner on 9/23/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSNumber * height;
 @property (nonatomic, retain) NSDate * created;
+@property (nonatomic, retain) NSNumber * colorSchemeConstant;
 @property (nonatomic, retain) NSNumber * originX;
 @property (nonatomic, retain) NSDate * lastSaved;
 @property (nonatomic, retain) NSSet* concepts;
