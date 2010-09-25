@@ -34,7 +34,8 @@ typedef enum ColorSchemeConstantValues {
 	ColorSchemeConstantBlue		= 0,
 	ColorSchemeConstantPurple	= 1,
 	ColorSchemeConstantYellow	= 2,
-	ColorSchemeConstantGreen	= 3	
+	ColorSchemeConstantGreen	= 3,	
+	ColorSchemeConstantMAX
 } ColorSchemeConstant;
 
 @interface Utility : NSObject {

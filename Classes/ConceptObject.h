@@ -47,6 +47,7 @@
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;
+- (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
 
 @end
 

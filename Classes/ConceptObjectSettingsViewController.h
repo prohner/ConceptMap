@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ConceptObject;
 
 @interface ConceptObjectSettingsViewController : UITableViewController {
-
+	ConceptObject *conceptObject;
 }
+
+@property (nonatomic, retain) ConceptObject *conceptObject;
 
 @end

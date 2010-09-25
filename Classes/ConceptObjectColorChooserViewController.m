@@ -1,37 +1,33 @@
 //
-//  ConceptObjectSettingsViewController.m
+//  ConceptObjectColorChooserViewController.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/22/10.
+//  Created by Preston Rohner on 9/24/10.
 //  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
-#import "ConceptObjectSettingsViewController.h"
 #import "ConceptObjectColorChooserViewController.h"
-#import "ConceptObject.h"
 
-@implementation ConceptObjectSettingsViewController
+
+@implementation ConceptObjectColorChooserViewController
 
 @synthesize conceptObject;
-
-#define ROW_COLOR		0
 
 #pragma mark -
 #pragma mark View lifecycle
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+	FUNCTION_LOG();
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
+	self.title = @"Color Scheme";
 
-	self.title = @"Settings";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
 }
-
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -66,40 +62,41 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
+    FUNCTION_LOG();
     return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    FUNCTION_LOG();
+    return ColorSchemeConstantMAX;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    FUNCTION_LOG();
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     // Configure the cell...
 	switch (indexPath.row) {
-		case ROW_COLOR:
-			cell.textLabel.text = @"Colors";
+		case ColorSchemeConstantBlue:
+			cell.textLabel.text = @"Blue";
 			break;
-		case 1:
-			cell.textLabel.text = @"Font";
+		case ColorSchemeConstantPurple:
+			cell.textLabel.text = @"Purple";
 			break;
-		case 2:
-			cell.textLabel.text = @"Background Picture";
+		case ColorSchemeConstantYellow:
+			cell.textLabel.text = @"Yellow";
 			break;
-		case 3:
-			cell.textLabel.text = @"Shape";
+		case ColorSchemeConstantGreen:
+			cell.textLabel.text = @"Green";
 			break;
 		default:
 			break;
@@ -153,7 +150,6 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
     // Navigation logic may go here. Create and push another view controller.
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -162,26 +158,7 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	switch (indexPath.row) {
-		case ROW_COLOR:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectColorChooserViewController *ctrl = [[ConceptObjectColorChooserViewController alloc] initWithNibName:@"ConceptObjectColorChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
-		default:
-			FUNCTION_LOG(@"At row %i", indexPath.row);
-			break;
-	}
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
-	return indexPath;
+	[conceptObject setConceptColorScheme:indexPath.row];	
 }
 
 

@@ -101,10 +101,6 @@
 - (void)setConcept:(Concept *)newConcept {
 	concept = newConcept;
 
-	self.backgroundColor = concept.conceptObjectColorSet.backgroundColor;
-	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
-	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
-	
 	conceptObjectLabel.title = concept.title;
 	[conceptObjectLabel setNeedsDisplay];
 
@@ -147,6 +143,10 @@
 - (void)layoutSubviews {
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
+	self.backgroundColor = concept.conceptObjectColorSet.backgroundColor;
+	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
+	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
+	
 	[CATransaction flush];
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
@@ -178,6 +178,12 @@
 //	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 20 - settingsButton.bounds.size.width;
 
 	[CATransaction commit];
+}
+
+- (void)setConceptColorScheme:(ColorSchemeConstant)newColor {
+	concept.colorSchemeConstant = [NSNumber numberWithInt:newColor];
+	[self setNeedsLayout];
+	[self setNeedsDisplay];
 }
 
 #pragma mark Handling touches 
@@ -320,11 +326,13 @@
 }
 
 - (void)doSettings:(id)sender {
-	FUNCTION_LOG(@"Do settings");
+	FUNCTION_LOG(@"");
 	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
+	conceptObjectSettingsViewController.conceptObject = self;
+	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
 	//conceptObjectSettingsViewController.conceptObject = self;
 	UIPopoverController *popover = [[[UIPopoverController alloc] 
-									 initWithContentViewController:conceptObjectSettingsViewController] retain];
+									 initWithContentViewController:navCtrl] retain];
 	
 	[popover presentPopoverFromRect:[settingsButton.layer convertRect:settingsButton.bounds  
 													toLayer:self.layer]

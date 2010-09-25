@@ -31,6 +31,10 @@
 		E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
+		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
+		E72A53C1124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72A53BF124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib */; };
+		E72A53C2124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
+		E72A53C3124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72A53BF124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib */; };
 		E72DD7651239F9B300B73998 /* CoreDataTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD7641239F9B300B73998 /* CoreDataTest.m */; };
 		E72DD7701239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
 		E72DD7711239FB0800B73998 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DD76F1239FB0800B73998 /* DataController.m */; };
@@ -96,6 +100,9 @@
 		E716CDD9123F2A55003F21D3 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpeg; path = Images/image1.jpeg; sourceTree = "<group>"; };
 		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
 		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
+		E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorChooserViewController.h; sourceTree = "<group>"; };
+		E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorChooserViewController.m; sourceTree = "<group>"; };
+		E72A53BF124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectColorChooserViewController.xib; path = Classes/ConceptObjectColorChooserViewController.xib; sourceTree = "<group>"; };
 		E72DD7631239F9B300B73998 /* CoreDataTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTest.h; sourceTree = "<group>"; };
 		E72DD7641239F9B300B73998 /* CoreDataTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTest.m; sourceTree = "<group>"; };
 		E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -237,6 +244,7 @@
 				E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */,
 				E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */,
 				2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */,
+				E72A53BF124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib */,
 				E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */,
 				E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -323,6 +331,8 @@
 				E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */,
 				E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */,
 				E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */,
+				E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */,
+				E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -412,6 +422,7 @@
 				E792D379124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */,
 				E774F69A1249B80C00CC1918 /* delete.png in Resources */,
 				E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
+				E72A53C1124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +439,7 @@
 				E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */,
 				E774F6991249B80C00CC1918 /* delete.png in Resources */,
 				E7E6EB4B124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
+				E72A53C3124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +483,7 @@
 				E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */,
 				E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
 				E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
+				E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +514,7 @@
 				E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */,
 				E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
 				E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
+				E72A53C2124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
