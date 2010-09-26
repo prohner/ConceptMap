@@ -17,12 +17,14 @@
 
 @implementation ConceptObjectColorSet
 @synthesize colorSchemeConstant, borderColor, backgroundColor, foregroundColor, titleBorderColor, titleBackgroundColor, titleForegroundColor;
+@synthesize colorSchemeName;
 
 - (void)setColorSchemeConstant:(ColorSchemeConstant)newScheme {
 	switch (newScheme) {
 		// From http://colorschemedesigner.com/
 		case ColorSchemeConstantBlue:
 			// based on 0x0B61A4
+			colorSchemeName			= @"Blue";
 			borderColor				= OPAQUE_HEXCOLOR(0xffbf00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x033e6b);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0x66a3d2);	// right, top
@@ -32,6 +34,7 @@
 			break;
 		case ColorSchemeConstantPurple:
 			// based on 0xB70094
+			colorSchemeName			= @"Purple";
 			borderColor				= OPAQUE_HEXCOLOR(0x4dde00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x770060);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xdb62c4);	// right, top
@@ -41,6 +44,7 @@
 			break;
 		case ColorSchemeConstantYellow:
 			// based on 0xffde00
+			colorSchemeName			= @"Yellow";
 			borderColor				= OPAQUE_HEXCOLOR(0x8805a8);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0xa69000);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xffed73);	// right, top
@@ -50,6 +54,7 @@
 			break;
 		case ColorSchemeConstantGreen:
 			// based on 0x14d100
+			colorSchemeName			= @"Green";
 			borderColor				= OPAQUE_HEXCOLOR(0xff6f00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x0d8800);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0x74e868);	// right, top
@@ -59,6 +64,7 @@
 			break;
 		default:
 			// based on 0x0B61A4
+			colorSchemeName			= @"Blue";
 			borderColor				= OPAQUE_HEXCOLOR(0xffbf00);
 			backgroundColor			= OPAQUE_HEXCOLOR(0x033e6b);
 			foregroundColor			= OPAQUE_HEXCOLOR(0x66a3d2);

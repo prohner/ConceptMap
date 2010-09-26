@@ -11,6 +11,7 @@
 
 @interface ConceptObjectColorSet : NSObject {
 	ColorSchemeConstant colorSchemeConstant;
+	NSString *colorSchemeName;
 	UIColor *borderColor;
 	UIColor *backgroundColor;
 	UIColor *foregroundColor;
@@ -21,6 +22,7 @@
 
 @property (nonatomic) ColorSchemeConstant colorSchemeConstant;
 
+@property (nonatomic, readonly) NSString *colorSchemeName;
 @property (nonatomic, readonly) UIColor *borderColor;
 @property (nonatomic, readonly) UIColor *backgroundColor;
 @property (nonatomic, readonly) UIColor *foregroundColor;

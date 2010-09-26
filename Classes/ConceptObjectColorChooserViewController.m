@@ -82,26 +82,36 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		CGRect r = cell.frame;
+		r.origin.x = 15;
+		UILabel *lbl = [[UILabel alloc] initWithFrame:r];
+		lbl.tag = 1;
+		lbl.backgroundColor = [UIColor clearColor];
+		lbl.font = [UIFont boldSystemFontOfSize:18];
+		[cell addSubview:lbl];
+		[lbl release];
+
+		UIView *bg = [[UIView alloc] initWithFrame:cell.frame];
+		bg.tag = 2;
+		cell.backgroundView = bg;
+		[bg release];	
     }
     
     // Configure the cell...
-	switch (indexPath.row) {
-		case ColorSchemeConstantBlue:
-			cell.textLabel.text = @"Blue";
-			break;
-		case ColorSchemeConstantPurple:
-			cell.textLabel.text = @"Purple";
-			break;
-		case ColorSchemeConstantYellow:
-			cell.textLabel.text = @"Yellow";
-			break;
-		case ColorSchemeConstantGreen:
-			cell.textLabel.text = @"Green";
-			break;
-		default:
-			break;
-	}
-    
+	ConceptObjectColorSet *cocs = [[ConceptObjectColorSet alloc] init];
+	cocs.colorSchemeConstant = (ColorSchemeConstant)indexPath.row;
+	
+	UILabel *lbl = (UILabel *)[cell viewWithTag:1];
+	lbl.text = cocs.colorSchemeName;
+	lbl.textColor = cocs.foregroundColor;
+	
+	UIView *bg = [cell viewWithTag:2];
+	bg.backgroundColor = cocs.backgroundColor;
+
+	[bg release];	
+    [cocs release];
+
+
     return cell;
 }
 
