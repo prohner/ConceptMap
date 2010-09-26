@@ -37,7 +37,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = E7F87E1D12388404003F63CA /* ConceptMap */;
-		activeSDKPreference = iphoneos3.2;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ConceptMap */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ConceptMap */,
@@ -174,6 +174,9 @@
 			E7F50900124EF8C100FD56BA /* PBXTextBookmark */ = E7F50900124EF8C100FD56BA /* PBXTextBookmark */;
 			E7F50901124EF8C100FD56BA /* PBXTextBookmark */ = E7F50901124EF8C100FD56BA /* PBXTextBookmark */;
 			E7F50902124EF8C100FD56BA /* PBXTextBookmark */ = E7F50902124EF8C100FD56BA /* PBXTextBookmark */;
+			E7F50911124EFDA600FD56BA /* PBXTextBookmark */ = E7F50911124EFDA600FD56BA /* PBXTextBookmark */;
+			E7F50912124EFDA600FD56BA /* PBXTextBookmark */ = E7F50912124EFDA600FD56BA /* PBXTextBookmark */;
+			E7F50913124EFDA600FD56BA /* PBXTextBookmark */ = E7F50913124EFDA600FD56BA /* PBXTextBookmark */;
 			E7FA6BC8124330EA00E1084F = E7FA6BC8124330EA00E1084F /* PBXTextBookmark */;
 			E7FA6BC9124330EA00E1084F = E7FA6BC9124330EA00E1084F /* PBXTextBookmark */;
 		};
@@ -238,9 +241,9 @@
 	};
 	E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {999, 910}}";
+			sepNavIntBoundsRect = "{{0, 0}, {999, 949}}";
 			sepNavSelRange = "{2553, 0}";
-			sepNavVisRange = "{279, 2486}";
+			sepNavVisRange = "{279, 2436}";
 			sepNavWindowFrame = "{{15, 58}, {1554, 1115}}";
 		};
 	};
@@ -1091,6 +1094,36 @@
 		rType = 0;
 		vrLen = 1586;
 		vrLoc = 0;
+	};
+	E7F50911124EFDA600FD56BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 46";
+		rLen = 0;
+		rLoc = 1540;
+		rType = 0;
+		vrLen = 1586;
+		vrLoc = 0;
+	};
+	E7F50912124EFDA600FD56BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */;
+		name = "ConceptObjectColorSet.m: 58";
+		rLen = 0;
+		rLoc = 2553;
+		rType = 0;
+		vrLen = 2486;
+		vrLoc = 279;
+	};
+	E7F50913124EFDA600FD56BA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */;
+		name = "ConceptObjectColorSet.m: 58";
+		rLen = 0;
+		rLoc = 2553;
+		rType = 0;
+		vrLen = 2436;
+		vrLoc = 279;
 	};
 	E7F87E1D12388404003F63CA /* ConceptMap */ = {
 		isa = PBXExecutable;

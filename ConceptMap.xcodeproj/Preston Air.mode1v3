@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -275,7 +277,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>38</integer>
+									<integer>26</integer>
+									<integer>20</integer>
+									<integer>19</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -311,14 +315,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapView.m</string>
+								<string>ConceptObjectColorSet.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +328,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapView.m</string>
+										<string>ConceptObjectColorSet.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7F50902124EF8C100FD56BA</string>
+										<string>E7F50913124EFDA600FD56BA</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -370,8 +372,8 @@
 											<string>E747CDB1124E9DDB00F46A36</string>
 											<string>E747CDB7124E9E1A00F46A36</string>
 											<string>E7F508FF124EF8C100FD56BA</string>
-											<string>E7F50900124EF8C100FD56BA</string>
-											<string>E7F50901124EF8C100FD56BA</string>
+											<string>E7F50911124EFDA600FD56BA</string>
+											<string>E7F50912124EFDA600FD56BA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
