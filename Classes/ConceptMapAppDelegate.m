@@ -47,14 +47,16 @@
 		concept.originY = [NSNumber numberWithInt: 100];
 		concept.height = [NSNumber numberWithInt: 200];
 		concept.width = [NSNumber numberWithInt: 200];
+		concept.colorSchemeConstant = [NSNumber numberWithInt:0];
 		concept.bodyDisplayString = @"body string";
 		
 		concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
-		concept.originX = [NSNumber numberWithInt: 400];
-		concept.originY = [NSNumber numberWithInt: 400];
-		concept.height = [NSNumber numberWithInt: 200];
-		concept.width = [NSNumber numberWithInt: 200];
-		concept.bodyDisplayString = @"body string";
+		concept.originX = [NSNumber numberWithInt: 320];
+		concept.originY = [NSNumber numberWithInt: 320];
+		concept.height = [NSNumber numberWithInt: 300];
+		concept.width = [NSNumber numberWithInt: 300];
+		concept.colorSchemeConstant = [NSNumber numberWithInt:2];
+		concept.bodyDisplayString = @"Hi, I am concept #2";
 		[DATABASE saveManagedObjectContext];
 
 	}

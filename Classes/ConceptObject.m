@@ -45,7 +45,7 @@
  	settingsButton.enabled = YES;
 	settingsButton.hidden = YES;
 	settingsButton.userInteractionEnabled = YES;
-	settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
+//	settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
 
 	[self.layer addSublayer:settingsButton.layer];
 }
@@ -145,10 +145,10 @@
 
 - (void)setIsActiveDropTarget:(BOOL)isTarget {
 	if (isTarget) {
-		FUNCTION_LOG(@"YES");
+		//FUNCTION_LOG(@"YES");
 		self.layer.borderColor = [[UIColor redColor] CGColor];
 	} else {
-		FUNCTION_LOG(@"NO");
+		//FUNCTION_LOG(@"NO");
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 	}
 }
@@ -159,7 +159,7 @@
 }
 
 - (void)layoutSubviews {
-	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+	FUNCTION_LOG(@"%@ current bounds = (%.0f, %.0f) (%.0f, %.0f)", concept.title, self.frame.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
 	self.backgroundColor				= concept.conceptObjectColorSet.backgroundColor;
 	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
@@ -189,8 +189,7 @@
 	r = settingsButton.bounds;
 	r.origin.x -= 50;
 	settingsButton.bounds = r;
-	FUNCTION_LOG(@"(%i, %i) (%i, %i)", r.origin.x, r.origin.y, r.size.width, r.size.height
-				 );
+//	FUNCTION_LOG(@"(%.0f, %.0f) (%.0f, %.0f)", r.origin.x, r.origin.y, r.size.width, r.size.height);
 //	settingsButton.layer.anchorPoint = CGPointZero;
 //	pt = settingsButton.layer.position;
 //	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 20 - settingsButton.bounds.size.width;
@@ -306,7 +305,7 @@
 			self.layer.shadowRadius = self.layer.cornerRadius;
 			self.layer.shadowOpacity = 0.35f;
 			self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
-			[self.layer setValue:[NSNumber numberWithFloat:1.10f] forKeyPath:@"transform.scale"];
+			//[self.layer setValue:[NSNumber numberWithFloat:1.10f] forKeyPath:@"transform.scale"];
 			
 			break;
 		case UIGestureRecognizerStateChanged:

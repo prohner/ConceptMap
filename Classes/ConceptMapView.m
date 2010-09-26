@@ -103,7 +103,7 @@
 		if ([possibleDropTargetCandidate.layer containsPoint:receiverPoint] 
 			&& possibleDropTargetCandidate != conceptObject) {
 			
-			FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
+			//FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
 			possibleDropTargetCandidate.isActiveDropTarget = YES;
 			possibleDropTarget = possibleDropTargetCandidate;
 			foundHomeForPanningObject = YES;
@@ -126,7 +126,15 @@
 		[conceptObject removeFromSuperview];
 
 		CGPoint pt = conceptObject.layer.position;
-		pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+		FUNCTION_LOG(@"1 (%.0f, %.0f)", pt.x, pt.y);
+		pt = [self.layer convertPoint:pt toLayer:self.layer];
+		FUNCTION_LOG(@"2 (%.0f, %.0f)", pt.x, pt.y);
+		pt = [possibleDropTarget convertPoint:pt fromView:self];
+		FUNCTION_LOG(@"3 (%.0f, %.0f)", pt.x, pt.y);
+		conceptObject.layer.position = pt;
+		
+		//pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+		//pt = [self.layer convertPoint:pt toLayer:possibleDropTarget.layer];
 		
 		[possibleDropTarget addConceptObject:conceptObject];
 
@@ -134,7 +142,11 @@
 		if (conceptObject.superview != self) {
 			FUNCTION_LOG(@"Just drop it");
 			CGPoint pt = conceptObject.layer.position;
+			FUNCTION_LOG(@"sv (%.0f, %.0f)", [sender locationInView:self].x, [sender locationInView:self].y);
+			FUNCTION_LOG(@"a (%.0f, %.0f)", pt.x, pt.y);
 			pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
+//			pt = [sender locationInView:self];
+			FUNCTION_LOG(@"b (%.0f, %.0f)", pt.x, pt.y);
 			[conceptObject removeFromSuperview];
 			conceptObject.layer.position = pt;
 			[self addSubview:conceptObject];
@@ -143,7 +155,7 @@
 		}
 
 	}
-
+	possibleDropTarget = nil;
 }
 
 @end
