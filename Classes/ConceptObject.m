@@ -76,6 +76,7 @@
 	bodyDisplayString = [[UITextField alloc] initWithFrame:bodyDisplayStringFrame];
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
+	[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
 
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -96,6 +97,12 @@
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
 	return self;
+}
+
+- (void)bodyDisplayStringBecameActive:(id)sender {
+	if (! self.selected) {
+		self.selected = YES;
+	}
 }
 
 - (void)setConcept:(Concept *)newConcept {
