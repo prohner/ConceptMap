@@ -142,9 +142,8 @@
 		if (conceptObject.superview != self) {
 			FUNCTION_LOG(@"Just drop it");
 			CGPoint pt = conceptObject.layer.position;
-			FUNCTION_LOG(@"sv (%.0f, %.0f)", [sender locationInView:self].x, [sender locationInView:self].y);
 			FUNCTION_LOG(@"a (%.0f, %.0f)", pt.x, pt.y);
-			pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
+			pt = [conceptObject.layer.superlayer convertPoint:pt toLayer:self.layer];
 //			pt = [sender locationInView:self];
 			FUNCTION_LOG(@"b (%.0f, %.0f)", pt.x, pt.y);
 			[conceptObject removeFromSuperview];
