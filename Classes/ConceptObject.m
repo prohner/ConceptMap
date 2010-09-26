@@ -142,8 +142,8 @@
 
 - (void)layoutSubviews {
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
-
-	self.backgroundColor = concept.conceptObjectColorSet.backgroundColor;
+	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
+	self.backgroundColor				= concept.conceptObjectColorSet.backgroundColor;
 	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
 	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
 	

@@ -111,19 +111,32 @@
 - (void)testConceptDatesAreMaintained {
 	Document *doc;
 	Concept *concept;
+	ColorSchemeConstant color1 = ColorSchemeConstantBlue;
+	ColorSchemeConstant color2 = ColorSchemeConstantPurple;
+	
 
     doc = [DATABASE newDocumentTitled:@"doc 1"];
-	concept = [DATABASE newConceptTitled:@"concept" toDocument:doc];
+	concept = [DATABASE newConceptTitled:@"concept 1" toDocument:doc];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:color1];
+
+	concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:color2];
     [DATABASE saveManagedObjectContext];
 	
 	NSArray *documents = [DATABASE documents];
 	doc = (Document *)[documents objectAtIndex:0];
-	
-	concept = [[doc concepts] anyObject];
-	
-    STAssertNotNil(concept, @"The concept was not found.");
-    STAssertNotNil(concept.lastSaved, @"The last saved date should have been set.");
-	
+
+	STAssertTrue([[doc concepts] count] == 2, @"Wrong number of concepts");
+	for (Concept *concept in [doc concepts]) {
+		STAssertNotNil(concept, @"The concept was not found.");
+		STAssertNotNil(concept.lastSaved, @"The last saved date should have been set.");
+		if ([concept.title isEqualToString:@"concept 1"]) {
+			STAssertTrue([concept.colorSchemeConstant intValue] == color1, @"%@ color is %@ and should be %i", concept.title, concept.colorSchemeConstant, color1);
+		} else {
+			STAssertTrue([concept.colorSchemeConstant intValue] == color2, @"%@ color is %@ and should be %i", concept.title, concept.colorSchemeConstant, color2);
+		}
+
+	}	
 }
 
 @end

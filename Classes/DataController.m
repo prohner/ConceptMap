@@ -259,9 +259,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 
 @implementation Concept(AutoPopulateFields)
 - (void)awakeFromInsert {
+	FUNCTION_LOG(@"%@ is color %@", self.title, self.colorSchemeConstant);
 	[self setValue:[NSDate date] forKey:@"created"];
 }
 - (void)willSave {
+	FUNCTION_LOG(@"%@ is color %@", self.title, self.colorSchemeConstant);
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
 - (ConceptObjectColorSet *)colorSet {
