@@ -76,6 +76,7 @@
 	bodyDisplayString = [[UITextField alloc] initWithFrame:bodyDisplayStringFrame];
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
+	bodyDisplayString.userInteractionEnabled = NO;
 	[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
 
@@ -84,6 +85,13 @@
 	[self addGestureRecognizer:tapGesture];
 	[tapGesture release];
 
+	UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc]
+												initWithTarget:self 
+												action:@selector(handleObjectDoubleTapGesture:)];
+	doubleTapGesture.numberOfTapsRequired = 2;
+	[self addGestureRecognizer:doubleTapGesture];
+	[doubleTapGesture release];
+	
 	UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] 
 											  initWithTarget:self action:@selector(handlePinchGesture:)];
 	[self addGestureRecognizer:pinchGesture];
@@ -100,7 +108,11 @@
 }
 
 - (void)bodyDisplayStringBecameActive:(id)sender {
-	if (! self.selected) {
+	FUNCTION_LOG(@"%i", sender);
+	if (self.selected) {
+		[bodyDisplayString becomeFirstResponder];
+	} else {
+		[bodyDisplayString resignFirstResponder];
 		self.selected = YES;
 	}
 }
@@ -120,11 +132,10 @@
 	if (selected) {
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteButton.hidden = NO;
-		[bodyDisplayString becomeFirstResponder];
 	} else {
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteButton.hidden = YES;
-		[bodyDisplayString resignFirstResponder];
+		bodyDisplayString.userInteractionEnabled = NO;
 	}
 	settingsButton.hidden = deleteButton.hidden;
  	settingsButton.enabled = ! settingsButton.hidden;
@@ -234,6 +245,11 @@
 	} else {
 		self.selected = !self.selected;
 	}
+}
+
+- (void) handleObjectDoubleTapGesture:(id)sender {
+	FUNCTION_LOG();
+	bodyDisplayString.userInteractionEnabled = YES;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
