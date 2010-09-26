@@ -39,6 +39,24 @@
 			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x329000);	// middle, middle
 			titleForegroundColor	= OPAQUE_HEXCOLOR(0x99ee6b);	// middle, right
 			break;
+		case ColorSchemeConstantYellow:
+			// based on 0xffde00
+			borderColor				= OPAQUE_HEXCOLOR(0x8805a8);	// leftmost, middle
+			backgroundColor			= OPAQUE_HEXCOLOR(0xa69000);	// middle, top
+			foregroundColor			= OPAQUE_HEXCOLOR(0xffed73);	// right, top
+			titleBorderColor		= OPAQUE_HEXCOLOR(0x071871);	// middle, bottom
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x58026d);	// middle, middle
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xbd63d4);	// middle, right
+			break;
+		case ColorSchemeConstantGreen:
+			// based on 0x14d100
+			borderColor				= OPAQUE_HEXCOLOR(0xff6f00);	// leftmost, middle
+			backgroundColor			= OPAQUE_HEXCOLOR(0x0d8800);	// middle, top
+			foregroundColor			= OPAQUE_HEXCOLOR(0x74e868);	// right, top
+			titleBorderColor		= OPAQUE_HEXCOLOR(0x83004f);	// middle, bottom
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0xa64800);	// middle, middle
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xffb073);	// middle, right
+			break;
 		default:
 			// based on 0x0B61A4
 			borderColor				= OPAQUE_HEXCOLOR(0xffbf00);
