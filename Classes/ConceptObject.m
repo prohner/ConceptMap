@@ -45,7 +45,7 @@
  	settingsButton.enabled = YES;
 	settingsButton.hidden = YES;
 	settingsButton.userInteractionEnabled = YES;
-	//settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
+	settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
 
 	[self.layer addSublayer:settingsButton.layer];
 }
@@ -66,7 +66,7 @@
 	[self addSettingsButton];
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
-	//conceptObjectLabel.	= concept.conceptObjectColorSet.titleBackgroundColor;
+	conceptObjectLabel.conceptObject = self;
 	[self.layer addSublayer:conceptObjectLabel];
 
 	CGRect bodyDisplayStringFrame = CGRectMake(BODY_DISPLAY_STRING_INDENT_X, 
@@ -269,6 +269,7 @@
 		case UIGestureRecognizerStateEnded:
 			[concept setRect:self.frame];
 			self.selected = holdSelected;
+			[self setNeedsLayout];
 			break;
 		default:
 			break;

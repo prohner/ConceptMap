@@ -10,13 +10,17 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Utility.h"
 
+@class ConceptObject;
+
 @interface ConceptObjectLabel : CALayer {
 	NSString *title;
 	int titleIndentation;
 	int positionX;
 	float fontSize;
+	ConceptObject *conceptObject;
 }
 
+@property (nonatomic, retain) ConceptObject *conceptObject;
 @property (nonatomic, retain) NSString *title;
 
 @end

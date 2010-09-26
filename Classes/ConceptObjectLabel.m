@@ -7,11 +7,11 @@
 //
 
 #import "ConceptObjectLabel.h"
-
+#import "ConceptObject.h"
 
 @implementation ConceptObjectLabel
 
-@synthesize title;
+@synthesize title, conceptObject;
 
 - (id)init {
 	FUNCTION_LOG();
@@ -33,7 +33,7 @@
 	
 	self.anchorPoint = CGPointZero;
 	self.position = CGPointMake(30, 0);
-	self.borderWidth = 5;
+	self.borderWidth = 3;
 	self.cornerRadius = 5;
 	self.needsDisplayOnBoundsChange = NO;
 	self.backgroundColor = [[UIColor blackColor] CGColor];
@@ -72,9 +72,9 @@
 	
 	//	CGPoint pointStartOfText = CGPointMake(textX, textY);
 	CGContextSetTextPosition(theContext, 0, 0);
-	CGContextSetFillColorWithColor(theContext, [UIColor whiteColor].CGColor);
+	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
 	
-	[title drawAtPoint:CGPointMake(-80, self.bounds.size.height / 2 - size.height / 2 - self.borderWidth) withFont:font];
+	[title drawAtPoint:CGPointMake(-80, self.bounds.size.height / 2 - size.height / 2 - self.borderWidth * 2) withFont:font];
 	//	[title drawAtPoint:CGPointMake(5, 5) withFont:font];
 	
 	UIGraphicsPopContext();
