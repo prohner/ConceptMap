@@ -276,14 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>19</integer>
+									<integer>38</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 35}, {342, 704}}</string>
+							<string>{{0, 0}, {342, 704}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -320,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptMapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptMapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E783B88A125197C3009B0C77</string>
+										<string>E783B9191251A5E5009B0C77</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -357,11 +356,9 @@
 											<string>E747CDAB124E9DAD00F46A36</string>
 											<string>E7F50920124EFFA300FD56BA</string>
 											<string>E7F50939124F010A00FD56BA</string>
-											<string>E7F5093C124F010A00FD56BA</string>
 											<string>E7F50985124F98E300FD56BA</string>
 											<string>E7F50999124F9AD900FD56BA</string>
 											<string>E7F509E4124FAA8200FD56BA</string>
-											<string>E7F50A6E124FF95E00FD56BA</string>
 											<string>E783B76912504BB2009B0C77</string>
 											<string>E783B78512504DBE009B0C77</string>
 											<string>E783B7E0125057D0009B0C77</string>
@@ -369,14 +366,16 @@
 											<string>E783B80312505C6E009B0C77</string>
 											<string>E783B8231250638E009B0C77</string>
 											<string>E783B82E125143E1009B0C77</string>
-											<string>E783B83D125182C1009B0C77</string>
 											<string>E783B83F125182C1009B0C77</string>
 											<string>E783B84D125193EA009B0C77</string>
 											<string>E783B84E125193EA009B0C77</string>
 											<string>E783B850125193EA009B0C77</string>
-											<string>E783B87A125196C0009B0C77</string>
-											<string>E783B888125197C3009B0C77</string>
-											<string>E783B889125197C3009B0C77</string>
+											<string>E783B89A12519BB4009B0C77</string>
+											<string>E783B8E71251A2A1009B0C77</string>
+											<string>E783B8E81251A2A1009B0C77</string>
+											<string>E783B8E91251A2A1009B0C77</string>
+											<string>E783B90F1251A596009B0C77</string>
+											<string>E783B9101251A596009B0C77</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

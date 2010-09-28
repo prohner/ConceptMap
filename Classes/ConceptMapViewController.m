@@ -38,14 +38,33 @@
     viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
+	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
     [self.view addSubview:conceptMapView];
 }
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	FUNCTION_LOG();
     return YES;
 }
+
+//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+//	FUNCTION_LOG();
+////	[self.view sizeToFit];
+//	CGRect viewSize = [[UIScreen mainScreen] applicationFrame];
+//	viewSize.origin.x = 0;
+//	viewSize.origin.y = 0;
+//	[self.view setFrame:viewSize];
+//
+//	//	[toolbar setFrame:CGRectMake(0, 0, 768, 44)];
+//	//	[toolbar sizeToFit];
+//	//	
+//	//	if (popoverController) {
+//	//		CGPoint point = [mapView convertCoordinate:[selectedAnnotation coordinate] toPointToView:mapView];
+//	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+//	//	}
+//}
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
