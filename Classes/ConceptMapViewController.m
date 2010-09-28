@@ -76,6 +76,13 @@
 
 - (IBAction)documentButtonTapped:(id)sender {
 	FUNCTION_LOG();
+	
+	UIGraphicsBeginImageContext(self.view.bounds.size);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	conceptMapView.currentDocument.image = UIImageJPEGRepresentation(viewImage, 1.0);
+	UIGraphicsEndImageContext();
+	
 	documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
 	
 	UIPopoverController *popover = [[[UIPopoverController alloc] 

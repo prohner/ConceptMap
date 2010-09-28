@@ -22,16 +22,16 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {741, 561}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 621}}";
 			sepNavSelRange = "{494, 0}";
 			sepNavVisRange = "{0, 718}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 1534}}";
-			sepNavSelRange = "{1580, 0}";
-			sepNavVisRange = "{596, 1612}";
+			sepNavIntBoundsRect = "{{0, 0}, {1286, 1521}}";
+			sepNavSelRange = "{2577, 0}";
+			sepNavVisRange = "{2098, 1685}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -47,7 +47,7 @@
 			E794E2AF123F24A0002F0EF8 /* DocumentsViewController.m:83 */,
 			E716CDBC123F27F9003F21D3 /* ConceptMapAppDelegate.m:29 */,
 			E754AC62123F392C002801A3 /* CoreDataTest.m:79 */,
-			E792D33312470ECA00873C15 /* ConceptMapViewController.m:110 */,
+			E792D33312470ECA00873C15 /* ConceptMapViewController.m:117 */,
 			E747CD76124E9C1900F46A36 /* ConceptObjectColorChooserViewController.m:171 */,
 			E7F50A09124FAF0800FD56BA /* ConceptObject.m:106 */,
 			E7F50A90124FFC6A00FD56BA /* ConceptMapView.m:162 */,
@@ -770,7 +770,7 @@
 					chosenTableWidths = (
 						103.000000,
 						22.000000,
-						56.080078,
+						47.080078,
 					);
 				};
 				UIContextForLayoutManager = {
@@ -780,8 +780,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {474, 270}}",
-							"{{479, 0}, {252, 270}}",
+							"{{0, 0}, {455, 270}}",
+							"{{460, 0}, {242, 270}}",
 						);
 					};
 					diagramSplitGeometry = {
@@ -790,8 +790,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {731, 272}}",
-							"{{0, 277}, {731, 332}}",
+							"{{0, 0}, {702, 272}}",
+							"{{0, 277}, {702, 359}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -800,8 +800,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {206, 270}}",
-							"{{211, 0}, {263, 270}}",
+							"{{0, 0}, {197, 270}}",
+							"{{202, 0}, {251, 270}}",
 						);
 					};
 				};
@@ -898,7 +898,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{0, 0}, {716, 317}}";
+				"xdesign model diagram view visible rect key" = "{{0, 0}, {687, 344}}";
 			};
 		};
 	};
@@ -918,7 +918,7 @@
 	};
 	E75ABC6B1239F24C004A5C76 /* Document.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {670, 584}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 621}}";
 			sepNavSelRange = "{652, 47}";
 			sepNavVisRange = "{0, 781}";
 		};
@@ -4268,7 +4268,7 @@
 		vrLen = 1991;
 		vrLoc = 5861;
 	};
-	E792D33312470ECA00873C15 /* ConceptMapViewController.m:110 */ = {
+	E792D33312470ECA00873C15 /* ConceptMapViewController.m:117 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -4280,7 +4280,7 @@
 		functionName = "-addConcept:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 110;
+		lineNumber = 117;
 		location = ConceptMap;
 		modificationTime = 307336653.282144;
 		originalNumberOfMultipleMatches = 1;
@@ -4673,7 +4673,7 @@
 	};
 	E7F87E4612388B1C003F63CA /* ConceptMapView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {672, 594}}";
+			sepNavIntBoundsRect = "{{0, 0}, {643, 621}}";
 			sepNavSelRange = "{283, 12}";
 			sepNavVisRange = "{0, 831}";
 		};
@@ -4696,7 +4696,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1230, 4901}}";
 			sepNavSelRange = "{7421, 0}";
-			sepNavVisRange = "{5861, 1991}";
+			sepNavVisRange = "{5861, 2077}";
 		};
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {
