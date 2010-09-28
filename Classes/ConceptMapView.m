@@ -131,25 +131,30 @@
 }
 
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
-	if (possibleDropTarget && possibleDropTarget != conceptObject.superview) {
+	FUNCTION_LOG(@"possibleDropTarget==%i",  possibleDropTarget);
+	if (possibleDropTarget /*&& possibleDropTarget != conceptObject.superview*/) {
 		// TODO keep track of items inside drop target so it knows who it owns
 		
 		FUNCTION_LOG(@"New position (%i, %i)", conceptObject.layer.position.x, conceptObject.layer.position.y);
 		possibleDropTarget.isActiveDropTarget = NO;
-		[conceptObject removeFromSuperview];
 
-		CGPoint pt = conceptObject.layer.position;
-		FUNCTION_LOG(@"1 (%.0f, %.0f)", pt.x, pt.y);
-		pt = [self.layer convertPoint:pt toLayer:self.layer];
-		FUNCTION_LOG(@"2 (%.0f, %.0f)", pt.x, pt.y);
-		pt = [possibleDropTarget convertPoint:pt fromView:self];
-		FUNCTION_LOG(@"3 (%.0f, %.0f)", pt.x, pt.y);
-		conceptObject.layer.position = pt;
-		
-		//pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
-		//pt = [self.layer convertPoint:pt toLayer:possibleDropTarget.layer];
-		
-		[possibleDropTarget addConceptObject:conceptObject];
+		if (possibleDropTarget != conceptObject.superview) {
+			[conceptObject removeFromSuperview];
+			
+			CGPoint pt = conceptObject.layer.position;
+			
+			FUNCTION_LOG(@"1 (%.0f, %.0f)", pt.x, pt.y);
+			pt = [self.layer convertPoint:pt toLayer:self.layer];
+			FUNCTION_LOG(@"2 (%.0f, %.0f)", pt.x, pt.y);
+			pt = [possibleDropTarget convertPoint:pt fromView:self];
+			FUNCTION_LOG(@"3 (%.0f, %.0f)", pt.x, pt.y);
+			conceptObject.layer.position = pt;
+			
+			//pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+			//pt = [self.layer convertPoint:pt toLayer:possibleDropTarget.layer];
+			
+			[possibleDropTarget addConceptObject:conceptObject];
+		}
 
 	} else {
 		if (conceptObject.superview != self) {
@@ -159,7 +164,7 @@
 			pt = [conceptObject.layer.superlayer convertPoint:pt toLayer:self.layer];
 //			pt = [sender locationInView:self];
 			FUNCTION_LOG(@"b (%.0f, %.0f)", pt.x, pt.y);
-			[conceptObject removeFromSuperview];
+			[conceptObject removeFromParentConceptObject];
 			conceptObject.layer.position = pt;
 			[self addSubview:conceptObject];
 		} else {

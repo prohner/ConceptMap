@@ -48,6 +48,8 @@
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;
+- (void)removeConceptObject:(ConceptObject *)newConceptObject;
+- (void)removeFromParentConceptObject;
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
 
 @end

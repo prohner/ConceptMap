@@ -152,7 +152,20 @@
 
 - (void)addConceptObject:(ConceptObject *)newConceptObject {
 	[self addSubview:newConceptObject];
+	[self.concept addConcept:newConceptObject.concept];
 	newConceptObject.concept.parentConcept = self.concept;
+}
+
+- (void)removeConceptObject:(ConceptObject *)newConceptObject {
+	[newConceptObject removeFromSuperview];
+	[self.concept removeConceptsObject:newConceptObject.concept];
+	newConceptObject.concept.parentConcept = nil;
+}
+
+- (void)removeFromParentConceptObject {
+	[self removeFromSuperview];
+	[self.concept.parentConcept removeConceptsObject:self.concept];
+	self.concept.parentConcept = nil;
 }
 
 - (void)layoutSubviews {
