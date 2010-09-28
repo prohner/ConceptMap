@@ -24,24 +24,20 @@
 
 - (void)drawInContext:(CGContextRef)theContext {
 	LOG_RECT(self.frame);
-	NSString * title = @"X";
-	int fontSize = 18;
 	UIGraphicsPushContext(theContext);
 	
-	UIFont *font = [UIFont systemFontOfSize:fontSize];
-	CGSize size = [title sizeWithFont:font];
+	CGContextSetStrokeColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);
+	CGContextSetLineWidth(theContext, 1.0);
+	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);
 	
-	CGContextSetStrokeColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
-	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
-	CGContextAddEllipseInRect(theContext, self.frame);
+	CGRect frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+
+	CGContextAddEllipseInRect(theContext, frame);
+	CGContextFillPath(theContext);
 	CGContextStrokePath(theContext);
 	
-//	//	CGPoint pointStartOfText = CGPointMake(textX, textY);
-//	CGContextSetTextPosition(theContext, 0, 0);
-	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);
-	[title drawAtPoint:CGPointMake(self.bounds.size.width / 2 - size.width / 2
-								   , self.bounds.size.height / 2 - size.height / 2 - self.borderWidth * 2) withFont:font];
-	
+	[@"abc" drawAtPoint:CGPointMake(0, 5) withFont:[UIFont systemFontOfSize:14]];
+
 	UIGraphicsPopContext();
 	
 }

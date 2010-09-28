@@ -186,31 +186,8 @@
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
-	CGRect r;
-	CGPoint pt;
-	
-	r = self.bounds;
-	r.size.height = 40;
-	r.size.width = 40;
-	deleteButton.bounds = r;
-	deleteButton.anchorPoint = CGPointMake(0.5, 0.5);
-	
-	pt = deleteButton.position;
-	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 10;
-	pt.y = 20;
-	deleteButton.position = pt;
-	LOG_POINT(pt);
-	[deleteButton setNeedsDisplay];
-	[deleteButton setNeedsLayout];
-	
-//	r = settingsButton.bounds;
-//	r.origin.x -= 50;
-//	settingsButton.bounds = r;
-
-//	FUNCTION_LOG(@"(%.0f, %.0f) (%.0f, %.0f)", r.origin.x, r.origin.y, r.size.width, r.size.height);
-//	settingsButton.layer.anchorPoint = CGPointZero;
-//	pt = settingsButton.layer.position;
-//	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 20 - settingsButton.bounds.size.width;
+	deleteButton.position = CGPointMake(15, 15);
+	deleteButton.frame = CGRectMake(self.bounds.size.width - 30 - 10, self.layer.borderWidth, 30, 30);
 
 	[CATransaction commit];
 }
