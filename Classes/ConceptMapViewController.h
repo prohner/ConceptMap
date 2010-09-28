@@ -24,5 +24,7 @@
 - (IBAction)documentButtonTapped:(id)sender;
 - (IBAction)addConcept:(id)sender;
 
+- (void)setConceptMapView;
+
 @end
 

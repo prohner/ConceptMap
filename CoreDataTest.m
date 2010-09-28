@@ -56,15 +56,13 @@
 	NSString *currentDocumentTitle = @"doc 2";
 	
     doc = [DATABASE newDocumentTitled:@"doc 1"];
-    [DATABASE saveManagedObjectContext];
 	
     doc = [DATABASE newDocumentTitled:currentDocumentTitle];
 	doc.lastSaved = [doc.lastSaved addTimeInterval:20];
     [DATABASE saveManagedObjectContext];
 	
-	NSArray *documents = [DATABASE documents];
-	doc = (Document *)[documents objectAtIndex:0];
-	STAssertTrue([documents count] == 2, @"Should be 2 document, but found %i", [documents count]);
+	doc = theApplication.currentDocument;
+	STAssertTrue([theApplication.documents count] == 2, @"Should be 2 document, but found %i", [theApplication.documents count]);
 	STAssertEqualStrings(doc.title, currentDocumentTitle, @"Titles don't match.  Expected %@, but got %@", currentDocumentTitle, [(Document *)[[DATABASE documents] objectAtIndex:0] title]);
 }
 
@@ -78,6 +76,17 @@
 	doc = (Document *)[documents objectAtIndex:0];
     STAssertNotNil(doc.created, @"The created date should have been set.");
     STAssertNotNil(doc.lastSaved, @"The updated date should have been set.");
+	
+}
+
+- (void)testApplicationCurrentDocumentIsMaintained {
+	NSString *lastDocTitle = @"doc 2";
+	[DATABASE newDocumentTitled:@"doc 1"];
+	[DATABASE newDocumentTitled:lastDocTitle];
+    [DATABASE saveManagedObjectContext];
+	
+	Document *doc = theApplication.currentDocument;
+    STAssertEqualStrings(doc.title, lastDocTitle, @"", @"");
 	
 }
 

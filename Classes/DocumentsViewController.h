@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "DataController.h"
 
-@interface DocumentsViewController : UITableViewController {
+@class ConceptMapViewController;
 
+@interface DocumentsViewController : UITableViewController {
+	ConceptMapViewController *conceptMapViewController;
 }
+
+@property (nonatomic, retain) ConceptMapViewController *conceptMapViewController;
 
 @end

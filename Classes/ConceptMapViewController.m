@@ -34,13 +34,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	[self setConceptMapView];
+}
+
+- (void)setConceptMapView {
+	if (conceptMapView) {
+		[conceptMapView removeFromSuperview];
+		[conceptMapView release];
+		conceptMapView = nil;
+	}
+	
     CGRect viewFrame = self.view.frame;
     viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+	
     [self.view addSubview:conceptMapView];
+	
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -84,6 +95,7 @@
 	UIGraphicsEndImageContext();
 	
 	documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
+	documentsViewController.conceptMapViewController = self;
 	
 	UIPopoverController *popover = [[[UIPopoverController alloc] 
 									 initWithContentViewController:documentsViewController] retain];

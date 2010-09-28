@@ -2,8 +2,8 @@
 //  Application.h
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/10/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Created by Preston Rohner on 9/11/10.
+//  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
 #import <CoreData/CoreData.h>
@@ -14,16 +14,16 @@
 {
 }
 
-@property (nonatomic, retain) NSSet* newRelationship;
+@property (nonatomic, retain) NSSet* documents;
 
 @end
 
 
 @interface Application (CoreDataGeneratedAccessors)
-- (void)addNewRelationshipObject:(Document *)value;
-- (void)removeNewRelationshipObject:(Document *)value;
-- (void)addNewRelationship:(NSSet *)value;
-- (void)removeNewRelationship:(NSSet *)value;
+- (void)addDocumentsObject:(Document *)value;
+- (void)removeDocumentsObject:(Document *)value;
+- (void)addDocuments:(NSSet *)value;
+- (void)removeDocuments:(NSSet *)value;
 
 @end
 

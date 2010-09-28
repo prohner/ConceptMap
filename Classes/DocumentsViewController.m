@@ -8,15 +8,18 @@
 
 #import "DocumentsViewController.h"
 #import "DocumentTableViewCell.h"
+#import "conceptMapViewController.h"
 
 @implementation DocumentsViewController
 
+@synthesize conceptMapViewController;
 
 #pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.contentSizeForViewInPopover = CGSizeMake(195.0, 210.0);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -149,6 +152,8 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	[DATABASE application].currentDocument = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
+	[conceptMapViewController setConceptMapView];
 }
 
 
@@ -165,6 +170,7 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+	self.conceptMapViewController = nil;
 }
 
 

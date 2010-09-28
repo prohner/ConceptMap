@@ -227,8 +227,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 }
 
 - (Document *)currentDocument {
-	Document *currentDocument = (Document *)[[DATABASE documents] objectAtIndex:0];
-	
+	Document *currentDocument = [DATABASE application].currentDocument;
+	if (!currentDocument) {
+		currentDocument = (Document *)[[DATABASE documents] objectAtIndex:0];
+	}
 	return currentDocument;
 }
 
@@ -239,6 +241,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	doc.created = [NSDate date];
 	doc.lastSaved = [NSDate date];
 	[[self application] addDocumentsObject:doc];
+	[[self application] setCurrentDocument:doc];
 	return doc;
 }
 
