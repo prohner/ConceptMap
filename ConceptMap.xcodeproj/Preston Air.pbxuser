@@ -439,6 +439,11 @@
 			E783BA3B1251BBCD009B0C77 /* PBXTextBookmark */ = E783BA3B1251BBCD009B0C77 /* PBXTextBookmark */;
 			E783BA401251BBEA009B0C77 /* PBXTextBookmark */ = E783BA401251BBEA009B0C77 /* PBXTextBookmark */;
 			E783BA431251BC00009B0C77 /* PBXTextBookmark */ = E783BA431251BC00009B0C77 /* PBXTextBookmark */;
+			E783BA461251BCD3009B0C77 /* PBXTextBookmark */ = E783BA461251BCD3009B0C77 /* PBXTextBookmark */;
+			E783BA471251BCD3009B0C77 /* PBXTextBookmark */ = E783BA471251BCD3009B0C77 /* PBXTextBookmark */;
+			E783BA4C1251BDA1009B0C77 /* PBXTextBookmark */ = E783BA4C1251BDA1009B0C77 /* PBXTextBookmark */;
+			E783BA4F1251BDDE009B0C77 /* PBXTextBookmark */ = E783BA4F1251BDDE009B0C77 /* PBXTextBookmark */;
+			E783BA541251BE1C009B0C77 /* PBXTextBookmark */ = E783BA541251BE1C009B0C77 /* PBXTextBookmark */;
 			E792D3681247129300873C15 = E792D3681247129300873C15 /* PBXTextBookmark */;
 			E792D3FA1247257A00873C15 = E792D3FA1247257A00873C15 /* PBXTextBookmark */;
 			E794E20A123DE694002F0EF8 = E794E20A123DE694002F0EF8 /* PBXTextBookmark */;
@@ -1054,9 +1059,9 @@
 	};
 	E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {873, 663}}";
-			sepNavSelRange = "{860, 0}";
-			sepNavVisRange = "{0, 1177}";
+			sepNavIntBoundsRect = "{{0, 0}, {873, 845}}";
+			sepNavSelRange = "{1402, 0}";
+			sepNavVisRange = "{262, 1485}";
 		};
 	};
 	E783B75012504AB3009B0C77 /* PBXTextBookmark */ = {
@@ -1174,7 +1179,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 33";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 0;
@@ -1214,7 +1219,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 33";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 0;
@@ -1962,7 +1967,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 34";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 0;
@@ -1972,7 +1977,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 34";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 0;
@@ -2022,7 +2027,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 34";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 0;
@@ -3107,7 +3112,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 39";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 0;
@@ -3117,7 +3122,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 34";
 		rLen = 0;
-		rLoc = 989;
+		rLoc = 1697;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 155;
@@ -3137,7 +3142,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 40";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 155;
@@ -3157,7 +3162,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 155;
@@ -3167,7 +3172,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 42";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 155;
@@ -3177,7 +3182,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 40";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 151;
@@ -3187,7 +3192,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 36";
 		rLen = 0;
-		rLoc = 1021;
+		rLoc = 1697;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 151;
@@ -3197,7 +3202,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 41";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1285;
 		vrLoc = 151;
@@ -3207,7 +3212,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 42";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 151;
@@ -3217,7 +3222,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 42";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 151;
@@ -3267,7 +3272,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 42";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 151;
@@ -3277,7 +3282,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 38";
 		rLen = 0;
-		rLoc = 911;
+		rLoc = 910;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 50;
@@ -3287,7 +3292,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 911;
+		rLoc = 910;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 50;
@@ -3457,7 +3462,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 44";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 53;
@@ -3467,7 +3472,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 47";
 		rLen = 0;
-		rLoc = 1106;
+		rLoc = 1699;
 		rType = 0;
 		vrLen = 1485;
 		vrLoc = 53;
@@ -3477,7 +3482,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 47";
 		rLen = 0;
-		rLoc = 1106;
+		rLoc = 1699;
 		rType = 0;
 		vrLen = 1483;
 		vrLoc = 53;
@@ -3487,7 +3492,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 47";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1530;
 		vrLoc = 53;
@@ -3497,7 +3502,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 41";
 		rLen = 0;
-		rLoc = 989;
+		rLoc = 1697;
 		rType = 0;
 		vrLen = 1544;
 		vrLoc = 53;
@@ -3727,7 +3732,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 48";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1546;
 		vrLoc = 50;
@@ -3737,7 +3742,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 0;
@@ -3877,7 +3882,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1105;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 0;
@@ -3887,7 +3892,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1101;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 0;
@@ -3897,7 +3902,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1101;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 0;
@@ -3927,7 +3932,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 37";
 		rLen = 0;
-		rLoc = 1101;
+		rLoc = 1698;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 0;
@@ -4007,7 +4012,7 @@
 		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
 		name = "ConceptObjectDeleteButton.m: 35";
 		rLen = 0;
-		rLoc = 955;
+		rLoc = 954;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 0;
@@ -4091,6 +4096,56 @@
 		rType = 0;
 		vrLen = 2053;
 		vrLoc = 6115;
+	};
+	E783BA461251BCD3009B0C77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
+		name = "ConceptObject.m: 191";
+		rLen = 0;
+		rLoc = 6946;
+		rType = 0;
+		vrLen = 2053;
+		vrLoc = 6115;
+	};
+	E783BA471251BCD3009B0C77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
+		name = "ConceptObjectDeleteButton.m: 43";
+		rLen = 0;
+		rLoc = 1697;
+		rType = 0;
+		vrLen = 1494;
+		vrLoc = 263;
+	};
+	E783BA4C1251BDA1009B0C77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
+		name = "ConceptObjectDeleteButton.m: 48";
+		rLen = 0;
+		rLoc = 1696;
+		rType = 0;
+		vrLen = 1287;
+		vrLoc = 262;
+	};
+	E783BA4F1251BDDE009B0C77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
+		name = "ConceptObjectDeleteButton.m: 41";
+		rLen = 0;
+		rLoc = 1229;
+		rType = 0;
+		vrLen = 1337;
+		vrLoc = 262;
+	};
+	E783BA541251BE1C009B0C77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */;
+		name = "ConceptObjectDeleteButton.m: 44";
+		rLen = 0;
+		rLoc = 1402;
+		rType = 0;
+		vrLen = 1485;
+		vrLoc = 262;
 	};
 	E792D33312470ECA00873C15 /* ConceptMapViewController.m:110 */ = {
 		isa = PBXFileBreakpoint;

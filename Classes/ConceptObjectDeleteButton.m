@@ -31,13 +31,27 @@
 	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);
 	
 	CGRect frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-
 	CGContextAddEllipseInRect(theContext, frame);
 	CGContextFillPath(theContext);
+	
+
+	CGMutablePathRef myPath = CGPathCreateMutable();
+	float indent = 5;
+	CGPathMoveToPoint(myPath,    NULL,  0.0 + indent, 0.0 + indent);
+	CGPathAddLineToPoint(myPath, NULL,  self.bounds.size.height - indent, self.bounds.size.width - indent);
+
+	CGPathMoveToPoint(myPath,    NULL,  0.0 + indent,  self.bounds.size.width - indent);
+	CGPathAddLineToPoint(myPath, NULL,  self.bounds.size.height - indent, 0.0 + indent);
+
+	CGContextBeginPath(theContext);
+	CGContextAddPath(theContext, myPath);
+
+	CGContextSetStrokeColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
+	CGContextSetLineWidth(theContext, 3.0);
 	CGContextStrokePath(theContext);
 	
-	[@"abc" drawAtPoint:CGPointMake(0, 5) withFont:[UIFont systemFontOfSize:14]];
-
+	CFRelease(myPath);
+	
 	UIGraphicsPopContext();
 	
 }
