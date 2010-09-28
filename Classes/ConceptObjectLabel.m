@@ -33,7 +33,7 @@
 	
 	self.anchorPoint = CGPointZero;
 	self.position = CGPointMake(30, 0);
-	self.borderWidth = 3;
+	self.borderWidth = 0;
 	self.cornerRadius = 5;
 	self.needsDisplayOnBoundsChange = NO;
 	self.backgroundColor = [[UIColor blackColor] CGColor];
@@ -75,7 +75,7 @@
 	CGContextSetTextPosition(theContext, 0, 0);
 	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
 	
-	[title drawAtPoint:CGPointMake(-80, self.bounds.size.height / 2 - size.height / 2 - self.borderWidth * 2) withFont:font];
+	[title drawAtPoint:CGPointMake(-80, self.bounds.size.height / 2 - size.height / 2 - 5) withFont:font];
 	//	[title drawAtPoint:CGPointMake(5, 5) withFont:font];
 	
 	UIGraphicsPopContext();
