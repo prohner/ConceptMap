@@ -51,15 +51,6 @@
 
 //- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
 //	FUNCTION_LOG();
-////	[self.view sizeToFit];
-//	CGRect viewSize = [[UIScreen mainScreen] applicationFrame];
-//	viewSize.origin.x = 0;
-//	viewSize.origin.y = 0;
-//	[self.view setFrame:viewSize];
-//
-//	//	[toolbar setFrame:CGRectMake(0, 0, 768, 44)];
-//	//	[toolbar sizeToFit];
-//	//	
 //	//	if (popoverController) {
 //	//		CGPoint point = [mapView convertCoordinate:[selectedAnnotation coordinate] toPointToView:mapView];
 //	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];

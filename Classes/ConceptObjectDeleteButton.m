@@ -31,13 +31,16 @@
 	UIFont *font = [UIFont systemFontOfSize:fontSize];
 	CGSize size = [title sizeWithFont:font];
 	
-	//	CGPoint pointStartOfText = CGPointMake(textX, textY);
-	CGContextSetTextPosition(theContext, 0, 0);
+	CGContextSetStrokeColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
 	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleForegroundColor.CGColor);
-	CGContextSetFillColorWithColor(theContext, [UIColor greenColor].CGColor);
+	CGContextAddEllipseInRect(theContext, self.frame);
+	CGContextStrokePath(theContext);
 	
-	[title drawAtPoint:CGPointMake(-80, self.bounds.size.height / 2 - size.height / 2 - self.borderWidth * 2) withFont:font];
-	//	[title drawAtPoint:CGPointMake(5, 5) withFont:font];
+//	//	CGPoint pointStartOfText = CGPointMake(textX, textY);
+//	CGContextSetTextPosition(theContext, 0, 0);
+	CGContextSetFillColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);
+	[title drawAtPoint:CGPointMake(self.bounds.size.width / 2 - size.width / 2
+								   , self.bounds.size.height / 2 - size.height / 2 - self.borderWidth * 2) withFont:font];
 	
 	UIGraphicsPopContext();
 	

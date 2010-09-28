@@ -38,7 +38,7 @@
  	settingsButton.enabled = YES;
 	settingsButton.hidden = YES;
 	settingsButton.userInteractionEnabled = YES;
-//	settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
+//	settingsButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;// | UIViewAutoresizingFlexibleBottomMargin;
 
 	[self.layer addSublayer:settingsButton.layer];
 }
@@ -193,12 +193,11 @@
 	r.size.height = 40;
 	r.size.width = 40;
 	deleteButton.bounds = r;
-	deleteButton.anchorPoint = CGPointZero;
+	deleteButton.anchorPoint = CGPointMake(0.5, 0.5);
 	
 	pt = deleteButton.position;
 	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 10;
-	pt.x = 40;
-	pt.y = 40;
+	pt.y = 20;
 	deleteButton.position = pt;
 	LOG_POINT(pt);
 	[deleteButton setNeedsDisplay];
