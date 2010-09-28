@@ -23,6 +23,18 @@
 	#define FUNCTION_LOG(fmt, ...) /* */
 #endif
 
+#if FUNCTION_LOGGING
+	#define LOG_RECT(r) NSLog(@"%s origin=(%.0f, %.0f), size=(%.0f, %.0f)", __FUNCTION__, r.origin.x, r.origin.y, r.size.width, r.size.height)
+#else
+	#define LOG_RECT(r) /* */
+#endif
+
+#if FUNCTION_LOGGING
+	#define LOG_POINT(pt) NSLog(@"%s (%.0f, %.0f)", __FUNCTION__, pt.x, pt.y)
+#else
+	#define LOG_POINT(pt) /* */
+#endif
+
 #define DATABASE	[DataController sharedDataController]
 
 #define LAYER_NAME			@"layerName"

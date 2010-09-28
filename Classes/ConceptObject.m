@@ -23,18 +23,11 @@
 }
  
 - (void)addDeleteButton {
-	deleteButton = [CALayer layer];
-	deleteButton.borderColor = [[UIColor clearColor] CGColor];
-	deleteButton.backgroundColor = [[UIColor whiteColor] CGColor];
-	//deleteButton.borderWidth = 5;
-	//deleteButton.cornerRadius = 25;
-	deleteButton.masksToBounds = YES;
-	deleteButton.hidden = YES;
-	UIImage *c = [UIImage imageNamed:@"delete.png"];
-	deleteButton.contents = (id)c.CGImage;
-	
+	deleteButton = [[ConceptObjectDeleteButton alloc] init];	
 	[deleteButton setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
+	deleteButton.conceptObject = self;
 	[self.layer addSublayer:deleteButton];
+
 }
 
 - (void)addSettingsButton {
@@ -62,8 +55,8 @@
 
 	[self setFrame:frame];
 	
-	[self addDeleteButton];
 	[self addSettingsButton];
+	[self addDeleteButton];
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
 	conceptObjectLabel.conceptObject = self;
@@ -125,6 +118,8 @@
 
 	bodyDisplayString.text = concept.bodyDisplayString;
 	[bodyDisplayString setNeedsDisplay];
+	
+	[deleteButton setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)isSelected {
@@ -133,6 +128,7 @@
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteButton.hidden = NO;
 	} else {
+		// self.layer.borderColor = self.concept.conceptObjectColorSet.borderColor.CGColor;
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteButton.hidden = YES;
 		bodyDisplayString.userInteractionEnabled = NO;
@@ -141,6 +137,7 @@
  	settingsButton.enabled = ! settingsButton.hidden;
 
 	[myDelegate conceptObject:self isSelected:selected];
+	[self setNeedsLayout];
 }
 
 - (void)setIsActiveDropTarget:(BOOL)isTarget {
@@ -173,8 +170,6 @@
 	CGPoint pt;
 	
 	r = self.bounds;
-	r.origin.x -= 5;
-	r.origin.y -= 5;
 	r.size.height = 40;
 	r.size.width = 40;
 	deleteButton.bounds = r;
@@ -182,13 +177,17 @@
 	
 	pt = deleteButton.position;
 	pt.x = self.bounds.size.width - deleteButton.bounds.size.width - 10;
+	pt.x = 40;
+	pt.y = 40;
 	deleteButton.position = pt;
-	deleteButton.backgroundColor = [[UIColor brownColor] CGColor];
-	deleteButton.backgroundColor = deleteButton.borderColor;
+	LOG_POINT(pt);
+	[deleteButton setNeedsDisplay];
+	[deleteButton setNeedsLayout];
 	
-	r = settingsButton.bounds;
-	r.origin.x -= 50;
-	settingsButton.bounds = r;
+//	r = settingsButton.bounds;
+//	r.origin.x -= 50;
+//	settingsButton.bounds = r;
+
 //	FUNCTION_LOG(@"(%.0f, %.0f) (%.0f, %.0f)", r.origin.x, r.origin.y, r.size.width, r.size.height);
 //	settingsButton.layer.anchorPoint = CGPointZero;
 //	pt = settingsButton.layer.position;

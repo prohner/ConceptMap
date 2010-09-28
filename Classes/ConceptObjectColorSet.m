@@ -19,6 +19,7 @@
 @synthesize colorSchemeConstant, borderColor, backgroundColor, foregroundColor, titleBorderColor, titleBackgroundColor, titleForegroundColor;
 @synthesize colorSchemeName;
 
+
 - (void)setColorSchemeConstant:(ColorSchemeConstant)newScheme {
 	switch (newScheme) {
 		// From http://colorschemedesigner.com/

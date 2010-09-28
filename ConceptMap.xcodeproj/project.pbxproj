@@ -64,6 +64,8 @@
 		E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
 		E774F6991249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
 		E774F69A1249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
+		E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
+		E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
 		E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
 		E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */; };
 		E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
@@ -135,6 +137,8 @@
 		E75ABDFC1239F77C004A5C76 /* GeneralTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralTests.h; sourceTree = "<group>"; };
 		E75ABDFD1239F77C004A5C76 /* GeneralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTests.m; sourceTree = "<group>"; };
 		E774F6981249B80C00CC1918 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = Images/delete.png; sourceTree = "<group>"; };
+		E783B73E12504919009B0C77 /* ConceptObjectDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectDeleteButton.h; sourceTree = "<group>"; };
+		E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectDeleteButton.m; sourceTree = "<group>"; };
 		E792D373124718CA00873C15 /* ConceptObjectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectTitleViewController.h; sourceTree = "<group>"; };
 		E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectTitleViewController.m; sourceTree = "<group>"; };
 		E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectTitleViewController.xib; path = Classes/ConceptObjectTitleViewController.xib; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 				E792D3721247189D00873C15 /* Settings */,
 				E7F87F4C1238AC90003F63CA /* ConceptObject.h */,
 				E7F87F4D1238AC90003F63CA /* ConceptObject.m */,
+				E783B73E12504919009B0C77 /* ConceptObjectDeleteButton.h */,
+				E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */,
 				E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */,
 				E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */,
 			);
@@ -484,6 +490,7 @@
 				E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
 				E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 				E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
+				E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +522,7 @@
 				E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */,
 				E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 				E72A53C2124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
+				E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

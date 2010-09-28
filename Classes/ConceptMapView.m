@@ -103,10 +103,23 @@
 		if ([possibleDropTargetCandidate.layer containsPoint:receiverPoint] 
 			&& possibleDropTargetCandidate != conceptObject) {
 			
-			//FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
-			possibleDropTargetCandidate.isActiveDropTarget = YES;
-			possibleDropTarget = possibleDropTargetCandidate;
-			foundHomeForPanningObject = YES;
+			BOOL possibleCandidateIsChildOfPannedObject = NO;
+			
+			// Go up the tree and make sure we're not going to drop ourself onto a child
+			CALayer *upLayer = possibleDropTargetCandidate.layer;
+			while (upLayer != nil) {
+				if (upLayer == conceptObject.layer) {
+					possibleCandidateIsChildOfPannedObject = YES;
+				}
+				upLayer = upLayer.superlayer;
+			}
+
+			if (!possibleCandidateIsChildOfPannedObject) {
+				//FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
+				possibleDropTargetCandidate.isActiveDropTarget = YES;
+				possibleDropTarget = possibleDropTargetCandidate;
+				foundHomeForPanningObject = YES;
+			}
 		} 
 	}
 	

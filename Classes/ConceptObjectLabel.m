@@ -63,6 +63,7 @@
 }
 
 - (void)drawInContext:(CGContextRef)theContext {
+	LOG_RECT(self.frame);
 	title = [self valueForKey:@"myObjectName"];
 	NSLog(@"%s %@", __FUNCTION__, title);
 	UIGraphicsPushContext(theContext);
