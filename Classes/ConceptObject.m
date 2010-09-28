@@ -127,11 +127,18 @@
 	if (selected) {
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteButton.hidden = NO;
+		CGRect labelFrame = conceptObjectLabel.frame;
+		labelFrame.origin.y += self.layer.borderWidth;
+		[conceptObjectLabel setFrame:labelFrame];
 	} else {
 		// self.layer.borderColor = self.concept.conceptObjectColorSet.borderColor.CGColor;
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteButton.hidden = YES;
 		bodyDisplayString.userInteractionEnabled = NO;
+
+		CGRect labelFrame = conceptObjectLabel.frame;
+		labelFrame.origin.y -= self.layer.borderWidth;
+		[conceptObjectLabel setFrame:labelFrame];
 	}
 	settingsButton.hidden = deleteButton.hidden;
  	settingsButton.enabled = ! settingsButton.hidden;
