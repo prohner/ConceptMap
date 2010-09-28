@@ -26,6 +26,7 @@
 	deleteButton = [[ConceptObjectDeleteButton alloc] init];	
 	[deleteButton setValue:LAYER_NAME_DELETE forKey:LAYER_NAME];
 	deleteButton.conceptObject = self;
+	deleteButton.hidden = YES;
 	[self.layer addSublayer:deleteButton];
 
 }
@@ -187,7 +188,10 @@
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
 	deleteButton.position = CGPointMake(15, 15);
-	deleteButton.frame = CGRectMake(self.bounds.size.width - 30 - 10, self.layer.borderWidth, 30, 30);
+	int deleteButtonSize = 20;
+	deleteButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+
+	settingsButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth - 40, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
 
 	[CATransaction commit];
 }
