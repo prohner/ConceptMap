@@ -198,6 +198,7 @@
 
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor {
 	concept.colorSchemeConstant = [NSNumber numberWithInt:newColor];
+	[deleteButton setNeedsDisplay];
 	[self setNeedsLayout];
 	[self setNeedsDisplay];
 }
