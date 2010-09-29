@@ -53,10 +53,10 @@
 	int titleIndex = [items indexOfObject:documentTitleHolder];
 
 	documentTitleHolder = [[UIBarButtonItem alloc] initWithCustomView:documentTitle];
-	[items addObject:documentTitleHolder];
+	//[items addObject:documentTitleHolder];
 	[items replaceObjectAtIndex:titleIndex withObject:documentTitleHolder];
 	toolbar.items = items;
-	[documentTitleHolder release];
+	//[documentTitleHolder release];
 	
 	[self setConceptMapView];
 }
