@@ -362,6 +362,7 @@
 							 inView:self 
 		   permittedArrowDirections:UIPopoverArrowDirectionAny 
 						   animated:YES];
+	[navCtrl release];
 }
 
 @end

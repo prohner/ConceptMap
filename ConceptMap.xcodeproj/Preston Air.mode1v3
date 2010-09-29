@@ -267,6 +267,8 @@
 								<string>E75ABCB41239F44B004A5C76</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>E75ABC621239EFFF004A5C76</string>
+								<string>E7F87F4B1238AC7C003F63CA</string>
+								<string>E792D3721247189D00873C15</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>E716CDD6123F2983003F21D3</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -274,13 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
+									<integer>38</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {321, 708}}</string>
+							<string>{{0, 227}, {321, 665}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -292,14 +294,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {338, 726}}</string>
+						<string>{{0, 0}, {338, 683}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>321</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>-1 411 1047 767 0 0 1920 1178 </string>
+						<string>-1 454 1065 724 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -317,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DocumentsViewController.m</string>
+								<string>ConceptMapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DocumentsViewController.m</string>
+										<string>ConceptMapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E783BAEB12525083009B0C77</string>
+										<string>E783BB9112538F81009B0C77</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -340,7 +342,6 @@
 											<string>E7FA6BC9124330EA00E1084F</string>
 											<string>E774F6F21249BD8A00CC1918</string>
 											<string>E774F7141249BF3F00CC1918</string>
-											<string>E7E6EAAB124AFF0C00276DA9</string>
 											<string>E72A5379124DB8A800FEF168</string>
 											<string>E72A537A124DB8A800FEF168</string>
 											<string>E747CD9C124E9D6500F46A36</string>
@@ -354,12 +355,9 @@
 											<string>E783B9281251AB79009B0C77</string>
 											<string>E783B92B1251AB79009B0C77</string>
 											<string>E783B92C1251AB79009B0C77</string>
-											<string>E783BA341251BB9C009B0C77</string>
 											<string>E783BA641252402A009B0C77</string>
 											<string>E783BA651252402A009B0C77</string>
-											<string>E783BA7C1252473E009B0C77</string>
 											<string>E783BA7D1252473E009B0C77</string>
-											<string>E783BA7E1252473E009B0C77</string>
 											<string>E783BA811252473E009B0C77</string>
 											<string>E783BAB912524BB3009B0C77</string>
 											<string>E783BABA12524BB3009B0C77</string>
@@ -368,12 +366,16 @@
 											<string>E783BABD12524BB3009B0C77</string>
 											<string>E783BACA12524C8C009B0C77</string>
 											<string>E783BAD512525012009B0C77</string>
-											<string>E783BAD712525012009B0C77</string>
-											<string>E783BADF12525039009B0C77</string>
-											<string>E783BAE412525074009B0C77</string>
 											<string>E783BAE512525074009B0C77</string>
-											<string>E783BAE612525074009B0C77</string>
-											<string>E783BAE712525074009B0C77</string>
+											<string>E783BB3B12530B85009B0C77</string>
+											<string>E783BB3D12530B85009B0C77</string>
+											<string>E783BB4E12538822009B0C77</string>
+											<string>E783BB5012538822009B0C77</string>
+											<string>E783BB56125388B0009B0C77</string>
+											<string>E783BB7012538DE1009B0C77</string>
+											<string>E783BB7B12538E6A009B0C77</string>
+											<string>E783BB7C12538E6A009B0C77</string>
+											<string>E783BB7D12538E6A009B0C77</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -385,14 +387,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {704, 653}}</string>
+								<string>{{0, 0}, {722, 610}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-1 411 1047 767 0 0 1920 1178 </string>
+								<string>-1 454 1065 724 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>653pt</string>
+							<string>610pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -405,9 +407,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 658}, {704, 68}}</string>
+								<string>{{0, 615}, {722, 68}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-1 411 1047 767 0 0 1920 1178 </string>
+								<string>-1 454 1065 724 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -416,7 +418,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>704pt</string>
+					<string>722pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -579,7 +581,7 @@
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>-1 411 1047 767 0 0 1920 1178 </string>
+	<string>-1 454 1065 724 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -595,14 +597,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CoreDataTest.m</string>
+								<string>ApplicationData.xcdatamodel</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -619,6 +619,8 @@
 							<string>559pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

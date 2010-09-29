@@ -19,13 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.contentSizeForViewInPopover = CGSizeMake(195.0, 210.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 210.0);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.title = @"Documents";
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 /*
@@ -100,13 +101,13 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 
 /*
@@ -154,6 +155,8 @@
 	 */
 	[DATABASE application].currentDocument = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
 	[conceptMapViewController setConceptMapView];
+	
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
