@@ -72,6 +72,7 @@
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
 	bodyDisplayString.userInteractionEnabled = NO;
 	bodyDisplayString.font = [UIFont systemFontOfSize:18.0f];
+	bodyDisplayString.delegate = self;
 	//[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
 
@@ -368,9 +369,18 @@
 }
 
 #pragma mark UITextFieldDelegate
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-	[self bodyDisplayStringBecameActive:textField];
-	
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+	[self bodyDisplayStringBecameActive:textView];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+	concept.bodyDisplayString = textView.text;
+	return YES;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+	concept.bodyDisplayString = textView.text;
 }
 
 @end
