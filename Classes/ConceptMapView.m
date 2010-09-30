@@ -40,6 +40,10 @@
 		[self addGestureRecognizer:singleTap];
 		[singleTap release];
 	}
+	
+//	self.delegate = self;
+//	self.minimumZoomScale = 1.0f;
+//	self.maximumZoomScale = 5.0f;
 
 	return self;
 }
@@ -174,5 +178,16 @@
 	}
 	possibleDropTarget = nil;
 }
+
+#pragma mark UIScrollViewDelegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+	FUNCTION_LOG();
+	return scrollView;
+}
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale {
+	FUNCTION_LOG();
+}
+
 
 @end
