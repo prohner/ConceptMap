@@ -1,15 +1,15 @@
 //
-//  ActionsViewController.m
+//  DocumentSettingsViewController.m
 //  ConceptMap
 //
 //  Created by Preston Rohner on 9/29/10.
 //  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
-#import "ActionsViewController.h"
+#import "DocumentSettingsViewController.h"
 
 
-@implementation ActionsViewController
+@implementation DocumentSettingsViewController
 
 
 #pragma mark -
@@ -19,10 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Actions";
+	self.title = @"Document Settings";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.contentSizeForViewInPopover = CGSizeMake(320.0, 210.0);
@@ -83,16 +83,7 @@
     }
     
     // Configure the cell...
-	switch (indexPath.row) {
-		case 0:
-			cell.textLabel.text = @"Email as Image";
-			break;
-		case 1:
-			cell.textLabel.text = @"Email as List";
-			break;
-		default:
-			break;
-	}
+	cell.textLabel.text = @"Background Color";
     
     return cell;
 }

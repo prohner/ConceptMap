@@ -8,6 +8,7 @@
 
 #import "ConceptMapViewController.h"
 #import "ActionsViewController.h"
+#import "DocumentSettingsViewController.h"
 
 @implementation ConceptMapViewController
 
@@ -127,7 +128,7 @@
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:documentsViewController];
 	[documentsViewController release];
 	
-	self.popover = [[[UIPopoverController alloc] initWithContentViewController:navCtrl] retain];
+	self.popover = [self popoverControllerFor:navCtrl];
 	[popover presentPopoverFromBarButtonItem:documentsButton 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
@@ -139,11 +140,29 @@
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:actionsViewController];
 	[actionsViewController release];
 	
-	self.popover = [[[UIPopoverController alloc] initWithContentViewController:navCtrl] retain];
+	self.popover = [self popoverControllerFor:navCtrl];
 	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
 	[navCtrl release];
+}
+
+- (IBAction)settingsButtonTapped:(id)sender {
+	DocumentSettingsViewController *documentSettingsViewController = [[DocumentSettingsViewController alloc] initWithNibName:@"DocumentSettingsViewController" bundle:nil];
+	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:documentSettingsViewController];
+	[documentSettingsViewController release];
+	
+	self.popover = [self popoverControllerFor:navCtrl];
+	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
+					permittedArrowDirections:UIPopoverArrowDirectionAny 
+									animated:YES];
+	[navCtrl release];
+}
+
+- (UIPopoverController *)popoverControllerFor:(UIViewController *)vc {
+	[self.popover dismissPopoverAnimated:YES];
+	return [[UIPopoverController alloc] initWithContentViewController:vc];
+	
 }
 
 - (IBAction)addConcept:(id)sender {

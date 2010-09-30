@@ -70,6 +70,10 @@
 		E783BC3A1254597E009B0C77 /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC381254597E009B0C77 /* ActionsViewController.xib */; };
 		E783BC3B1254597E009B0C77 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC371254597E009B0C77 /* ActionsViewController.m */; };
 		E783BC3C1254597E009B0C77 /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC381254597E009B0C77 /* ActionsViewController.xib */; };
+		E783BC5E12545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */; };
+		E783BC5F12545C1C009B0C77 /* DocumentSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC5D12545C1C009B0C77 /* DocumentSettingsViewController.xib */; };
+		E783BC6012545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */; };
+		E783BC6112545C1C009B0C77 /* DocumentSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC5D12545C1C009B0C77 /* DocumentSettingsViewController.xib */; };
 		E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
 		E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */; };
 		E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
@@ -146,6 +150,9 @@
 		E783BC361254597E009B0C77 /* ActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
 		E783BC371254597E009B0C77 /* ActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsViewController.m; sourceTree = "<group>"; };
 		E783BC381254597E009B0C77 /* ActionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ActionsViewController.xib; path = Classes/ActionsViewController.xib; sourceTree = "<group>"; };
+		E783BC5B12545C1C009B0C77 /* DocumentSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentSettingsViewController.h; sourceTree = "<group>"; };
+		E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentSettingsViewController.m; sourceTree = "<group>"; };
+		E783BC5D12545C1C009B0C77 /* DocumentSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentSettingsViewController.xib; path = Classes/DocumentSettingsViewController.xib; sourceTree = "<group>"; };
 		E792D373124718CA00873C15 /* ConceptObjectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectTitleViewController.h; sourceTree = "<group>"; };
 		E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectTitleViewController.m; sourceTree = "<group>"; };
 		E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectTitleViewController.xib; path = Classes/ConceptObjectTitleViewController.xib; sourceTree = "<group>"; };
@@ -208,6 +215,8 @@
 				28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */,
 				E7F87E4612388B1C003F63CA /* ConceptMapView.h */,
 				E7F87E4712388B1C003F63CA /* ConceptMapView.m */,
+				E783BC5B12545C1C009B0C77 /* DocumentSettingsViewController.h */,
+				E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */,
 				E794E228123DE84E002F0EF8 /* DocumentsViewController.h */,
 				E794E229123DE84E002F0EF8 /* DocumentsViewController.m */,
 				E794E258123F2077002F0EF8 /* DocumentTableViewCell.h */,
@@ -255,6 +264,7 @@
 			children = (
 				E716CDD6123F2983003F21D3 /* Images */,
 				E783BC381254597E009B0C77 /* ActionsViewController.xib */,
+				E783BC5D12545C1C009B0C77 /* DocumentSettingsViewController.xib */,
 				E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */,
 				E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */,
 				2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */,
@@ -440,6 +450,7 @@
 				E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
 				E72A53C1124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
 				E783BC3A1254597E009B0C77 /* ActionsViewController.xib in Resources */,
+				E783BC5F12545C1C009B0C77 /* DocumentSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +469,7 @@
 				E7E6EB4B124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
 				E72A53C3124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
 				E783BC3C1254597E009B0C77 /* ActionsViewController.xib in Resources */,
+				E783BC6112545C1C009B0C77 /* DocumentSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +516,7 @@
 				E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 				E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
 				E783BC391254597E009B0C77 /* ActionsViewController.m in Sources */,
+				E783BC5E12545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +550,7 @@
 				E72A53C2124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 				E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
 				E783BC3B1254597E009B0C77 /* ActionsViewController.m in Sources */,
+				E783BC6012545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

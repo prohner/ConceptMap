@@ -30,8 +30,9 @@
 - (IBAction)addConcept:(id)sender;
 - (IBAction)documentTitleChanged:(id)sender;
 - (IBAction)actionButtonTapped:(id)sender;
+- (IBAction)settingsButtonTapped:(id)sender;
 
 - (void)setConceptMapView;
-
+- (UIPopoverController *)popoverControllerFor:(UIViewController *)vc;
 @end
 
