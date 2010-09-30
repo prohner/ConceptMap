@@ -67,11 +67,12 @@
 											   conceptObjectLabel.bounds.size.height, 
 											   frame.size.width - BODY_DISPLAY_STRING_INDENT_X * 2, 
 											   frame.size.height - conceptObjectLabel.bounds.size.height - BODY_DISPLAY_STRING_INDENT_Y);
-	bodyDisplayString = [[UITextField alloc] initWithFrame:bodyDisplayStringFrame];
+	bodyDisplayString = [[UITextView alloc] initWithFrame:bodyDisplayStringFrame];
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
 	bodyDisplayString.userInteractionEnabled = NO;
-	[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
+	bodyDisplayString.font = [UIFont systemFontOfSize:18.0f];
+	//[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
 
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -364,6 +365,12 @@
 		   permittedArrowDirections:UIPopoverArrowDirectionAny 
 						   animated:YES];
 	[navCtrl release];
+}
+
+#pragma mark UITextFieldDelegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+	[self bodyDisplayStringBecameActive:textField];
+	
 }
 
 @end

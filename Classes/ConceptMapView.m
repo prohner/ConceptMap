@@ -19,21 +19,7 @@
 		
         // Initialization code
 		self.currentDocument = [DATABASE currentDocument];
-		for (Concept *concept in [currentDocument concepts]) {
-			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-			FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i, color=%@", concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
-			
-			[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
-			UIView *containerView;
-			if (concept.parentConcept) {
-				containerView = [self getParentConceptObjectOf:concept];
-			} else {
-				containerView = self;
-			}
-			// TODO doublecheck the reference counts here...should I release after adding
-			[self addConceptObject:co toView:containerView];
-
-		}
+		[self addSetOfConcepts:[currentDocument concepts] toView:self];
 		
 		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
@@ -50,6 +36,25 @@
 
 - (void)dealloc {
     [super dealloc];
+	[conceptObjects release];
+}
+
+- (void)addSetOfConcepts:(NSSet *)concepts toView:(UIView *)view {
+	for (Concept *concept in [currentDocument concepts]) {
+		ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+		FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i, color=%@", concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
+		
+		[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
+		UIView *containerView;
+		if (concept.parentConcept) {
+			containerView = [self getParentConceptObjectOf:concept];
+		} else {
+			containerView = self;
+		}
+		// TODO doublecheck the reference counts here...should I release after adding
+		[self addConceptObject:co toView:containerView];
+		
+	}
 }
 
 - (ConceptObject *)getParentConceptObjectOf:(Concept *)concept {

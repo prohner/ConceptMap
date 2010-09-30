@@ -56,7 +56,7 @@
 		concept.height = [NSNumber numberWithInt: 300];
 		concept.width = [NSNumber numberWithInt: 300];
 		concept.colorSchemeConstant = [NSNumber numberWithInt:2];
-		concept.bodyDisplayString = @"Hi, I am concept #2";
+		concept.bodyDisplayString = @"Actions:\r\nEmail graphics\r\nEmail list form PDF";
 		[DATABASE saveManagedObjectContext];
 
 	}

@@ -18,7 +18,7 @@
 
 @protocol ConceptObjectDelegate;
 
-@interface ConceptObject : UIView <UIAlertViewDelegate> {
+@interface ConceptObject : UIView <UIAlertViewDelegate, UITextFieldDelegate> {
 	UIView *myContainingView;
 	BOOL selected;
 	
@@ -34,7 +34,7 @@
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	
-	UITextField *bodyDisplayString;
+	UITextView *bodyDisplayString;
 	
 	BOOL holdSelected;
 	BOOL isActiveDropTarget;
@@ -51,6 +51,7 @@
 - (void)removeConceptObject:(ConceptObject *)newConceptObject;
 - (void)removeFromParentConceptObject;
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
+- (void)bodyDisplayStringBecameActive:(id)sender;
 
 @end
 
