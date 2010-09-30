@@ -84,9 +84,11 @@
 #pragma mark ConceptObjectDelegate
 
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected {
-	FUNCTION_LOG(@"btn=(%i)", propertyInspectorButton);
+	FUNCTION_LOG(@"setSelected=(%i)", isSelected);
 	if (isSelected) {
-		[selectedConceptObject setSelected:NO];	// Unselect already selected one
+		if (selectedConceptObject != conceptObject) {
+			[selectedConceptObject setSelected:NO];	// Unselect already selected one
+		}
 		selectedConceptObject = conceptObject;
 	} else {
 		selectedConceptObject = nil;
@@ -106,12 +108,12 @@
 		CGPoint receiverPoint = [self.layer convertPoint:panPoint toLayer:possibleDropTargetCandidate.layer];
 		if ([possibleDropTargetCandidate.layer containsPoint:receiverPoint] 
 			&& possibleDropTargetCandidate != conceptObject) {
-			
+			FUNCTION_LOG(@"Found %@ is a possibleDropTarget %i", possibleDropTarget.concept.title, possibleDropTarget);
 			BOOL possibleCandidateIsChildOfPannedObject = NO;
 			
 			// Go up the tree and make sure we're not going to drop ourself onto a child
 			CALayer *upLayer = possibleDropTargetCandidate.layer;
-			while (upLayer != nil) {
+			while (upLayer != nil && self.layer != upLayer) {
 				if (upLayer == conceptObject.layer) {
 					possibleCandidateIsChildOfPannedObject = YES;
 				}
@@ -131,6 +133,11 @@
 		possibleDropTarget.isActiveDropTarget = NO;
 		possibleDropTarget = nil;
 	}
+#if FUNCTION_LOGGING
+	else {
+		FUNCTION_LOG(@"Found possibleDropTarget %i", possibleDropTarget);
+	}
+#endif
 	
 }
 

@@ -129,7 +129,7 @@
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteButton.hidden = NO;
 		CGRect labelFrame = conceptObjectLabel.frame;
-		labelFrame.origin.y += self.layer.borderWidth;
+		labelFrame.origin.y = self.layer.borderWidth;
 		[conceptObjectLabel setFrame:labelFrame];
 	} else {
 		// self.layer.borderColor = self.concept.conceptObjectColorSet.borderColor.CGColor;
@@ -138,7 +138,7 @@
 		bodyDisplayString.userInteractionEnabled = NO;
 
 		CGRect labelFrame = conceptObjectLabel.frame;
-		labelFrame.origin.y -= self.layer.borderWidth;
+		labelFrame.origin.y = 0;
 		[conceptObjectLabel setFrame:labelFrame];
 	}
 	settingsButton.hidden = deleteButton.hidden;
@@ -243,6 +243,7 @@
 		FUNCTION_LOG(@"HIT SETTINGS");
 	} else {
 		self.selected = !self.selected;
+		FUNCTION_LOG(@"Toggle selected to %i", self.selected);
 	}
 }
 
