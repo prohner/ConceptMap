@@ -7,10 +7,11 @@
 //
 
 #import "ConceptMapViewController.h"
+#import "ActionsViewController.h"
 
 @implementation ConceptMapViewController
 
-@synthesize toolbar, documentsButton, documentTitle, documentTitleHolder;
+@synthesize toolbar, documentsButton, documentTitle, documentTitleHolder, popover;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -103,6 +104,7 @@
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	self.documentTitle = nil;
+	self.popover = nil;
 }
 
 
@@ -119,14 +121,26 @@
 	conceptMapView.currentDocument.image = UIImageJPEGRepresentation(viewImage, 1.0);
 	UIGraphicsEndImageContext();
 	
-	documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
+	DocumentsViewController *documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
 	documentsViewController.conceptMapViewController = self;
 	
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:documentsViewController];
+	[documentsViewController release];
 	
-	UIPopoverController *popover = [[[UIPopoverController alloc] 
-									 initWithContentViewController:navCtrl] retain];
+	self.popover = [[[UIPopoverController alloc] initWithContentViewController:navCtrl] retain];
 	[popover presentPopoverFromBarButtonItem:documentsButton 
+					permittedArrowDirections:UIPopoverArrowDirectionAny 
+									animated:YES];
+	[navCtrl release];
+}
+
+- (IBAction)actionButtonTapped:(id)sender {
+	ActionsViewController *actionsViewController = [[ActionsViewController alloc] initWithNibName:@"ActionsViewController" bundle:nil];
+	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:actionsViewController];
+	[actionsViewController release];
+	
+	self.popover = [[[UIPopoverController alloc] initWithContentViewController:navCtrl] retain];
+	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
 	[navCtrl release];

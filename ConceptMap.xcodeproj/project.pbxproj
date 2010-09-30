@@ -66,6 +66,10 @@
 		E774F69A1249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
 		E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
 		E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
+		E783BC391254597E009B0C77 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC371254597E009B0C77 /* ActionsViewController.m */; };
+		E783BC3A1254597E009B0C77 /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC381254597E009B0C77 /* ActionsViewController.xib */; };
+		E783BC3B1254597E009B0C77 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC371254597E009B0C77 /* ActionsViewController.m */; };
+		E783BC3C1254597E009B0C77 /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E783BC381254597E009B0C77 /* ActionsViewController.xib */; };
 		E792D376124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
 		E792D377124718CA00873C15 /* ConceptObjectTitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */; };
 		E792D378124718CA00873C15 /* ConceptObjectTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */; };
@@ -139,6 +143,9 @@
 		E774F6981249B80C00CC1918 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = Images/delete.png; sourceTree = "<group>"; };
 		E783B73E12504919009B0C77 /* ConceptObjectDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectDeleteButton.h; sourceTree = "<group>"; };
 		E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectDeleteButton.m; sourceTree = "<group>"; };
+		E783BC361254597E009B0C77 /* ActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
+		E783BC371254597E009B0C77 /* ActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionsViewController.m; sourceTree = "<group>"; };
+		E783BC381254597E009B0C77 /* ActionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ActionsViewController.xib; path = Classes/ActionsViewController.xib; sourceTree = "<group>"; };
 		E792D373124718CA00873C15 /* ConceptObjectTitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectTitleViewController.h; sourceTree = "<group>"; };
 		E792D374124718CA00873C15 /* ConceptObjectTitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectTitleViewController.m; sourceTree = "<group>"; };
 		E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectTitleViewController.xib; path = Classes/ConceptObjectTitleViewController.xib; sourceTree = "<group>"; };
@@ -193,6 +200,8 @@
 				E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */,
 				E75ABC621239EFFF004A5C76 /* Data */,
 				E7F87F4B1238AC7C003F63CA /* Concept Object */,
+				E783BC361254597E009B0C77 /* ActionsViewController.h */,
+				E783BC371254597E009B0C77 /* ActionsViewController.m */,
 				1D3623240D0F684500981E51 /* ConceptMapAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */,
@@ -245,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E716CDD6123F2983003F21D3 /* Images */,
+				E783BC381254597E009B0C77 /* ActionsViewController.xib */,
 				E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */,
 				E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */,
 				2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */,
@@ -429,6 +439,7 @@
 				E774F69A1249B80C00CC1918 /* delete.png in Resources */,
 				E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
 				E72A53C1124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
+				E783BC3A1254597E009B0C77 /* ActionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +457,7 @@
 				E774F6991249B80C00CC1918 /* delete.png in Resources */,
 				E7E6EB4B124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */,
 				E72A53C3124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib in Resources */,
+				E783BC3C1254597E009B0C77 /* ActionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +503,7 @@
 				E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 				E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 				E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
+				E783BC391254597E009B0C77 /* ActionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +536,7 @@
 				E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */,
 				E72A53C2124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */,
 				E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */,
+				E783BC3B1254597E009B0C77 /* ActionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

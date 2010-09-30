@@ -16,18 +16,20 @@
 	UIBarButtonItem *documentsButton;
 	UIBarButtonItem *documentTitleHolder;
 	UITextField *documentTitle;
-	DocumentsViewController *documentsViewController;
 	ConceptMapView *conceptMapView;
+	UIPopoverController *popover;
 }
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *documentsButton;
 @property (nonatomic, retain) IBOutlet UITextField *documentTitle;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *documentTitleHolder;
+@property (nonatomic, retain) IBOutlet UIPopoverController *popover;
 
 - (IBAction)documentButtonTapped:(id)sender;
 - (IBAction)addConcept:(id)sender;
 - (IBAction)documentTitleChanged:(id)sender;
+- (IBAction)actionButtonTapped:(id)sender;
 
 - (void)setConceptMapView;
 
