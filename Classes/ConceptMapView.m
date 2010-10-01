@@ -40,7 +40,7 @@
 }
 
 - (void)addSetOfConcepts:(NSSet *)concepts toView:(UIView *)view {
-	for (Concept *concept in [currentDocument concepts]) {
+	for (Concept *concept in concepts) {
 		ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
 		FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i, color=%@", concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
 		
