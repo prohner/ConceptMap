@@ -179,8 +179,8 @@
 }
 
 - (void)layoutSubviews {
-	FUNCTION_LOG(@"%@ current bounds = (%.0f, %.0f) (%.0f, %.0f)", concept.title, self.frame.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
-	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
+//	FUNCTION_LOG(@"%@ current bounds = (%.0f, %.0f) (%.0f, %.0f)", concept.title, self.frame.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+//	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
 	self.backgroundColor				= concept.conceptObjectColorSet.backgroundColor;
 	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
 	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;

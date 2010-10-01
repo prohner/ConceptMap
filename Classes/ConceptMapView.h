@@ -25,6 +25,6 @@
 - (CGSize)idealContentSize;
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view;
 - (ConceptObject *)getParentConceptObjectOf:(Concept *)concept;
-- (void)addSetOfConcepts:(NSSet *)concepts toView:(UIView *)view;
+- (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs;
 
 @end

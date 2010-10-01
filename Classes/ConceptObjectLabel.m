@@ -14,7 +14,6 @@
 @synthesize title, conceptObject;
 
 - (id)init {
-	FUNCTION_LOG();
 	[super init];
 	
 	titleIndentation = 1.0f;
@@ -29,7 +28,6 @@
 	r.size.height = 40;
 	r.size.width = self.superlayer.bounds.size.width - 85 - 30;
 	self.bounds = r;
-	FUNCTION_LOG(@"(%i, %i)", r.origin.x, r.origin.y);
 	
 	self.anchorPoint = CGPointZero;
 	self.position = CGPointMake(30, 0);
@@ -49,7 +47,7 @@
 	
 	UIFont *font = [UIFont systemFontOfSize:fontSize];
 	CGSize size = [title sizeWithFont:font];
-	NSLog(@"%s size.width=%.2f, size.height=%.2f", __FUNCTION__, size.width, size.height);
+//	NSLog(@"%s size.width=%.2f, size.height=%.2f", __FUNCTION__, size.width, size.height);
 	CGRect bounds = self.bounds;
 	bounds.size.width = size.width + titleIndentation * 2 + self.borderWidth * 2 + positionX / 2;
 	bounds.size.height = size.height + self.borderWidth * 2;
@@ -63,9 +61,9 @@
 }
 
 - (void)drawInContext:(CGContextRef)theContext {
-	LOG_RECT(self.frame);
+//	LOG_RECT(self.frame);
 	title = [self valueForKey:@"myObjectName"];
-	NSLog(@"%s %@", __FUNCTION__, title);
+//	NSLog(@"%s %@", __FUNCTION__, title);
 	UIGraphicsPushContext(theContext);
 	
 	UIFont *font = [UIFont systemFontOfSize:fontSize];

@@ -19,7 +19,7 @@
 		
         // Initialization code
 		self.currentDocument = [DATABASE currentDocument];
-		[self addSetOfConcepts:[currentDocument concepts] toView:self];
+		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
 		
 		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
@@ -39,21 +39,26 @@
 	[conceptObjects release];
 }
 
-- (void)addSetOfConcepts:(NSSet *)concepts toView:(UIView *)view {
+- (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs{
 	for (Concept *concept in concepts) {
-		ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-		FUNCTION_LOG(@"%@ (%@, %@) (%@, %@) %i, color=%@", concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
-		
-		[co setFrame:CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue])];
-		UIView *containerView;
-		if (concept.parentConcept) {
-			containerView = [self getParentConceptObjectOf:concept];
-		} else {
-			containerView = self;
+		if (conceptObject.concept == concept.parentConcept) {
+			ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+			FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@) %i, color=%@", tabs, concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
+
+			CGPoint pt = CGPointMake([concept.originX intValue], [concept.originY intValue]);
+//			if (conceptObject != nil) {
+//				pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
+//			}
+			LOG_POINT(pt);
+			[co setFrame:CGRectMake(pt.x, pt.y, [concept.width intValue], [concept.height intValue])];
+			
+			// TODO doublecheck the reference counts here...should I release after adding
+			NSString *tabs2 = [[NSString alloc] initWithFormat:@"%@\t", tabs];
+			[self addConceptObject:co toView:conceptObject];
+			[self addSetOfConcepts:concept.concepts toConceptObject:co withTabs:tabs2];
+			[co release];
 		}
-		// TODO doublecheck the reference counts here...should I release after adding
-		[self addConceptObject:co toView:containerView];
-		
+
 	}
 }
 
@@ -72,6 +77,9 @@
 
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view {
 	co.myDelegate = self;
+	if (view == nil) {
+		view = self;
+	}
 	[view addSubview:co];
 	[conceptObjects addObject:co];
 }

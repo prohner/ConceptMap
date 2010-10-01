@@ -14,16 +14,16 @@
 @synthesize conceptObject;
 
 - (id)init {
-	FUNCTION_LOG();
+//	FUNCTION_LOG();
 	[super init];
 
-	UIImage *c = [UIImage imageNamed:@"delete.png"];
-	self.contents = (id)c.CGImage;
+//	UIImage *c = [UIImage imageNamed:@"delete.png"];
+//	self.contents = (id)c.CGImage;
 	return self;
 }
 
 - (void)drawInContext:(CGContextRef)theContext {
-	LOG_RECT(self.frame);
+//	LOG_RECT(self.frame);
 	UIGraphicsPushContext(theContext);
 	
 	CGContextSetStrokeColorWithColor(theContext, conceptObject.concept.conceptObjectColorSet.titleBackgroundColor.CGColor);

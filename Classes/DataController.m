@@ -266,7 +266,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	[self setValue:[NSDate date] forKey:@"created"];
 }
 - (void)willSave {
-	FUNCTION_LOG(@"%@ is color %@", self.title, self.colorSchemeConstant);
+	FUNCTION_LOG(@"%@ is color %@. origin=(%@, %@)", self.title, self.colorSchemeConstant, self.originX, self.originY);
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
 - (ConceptObjectColorSet *)colorSet {
@@ -305,6 +305,20 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 
 - (void)willSave {
     [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
+}
+
+@end
+
+@implementation Document(FetchingData)
+- (NSSet *)topLevelObjects {
+	// TODO have this take advantage of core data fetching filters
+	NSMutableSet *topLevelObj = [[NSMutableSet alloc] init];
+	for (Concept *concept in [self.concepts allObjects]) {
+		if (!concept.parentConcept) {
+			[topLevelObj addObject:concept];
+		}
+	}
+	return topLevelObj;
 }
 
 @end
