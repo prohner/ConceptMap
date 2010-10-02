@@ -81,7 +81,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					534,
+					531,
 					20,
 					48,
 					43,
@@ -272,6 +272,10 @@
 			E783AB801257056800E2F8CB /* PBXTextBookmark */ = E783AB801257056800E2F8CB /* PBXTextBookmark */;
 			E783AB83125705A200E2F8CB /* PBXTextBookmark */ = E783AB83125705A200E2F8CB /* PBXTextBookmark */;
 			E783AB86125705C100E2F8CB /* PBXTextBookmark */ = E783AB86125705C100E2F8CB /* PBXTextBookmark */;
+			E783AB911257A58C00E2F8CB /* PBXTextBookmark */ = E783AB911257A58C00E2F8CB /* PBXTextBookmark */;
+			E783AB921257A58C00E2F8CB /* PBXTextBookmark */ = E783AB921257A58C00E2F8CB /* PBXTextBookmark */;
+			E783AB931257A58C00E2F8CB /* PBXTextBookmark */ = E783AB931257A58C00E2F8CB /* PBXTextBookmark */;
+			E783AB981257A63700E2F8CB /* PBXTextBookmark */ = E783AB981257A63700E2F8CB /* PBXTextBookmark */;
 			E783B78512504DBE009B0C77 = E783B78512504DBE009B0C77 /* PBXTextBookmark */;
 			E783B82E125143E1009B0C77 = E783B82E125143E1009B0C77 /* PBXTextBookmark */;
 			E783B9281251AB79009B0C77 = E783B9281251AB79009B0C77 /* PBXTextBookmark */;
@@ -2381,6 +2385,46 @@
 		vrLen = 2075;
 		vrLoc = 4554;
 	};
+	E783AB911257A58C00E2F8CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 194";
+		rLen = 0;
+		rLoc = 5270;
+		rType = 0;
+		vrLen = 1148;
+		vrLoc = 0;
+	};
+	E783AB921257A58C00E2F8CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 121";
+		rLen = 0;
+		rLoc = 3901;
+		rType = 0;
+		vrLen = 1941;
+		vrLoc = 3014;
+	};
+	E783AB931257A58C00E2F8CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 45";
+		rLen = 0;
+		rLoc = 1421;
+		rType = 0;
+		vrLen = 1880;
+		vrLoc = 139;
+	};
+	E783AB981257A63700E2F8CB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 44";
+		rLen = 109;
+		rLoc = 1421;
+		rType = 0;
+		vrLen = 1810;
+		vrLoc = 139;
+	};
 	E783B73E12504919009B0C77 /* ConceptObjectDeleteButton.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {672, 617}}";
@@ -2664,9 +2708,9 @@
 	E783BC371254597E009B0C77 /* ActionsViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3938, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3989, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4039, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 7104}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 3120}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1048, 3237}}";
 			sepNavSelRange = "{5213, 0}";
-			sepNavVisRange = "{4497, 2075}";
+			sepNavVisRange = "{0, 1148}";
 		};
 	};
 	E783BC4712545AE7009B0C77 /* PBXTextBookmark */ = {
@@ -3021,9 +3065,9 @@
 	};
 	E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 2574}}";
-			sepNavSelRange = "{3901, 0}";
-			sepNavVisRange = "{3014, 1941}";
+			sepNavIntBoundsRect = "{{0, 0}, {1307, 2600}}";
+			sepNavSelRange = "{1421, 109}";
+			sepNavVisRange = "{139, 1810}";
 		};
 	};
 	E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {

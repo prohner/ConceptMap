@@ -42,7 +42,7 @@ static int recursionDepth = 0;
 
 			CGPoint pt = CGPointMake([concept.originX intValue], [concept.originY intValue]);
 //			if (conceptObject != nil) {
-//				pt = [conceptObject.layer convertPoint:pt toLayer:self.layer];
+//				pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
 //			}
 			LOG_POINT(pt);
 			[co setFrame:CGRectMake(pt.x, pt.y, [concept.width intValue], [concept.height intValue])];

@@ -271,13 +271,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>13</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {321, 814}}</string>
+							<string>{{0, 0}, {321, 739}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -289,14 +289,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {338, 832}}</string>
+						<string>{{0, 0}, {338, 757}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>321</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 305 1116 873 0 0 1920 1178 </string>
+						<string>0 380 1113 798 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ActionsViewController.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ActionsViewController.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E783AB86125705C100E2F8CB</string>
+										<string>E783AB981257A63700E2F8CB</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -368,13 +368,13 @@
 											<string>E783AAC01256EBA000E2F8CB</string>
 											<string>E783AB171256F64400E2F8CB</string>
 											<string>E783AB401256FF2000E2F8CB</string>
-											<string>E783AB411256FF2000E2F8CB</string>
 											<string>E783AB421256FF2000E2F8CB</string>
 											<string>E783AB4F1257002100E2F8CB</string>
 											<string>E783AB501257002100E2F8CB</string>
 											<string>E783AB7D1257056800E2F8CB</string>
 											<string>E783AB7E1257056800E2F8CB</string>
-											<string>E783AB7F1257056800E2F8CB</string>
+											<string>E783AB911257A58C00E2F8CB</string>
+											<string>E783AB921257A58C00E2F8CB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -386,14 +386,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {773, 757}}</string>
+								<string>{{0, 0}, {770, 682}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 305 1116 873 0 0 1920 1178 </string>
+								<string>0 380 1113 798 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>757pt</string>
+							<string>682pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -406,9 +406,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 762}, {773, 70}}</string>
+								<string>{{0, 687}, {770, 70}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 305 1116 873 0 0 1920 1178 </string>
+								<string>0 380 1113 798 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -417,7 +417,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>773pt</string>
+					<string>770pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -580,7 +580,7 @@
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 305 1116 873 0 0 1920 1178 </string>
+	<string>0 380 1113 798 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
