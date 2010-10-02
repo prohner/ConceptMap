@@ -13,8 +13,8 @@
 
 @interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate> {
 	ConceptObject *selectedConceptObject;
-	NSMutableArray *conceptObjects;
 	ConceptObject *possibleDropTarget;
+	ConceptObject *panningConceptObject;
 	Document *currentDocument;
 	UIBarButtonItem *propertyInspectorButton;
 }
@@ -24,7 +24,7 @@
 
 - (CGSize)idealContentSize;
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view;
-- (ConceptObject *)getParentConceptObjectOf:(Concept *)concept;
 - (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs;
+- (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view;
 
 @end

@@ -13,7 +13,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, myDelegate, concept, isActiveDropTarget, conceptObjectLabel;
+@synthesize selected, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -46,7 +46,8 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
-//	[super init];
+	self.childConceptObjects = [[NSArray alloc] init];
+	
 	self.userInteractionEnabled = YES;
     self.layer.borderWidth = 5;
     self.layer.cornerRadius = 12;
@@ -101,6 +102,15 @@
 	//FUNCTION_LOG(@"current bounds = (%@, %@) (%@, %@)", self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
 
 	return self;
+}
+
+- (void)viewDidUnload {
+	self.childConceptObjects = nil;
+}
+
+
+- (void) dealloc {
+	[super dealloc];
 }
 
 - (void)bodyDisplayStringBecameActive:(id)sender {

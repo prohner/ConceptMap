@@ -11,12 +11,12 @@
 
 @implementation ConceptMapView
 
+static int recursionDepth = 0;
+
 @synthesize currentDocument, propertyInspectorButton;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-		conceptObjects = [[NSMutableArray alloc] init];
-		
         // Initialization code
 		self.currentDocument = [DATABASE currentDocument];
 		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
@@ -27,16 +27,11 @@
 		[singleTap release];
 	}
 	
-//	self.delegate = self;
-//	self.minimumZoomScale = 1.0f;
-//	self.maximumZoomScale = 5.0f;
-
 	return self;
 }
 
 - (void)dealloc {
     [super dealloc];
-	[conceptObjects release];
 }
 
 - (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs{
@@ -62,26 +57,12 @@
 	}
 }
 
-- (ConceptObject *)getParentConceptObjectOf:(Concept *)concept {
-	FUNCTION_LOG();
-	ConceptObject *parentConceptObject = nil;
-	for (ConceptObject *co in conceptObjects) {
-		if (co.concept == concept.parentConcept) {
-			parentConceptObject	= co;
-			FUNCTION_LOG(@"%@ goes into %@", concept.title, parentConceptObject.concept.title);
-			break;
-		}
-	}
-	return parentConceptObject;
-}
-
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view {
 	co.myDelegate = self;
 	if (view == nil) {
 		view = self;
 	}
 	[view addSubview:co];
-	[conceptObjects addObject:co];
 }
 
 - (CGSize)idealContentSize {
@@ -112,50 +93,56 @@
 
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender {
 	CGPoint panPoint = [sender locationInView:self];
+	panningConceptObject = conceptObject;
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
 	//FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
 	
-	BOOL foundHomeForPanningObject = NO;
-	for (ConceptObject *possibleDropTargetCandidate in conceptObjects) {
-		CGPoint receiverPoint = [self.layer convertPoint:panPoint toLayer:possibleDropTargetCandidate.layer];
-		if ([possibleDropTargetCandidate.layer containsPoint:receiverPoint] 
-			&& possibleDropTargetCandidate != conceptObject) {
-			FUNCTION_LOG(@"Found %@ is a possibleDropTarget %i", possibleDropTarget.concept.title, possibleDropTarget);
-			BOOL possibleCandidateIsChildOfPannedObject = NO;
-			
-			// Go up the tree and make sure we're not going to drop ourself onto a child
-			CALayer *upLayer = possibleDropTargetCandidate.layer;
-			while (upLayer != nil && self.layer != upLayer) {
-				if (upLayer == conceptObject.layer) {
-					possibleCandidateIsChildOfPannedObject = YES;
-				}
-				upLayer = upLayer.superlayer;
-			}
-
-			if (!possibleCandidateIsChildOfPannedObject) {
-				//FUNCTION_LOG(@"GOT IT! %@", possibleDropTargetCandidate.concept.title);
-				possibleDropTargetCandidate.isActiveDropTarget = YES;
-				possibleDropTarget = possibleDropTargetCandidate;
-				foundHomeForPanningObject = YES;
-			}
-		} 
-	}
-	
-	if (!foundHomeForPanningObject) {
+	FUNCTION_LOG(@"\nSearching tree");
+	recursionDepth = 0;
+	if ( ! [self setPossibleDropTargetForPoint:panPoint inConceptObject:self]) {
 		possibleDropTarget.isActiveDropTarget = NO;
 		possibleDropTarget = nil;
 	}
 #if FUNCTION_LOGGING
 	else {
-		FUNCTION_LOG(@"Found possibleDropTarget %i", possibleDropTarget);
+		FUNCTION_LOG(@"Found possibleDropTarget %@", possibleDropTarget.concept.title);
 	}
 #endif
 	
 }
 
+- (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view {
+	BOOL foundHome = NO;
+	recursionDepth++;
+	FUNCTION_LOG(@"\t%i %@", recursionDepth, [view isKindOfClass:[ConceptObject class]] ? ((ConceptObject *)view).concept.title : @"non-ConceptObject");
+
+	for (UIView *subview in view.subviews) {
+		if ([subview isKindOfClass:[ConceptObject class]] && panningConceptObject != subview) {
+			CGPoint receiverPoint = [self.layer convertPoint:pt toLayer:subview.layer];
+			foundHome = [self setPossibleDropTargetForPoint:pt inConceptObject:subview];
+			
+			if (!foundHome) {
+				if ([subview.layer containsPoint:receiverPoint] && panningConceptObject != subview) {
+					foundHome = YES;
+					possibleDropTarget.isActiveDropTarget = NO;	// Unhighlight any already highlighted
+					possibleDropTarget = (ConceptObject *)subview;
+					possibleDropTarget.isActiveDropTarget = YES;
+				}
+			}
+
+			if (foundHome) {
+				break;
+			}
+
+		}
+	}
+	
+	return foundHome;
+}
+
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
-	FUNCTION_LOG(@"possibleDropTarget==%i",  possibleDropTarget);
+	FUNCTION_LOG(@"possibleDropTarget %@", possibleDropTarget.concept.title);
 	if (possibleDropTarget /*&& possibleDropTarget != conceptObject.superview*/) {
 		// TODO keep track of items inside drop target so it knows who it owns
 		

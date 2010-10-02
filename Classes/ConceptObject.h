@@ -34,6 +34,8 @@
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	
+	NSArray *childConceptObjects;
+	
 	UITextView *bodyDisplayString;
 	
 	BOOL holdSelected;
@@ -45,6 +47,7 @@
 @property (nonatomic, retain) id <ConceptObjectDelegate> myDelegate;
 @property (nonatomic, retain) Concept *concept;
 @property (nonatomic, retain) ConceptObjectLabel *conceptObjectLabel;
+@property (nonatomic, retain) NSArray *childConceptObjects;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;
