@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define APPLICATION_NAME	@"ConceptMap"
+
 #define FUNCTION_LOGGING		1
 #define MEMORY_WARNING_LOGGING		1
 

@@ -7,7 +7,10 @@
 //
 
 #import "ActionsViewController.h"
+#import "Utility.h"
+#import "DataController.h"
 
+#define ROW_EMAIL_AS_LIST		1
 
 @implementation ActionsViewController
 
@@ -87,7 +90,7 @@
 		case 0:
 			cell.textLabel.text = @"Email as Image";
 			break;
-		case 1:
+		case ROW_EMAIL_AS_LIST:
 			cell.textLabel.text = @"Email as List";
 			break;
 		default:
@@ -150,6 +153,14 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	switch (indexPath.row) {
+		case ROW_EMAIL_AS_LIST:
+			[self emailList];
+
+			break;
+		default:
+			break;
+	}
 }
 
 
@@ -171,6 +182,62 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+#pragma mark Email Methods
+- (void)emailList {
+	//	NSLog(@"Need to send email");
+	NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<table border=1>"];
+	for (Concept *concept in [DATABASE currentDocument].concepts) {
+		if (concept.parentConcept == nil) {
+			[messageBody appendString:[self stringForConcept:concept withIndent:@""]];
+			[messageBody appendString:[self concepts:concept.concepts indented:@"&nbsp;"]];
+		}
+	}
+
+	[messageBody appendString:@"</table>"];
+	
+	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
+	composerController.mailComposeDelegate = self;
+	NSString *subject = [[NSString alloc] initWithFormat:@"%@", [DATABASE currentDocument].title];
+	NSString *body = [[NSString alloc] initWithFormat:@"<div></div>"
+					  "<div style=\"\">Concept Map: </div>"
+					  "<div>%@</div>"
+					  "<div><p>Created using "
+					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
+					  " on my %@.</p></div>", 
+					  messageBody,
+					  APPLICATION_NAME,
+					  [[UIDevice currentDevice] model]];
+	[composerController setSubject:subject];
+	
+	[composerController setMessageBody:body isHTML:YES]; 
+	[self presentModalViewController:composerController animated:YES];
+	[composerController release];
+	[subject release];
+	[body release];
+	[messageBody release];
+}
+
+- (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent {
+	NSMutableString *s = [[NSMutableString alloc] init];
+	NSString *nextIndent = [[NSString alloc] initWithFormat:@"%@&nbsp;", indent];
+	for (Concept *concept in concepts) {
+		[s appendString:[self stringForConcept:concept withIndent:indent]];
+		[s appendString:[self concepts:concept.concepts indented:nextIndent]];
+	}
+	return s;
+}
+
+- (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent {
+	return [[NSString alloc] initWithFormat:@"<tr><td>%@ <b>%@</b> -- %@</td></tr>", indent, concept.title, concept.bodyDisplayString];
+	
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller  
+          didFinishWithResult:(MFMailComposeResult)result 
+                        error:(NSError*)error {
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 

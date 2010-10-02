@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+#import "Concept.h"
 
-
-@interface ActionsViewController : UITableViewController {
+@interface ActionsViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
 
 }
+
+- (void)emailList;
+- (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent;
+- (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent;
 
 @end

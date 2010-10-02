@@ -64,6 +64,7 @@
 		E768BDF7123B4CB100D149F7 /* ApplicationData.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */; };
 		E774F6991249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
 		E774F69A1249B80C00CC1918 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E774F6981249B80C00CC1918 /* delete.png */; };
+		E783AB351256FE2900E2F8CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783AB341256FE2900E2F8CB /* MessageUI.framework */; };
 		E783B74012504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
 		E783B74112504919009B0C77 /* ConceptObjectDeleteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */; };
 		E783BC391254597E009B0C77 /* ActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E783BC371254597E009B0C77 /* ActionsViewController.m */; };
@@ -145,6 +146,7 @@
 		E75ABDFC1239F77C004A5C76 /* GeneralTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralTests.h; sourceTree = "<group>"; };
 		E75ABDFD1239F77C004A5C76 /* GeneralTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralTests.m; sourceTree = "<group>"; };
 		E774F6981249B80C00CC1918 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delete.png; path = Images/delete.png; sourceTree = "<group>"; };
+		E783AB341256FE2900E2F8CB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E783B73E12504919009B0C77 /* ConceptObjectDeleteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectDeleteButton.h; sourceTree = "<group>"; };
 		E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectDeleteButton.m; sourceTree = "<group>"; };
 		E783BC361254597E009B0C77 /* ActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionsViewController.h; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				E7F87E4D12388BA9003F63CA /* QuartzCore.framework in Frameworks */,
 				E75ABC7E1239F25F004A5C76 /* CoreData.framework in Frameworks */,
+				E783AB351256FE2900E2F8CB /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +249,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E75ABCB01239F42B004A5C76 /* ApplicationTesting-Info.plist */,
+				E783AB341256FE2900E2F8CB /* MessageUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
