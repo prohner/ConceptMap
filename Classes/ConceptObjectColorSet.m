@@ -76,4 +76,14 @@
 	}
 }
 
++ (NSString *)colorToHexString:(UIColor *)color {
+	const CGFloat *c = CGColorGetComponents(color.CGColor);
+	CGFloat r = c[0];
+	CGFloat g = c[1];
+	CGFloat b = c[2];
+
+	return [NSString stringWithFormat:@"%02X%02X%02X",
+			(int)(r * 255), (int)(g * 255), (int)(b * 255)];
+}
+
 @end

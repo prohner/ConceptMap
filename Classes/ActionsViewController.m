@@ -9,6 +9,7 @@
 #import "ActionsViewController.h"
 #import "Utility.h"
 #import "DataController.h"
+#import "ConceptObject.h"
 
 #define ROW_EMAIL_AS_LIST		1
 
@@ -185,17 +186,21 @@
 }
 
 #pragma mark Email Methods
+
 - (void)emailList {
 	//	NSLog(@"Need to send email");
-	NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<table border=1>"];
+	NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<dl>"];
 	for (Concept *concept in [DATABASE currentDocument].concepts) {
 		if (concept.parentConcept == nil) {
+			ConceptObjectColorSet *conceptObjectColorSet = concept.conceptObjectColorSet;
+			[messageBody appendFormat:@"<div style=\"margin-left:5px;background-color:#%@;color:#%@;\">\n", [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor], [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.foregroundColor]];
 			[messageBody appendString:[self stringForConcept:concept withIndent:@""]];
 			[messageBody appendString:[self concepts:concept.concepts indented:@"&nbsp;"]];
+			[messageBody appendString:@"</div>\n"];
 		}
 	}
 
-	[messageBody appendString:@"</table>"];
+	[messageBody appendString:@"</dl>"];
 	
 	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
 	composerController.mailComposeDelegate = self;
@@ -215,6 +220,7 @@
 	[self presentModalViewController:composerController animated:YES];
 	[composerController release];
 	[subject release];
+	FUNCTION_LOG(@"%@", body);
 	[body release];
 	[messageBody release];
 }
@@ -222,15 +228,22 @@
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent {
 	NSMutableString *s = [[NSMutableString alloc] init];
 	NSString *nextIndent = [[NSString alloc] initWithFormat:@"%@&nbsp;", indent];
+	NSArray *listItems = [nextIndent componentsSeparatedByString:@"&"];
+	int indentations = [listItems count];
+	
 	for (Concept *concept in concepts) {
+		ConceptObjectColorSet *conceptObjectColorSet = concept.conceptObjectColorSet;
+		[s appendFormat:@"<div style=\"margin-left:%ipx;background-color:#%@;color:#%@;\">\n", (indentations * 5), [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor], [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.foregroundColor]];
 		[s appendString:[self stringForConcept:concept withIndent:indent]];
 		[s appendString:[self concepts:concept.concepts indented:nextIndent]];
+		[s appendString:@"</div>\n"];
 	}
+	[nextIndent release];
 	return s;
 }
 
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent {
-	return [[NSString alloc] initWithFormat:@"<tr><td>%@ <b>%@</b> -- %@</td></tr>", indent, concept.title, concept.bodyDisplayString];
+	return [[NSString alloc] initWithFormat:@"<dt style=\"font-weight:bold;\">%@</dt><dd>%@</dd>\n", concept.title, concept.bodyDisplayString];
 	
 }
 

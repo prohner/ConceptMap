@@ -30,4 +30,6 @@
 @property (nonatomic, readonly) UIColor *titleBackgroundColor;
 @property (nonatomic, readonly) UIColor *titleForegroundColor;
 
++ (NSString *)colorToHexString:(UIColor *)color;
+
 @end
