@@ -12,7 +12,9 @@
 
 @implementation ConceptObjectFontChooserViewController
 
-@synthesize conceptObject, changeFontSizeButtonsCell;
+
+
+@synthesize conceptObject, tableHeaderView, fontsArray;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -28,8 +30,17 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 	FUNCTION_LOG();
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 376.0);
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 430.0);
 	self.title = @"Fonts";
+	self.tableView.tableHeaderView = tableHeaderView;
+
+	self.fontsArray = [NSArray arrayWithObjects:
+					   [NSArray arrayWithObjects:@"Felt Marker", @"MarkerFelt-Thin", nil],
+					   [NSArray arrayWithObjects:@"Times New Roman", @"TimesNewRomanPSMT", nil],
+					   [NSArray arrayWithObjects:@"Typewriter", @"AmericanTypewriter", nil],
+					   [NSArray arrayWithObjects:@"Verdana", @"Verdana", nil],
+					   [NSArray arrayWithObjects:@"Zapfino", @"Zapfino", nil],
+					   nil];
 }
 
 
@@ -66,17 +77,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	if (section == 0) {
-		return 1;
-	} else {
-		return 5;
-	}
+	return [fontsArray count];
 
 }
 
@@ -92,13 +99,25 @@
     }
     
     // Configure the cell...
-	if (indexPath.section == 0) {
-		cell = changeFontSizeButtonsCell;
+	NSString *fontName = @"Verdana";
+	NSString *fontDesc = @"Verdana";
+	if (indexPath.row < [fontsArray count]) {
+		fontDesc = [[fontsArray objectAtIndex:indexPath.row] objectAtIndex:0];
+		fontName = [[fontsArray objectAtIndex:indexPath.row] objectAtIndex:1];
+	}
+	FUNCTION_LOG(@"name=%@, desc=%@", fontName, fontDesc);
+
+	cell.textLabel.text = fontDesc;
+	cell.textLabel.font = [UIFont fontWithName:fontName size:18.0];
+    
+	if ([fontName isEqualToString:conceptObject.concept.fontName]) {
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+		checkedIndexPath = indexPath;
 	} else {
-		cell.textLabel.text = @"hi";
+		cell.accessoryType = UITableViewCellAccessoryNone;
 	}
 
-    
+	
     return cell;
 }
 
@@ -155,6 +174,17 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	NSArray *fonts = fontsArray;
+	NSArray *fontInfo = [fonts objectAtIndex:indexPath.row];
+	NSString *fontName = [fontInfo objectAtIndex:1];
+	conceptObject.concept.fontName = fontName;
+	[conceptObject setBodyDisplayStringFont];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	
+	[tableView cellForRowAtIndexPath:checkedIndexPath].accessoryType = UITableViewCellAccessoryNone;
+	[tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+	checkedIndexPath = indexPath;
 }
 
 
@@ -171,6 +201,8 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+//	self.conceptObject = nil;
+	self.fontsArray = nil;
 }
 
 

@@ -104,12 +104,11 @@
 }
 
 - (void)setBodyDisplayStringFont {
-	UIFont *f = [UIFont systemFontOfSize:18];
-	f = [f fontWithSize:8+[concept.fontSize intValue]];
+	UIFont *f = [UIFont fontWithName:concept.fontName size:[concept.fontSize intValue]];
 	FUNCTION_LOG(@"Font size = %@, font name = %@", concept.fontSize, concept.fontName);
 	
 	bodyDisplayString.font = f;
-	//f.familyName = [concept.fontName];
+	
 }
 
 - (void)viewDidUnload {

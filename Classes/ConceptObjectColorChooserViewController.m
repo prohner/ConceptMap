@@ -108,9 +108,7 @@
 	UIView *bg = [cell viewWithTag:2];
 	bg.backgroundColor = cocs.backgroundColor;
 
-	[bg release];	
     [cocs release];
-
 
     return cell;
 }

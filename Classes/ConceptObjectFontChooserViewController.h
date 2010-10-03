@@ -12,11 +12,14 @@
 
 @interface ConceptObjectFontChooserViewController : UITableViewController {
 	ConceptObject *conceptObject;
-	UITableViewCell *changeFontSizeButtonsCell;
+	UIView *tableHeaderView;
+	NSArray *fontsArray;
+	NSIndexPath *checkedIndexPath;
 }
 
 @property (nonatomic, retain) ConceptObject *conceptObject;
-@property (nonatomic, retain) IBOutlet UITableViewCell *changeFontSizeButtonsCell;
+@property (nonatomic, retain) NSArray *fontsArray;
+@property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
 
 - (IBAction)makeFontSizeBigger:(id)sender;
 - (IBAction)makeFontSizeSmaller:(id)sender;
