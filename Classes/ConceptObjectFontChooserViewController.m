@@ -1,22 +1,18 @@
 //
-//  ConceptObjectSettingsViewController.m
+//  ConceptObjectFontChooserViewController.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/22/10.
+//  Created by Preston Rohner on 10/3/10.
 //  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
-#import "ConceptObjectSettingsViewController.h"
-#import "ConceptObjectColorChooserViewController.h"
-#import "ConceptObject.h"
 #import "ConceptObjectFontChooserViewController.h"
+#import "ConceptObject.h"
+#import "Utility.h"
 
-@implementation ConceptObjectSettingsViewController
+@implementation ConceptObjectFontChooserViewController
 
-@synthesize conceptObject;
-
-#define ROW_COLOR		0
-#define ROW_FONT		1
+@synthesize conceptObject, changeFontSizeButtonsCell;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -25,13 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Settings";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
+
+	FUNCTION_LOG();
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 376.0);
+	self.title = @"Fonts";
 }
 
 
@@ -68,13 +66,18 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+	if (section == 0) {
+		return 1;
+	} else {
+		return 5;
+	}
+
 }
 
 
@@ -86,26 +89,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     // Configure the cell...
-	switch (indexPath.row) {
-		case ROW_COLOR:
-			cell.textLabel.text = @"Colors";
-			break;
-		case ROW_FONT:
-			cell.textLabel.text = @"Font";
-			break;
-		case 2:
-			cell.textLabel.text = @"Background Picture";
-			break;
-		case 3:
-			cell.textLabel.text = @"Shape";
-			break;
-		default:
-			break;
+	if (indexPath.section == 0) {
+		cell = changeFontSizeButtonsCell;
+	} else {
+		cell.textLabel.text = @"hi";
 	}
+
     
     return cell;
 }
@@ -155,7 +147,6 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
     // Navigation logic may go here. Create and push another view controller.
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -164,35 +155,6 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	switch (indexPath.row) {
-		case ROW_COLOR:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectColorChooserViewController *ctrl = [[ConceptObjectColorChooserViewController alloc] initWithNibName:@"ConceptObjectColorChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
-		case ROW_FONT:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectFontChooserViewController *ctrl = [[ConceptObjectFontChooserViewController alloc] initWithNibName:@"ConceptObjectFontChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
-		default:
-			FUNCTION_LOG(@"At row %i", indexPath.row);
-			break;
-	}
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
-	return indexPath;
 }
 
 
@@ -214,6 +176,24 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+#pragma mark User Interaction
+- (IBAction)makeFontSizeBigger:(id)sender {
+	[self stepFontSize: 1];
+}
+
+- (IBAction)makeFontSizeSmaller:(id)sender {
+	[self stepFontSize:-1];
+}
+ 
+- (void)stepFontSize:(int)direction {
+	FUNCTION_LOG(@"Step font %i", direction);
+	int i = [conceptObject.concept.fontSize intValue];
+	i += direction;
+	conceptObject.concept.fontSize = [NSNumber numberWithInt:i];
+	[conceptObject setBodyDisplayStringFont];
+	
 }
 
 

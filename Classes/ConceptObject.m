@@ -72,7 +72,6 @@
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
 	bodyDisplayString.userInteractionEnabled = NO;
-	bodyDisplayString.font = [UIFont systemFontOfSize:18.0f];
 	bodyDisplayString.delegate = self;
 	//[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
@@ -104,6 +103,15 @@
 	return self;
 }
 
+- (void)setBodyDisplayStringFont {
+	UIFont *f = [UIFont systemFontOfSize:18];
+	f = [f fontWithSize:8+[concept.fontSize intValue]];
+	FUNCTION_LOG(@"Font size = %@, font name = %@", concept.fontSize, concept.fontName);
+	
+	bodyDisplayString.font = f;
+	//f.familyName = [concept.fontName];
+}
+
 - (void)viewDidUnload {
 	self.childConceptObjects = nil;
 }
@@ -130,6 +138,7 @@
 	[conceptObjectLabel setNeedsDisplay];
 
 	bodyDisplayString.text = concept.bodyDisplayString;
+	[self setBodyDisplayStringFont];
 	[bodyDisplayString setNeedsDisplay];
 	
 	[deleteButton setNeedsDisplay];

@@ -55,6 +55,7 @@
 - (void)removeFromParentConceptObject;
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
 - (void)bodyDisplayStringBecameActive:(id)sender;
+- (void)setBodyDisplayStringFont;
 
 @end
 
