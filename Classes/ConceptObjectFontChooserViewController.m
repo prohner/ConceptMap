@@ -30,7 +30,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
 	FUNCTION_LOG();
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 430.0);
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 330.0);
 	self.title = @"Fonts";
 	self.tableView.tableHeaderView = tableHeaderView;
 

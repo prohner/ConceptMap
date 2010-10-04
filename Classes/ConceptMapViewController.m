@@ -137,6 +137,7 @@
 
 - (IBAction)actionButtonTapped:(id)sender {
 	ActionsViewController *actionsViewController = [[ActionsViewController alloc] initWithNibName:@"ActionsViewController" bundle:nil];
+	actionsViewController.conceptMapView = (ConceptMapView *)self.view;
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:actionsViewController];
 	[actionsViewController release];
 	

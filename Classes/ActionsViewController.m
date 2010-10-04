@@ -10,11 +10,14 @@
 #import "Utility.h"
 #import "DataController.h"
 #import "ConceptObject.h"
+#import "ConceptMapView.h"
 
+#define ROW_EMAIL_AS_IMAGE		0
 #define ROW_EMAIL_AS_LIST		1
 
 @implementation ActionsViewController
 
+@synthesize conceptMapView;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -88,7 +91,7 @@
     
     // Configure the cell...
 	switch (indexPath.row) {
-		case 0:
+		case ROW_EMAIL_AS_IMAGE:
 			cell.textLabel.text = @"Email as Image";
 			break;
 		case ROW_EMAIL_AS_LIST:
@@ -155,9 +158,13 @@
 	 [detailViewController release];
 	 */
 	switch (indexPath.row) {
+		case ROW_EMAIL_AS_IMAGE:
+			[self emailImage];
+
+			break;
 		case ROW_EMAIL_AS_LIST:
 			[self emailList];
-
+			
 			break;
 		default:
 			break;
@@ -178,6 +185,7 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+	self.conceptMapView = nil;
 }
 
 
@@ -186,6 +194,34 @@
 }
 
 #pragma mark Email Methods
+
+- (void)emailImage {
+	UIImage *viewImage = [conceptMapView conceptMapAsImage];
+	
+	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
+	composerController.mailComposeDelegate = self;
+	NSString *subject = [[NSString alloc] initWithFormat:@"%@", [DATABASE currentDocument].title];
+	NSString *body = [[NSString alloc] initWithFormat:@"<div></div>"
+					  "<div style=\"\">Concept Map: </div>"
+					  "<div>Please see the attached map image.</div>"
+					  "<div><p>Created using "
+					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
+					  " on my %@.</p></div>", 
+					  APPLICATION_NAME,
+					  [[UIDevice currentDevice] model]];
+	[composerController setSubject:subject];
+	
+	[composerController addAttachmentData:UIImagePNGRepresentation(viewImage) mimeType:@"image/png" fileName:@"Map.png"];
+
+	
+	[composerController setMessageBody:body isHTML:YES]; 
+	[self presentModalViewController:composerController animated:YES];
+	[composerController release];
+	[subject release];
+	FUNCTION_LOG(@"%@", body);
+	[body release];
+	//[viewImage release];
+}
 
 - (void)emailList {
 	//	NSLog(@"Need to send email");

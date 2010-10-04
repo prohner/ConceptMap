@@ -11,10 +11,15 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "Concept.h"
 
-@interface ActionsViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
+@class ConceptMapView;
 
+@interface ActionsViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
+	ConceptMapView *conceptMapView;
 }
 
+@property (nonatomic, retain) ConceptMapView *conceptMapView;
+
+- (void)emailImage;
 - (void)emailList;
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent;
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent;

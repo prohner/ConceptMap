@@ -13,7 +13,7 @@
 
 static int recursionDepth = 0;
 
-@synthesize currentDocument, propertyInspectorButton;
+@synthesize currentDocument, propertyInspectorButton, toolbar;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -184,6 +184,16 @@ static int recursionDepth = 0;
 
 	}
 	possibleDropTarget = nil;
+}
+
+- (UIImage *)conceptMapAsImage {
+	toolbar.hidden = YES;
+	UIGraphicsBeginImageContext(self.bounds.size);	
+	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	toolbar.hidden = NO;
+	return viewImage;
 }
 
 #pragma mark UIScrollViewDelegate
