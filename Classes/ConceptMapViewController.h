@@ -18,6 +18,7 @@
 	UITextField *documentTitle;
 	ConceptMapView *conceptMapView;
 	UIPopoverController *popover;
+	id conceptMapViewDelegateHold;
 }
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
@@ -31,6 +32,9 @@
 - (IBAction)documentTitleChanged:(id)sender;
 - (IBAction)actionButtonTapped:(id)sender;
 - (IBAction)settingsButtonTapped:(id)sender;
+- (IBAction)sliderStarted:(id)sender;
+- (IBAction)sliderChanged:(id)sender;
+- (IBAction)sliderStopped:(id)sender;
 
 - (void)setConceptMapView;
 - (UIPopoverController *)popoverControllerFor:(UIViewController *)vc;

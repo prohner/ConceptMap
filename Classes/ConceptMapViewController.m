@@ -75,6 +75,7 @@
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//	conceptMapView.delegate = self;
 	
     [self.view addSubview:conceptMapView];
 	
@@ -188,6 +189,36 @@
 
 - (IBAction)documentTitleChanged:(id)sender {
 	[DATABASE currentDocument].title = documentTitle.text;
+}
+
+- (IBAction)sliderStarted:(id)sender {
+	conceptMapViewDelegateHold = conceptMapView.delegate;
+
+	FUNCTION_LOG(@"min=%.2f, max=%.2f", conceptMapView.minimumZoomScale, conceptMapView.maximumZoomScale);
+	[conceptMapView setMinimumZoomScale:0.25f];
+	[conceptMapView setMaximumZoomScale:1.75f];
+//	[conceptMapView setZoomScale:1.0f];
+	conceptMapView.delegate = self;
+}
+
+- (IBAction)sliderChanged:(id)sender {
+	FUNCTION_LOG();
+	UISlider *slider = (UISlider *)sender;
+	[conceptMapView setZoomScale:slider.value];
+	[conceptMapView setNeedsDisplay];
+}
+
+- (IBAction)sliderStopped:(id)sender {
+	conceptMapView.delegate = conceptMapViewDelegateHold;
+	[conceptMapView setMinimumZoomScale:1.0f];
+	[conceptMapView setMaximumZoomScale:1.0f];
+}
+
+#pragma mark UIScrollViewDelegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+	FUNCTION_LOG();
+	return conceptMapView;
 }
 
 
