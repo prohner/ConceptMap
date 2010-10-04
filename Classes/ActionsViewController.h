@@ -19,8 +19,8 @@
 
 @property (nonatomic, retain) ConceptMapView *conceptMapView;
 
-- (void)emailImage;
-- (void)emailList;
+- (void)sendEmailIncludingImage:(BOOL)includeImage andList:(BOOL)includeList;
+- (NSString *)conceptMapAsList;
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent;
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent;
 

@@ -14,6 +14,7 @@
 
 #define ROW_EMAIL_AS_IMAGE		0
 #define ROW_EMAIL_AS_LIST		1
+#define ROW_EMAIL_AS_COMBO		2
 
 @implementation ActionsViewController
 
@@ -32,7 +33,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 210.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 132.0);
 }
 
 
@@ -75,7 +76,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
 }
 
 
@@ -96,6 +97,9 @@
 			break;
 		case ROW_EMAIL_AS_LIST:
 			cell.textLabel.text = @"Email as List";
+			break;
+		case ROW_EMAIL_AS_COMBO:
+			cell.textLabel.text = @"Email as List + Image";
 			break;
 		default:
 			break;
@@ -159,12 +163,13 @@
 	 */
 	switch (indexPath.row) {
 		case ROW_EMAIL_AS_IMAGE:
-			[self emailImage];
-
+			[self sendEmailIncludingImage:YES andList:NO];
 			break;
 		case ROW_EMAIL_AS_LIST:
-			[self emailList];
-			
+			[self sendEmailIncludingImage:NO andList:YES];
+			break;
+		case ROW_EMAIL_AS_COMBO:
+			[self sendEmailIncludingImage:YES andList:YES];
 			break;
 		default:
 			break;
@@ -195,24 +200,25 @@
 
 #pragma mark Email Methods
 
-- (void)emailImage {
-	UIImage *viewImage = [conceptMapView conceptMapAsImage];
-	
+- (void)sendEmailIncludingImage:(BOOL)includeImage andList:(BOOL)includeList {
 	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
 	composerController.mailComposeDelegate = self;
 	NSString *subject = [[NSString alloc] initWithFormat:@"%@", [DATABASE currentDocument].title];
+	NSString *messageBody = [self conceptMapAsList];
 	NSString *body = [[NSString alloc] initWithFormat:@"<div></div>"
 					  "<div style=\"\">Concept Map: </div>"
-					  "<div>Please see the attached map image.</div>"
+					  "<div>%@</div>"
 					  "<div><p>Created using "
 					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
 					  " on my %@.</p></div>", 
+					  (includeList ? messageBody : @""),
 					  APPLICATION_NAME,
 					  [[UIDevice currentDevice] model]];
 	[composerController setSubject:subject];
 	
-	[composerController addAttachmentData:UIImagePNGRepresentation(viewImage) mimeType:@"image/png" fileName:@"Map.png"];
-
+	if (includeImage) {
+		[composerController addAttachmentData:UIImagePNGRepresentation([conceptMapView conceptMapAsImage]) mimeType:@"image/png" fileName:@"Map.png"];
+	}
 	
 	[composerController setMessageBody:body isHTML:YES]; 
 	[self presentModalViewController:composerController animated:YES];
@@ -220,10 +226,9 @@
 	[subject release];
 	FUNCTION_LOG(@"%@", body);
 	[body release];
-	//[viewImage release];
 }
 
-- (void)emailList {
+- (NSString *)conceptMapAsList {
 	//	NSLog(@"Need to send email");
 	NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<dl>"];
 	for (Concept *concept in [DATABASE currentDocument].concepts) {
@@ -237,28 +242,7 @@
 	}
 
 	[messageBody appendString:@"</dl>"];
-	
-	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
-	composerController.mailComposeDelegate = self;
-	NSString *subject = [[NSString alloc] initWithFormat:@"%@", [DATABASE currentDocument].title];
-	NSString *body = [[NSString alloc] initWithFormat:@"<div></div>"
-					  "<div style=\"\">Concept Map: </div>"
-					  "<div>%@</div>"
-					  "<div><p>Created using "
-					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
-					  " on my %@.</p></div>", 
-					  messageBody,
-					  APPLICATION_NAME,
-					  [[UIDevice currentDevice] model]];
-	[composerController setSubject:subject];
-	
-	[composerController setMessageBody:body isHTML:YES]; 
-	[self presentModalViewController:composerController animated:YES];
-	[composerController release];
-	[subject release];
-	FUNCTION_LOG(@"%@", body);
-	[body release];
-	[messageBody release];
+	return messageBody;
 }
 
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent {

@@ -22,7 +22,7 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {712, 702}}";
+			sepNavIntBoundsRect = "{{0, 0}, {565, 615}}";
 			sepNavSelRange = "{1105, 0}";
 			sepNavVisRange = "{0, 1209}";
 		};
@@ -37,7 +37,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = E7F87E1D12388404003F63CA /* ConceptMap */;
-		activeSDKPreference = iphonesimulator3.2;
+		activeSDKPreference = iphoneos3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ConceptMap */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ConceptMap */,
@@ -52,7 +52,7 @@
 			E7F50A90124FFC6A00FD56BA /* ConceptMapView.m:173 */,
 			E783B86512519556009B0C77 /* ConceptMapView.m:146 */,
 			E783BBBA125444BA009B0C77 /* ConceptMapView.m:103 */,
-			E783ABAB1257AA6000E2F8CB /* ActionsViewController.m:229 */,
+			E783ABAB1257AA6000E2F8CB /* ActionsViewController.m:234 */,
 			E783ACED1258C86700E2F8CB /* ConceptObjectFontChooserViewController.m:177 */,
 			E783AD081258C90A00E2F8CB /* ConceptObjectFontChooserViewController.m:38 */,
 		);
@@ -164,6 +164,21 @@
 			E722779C1259A481001A0386 /* PBXTextBookmark */ = E722779C1259A481001A0386 /* PBXTextBookmark */;
 			E722779D1259A481001A0386 /* PBXTextBookmark */ = E722779D1259A481001A0386 /* PBXTextBookmark */;
 			E722779E1259A481001A0386 /* PBXTextBookmark */ = E722779E1259A481001A0386 /* PBXTextBookmark */;
+			E72277A51259A50B001A0386 /* PBXTextBookmark */ = E72277A51259A50B001A0386 /* PBXTextBookmark */;
+			E72277A61259A50B001A0386 /* PBXTextBookmark */ = E72277A61259A50B001A0386 /* PBXTextBookmark */;
+			E72277A71259A50B001A0386 /* PBXTextBookmark */ = E72277A71259A50B001A0386 /* PBXTextBookmark */;
+			E72277A81259A50B001A0386 /* PBXTextBookmark */ = E72277A81259A50B001A0386 /* PBXTextBookmark */;
+			E72277A91259A50B001A0386 /* PBXTextBookmark */ = E72277A91259A50B001A0386 /* PBXTextBookmark */;
+			E72277AE1259A51C001A0386 /* PBXTextBookmark */ = E72277AE1259A51C001A0386 /* PBXTextBookmark */;
+			E72277B41259A5C2001A0386 /* PBXTextBookmark */ = E72277B41259A5C2001A0386 /* PBXTextBookmark */;
+			E72277B51259A5C2001A0386 /* PBXTextBookmark */ = E72277B51259A5C2001A0386 /* PBXTextBookmark */;
+			E72277B61259A5C2001A0386 /* PBXTextBookmark */ = E72277B61259A5C2001A0386 /* PBXTextBookmark */;
+			E72277BE1259A661001A0386 /* PBXTextBookmark */ = E72277BE1259A661001A0386 /* PBXTextBookmark */;
+			E72277BF1259A661001A0386 /* PBXTextBookmark */ = E72277BF1259A661001A0386 /* PBXTextBookmark */;
+			E72277C01259A661001A0386 /* PBXTextBookmark */ = E72277C01259A661001A0386 /* PBXTextBookmark */;
+			E72277C41259A6B0001A0386 /* PBXTextBookmark */ = E72277C41259A6B0001A0386 /* PBXTextBookmark */;
+			E72277C71259A6BA001A0386 /* PBXTextBookmark */ = E72277C71259A6BA001A0386 /* PBXTextBookmark */;
+			E72277CA1259A6DA001A0386 /* PBXTextBookmark */ = E72277CA1259A6DA001A0386 /* PBXTextBookmark */;
 			E72A5379124DB8A800FEF168 = E72A5379124DB8A800FEF168 /* PBXTextBookmark */;
 			E72FF74A12599E4400C1C79E = E72FF74A12599E4400C1C79E /* PBXTextBookmark */;
 			E72FF74B12599E4400C1C79E = E72FF74B12599E4400C1C79E /* PBXTextBookmark */;
@@ -241,7 +256,7 @@
 		ignoreCount = 0;
 		lineNumber = 29;
 		location = ConceptMap;
-		modificationTime = 307864691.061264;
+		modificationTime = 307865186.469506;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -250,7 +265,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 199";
 		rLen = 0;
-		rLoc = 5087;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2205;
 		vrLoc = 4974;
@@ -260,7 +275,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 198";
 		rLen = 0;
-		rLoc = 5087;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2138;
 		vrLoc = 5009;
@@ -270,7 +285,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 198";
 		rLen = 0;
-		rLoc = 5087;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2138;
 		vrLoc = 5009;
@@ -280,7 +295,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 198";
 		rLen = 0;
-		rLoc = 5087;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2138;
 		vrLoc = 5009;
@@ -290,7 +305,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 199";
 		rLen = 0;
-		rLoc = 5104;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2172;
 		vrLoc = 5009;
@@ -300,7 +315,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 210";
 		rLen = 0;
-		rLoc = 5560;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2176;
 		vrLoc = 5009;
@@ -319,7 +334,7 @@
 		isa = PBXTextBookmark;
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		rLen = 0;
-		rLoc = 198;
+		rLoc = 230;
 		rType = 1;
 	};
 	E722777A1259A2ED001A0386 /* PBXTextBookmark */ = {
@@ -327,7 +342,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 200";
 		rLen = 0;
-		rLoc = 5104;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2174;
 		vrLoc = 5011;
@@ -337,7 +352,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 227";
 		rLen = 0;
-		rLoc = 6220;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2176;
 		vrLoc = 5011;
@@ -347,7 +362,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 201";
 		rLen = 0;
-		rLoc = 5104;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2100;
 		vrLoc = 5011;
@@ -406,8 +421,8 @@
 		isa = PBXTextBookmark;
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 200";
-		rLen = 58;
-		rLoc = 5104;
+		rLen = 0;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2100;
 		vrLoc = 5011;
@@ -417,7 +432,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 200";
 		rLen = 0;
-		rLoc = 5162;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2024;
 		vrLoc = 5011;
@@ -436,15 +451,15 @@
 		isa = PBXTextBookmark;
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		rLen = 0;
-		rLoc = 200;
+		rLoc = 230;
 		rType = 1;
 	};
 	E72277911259A437001A0386 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 199";
-		rLen = 58;
-		rLoc = 5104;
+		rLen = 0;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2024;
 		vrLoc = 5011;
@@ -453,8 +468,8 @@
 		isa = PBXTextBookmark;
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 199";
-		rLen = 58;
-		rLoc = 5104;
+		rLen = 0;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2024;
 		vrLoc = 5011;
@@ -505,6 +520,156 @@
 		rType = 0;
 		vrLen = 1817;
 		vrLoc = 1558;
+	};
+	E72277A51259A50B001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */;
+		name = "DocumentsViewController.m: 87";
+		rLen = 0;
+		rLoc = 2293;
+		rType = 0;
+		vrLen = 1726;
+		vrLoc = 1649;
+	};
+	E72277A61259A50B001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */;
+		name = "ConceptMapViewController.h: 34";
+		rLen = 0;
+		rLoc = 1105;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	E72277A71259A50B001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
+		name = "ActionsViewController.h: 22";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 0;
+	};
+	E72277A81259A50B001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 198";
+		rLen = 79;
+		rLoc = 5341;
+		rType = 0;
+		vrLen = 1769;
+		vrLoc = 4822;
+	};
+	E72277A91259A50B001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 212";
+		rLen = 0;
+		rLoc = 6361;
+		rType = 0;
+		vrLen = 1929;
+		vrLoc = 4940;
+	};
+	E72277AE1259A51C001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 248";
+		rLen = 0;
+		rLoc = 6585;
+		rType = 0;
+		vrLen = 2174;
+		vrLoc = 5729;
+	};
+	E72277B41259A5C2001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 222";
+		rLen = 0;
+		rLoc = 6585;
+		rType = 0;
+		vrLen = 2232;
+		vrLoc = 5619;
+	};
+	E72277B51259A5C2001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
+		name = "ActionsViewController.h: 22";
+		rLen = 0;
+		rLoc = 575;
+		rType = 0;
+		vrLen = 772;
+		vrLoc = 0;
+	};
+	E72277B61259A5C2001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
+		name = "ActionsViewController.h: 23";
+		rLen = 0;
+		rLoc = 576;
+		rType = 0;
+		vrLen = 752;
+		vrLoc = 0;
+	};
+	E72277BE1259A661001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
+		name = "ActionsViewController.h: 23";
+		rLen = 0;
+		rLoc = 607;
+		rType = 0;
+		vrLen = 765;
+		vrLoc = 0;
+	};
+	E72277BF1259A661001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 222";
+		rLen = 33;
+		rLoc = 6585;
+		rType = 0;
+		vrLen = 3424;
+		vrLoc = 5135;
+	};
+	E72277C01259A661001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 207";
+		rLen = 0;
+		rLoc = 6078;
+		rType = 0;
+		vrLen = 2211;
+		vrLoc = 5106;
+	};
+	E72277C41259A6B0001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 102";
+		rLen = 0;
+		rLoc = 2576;
+		rType = 0;
+		vrLen = 1281;
+		vrLoc = 1608;
+	};
+	E72277C71259A6BA001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 79";
+		rLen = 0;
+		rLoc = 1816;
+		rType = 0;
+		vrLen = 1379;
+		vrLoc = 1488;
+	};
+	E72277CA1259A6DA001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 36";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 1106;
+		vrLoc = 0;
 	};
 	E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {
 		uiCtxt = {
@@ -599,7 +764,7 @@
 		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
 		name = "ActionsViewController.h: 22";
 		rLen = 0;
-		rLoc = 517;
+		rLoc = 576;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 0;
@@ -614,7 +779,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 226";
 		rLen = 0;
-		rLoc = 6240;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2455;
 		vrLoc = 5083;
@@ -633,7 +798,7 @@
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = ConceptMap;
-		modificationTime = 307864691.061425;
+		modificationTime = 307865186.469614;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -650,9 +815,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 307864691.061277;
+		modificationTime = 307865263.560975;
 		originalNumberOfMultipleMatches = 1;
-		state = 0;
+		state = 1;
 	};
 	E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */ = {
 		uiCtxt = {
@@ -1175,7 +1340,7 @@
 		vrLen = 522;
 		vrLoc = 0;
 	};
-	E783ABAB1257AA6000E2F8CB /* ActionsViewController.m:229 */ = {
+	E783ABAB1257AA6000E2F8CB /* ActionsViewController.m:234 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1185,11 +1350,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		functionName = "-emailList";
-		hitCount = 0;
+		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 229;
+		lineNumber = 234;
 		location = ConceptMap;
-		modificationTime = 307864691.061506;
+		modificationTime = 307865189.320227;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1283,7 +1448,7 @@
 		ignoreCount = 0;
 		lineNumber = 177;
 		location = ConceptMap;
-		modificationTime = 307864691.061517;
+		modificationTime = 307865186.469902;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1301,7 +1466,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = ConceptMap;
-		modificationTime = 307864691.061527;
+		modificationTime = 307865186.469912;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1343,7 +1508,7 @@
 		ignoreCount = 0;
 		lineNumber = 146;
 		location = ConceptMap;
-		modificationTime = 307864691.061474;
+		modificationTime = 307865186.469689;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1421,23 +1586,23 @@
 		ignoreCount = 0;
 		lineNumber = 103;
 		location = ConceptMap;
-		modificationTime = 307864691.061489;
+		modificationTime = 307865186.4697;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
 	E783BC361254597E009B0C77 /* ActionsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {684, 619}}";
-			sepNavSelRange = "{517, 0}";
-			sepNavVisRange = "{0, 694}";
+			sepNavIntBoundsRect = "{{0, 0}, {1516, 889}}";
+			sepNavSelRange = "{607, 0}";
+			sepNavVisRange = "{0, 765}";
 		};
 	};
 	E783BC371254597E009B0C77 /* ActionsViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4066, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4117, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4167, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9405}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1888, 3991}}";
-			sepNavSelRange = "{5047, 58}";
-			sepNavVisRange = "{4954, 2024}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4184, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4235, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4285, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 8835}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 3861}}";
+			sepNavSelRange = "{934, 0}";
+			sepNavVisRange = "{0, 1106}";
 		};
 	};
 	E783BC5312545B2D009B0C77 /* PBXTextBookmark */ = {
@@ -1489,9 +1654,9 @@
 		ignoreCount = 0;
 		lineNumber = 193;
 		location = ConceptMap;
-		modificationTime = 307864691.061292;
+		modificationTime = 307865263.560944;
 		originalNumberOfMultipleMatches = 1;
-		state = 0;
+		state = 1;
 	};
 	E792D373124718CA00873C15 /* ConceptObjectTitleViewController.h */ = {
 		uiCtxt = {
@@ -1519,7 +1684,7 @@
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4404, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4455, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4505, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5459}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {1048, 2457}}";
 			sepNavSelRange = "{2293, 0}";
-			sepNavVisRange = "{1558, 1817}";
+			sepNavVisRange = "{1649, 1726}";
 		};
 	};
 	E794E258123F2077002F0EF8 /* DocumentTableViewCell.h */ = {
@@ -1556,7 +1721,7 @@
 		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
 		name = "ActionsViewController.m: 226";
 		rLen = 0;
-		rLoc = 6240;
+		rLoc = 6585;
 		rType = 0;
 		vrLen = 2455;
 		vrLoc = 5083;
@@ -1582,7 +1747,7 @@
 		ignoreCount = 0;
 		lineNumber = 125;
 		location = ConceptMap;
-		modificationTime = 307864691.061446;
+		modificationTime = 307865186.469662;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1600,7 +1765,7 @@
 		ignoreCount = 0;
 		lineNumber = 173;
 		location = ConceptMap;
-		modificationTime = 307864691.061459;
+		modificationTime = 307865186.469672;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1611,7 +1776,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
