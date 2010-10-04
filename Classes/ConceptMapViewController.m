@@ -116,11 +116,8 @@
 - (IBAction)documentButtonTapped:(id)sender {
 	FUNCTION_LOG();
 	
-	UIGraphicsBeginImageContext(self.view.bounds.size);
-	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIImage *viewImage = [conceptMapView conceptMapAsImage];
 	conceptMapView.currentDocument.image = UIImageJPEGRepresentation(viewImage, 1.0);
-	UIGraphicsEndImageContext();
 	
 	DocumentsViewController *documentsViewController = [[[DocumentsViewController alloc] initWithNibName:@"DocumentsViewController" bundle:nil] retain];
 	documentsViewController.conceptMapViewController = self;
