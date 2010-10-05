@@ -1,0 +1,35 @@
+/* 
+   Localizable.strings
+   ConceptMap
+
+   Created by Preston Rohner on 10/4/10.
+   Copyright 2010 Cool Tool Apps. All rights reserved.
+ */
+
+"Documents" = "Documents";
+"Concept Map" = "Concept Map";
+
+"Actions" = "Actions";
+"Email as Image" = "Email as Image";
+"Email as List" = "Email as List";
+"Email as List + Image" = "Email as List + Image";
+
+"Blue" = "Blue";
+"Purple" = "Purple";
+"Yellow" = "Yellow";
+"Green" = "Green";
+"Light Green" = "Light Green";
+"Light Blue" = "Light Blue";
+"Salmon" = "Salmon";
+
+"Settings" = "Settings";
+"Colors" = "Colors";
+"Font" = "Font";
+"Background Picture" = "Background Picture";
+"Shape" = "Shape";
+
+"Color Scheme" = "Color Scheme";
+"Fonts" = "Fonts";
+
+"Created using" = "Created using";
+"on my" = "on my";

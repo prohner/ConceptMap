@@ -20,7 +20,7 @@
     [super viewDidLoad];
 	FUNCTION_LOG();
 	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
-	self.title = @"Color Scheme";
+	self.title = NSLocalizedString(@"Color Scheme", @"");
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

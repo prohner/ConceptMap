@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Actions";
+	self.title = NSLocalizedString(@"Actions", @"");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -93,13 +93,13 @@
     // Configure the cell...
 	switch (indexPath.row) {
 		case ROW_EMAIL_AS_IMAGE:
-			cell.textLabel.text = @"Email as Image";
+			cell.textLabel.text = NSLocalizedString(@"Email as Image", @"");
 			break;
 		case ROW_EMAIL_AS_LIST:
-			cell.textLabel.text = @"Email as List";
+			cell.textLabel.text = NSLocalizedString(@"Email as List", @"");
 			break;
 		case ROW_EMAIL_AS_COMBO:
-			cell.textLabel.text = @"Email as List + Image";
+			cell.textLabel.text = NSLocalizedString(@"Email as List + Image", @"");
 			break;
 		default:
 			break;
@@ -206,13 +206,16 @@
 	NSString *subject = [[NSString alloc] initWithFormat:@"%@", [DATABASE currentDocument].title];
 	NSString *messageBody = [self conceptMapAsList];
 	NSString *body = [[NSString alloc] initWithFormat:@"<div></div>"
-					  "<div style=\"\">Concept Map: </div>"
+					  "<div style=\"\">%@: </div>"
 					  "<div>%@</div>"
-					  "<div><p>Created using "
+					  "<div><p>%@ "
 					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
-					  " on my %@.</p></div>", 
-					  (includeList ? messageBody : @""),
+					  " %@ %@.</p></div>", 
 					  APPLICATION_NAME,
+					  (includeList ? messageBody : @""),
+					  NSLocalizedString(@"Created using", @""),
+					  APPLICATION_NAME,
+					  NSLocalizedString(@"on my", @""),
 					  [[UIDevice currentDevice] model]];
 	[composerController setSubject:subject];
 	

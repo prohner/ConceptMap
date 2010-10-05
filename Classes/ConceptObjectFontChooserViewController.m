@@ -31,7 +31,7 @@
 
 	FUNCTION_LOG();
 	self.contentSizeForViewInPopover = CGSizeMake(235.0, 330.0);
-	self.title = @"Fonts";
+	self.title = NSLocalizedString(@"Fonts", @"");
 	self.tableView.tableHeaderView = tableHeaderView;
 
 	self.fontsArray = [NSArray arrayWithObjects:

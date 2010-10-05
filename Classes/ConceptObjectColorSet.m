@@ -25,7 +25,7 @@
 		// From http://colorschemedesigner.com/
 		case ColorSchemeConstantBlue:
 			// based on 0x0B61A4
-			colorSchemeName			= @"Blue";
+			colorSchemeName			= NSLocalizedString(@"Blue", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0xffbf00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x033e6b);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0x66a3d2);	// right, top
@@ -35,7 +35,7 @@
 			break;
 		case ColorSchemeConstantPurple:
 			// based on 0xB70094
-			colorSchemeName			= @"Purple";
+			colorSchemeName			= NSLocalizedString(@"Purple", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0x4dde00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x770060);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xdb62c4);	// right, top
@@ -45,7 +45,7 @@
 			break;
 		case ColorSchemeConstantYellow:
 			// based on 0xffde00
-			colorSchemeName			= @"Yellow";
+			colorSchemeName			= NSLocalizedString(@"Yellow", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0x8805a8);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0xa69000);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xffed73);	// right, top
@@ -55,7 +55,7 @@
 			break;
 		case ColorSchemeConstantGreen:
 			// based on 0x14d100
-			colorSchemeName			= @"Green";
+			colorSchemeName			= NSLocalizedString(@"Green", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0xff6f00);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x0d8800);	// middle, top
 			foregroundColor			= OPAQUE_HEXCOLOR(0x74e868);	// right, top
@@ -65,7 +65,7 @@
 			break;
 		case ColorSchemeConstantLightGreen:
 			// http://www.colorsontheweb.com/colorwizard.asp
-			colorSchemeName			= @"Light Green";
+			colorSchemeName			= NSLocalizedString(@"Light Green", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0x07ce58);	// leftmost, middle
 			backgroundColor			= OPAQUE_HEXCOLOR(0x75faab);	// left top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xb7b7b7);	// right, top
@@ -75,7 +75,7 @@
 			break;
 		case ColorSchemeConstantLightBlue:
 			// http://www.colorsontheweb.com/colorwizard.asp
-			colorSchemeName			= @"Light Blue";
+			colorSchemeName			= NSLocalizedString(@"Light Blue", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0x08aee6);	// center top
 			backgroundColor			= OPAQUE_HEXCOLOR(0x8ddffb);	// left top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xffffff);	// right top
@@ -85,7 +85,7 @@
 			break;
 		case ColorSchemeConstantLightBrown:
 			// http://www.colorsontheweb.com/colorwizard.asp
-			colorSchemeName			= @"Salmon";
+			colorSchemeName			= NSLocalizedString(@"Salmon", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0x853d35);	// center top
 			backgroundColor			= OPAQUE_HEXCOLOR(0xce8d86);	// left top
 			foregroundColor			= OPAQUE_HEXCOLOR(0xfaf3f2);	// right top
@@ -95,7 +95,7 @@
 			break;
 		default:
 			// based on 0x0B61A4
-			colorSchemeName			= @"Blue";
+			colorSchemeName			= NSLocalizedString(@"Blue", @"");
 			borderColor				= OPAQUE_HEXCOLOR(0xffbf00);
 			backgroundColor			= OPAQUE_HEXCOLOR(0x033e6b);
 			foregroundColor			= OPAQUE_HEXCOLOR(0x66a3d2);

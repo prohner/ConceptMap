@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Settings";
+	self.title = NSLocalizedString(@"Settings", @"");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -92,16 +92,16 @@
     // Configure the cell...
 	switch (indexPath.row) {
 		case ROW_COLOR:
-			cell.textLabel.text = @"Colors";
+			cell.textLabel.text = NSLocalizedString(@"Colors", @"");
 			break;
 		case ROW_FONT:
-			cell.textLabel.text = @"Font";
+			cell.textLabel.text = NSLocalizedString(@"Font", @"");
 			break;
 		case 2:
-			cell.textLabel.text = @"Background Picture";
+			cell.textLabel.text = NSLocalizedString(@"Background Picture", @"");
 			break;
 		case 3:
-			cell.textLabel.text = @"Shape";
+			cell.textLabel.text = NSLocalizedString(@"Shape", @"");
 			break;
 		default:
 			break;

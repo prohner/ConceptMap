@@ -59,6 +59,8 @@
 	toolbar.items = items;
 	[documentTitleHolder release];
 	
+	[documentsButton setTitle:NSLocalizedString(@"Documents", @"")];
+	
 	[self setConceptMapView];
 }
 
