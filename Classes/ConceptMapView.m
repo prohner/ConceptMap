@@ -150,20 +150,19 @@ static int recursionDepth = 0;
 		possibleDropTarget.isActiveDropTarget = NO;
 
 		if (possibleDropTarget != conceptObject.superview) {
-			[conceptObject removeFromSuperview];
-			
 			CGPoint pt = conceptObject.layer.position;
 			
 			FUNCTION_LOG(@"1 (%.0f, %.0f)", pt.x, pt.y);
-			pt = [self.layer convertPoint:pt toLayer:self.layer];
-			FUNCTION_LOG(@"2 (%.0f, %.0f)", pt.x, pt.y);
-			pt = [possibleDropTarget convertPoint:pt fromView:self];
+//			pt = [self.layer convertPoint:pt toLayer:self.layer];
+//			FUNCTION_LOG(@"2 (%.0f, %.0f)", pt.x, pt.y);
+			pt = [possibleDropTarget.layer convertPoint:pt fromLayer:conceptObject.superview.layer];
 			FUNCTION_LOG(@"3 (%.0f, %.0f)", pt.x, pt.y);
 			conceptObject.layer.position = pt;
 			
 			//pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
 			//pt = [self.layer convertPoint:pt toLayer:possibleDropTarget.layer];
 			
+			[conceptObject removeFromSuperview];
 			[possibleDropTarget addConceptObject:conceptObject];
 		}
 

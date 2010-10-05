@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>321</real>
+								<real>277</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -274,13 +274,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>37</integer>
+									<integer>27</integer>
+									<integer>14</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 431}, {321, 735}}</string>
+							<string>{{0, 174}, {277, 735}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -292,11 +293,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {338, 753}}</string>
+						<string>{{0, 0}, {294, 753}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>321</real>
+							<real>277</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 384 961 794 0 0 1920 1178 </string>
@@ -304,7 +305,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>338pt</string>
+					<string>294pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -317,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapViewController.m</string>
+								<string>ConceptObject.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapViewController.m</string>
+										<string>ConceptObject.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E722787B125ACC2F001A0386</string>
+										<string>E72278E2125AE555001A0386</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -357,29 +358,29 @@
 											<string>E783AABE1256EBA000E2F8CB</string>
 											<string>E783AABF1256EBA000E2F8CB</string>
 											<string>E783AB401256FF2000E2F8CB</string>
-											<string>E783AB421256FF2000E2F8CB</string>
 											<string>E783AB7E1257056800E2F8CB</string>
-											<string>E783ABF612583D1B00E2F8CB</string>
 											<string>E783AC1C1258B42E00E2F8CB</string>
 											<string>E783AC1D1258B42E00E2F8CB</string>
 											<string>E783AC861258BABD00E2F8CB</string>
-											<string>E783AC8D1258BB1900E2F8CB</string>
 											<string>E783AD3C1258CD3300E2F8CB</string>
-											<string>E759F4051258D0A500D1ED34</string>
 											<string>E759F4061258D0A500D1ED34</string>
-											<string>E759F4231258D66F00D1ED34</string>
 											<string>E759F42F1259153800D1ED34</string>
-											<string>E759F4371259169B00D1ED34</string>
 											<string>E72FF74A12599E4400C1C79E</string>
 											<string>E72FF74D12599E4400C1C79E</string>
 											<string>E72277781259A2ED001A0386</string>
-											<string>E722778F1259A437001A0386</string>
 											<string>E72277A51259A50B001A0386</string>
 											<string>E72277BE1259A661001A0386</string>
 											<string>E72277CF1259AB5A001A0386</string>
 											<string>E7227854125AC960001A0386</string>
 											<string>E7227855125AC960001A0386</string>
-											<string>E7227856125AC960001A0386</string>
+											<string>E722788E125ADCE3001A0386</string>
+											<string>E722788F125ADCE3001A0386</string>
+											<string>E7227890125ADCE3001A0386</string>
+											<string>E7227891125ADCE3001A0386</string>
+											<string>E7227892125ADCE3001A0386</string>
+											<string>E72278CC125AE42D001A0386</string>
+											<string>E72278D9125AE4AD001A0386</string>
+											<string>E72278DA125AE4AD001A0386</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -391,7 +392,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {618, 670}}</string>
+								<string>{{0, 0}, {662, 670}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 384 961 794 0 0 1920 1178 </string>
 							</dict>
@@ -411,7 +412,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 675}, {618, 78}}</string>
+								<string>{{0, 675}, {662, 78}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 384 961 794 0 0 1920 1178 </string>
 							</dict>
@@ -422,7 +423,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>618pt</string>
+					<string>662pt</string>
 				</dict>
 			</array>
 			<key>Name</key>

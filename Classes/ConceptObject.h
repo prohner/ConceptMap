@@ -56,6 +56,7 @@
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
 - (void)bodyDisplayStringBecameActive:(id)sender;
 - (void)setBodyDisplayStringFont;
+- (void)setLayerTreeFrom:(CALayer *)layer toMasksToBounds:(BOOL)newValue;
 
 @end
 

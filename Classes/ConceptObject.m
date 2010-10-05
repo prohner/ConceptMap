@@ -319,7 +319,7 @@
 		case UIGestureRecognizerStatePossible:
 		case UIGestureRecognizerStateBegan:
 			//NSLog(@"UIGestureRecognizerStateBegan");
-			self.layer.superlayer.masksToBounds = NO;
+			[self setLayerTreeFrom:self.layer toMasksToBounds:NO];
 			
 			self.layer.zPosition = 2;
 			self.layer.shadowOffset = CGSizeMake(15.0f, 15.0f);
@@ -350,7 +350,7 @@
 		{
 			CGPoint where = dragLastPoint;
 			
-			self.layer.superlayer.masksToBounds = YES;
+			[self setLayerTreeFrom:self.layer toMasksToBounds:YES];
 			self.layer.position = where;
 			self.layer.zPosition = 0;
 			self.layer.shadowColor = [UIColor clearColor].CGColor;
@@ -366,6 +366,15 @@
 		}
 
 			break;				
+	}
+}
+
+- (void)setLayerTreeFrom:(CALayer *)layer toMasksToBounds:(BOOL)newValue {
+	while (layer.superlayer != nil) {
+		//if ([layer.superlayer isKindOfClass:[ConceptObject class]]) {
+			layer.superlayer.masksToBounds = newValue;
+		//}
+		layer = layer.superlayer;
 	}
 }
 
