@@ -45,10 +45,13 @@
 #define LAYER_NAME_DELETE	@"deleteLayer"
 
 typedef enum ColorSchemeConstantValues {
-	ColorSchemeConstantBlue		= 0,
-	ColorSchemeConstantPurple	= 1,
-	ColorSchemeConstantYellow	= 2,
-	ColorSchemeConstantGreen	= 3,	
+	ColorSchemeConstantBlue			= 0,
+	ColorSchemeConstantPurple		= 1,
+	ColorSchemeConstantYellow		= 2,
+	ColorSchemeConstantGreen		= 3,	
+	ColorSchemeConstantLightGreen	= 4,
+	ColorSchemeConstantLightBlue	= 5,
+	ColorSchemeConstantLightBrown	= 6,
 	ColorSchemeConstantMAX
 } ColorSchemeConstant;
 

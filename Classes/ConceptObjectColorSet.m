@@ -63,6 +63,36 @@
 			titleBackgroundColor	= OPAQUE_HEXCOLOR(0xa64800);	// middle, middle
 			titleForegroundColor	= OPAQUE_HEXCOLOR(0xffb073);	// middle, right
 			break;
+		case ColorSchemeConstantLightGreen:
+			// http://www.colorsontheweb.com/colorwizard.asp
+			colorSchemeName			= @"Light Green";
+			borderColor				= OPAQUE_HEXCOLOR(0x07ce58);	// leftmost, middle
+			backgroundColor			= OPAQUE_HEXCOLOR(0x75faab);	// left top
+			foregroundColor			= OPAQUE_HEXCOLOR(0xb7b7b7);	// right, top
+			titleBorderColor		= OPAQUE_HEXCOLOR(0xfffeff);	// middle, bottom
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x07ce58);	// middle, middle
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xfffeff);	// middle, right
+			break;
+		case ColorSchemeConstantLightBlue:
+			// http://www.colorsontheweb.com/colorwizard.asp
+			colorSchemeName			= @"Light Blue";
+			borderColor				= OPAQUE_HEXCOLOR(0x08aee6);	// center top
+			backgroundColor			= OPAQUE_HEXCOLOR(0x8ddffb);	// left top
+			foregroundColor			= OPAQUE_HEXCOLOR(0xffffff);	// right top
+			titleBorderColor		= OPAQUE_HEXCOLOR(0xffffff);	// right top
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x08aee6);	// middle top
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xc4c4c4);	// bottom
+			break;
+		case ColorSchemeConstantLightBrown:
+			// http://www.colorsontheweb.com/colorwizard.asp
+			colorSchemeName			= @"Salmon";
+			borderColor				= OPAQUE_HEXCOLOR(0x853d35);	// center top
+			backgroundColor			= OPAQUE_HEXCOLOR(0xce8d86);	// left top
+			foregroundColor			= OPAQUE_HEXCOLOR(0xfaf3f2);	// right top
+			titleBorderColor		= OPAQUE_HEXCOLOR(0xfaf3f2);	// right top
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x853d35);	// middle top
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xaaaaaa);	// bottom
+			break;
 		default:
 			// based on 0x0B61A4
 			colorSchemeName			= @"Blue";
