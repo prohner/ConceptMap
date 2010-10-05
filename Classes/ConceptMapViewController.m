@@ -75,7 +75,10 @@
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	[conceptMapView setZoomScale:4.0f];
 //	conceptMapView.delegate = self;
+	
+	conceptMapView.backgroundColor = [UIColor lightGrayColor];
 	
     [self.view addSubview:conceptMapView];
 	
@@ -209,16 +212,33 @@
 }
 
 - (IBAction)sliderStopped:(id)sender {
+	FUNCTION_LOG(@"scale=%.2f, width=%.2f, height=%.2f", conceptMapView.zoomScale, conceptMapView.contentSize.width, conceptMapView.contentSize.height);
 	conceptMapView.delegate = conceptMapViewDelegateHold;
 	[conceptMapView setMinimumZoomScale:1.0f];
 	[conceptMapView setMaximumZoomScale:1.0f];
+
 }
 
 #pragma mark UIScrollViewDelegate
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	FUNCTION_LOG();
+	FUNCTION_LOG(@"width=%.2f, height=%.2f", conceptMapView.contentSize.width, conceptMapView.contentSize.height);
 	return conceptMapView;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+	FUNCTION_LOG(@"scale=%.2f, width=%.2f, height=%.2f", conceptMapView.zoomScale, conceptMapView.contentSize.width, conceptMapView.contentSize.height);
+	if (conceptMapView.contentSize.height < 1024 || conceptMapView.contentSize.width < 768) {
+		CGSize sz = CGSizeMake(768, 1024);
+		if (conceptMapView.contentSize.height < 1024) {
+			sz.height = 1024;
+		}
+		if (conceptMapView.contentSize.width < 768) {
+			sz.width = 768;
+		}
+		[conceptMapView setContentSize:sz];
+	}
+	
 }
 
 
