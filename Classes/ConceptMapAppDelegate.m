@@ -8,6 +8,7 @@
 
 #import "ConceptMapAppDelegate.h"
 #import "ConceptMapViewController.h"
+#import "Utility.h"
 
 @implementation ConceptMapAppDelegate
 
@@ -24,6 +25,10 @@
 	if ([[DATABASE documents] count] <= 0) {
 		Document *doc;
 		Concept *concept;
+		Concept *drives;
+		Concept *edrives;
+		Concept *idrives;
+		Concept *ips;
 		UIImage *image;
 		
 		doc = [DATABASE newDocumentTitled:@"doc 2"];
@@ -42,21 +47,57 @@
 		image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image1" ofType:@"jpeg"]];
 		doc.image = UIImageJPEGRepresentation(image, 1.0);
 
-		concept = [DATABASE newConceptTitled:@"concept 1" toDocument:doc];
+		concept = [DATABASE newConceptTitled:NSLocalizedString(@"Computer Template", @"") toDocument:doc];
 		concept.originX = [NSNumber numberWithInt: 100];
 		concept.originY = [NSNumber numberWithInt: 100];
-		concept.height = [NSNumber numberWithInt: 200];
-		concept.width = [NSNumber numberWithInt: 200];
-		concept.colorSchemeConstant = [NSNumber numberWithInt:0];
-		concept.bodyDisplayString = @"body string";
+		concept.height = [NSNumber numberWithInt: 300];
+		concept.width = [NSNumber numberWithInt: 350];
+		concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+		concept.bodyDisplayString = NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"");
 		
-		concept = [DATABASE newConceptTitled:@"concept 2" toDocument:doc];
+		drives = [DATABASE newConceptTitled:NSLocalizedString(@"Disk Drives", @"") toDocument:doc];
+		drives.originX = [NSNumber numberWithInt: 85];
+		drives.originY = [NSNumber numberWithInt: 50];
+		drives.height = [NSNumber numberWithInt:150];
+		drives.width = [NSNumber numberWithInt:200];
+		drives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+		drives.bodyDisplayString = @" ";
+		[concept addConcept:drives];
+		
+		idrives = [DATABASE newConceptTitled:NSLocalizedString(@"Internal Drives", @"") toDocument:doc];
+		idrives.originX = [NSNumber numberWithInt: 10];
+		idrives.originY = [NSNumber numberWithInt: 20];
+		idrives.height = [NSNumber numberWithInt:50];
+		idrives.width = [NSNumber numberWithInt:180];
+		idrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+		idrives.bodyDisplayString = NSLocalizedString(@"300gb - SATA", @"");
+		[drives addConcept:idrives];
+		
+		edrives = [DATABASE newConceptTitled:NSLocalizedString(@"External Drives", @"") toDocument:doc];
+		edrives.originX = [NSNumber numberWithInt: 10];
+		edrives.originY = [NSNumber numberWithInt: 75];
+		edrives.height = [NSNumber numberWithInt:50];
+		edrives.width = [NSNumber numberWithInt:180];
+		edrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+		edrives.bodyDisplayString = NSLocalizedString(@"RAID - 3tb", @"");
+		[drives addConcept:edrives];
+		
+		ips = [DATABASE newConceptTitled:NSLocalizedString(@"IP Addresses", @"") toDocument:doc];
+		ips.originX = [NSNumber numberWithInt: 85];
+		ips.originY = [NSNumber numberWithInt: 205];
+		ips.height = [NSNumber numberWithInt:70];
+		ips.width = [NSNumber numberWithInt:200];
+		ips.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+		ips.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
+		[concept addConcept:ips];
+
+		concept = [DATABASE newConceptTitled:@"Features to Add" toDocument:doc];
 		concept.originX = [NSNumber numberWithInt: 320];
 		concept.originY = [NSNumber numberWithInt: 320];
 		concept.height = [NSNumber numberWithInt: 300];
 		concept.width = [NSNumber numberWithInt: 300];
 		concept.colorSchemeConstant = [NSNumber numberWithInt:2];
-		concept.bodyDisplayString = @"Actions:\r\nEmail graphics\r\nEmail list form PDF";
+		concept.bodyDisplayString = @"Connection objects\nCleanup all the coordinate mess";
 		[DATABASE saveManagedObjectContext];
 
 	}

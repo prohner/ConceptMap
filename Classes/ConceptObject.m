@@ -9,7 +9,8 @@
 #import "ConceptObject.h"
 #define BODY_DISPLAY_STRING_INDENT_X		10
 #define BODY_DISPLAY_STRING_INDENT_Y		10
-
+#define DELETE_BUTTON_SIZE					20
+#define OUTER_LAYER_BORDER_WIDTH			3
 
 @implementation ConceptObject
 
@@ -49,7 +50,7 @@
 	self.childConceptObjects = [[NSArray alloc] init];
 	
 	self.userInteractionEnabled = YES;
-    self.layer.borderWidth = 5;
+    self.layer.borderWidth = OUTER_LAYER_BORDER_WIDTH;
     self.layer.cornerRadius = 12;
 	self.layer.borderColor = [[UIColor clearColor] CGColor];
 	self.layer.masksToBounds = YES;
@@ -65,14 +66,16 @@
 	[self.layer addSublayer:conceptObjectLabel];
 
 	CGRect bodyDisplayStringFrame = CGRectMake(BODY_DISPLAY_STRING_INDENT_X, 
-											   conceptObjectLabel.bounds.size.height, 
+											   DELETE_BUTTON_SIZE + OUTER_LAYER_BORDER_WIDTH + 1, 
 											   frame.size.width - BODY_DISPLAY_STRING_INDENT_X * 2, 
-											   frame.size.height - conceptObjectLabel.bounds.size.height - BODY_DISPLAY_STRING_INDENT_Y);
+											   frame.size.height - DELETE_BUTTON_SIZE + OUTER_LAYER_BORDER_WIDTH + 1 - BODY_DISPLAY_STRING_INDENT_Y);
 	bodyDisplayString = [[UITextView alloc] initWithFrame:bodyDisplayStringFrame];
 	bodyDisplayString.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	bodyDisplayString.backgroundColor = [UIColor clearColor];
+//	bodyDisplayString.backgroundColor = [UIColor lightGrayColor];
 	bodyDisplayString.userInteractionEnabled = NO;
 	bodyDisplayString.delegate = self;
+	bodyDisplayString.contentInset = UIEdgeInsetsMake(-8, -8, 0, 0);
 	//[bodyDisplayString addTarget:self action:@selector(bodyDisplayStringBecameActive:) forControlEvents:UIControlEventEditingDidBegin];
 	[self addSubview:bodyDisplayString];
 
@@ -208,20 +211,19 @@
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
 	deleteButton.position = CGPointMake(15, 15);
-	int deleteButtonSize = 20;
 	CGFloat rightSideOfLabel = conceptObjectLabel.frame.origin.x + conceptObjectLabel.frame.size.width;
-	CGFloat leftSideOfDelete = self.bounds.size.width - deleteButtonSize - self.layer.borderWidth;
-	if (leftSideOfDelete < rightSideOfLabel + deleteButtonSize) {
-		leftSideOfDelete = rightSideOfLabel + deleteButtonSize;
+	CGFloat leftSideOfDelete = self.bounds.size.width - DELETE_BUTTON_SIZE - self.layer.borderWidth;
+	if (leftSideOfDelete < rightSideOfLabel + DELETE_BUTTON_SIZE) {
+		leftSideOfDelete = rightSideOfLabel + DELETE_BUTTON_SIZE;
 	}
 
-	deleteButton.frame = CGRectMake(leftSideOfDelete, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+	deleteButton.frame = CGRectMake(leftSideOfDelete, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 
 	CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
 	if (settingsX < rightSideOfLabel) {
 		settingsX = rightSideOfLabel;
 	}
-	settingsButton.frame = CGRectMake(settingsX, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+	settingsButton.frame = CGRectMake(settingsX, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 //	settingsButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth - 40, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
 
 	[CATransaction commit];
