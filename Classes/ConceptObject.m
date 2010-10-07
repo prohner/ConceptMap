@@ -209,9 +209,20 @@
 	
 	deleteButton.position = CGPointMake(15, 15);
 	int deleteButtonSize = 20;
-	deleteButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+	CGFloat rightSideOfLabel = conceptObjectLabel.frame.origin.x + conceptObjectLabel.frame.size.width;
+	CGFloat leftSideOfDelete = self.bounds.size.width - deleteButtonSize - self.layer.borderWidth;
+	if (leftSideOfDelete < rightSideOfLabel + deleteButtonSize) {
+		leftSideOfDelete = rightSideOfLabel + deleteButtonSize;
+	}
 
-	settingsButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth - 40, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+	deleteButton.frame = CGRectMake(leftSideOfDelete, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+
+	CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
+	if (settingsX < rightSideOfLabel) {
+		settingsX = rightSideOfLabel;
+	}
+	settingsButton.frame = CGRectMake(settingsX, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
+//	settingsButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth - 40, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
 
 	[CATransaction commit];
 }

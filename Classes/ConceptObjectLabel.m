@@ -30,7 +30,7 @@
 	self.bounds = r;
 	
 	self.anchorPoint = CGPointZero;
-	self.position = CGPointMake(30, 0);
+	self.position = CGPointMake(10, 0);
 	self.borderWidth = 0;
 	self.cornerRadius = 5;
 	self.needsDisplayOnBoundsChange = NO;
