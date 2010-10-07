@@ -228,20 +228,6 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
 	FUNCTION_LOG(@"scale=%.2f, width=%.2f, height=%.2f", conceptMapView.zoomScale, conceptMapView.contentSize.width, conceptMapView.contentSize.height);
-	if (conceptMapView.contentSize.height < 1024 || conceptMapView.contentSize.width < 768) {
-		FUNCTION_LOG(@"\tfixing size");
-		CGSize sz = CGSizeMake(768, 1024);
-		if (conceptMapView.contentSize.height < 1024) {
-			sz.height = 1024;
-		}
-		if (conceptMapView.contentSize.width < 768) {
-			sz.width = 768;
-		}
-		CGRect r = conceptMapView.bounds;
-		r.size = sz;
-		[conceptMapView setBounds:r];
-		
-	}
 	
 }
 
