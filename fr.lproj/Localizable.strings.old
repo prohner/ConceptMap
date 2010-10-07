@@ -10,12 +10,12 @@
 "Concept Map" = "Carte Conceptuelle";
 
 "Actions" = "Actions";
-"Email as Image" = "Envoyer - L'image";
-"Email as List" = "Envoyer - La liste";
-"Email as List + Image" = "Envoyer - La liste et l'image";
+"Email as Image" = "Courrier électronique - L'image";
+"Email as List" = "Courrier électronique - Liste";
+"Email as List + Image" = "Courrier électronique - Liste et L'image";
 
 "Blue" = "Bleu";
-"Purple" = "Violet";
+"Purple" = "Pourpre";
 "Yellow" = "Jaune";
 "Green" = "Vert";
 "Light Green" = "Vert Pâle";
@@ -28,8 +28,8 @@
 "Background Picture" = "Image de Fond";
 "Shape" = "Forme";
 
-"Color Scheme" = "Schéma de Couleurs";
+"Color Scheme" = "Schéma de Couleur";
 "Fonts" = "Polices";
 
-"Created using" = "Créé à l'aide de";
+"Created using" = "Créé à l'aide";
 "on my" = "sur mon";

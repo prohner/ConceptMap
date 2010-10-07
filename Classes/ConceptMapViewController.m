@@ -77,8 +77,9 @@
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
     conceptMapView.contentSize = [conceptMapView idealContentSize];
 	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	[conceptMapView setZoomScale:4.0f];
+//	[conceptMapView setZoomScale:4.0f];
 //	conceptMapView.delegate = self;
+//	conceptMapView.layer.masksToBounds = NO;
 	
 	conceptMapView.backgroundColor = [UIColor lightGrayColor];
 	
@@ -200,25 +201,22 @@
 	conceptMapViewDelegateHold = conceptMapView.delegate;
 
 	FUNCTION_LOG(@"min=%.2f, max=%.2f", conceptMapView.minimumZoomScale, conceptMapView.maximumZoomScale);
-	[conceptMapView setMinimumZoomScale:0.25f];
-	[conceptMapView setMaximumZoomScale:1.75f];
+	[conceptMapView setMinimumZoomScale:1.00f];
+	[conceptMapView setMaximumZoomScale:5.00f];
 //	[conceptMapView setZoomScale:1.0f];
 	conceptMapView.delegate = self;
 }
 
 - (IBAction)sliderChanged:(id)sender {
-	FUNCTION_LOG();
 	UISlider *slider = (UISlider *)sender;
 	[conceptMapView setZoomScale:slider.value];
+	FUNCTION_LOG(@"zomm scale: %.2f", slider.value);
 	[conceptMapView setNeedsDisplay];
 }
 
 - (IBAction)sliderStopped:(id)sender {
 	FUNCTION_LOG(@"scale=%.2f, width=%.2f, height=%.2f", conceptMapView.zoomScale, conceptMapView.contentSize.width, conceptMapView.contentSize.height);
 	conceptMapView.delegate = conceptMapViewDelegateHold;
-	[conceptMapView setMinimumZoomScale:1.0f];
-	[conceptMapView setMaximumZoomScale:1.0f];
-
 }
 
 #pragma mark UIScrollViewDelegate
@@ -231,6 +229,7 @@
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
 	FUNCTION_LOG(@"scale=%.2f, width=%.2f, height=%.2f", conceptMapView.zoomScale, conceptMapView.contentSize.width, conceptMapView.contentSize.height);
 	if (conceptMapView.contentSize.height < 1024 || conceptMapView.contentSize.width < 768) {
+		FUNCTION_LOG(@"\tfixing size");
 		CGSize sz = CGSizeMake(768, 1024);
 		if (conceptMapView.contentSize.height < 1024) {
 			sz.height = 1024;
@@ -238,7 +237,10 @@
 		if (conceptMapView.contentSize.width < 768) {
 			sz.width = 768;
 		}
-		[conceptMapView setContentSize:sz];
+		CGRect r = conceptMapView.bounds;
+		r.size = sz;
+		[conceptMapView setBounds:r];
+		
 	}
 	
 }

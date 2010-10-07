@@ -25,6 +25,11 @@ static int recursionDepth = 0;
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 		[self addGestureRecognizer:singleTap];
 		[singleTap release];
+
+		UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+		doubleTap.numberOfTapsRequired = 2;
+		[self addGestureRecognizer:doubleTap];
+		[doubleTap release];
 	}
 	
 	return self;
@@ -73,6 +78,11 @@ static int recursionDepth = 0;
     // single tap does nothing for now
 	FUNCTION_LOG();
 	[selectedConceptObject setSelected:NO];	// Unselect already selected one
+}
+
+- (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
+    // single tap does nothing for now
+	FUNCTION_LOG(@"zoom scale == %.2f", self.zoomScale);
 }
 
 #pragma mark ConceptObjectDelegate

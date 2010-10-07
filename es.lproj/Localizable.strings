@@ -10,9 +10,9 @@
 "Concept Map" = "Mapa Conceptual";
 
 "Actions" = "Acciones";
-"Email as Image" = "Correo Electrónico - Imagen";
-"Email as List" = "Correo Electrónico - Lista";
-"Email as List + Image" = "Correo Electrónico - Lista y Imagen";
+"Email as Image" = "Enviar - Imagen";
+"Email as List" = "Enviar - Lista";
+"Email as List + Image" = "Enviar - Lista y Imagen";
 
 "Blue" = "Azul";
 "Purple" = "Púrpura";
