@@ -43,6 +43,7 @@
 #define LAYER_NAME_OBJECT	@"conceptObject"
 #define LAYER_NAME_TITLE	@"titleLayer"
 #define LAYER_NAME_DELETE	@"deleteLayer"
+#define LAYER_NAME_CONNECT	@"connectLayer"
 
 typedef enum ColorSchemeConstantValues {
 	ColorSchemeConstantBlue			= 0,

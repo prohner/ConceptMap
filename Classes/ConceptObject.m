@@ -29,7 +29,14 @@
 	deleteButton.conceptObject = self;
 	deleteButton.hidden = YES;
 	[self.layer addSublayer:deleteButton];
+}
 
+- (void)addConnectButton {
+	connectButton = [[ConceptObjectConnectButton alloc] init];	
+	[connectButton setValue:LAYER_NAME_CONNECT forKey:LAYER_NAME];
+	connectButton.conceptObject = self;
+	connectButton.hidden = YES;
+	[self.layer addSublayer:connectButton];
 }
 
 - (void)addSettingsButton {
@@ -59,6 +66,7 @@
 	[self setFrame:frame];
 	
 	[self addSettingsButton];
+	[self addConnectButton];
 	[self addDeleteButton];
 	
 	conceptObjectLabel = [[ConceptObjectLabel alloc] init];
@@ -120,6 +128,9 @@
 
 
 - (void) dealloc {
+	[deleteButton release];
+	[connectButton release];
+	[conceptObjectLabel release];
 	[super dealloc];
 }
 
@@ -144,6 +155,7 @@
 	[bodyDisplayString setNeedsDisplay];
 	
 	[deleteButton setNeedsDisplay];
+	[connectButton setNeedsDisplay];
 }
 
 - (void)setSelected:(BOOL)isSelected {
@@ -165,6 +177,7 @@
 		[conceptObjectLabel setFrame:labelFrame];
 	}
 	settingsButton.hidden = deleteButton.hidden;
+	connectButton.hidden = deleteButton.hidden;
  	settingsButton.enabled = ! settingsButton.hidden;
 
 	[myDelegate conceptObject:self isSelected:selected];
@@ -201,7 +214,7 @@
 
 - (void)layoutSubviews {
 //	FUNCTION_LOG(@"%@ current bounds = (%.0f, %.0f) (%.0f, %.0f)", concept.title, self.frame.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
-//	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
+	FUNCTION_LOG(@"%@ %i", concept.title, concept.conceptObjectColorSet.backgroundColor);
 	self.backgroundColor				= concept.conceptObjectColorSet.backgroundColor;
 	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
 	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
@@ -224,8 +237,9 @@
 		settingsX = rightSideOfLabel;
 	}
 	settingsButton.frame = CGRectMake(settingsX, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
-//	settingsButton.frame = CGRectMake(self.bounds.size.width - deleteButtonSize - self.layer.borderWidth - 40, self.layer.borderWidth, deleteButtonSize, deleteButtonSize);
 
+	connectButton.frame = CGRectMake(settingsX + DELETE_BUTTON_SIZE, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
+	
 	[CATransaction commit];
 }
 
@@ -273,6 +287,8 @@
 												  otherButtonTitles:@"Yes", nil];
 			[alert show];
 			[alert release];
+		} else if ([layerName isEqualToString:LAYER_NAME_CONNECT]) {
+			FUNCTION_LOG(@"Connect Button Tapped");
 		} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
 			FUNCTION_LOG(@"HIT SETTINGS");
 		} else {

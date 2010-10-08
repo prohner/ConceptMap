@@ -267,6 +267,7 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>E75ABC621239EFFF004A5C76</string>
 								<string>E7F87F4B1238AC7C003F63CA</string>
+								<string>E792D3721247189D00873C15</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>E722790E125AEA1E001A0386</string>
 								<string>E722790F125AEA1E001A0386</string>
@@ -280,14 +281,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
+									<integer>27</integer>
 									<integer>14</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 22}, {338, 680}}</string>
+							<string>{{0, 152}, {338, 680}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7227BE4125EEBB3001A0386</string>
+										<string>E7227CB0125F026E001A0386</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -346,27 +347,21 @@
 											<string>E774F6F21249BD8A00CC1918</string>
 											<string>E774F7141249BF3F00CC1918</string>
 											<string>E72A5379124DB8A800FEF168</string>
-											<string>E783B92B1251AB79009B0C77</string>
-											<string>E783B92C1251AB79009B0C77</string>
 											<string>E783BACA12524C8C009B0C77</string>
 											<string>E783BB3D12530B85009B0C77</string>
 											<string>E783BB56125388B0009B0C77</string>
 											<string>E783BC6412545CE7009B0C77</string>
 											<string>E783AA3E1255AB1700E2F8CB</string>
-											<string>E783AA8912569CBF00E2F8CB</string>
 											<string>E783AC1C1258B42E00E2F8CB</string>
 											<string>E783AC1D1258B42E00E2F8CB</string>
 											<string>E783AC861258BABD00E2F8CB</string>
 											<string>E783AD3C1258CD3300E2F8CB</string>
 											<string>E759F4061258D0A500D1ED34</string>
-											<string>E72FF74D12599E4400C1C79E</string>
 											<string>E7227934125AEFAD001A0386</string>
-											<string>E7227939125AEFAD001A0386</string>
 											<string>E7227949125AF0CE001A0386</string>
 											<string>E722794D125AF0CE001A0386</string>
 											<string>E722794F125AF0CE001A0386</string>
 											<string>E7227950125AF0CE001A0386</string>
-											<string>E7227960125AF2EF001A0386</string>
 											<string>E7227968125AF3C7001A0386</string>
 											<string>E7227969125AF3C7001A0386</string>
 											<string>E7227979125BBD5E001A0386</string>
@@ -374,12 +369,9 @@
 											<string>E722797F125C4205001A0386</string>
 											<string>E7227980125C4205001A0386</string>
 											<string>E7227A51125D8170001A0386</string>
-											<string>E7227A53125D8170001A0386</string>
 											<string>E7227A89125D893A001A0386</string>
-											<string>E7227A8A125D893A001A0386</string>
 											<string>E7227AC8125D8F5B001A0386</string>
 											<string>E7227B0E125D9D8C001A0386</string>
-											<string>E7227B62125EDFDB001A0386</string>
 											<string>E7227B79125EE11C001A0386</string>
 											<string>E7227B7A125EE11C001A0386</string>
 											<string>E7227B7B125EE11C001A0386</string>
@@ -392,7 +384,18 @@
 											<string>E7227BC7125EE96C001A0386</string>
 											<string>E7227BC8125EE96C001A0386</string>
 											<string>E7227BCD125EEA70001A0386</string>
-											<string>E7227ABC125D8D85001A0386</string>
+											<string>E7227BF7125EF170001A0386</string>
+											<string>E7227BF8125EF170001A0386</string>
+											<string>E7227BF9125EF170001A0386</string>
+											<string>E7227BFD125EF170001A0386</string>
+											<string>E7227C03125EF19C001A0386</string>
+											<string>E7227C0C125EF23B001A0386</string>
+											<string>E7227C57125EFB42001A0386</string>
+											<string>E7227C6A125EFD6D001A0386</string>
+											<string>E7227CAC125F026E001A0386</string>
+											<string>E7227CAD125F026E001A0386</string>
+											<string>E7227CAE125F026E001A0386</string>
+											<string>E7227CAF125F026E001A0386</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -594,8 +597,8 @@
 		<string>E722775A1259A1A0001A0386</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7F87E2C12388412003F63CA</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 439 1112 739 0 0 1920 1178 </string>

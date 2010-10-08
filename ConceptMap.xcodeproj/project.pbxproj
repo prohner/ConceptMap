@@ -41,6 +41,8 @@
 		E722792B125AEEAC001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227928125AEEAC001A0386 /* InfoPlist.strings */; };
 		E722792E125AEED3001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722792C125AEED3001A0386 /* InfoPlist.strings */; };
 		E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722792C125AEED3001A0386 /* InfoPlist.strings */; };
+		E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
+		E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
@@ -131,6 +133,8 @@
 		E7227925125AEE6E001A0386 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E7227929125AEEAC001A0386 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E722792D125AEED3001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E7227BE5125EEEAC001A0386 /* ConceptObjectConnectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnectButton.h; sourceTree = "<group>"; };
+		E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnectButton.m; sourceTree = "<group>"; };
 		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
 		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
 		E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorChooserViewController.h; sourceTree = "<group>"; };
@@ -433,6 +437,8 @@
 				E783B73F12504919009B0C77 /* ConceptObjectDeleteButton.m */,
 				E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */,
 				E754AD90123FCCD2002801A3 /* ConceptObjectLabel.m */,
+				E7227BE5125EEEAC001A0386 /* ConceptObjectConnectButton.h */,
+				E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */,
 			);
 			name = "Concept Object";
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				E783BC391254597E009B0C77 /* ActionsViewController.m in Sources */,
 				E783BC5E12545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 				E783AC121258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
+				E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +645,7 @@
 				E783BC3B1254597E009B0C77 /* ActionsViewController.m in Sources */,
 				E783BC6012545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 				E783AC141258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
+				E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

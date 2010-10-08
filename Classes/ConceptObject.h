@@ -15,6 +15,7 @@
 #import "ConceptObjectSettingsViewController.h"
 #import "ConceptObjectColorSet.h"
 #import "ConceptObjectDeleteButton.h"
+#import "ConceptObjectConnectButton.h"
 
 @protocol ConceptObjectDelegate;
 
@@ -27,6 +28,7 @@
     id <ConceptObjectDelegate> myDelegate;
 	
 	ConceptObjectDeleteButton *deleteButton;
+	ConceptObjectConnectButton *connectButton;
 	ConceptObjectLabel *conceptObjectLabel;
 	UIButton *settingsButton;
 	ConceptObjectTitleViewController *conceptObjectTitleViewController;
