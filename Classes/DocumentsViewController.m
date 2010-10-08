@@ -26,7 +26,24 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 	self.title = NSLocalizedString(@"Documents", @"");
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDocument)];
+
+}
+
+- (void) addDocument {
+	Document *doc = [DATABASE newDocumentTitled:NSLocalizedString(@"New Document", @"")];
+	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(@"Your New Doc", @"") toDocument:doc];
+	concept.originX = [NSNumber numberWithInt: 100];
+	concept.originY = [NSNumber numberWithInt:  50];
+	concept.height = [NSNumber numberWithInt: 400];
+	concept.width = [NSNumber numberWithInt: 425];
+	concept.bodyDisplayString = @"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess";
+	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+	
+	[DATABASE application].currentDocument = doc;
+	[conceptMapViewController setConceptMapView];
+	
 }
 
 /*
@@ -110,19 +127,26 @@
 
 
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		Document *doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
+		[[DATABASE application] removeDocumentsObject:doc];
+        [[DATABASE managedObjectContext] deleteObject:doc];
+//		[DATABASE saveManagedObjectContext];
+//		[[DATABASE documents] removeObjectAtIndex:indexPath.row];
+		[tableView reloadData];
+		//[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 
 /*
