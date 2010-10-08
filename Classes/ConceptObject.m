@@ -240,49 +240,58 @@
 
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
-	CGPoint viewPoint = [sender locationInView:self.superview];
-	CALayer *hitLayer = [self.layer hitTest:viewPoint];
-	
-	NSString *layerName = (NSString *)[hitLayer valueForKey:LAYER_NAME];
-	FUNCTION_LOG(@" (%i)tapped on %@ (%i)", self, layerName, hitLayer);
-	
-	if ([layerName isEqualToString:LAYER_NAME_TITLE]) {
-		FUNCTION_LOG(@"Title tapped");
-		self.selected = YES;
-		conceptObjectTitleViewController = [[ConceptObjectTitleViewController alloc] initWithNibName:@"ConceptObjectTitleViewController" bundle:nil];
-		conceptObjectTitleViewController.conceptObject = self;
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		CGPoint viewPoint = [sender locationInView:self.superview];
+		CALayer *hitLayer = [self.layer hitTest:viewPoint];
 		
-		UIPopoverController *popover = [[[UIPopoverController alloc] 
-										 initWithContentViewController:conceptObjectTitleViewController] retain];
+		NSString *layerName = (NSString *)[hitLayer valueForKey:LAYER_NAME];
+		FUNCTION_LOG(@" (%i)tapped on %@ (%i)", self, layerName, hitLayer);
 		
-		[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
-								 inView:self 
-			   permittedArrowDirections:UIPopoverArrowDirectionAny 
-							   animated:YES];
-		
-		
-	} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
-		FUNCTION_LOG(@"Delete tapped");
-		self.selected = YES;
-		NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete %@?", concept.title];
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item"
-														message:msg
-													   delegate:self 
-											  cancelButtonTitle:@"No" 
-											  otherButtonTitles:@"Yes", nil];
-		[alert show];
-		[alert release];
-	} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
-		FUNCTION_LOG(@"HIT SETTINGS");
-	} else {
-		self.selected = !self.selected;
-		FUNCTION_LOG(@"Toggle selected to %i", self.selected);
+		if ([layerName isEqualToString:LAYER_NAME_TITLE]) {
+			FUNCTION_LOG(@"Title tapped");
+			self.selected = YES;
+			conceptObjectTitleViewController = [[ConceptObjectTitleViewController alloc] initWithNibName:@"ConceptObjectTitleViewController" bundle:nil];
+			conceptObjectTitleViewController.conceptObject = self;
+			
+			UIPopoverController *popover = [[[UIPopoverController alloc] 
+											 initWithContentViewController:conceptObjectTitleViewController] retain];
+			
+			[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
+									 inView:self 
+				   permittedArrowDirections:UIPopoverArrowDirectionAny 
+								   animated:YES];
+			
+			
+		} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
+			FUNCTION_LOG(@"Delete tapped");
+			self.selected = YES;
+			NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete %@?", concept.title];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item"
+															message:msg
+														   delegate:self 
+												  cancelButtonTitle:@"No" 
+												  otherButtonTitles:@"Yes", nil];
+			[alert show];
+			[alert release];
+		} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
+			FUNCTION_LOG(@"HIT SETTINGS");
+		} else {
+			if (!self.selected) {
+				self.selected = YES;
+			}
+//			self.selected = !self.selected;
+//			FUNCTION_LOG(@"Toggle selected to %i", self.selected);
+		}
 	}
 }
 
-- (void) handleObjectDoubleTapGesture:(id)sender {
+- (void) handleObjectDoubleTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
-	bodyDisplayString.userInteractionEnabled = YES;
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		[self setSelected:YES];
+		bodyDisplayString.userInteractionEnabled = YES;
+		[bodyDisplayString becomeFirstResponder];
+	}
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
