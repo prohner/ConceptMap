@@ -40,10 +40,14 @@
 	concept.width = [NSNumber numberWithInt: 425];
 	concept.bodyDisplayString = @"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess";
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+
+	DATABASE.fetchedResultsController = nil;
+	[self.tableView reloadData];
 	
 	[DATABASE application].currentDocument = doc;
 	[conceptMapViewController setConceptMapView];
 	
+	[conceptMapViewController.popover dismissPopoverAnimated:YES];
 }
 
 /*
@@ -122,7 +126,12 @@
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+	Document *doc;
+	doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
+	if (doc != [DATABASE currentDocument]) {
+		return YES;
+	}
+    return NO;
 }
 
 
@@ -136,6 +145,7 @@
 		Document *doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
 		[[DATABASE application] removeDocumentsObject:doc];
         [[DATABASE managedObjectContext] deleteObject:doc];
+		DATABASE.fetchedResultsController = nil;
 //		[DATABASE saveManagedObjectContext];
 //		[[DATABASE documents] removeObjectAtIndex:indexPath.row];
 		[tableView reloadData];
