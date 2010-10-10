@@ -262,7 +262,17 @@
 	CGRect bounds = self.bounds;
 	bounds.size = newSize;
 
+	CGPoint savedPosition = self.layer.position;
+	CGPoint adjustedPosition = self.layer.position;
+	adjustedPosition.x = adjustedPosition.x / 2;
+	adjustedPosition.y = adjustedPosition.x / 2;
+	CGPoint savedAnchorPoint = self.layer.anchorPoint;
+	self.layer.anchorPoint = CGPointMake(0, 0);
+	self.layer.position = adjustedPosition;
 	self.bounds = bounds;
+	self.layer.position = savedPosition;
+	self.layer.anchorPoint = savedAnchorPoint;
+	
 
 }
 
@@ -389,6 +399,8 @@
 			
 			CGPoint viewPoint = [sender locationInView:self];
 			dragLastPoint = [self convertPoint:viewPoint toView:self.superview];
+			dragLastPoint.x -= [self.concept.width floatValue] / 2;
+			dragLastPoint.y -= [self.concept.height floatValue] / 2;
 
 			[CATransaction flush];
 			[CATransaction begin];
@@ -434,7 +446,7 @@
 
 - (void)doSettings:(id)sender {
 	FUNCTION_LOG(@"");
-	self.layer.anchorPoint = CGPointMake(0.0f, 0.0f);
+//	self.layer.anchorPoint = CGPointMake(0.0f, 0.0f);
 	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
 	conceptObjectSettingsViewController.conceptObject = self;
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
