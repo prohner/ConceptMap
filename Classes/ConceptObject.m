@@ -56,7 +56,8 @@
 	self = [super initWithFrame:frame];
 	self.childConceptObjects = [[NSArray alloc] init];
 	
-	self.layer.anchorPoint = CGPointMake(0, 0);
+	self.layer.anchorPoint = CGPointMake(0.0f, 0.0f);
+
 	self.userInteractionEnabled = YES;
     self.layer.borderWidth = OUTER_LAYER_BORDER_WIDTH;
     self.layer.cornerRadius = 12;
@@ -261,14 +262,8 @@
 	CGRect bounds = self.bounds;
 	bounds.size = newSize;
 
-	[CATransaction flush];
-	[CATransaction begin];
-	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	self.bounds = bounds;
-	[CATransaction commit];
-	
-//	[self setNeedsDisplay];
-//	[self setNeedsLayout];	
+
 }
 
 #pragma mark Handling touches 
@@ -439,6 +434,7 @@
 
 - (void)doSettings:(id)sender {
 	FUNCTION_LOG(@"");
+	self.layer.anchorPoint = CGPointMake(0.0f, 0.0f);
 	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
 	conceptObjectSettingsViewController.conceptObject = self;
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
@@ -467,6 +463,11 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
 	concept.bodyDisplayString = textView.text;
+}
+
+#pragma mark UIPopoverControllerDelegate
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+//	self.layer.anchorPoint = CGPointMake(0.5f, 0.5f);
 }
 
 @end

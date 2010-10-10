@@ -19,7 +19,7 @@
 
 @protocol ConceptObjectDelegate;
 
-@interface ConceptObject : UIView <UIAlertViewDelegate, UITextViewDelegate> {
+@interface ConceptObject : UIView <UIAlertViewDelegate, UITextViewDelegate, UIPopoverControllerDelegate> {
 	UIView *myContainingView;
 	BOOL selected;
 	
