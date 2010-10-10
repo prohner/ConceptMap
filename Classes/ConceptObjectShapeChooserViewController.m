@@ -1,24 +1,21 @@
 //
-//  ConceptObjectSettingsViewController.m
+//  ConceptObjectShapeChooserViewController.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/22/10.
+//  Created by Preston Rohner on 10/9/10.
 //  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
-#import "ConceptObjectSettingsViewController.h"
-#import "ConceptObjectColorChooserViewController.h"
-#import "ConceptObject.h"
-#import "ConceptObjectFontChooserViewController.h"
 #import "ConceptObjectShapeChooserViewController.h"
+#import "ConceptObject.h"
 
-@implementation ConceptObjectSettingsViewController
+#define	ROW_SQUARE		0
+#define ROW_VERT_RECT	1
+#define ROW_HORZ_RECT	2
+
+@implementation ConceptObjectShapeChooserViewController
 
 @synthesize conceptObject;
-
-#define ROW_COLOR		0
-#define ROW_FONT		1
-#define ROW_SHAPE		3
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -27,13 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = NSLocalizedString(@"Settings", @"");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	
 	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
+	self.title = NSLocalizedString(@"Shapes", @"");
+	originalHeight = [conceptObject.concept.height intValue];
+	originalWidth = [conceptObject.concept.width intValue];
+
 }
 
 
@@ -76,7 +77,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    return 3;
 }
 
 
@@ -88,22 +89,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     // Configure the cell...
 	switch (indexPath.row) {
-		case ROW_COLOR:
-			cell.textLabel.text = NSLocalizedString(@"Colors", @"");
+		case ROW_SQUARE:
+			cell.textLabel.text = @"Square";
 			break;
-		case ROW_FONT:
-			cell.textLabel.text = NSLocalizedString(@"Fonts", @"");
+		case ROW_VERT_RECT:
+			cell.textLabel.text = @"Vertical Rectangle";
 			break;
-		case 2:
-			cell.textLabel.text = NSLocalizedString(@"Background Picture", @"");
-			break;
-		case ROW_SHAPE:
-			cell.textLabel.text = NSLocalizedString(@"Shapes", @"");
+		case ROW_HORZ_RECT:
+			cell.textLabel.text = @"Horizontal Rectangle";
 			break;
 		default:
 			break;
@@ -111,7 +108,6 @@
     
     return cell;
 }
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -157,7 +153,6 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
     // Navigation logic may go here. Create and push another view controller.
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -166,45 +161,32 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	switch (indexPath.row) {
-		case ROW_COLOR:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectColorChooserViewController *ctrl = [[ConceptObjectColorChooserViewController alloc] initWithNibName:@"ConceptObjectColorChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
-		case ROW_FONT:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectFontChooserViewController *ctrl = [[ConceptObjectFontChooserViewController alloc] initWithNibName:@"ConceptObjectFontChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
-		case ROW_SHAPE:
-		{
-			FUNCTION_LOG(@"At row the row 0 %i", indexPath.row);
-			ConceptObjectShapeChooserViewController *ctrl = [[ConceptObjectShapeChooserViewController alloc] initWithNibName:@"ConceptObjectShapeChooserViewController" bundle:nil];
-			ctrl.conceptObject = conceptObject;
-			[self.navigationController pushViewController:ctrl animated:YES];
-			[ctrl release];
-		}
-			break;
 
+	int width = [conceptObject.concept.width intValue];
+	int height = [conceptObject.concept.height intValue]; 
+	switch (indexPath.row) {
+		case ROW_SQUARE:
+			width = originalWidth;
+			height = originalWidth;
+			break;
+		case ROW_VERT_RECT:
+			if (originalHeight <= originalWidth) {
+				height = originalWidth * 1.5;
+				width = originalWidth;
+			}
+			break;
+		case ROW_HORZ_RECT:
+			if (originalHeight >= originalWidth) {
+				width = originalHeight * 1.5;
+				height = originalHeight;
+			}
+			break;
 		default:
-			FUNCTION_LOG(@"At row %i", indexPath.row);
 			break;
 	}
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+	
+	[conceptObject setConceptSize:CGSizeMake(width, height)];
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	FUNCTION_LOG();
-	return indexPath;
 }
 
 
@@ -221,6 +203,7 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+	self.conceptObject = nil;
 }
 
 

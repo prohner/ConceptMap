@@ -59,6 +59,7 @@
 - (void)bodyDisplayStringBecameActive:(id)sender;
 - (void)setBodyDisplayStringFont;
 - (void)setLayerTreeFrom:(CALayer *)layer toMasksToBounds:(BOOL)newValue;
+- (void)setConceptSize:(CGSize)newSize;
 
 @end
 

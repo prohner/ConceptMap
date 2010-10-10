@@ -43,6 +43,10 @@
 		E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722792C125AEED3001A0386 /* InfoPlist.strings */; };
 		E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
 		E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
+		E7227CB812616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */; };
+		E7227CB912616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */; };
+		E7227CBA12616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */; };
+		E7227CBB12616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
@@ -135,6 +139,9 @@
 		E722792D125AEED3001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E7227BE5125EEEAC001A0386 /* ConceptObjectConnectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnectButton.h; sourceTree = "<group>"; };
 		E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnectButton.m; sourceTree = "<group>"; };
+		E7227CB512616628001A0386 /* ConceptObjectShapeChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectShapeChooserViewController.h; sourceTree = "<group>"; };
+		E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectShapeChooserViewController.m; sourceTree = "<group>"; };
+		E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectShapeChooserViewController.xib; path = Classes/ConceptObjectShapeChooserViewController.xib; sourceTree = "<group>"; };
 		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
 		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
 		E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorChooserViewController.h; sourceTree = "<group>"; };
@@ -307,6 +314,7 @@
 				E72A53BF124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.xib */,
 				E783AC111258B38100E2F8CB /* ConceptObjectFontChooserViewController.xib */,
 				E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */,
+				E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */,
 				E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ConceptMap-Info.plist */,
@@ -423,6 +431,8 @@
 				E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */,
 				E783AC0F1258B38100E2F8CB /* ConceptObjectFontChooserViewController.h */,
 				E783AC101258B38100E2F8CB /* ConceptObjectFontChooserViewController.m */,
+				E7227CB512616628001A0386 /* ConceptObjectShapeChooserViewController.h */,
+				E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -535,6 +545,7 @@
 				E7227926125AEE6E001A0386 /* InfoPlist.strings in Resources */,
 				E722792A125AEEAC001A0386 /* InfoPlist.strings in Resources */,
 				E722792E125AEED3001A0386 /* InfoPlist.strings in Resources */,
+				E7227CB912616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +572,7 @@
 				E7227927125AEE6E001A0386 /* InfoPlist.strings in Resources */,
 				E722792B125AEEAC001A0386 /* InfoPlist.strings in Resources */,
 				E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */,
+				E7227CBB12616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +622,7 @@
 				E783BC5E12545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 				E783AC121258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
 				E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
+				E7227CB812616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +659,7 @@
 				E783BC6012545C1C009B0C77 /* DocumentSettingsViewController.m in Sources */,
 				E783AC141258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
 				E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
+				E7227CBA12616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

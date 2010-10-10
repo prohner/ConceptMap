@@ -56,6 +56,7 @@
 	self = [super initWithFrame:frame];
 	self.childConceptObjects = [[NSArray alloc] init];
 	
+	self.layer.anchorPoint = CGPointMake(0, 0);
 	self.userInteractionEnabled = YES;
     self.layer.borderWidth = OUTER_LAYER_BORDER_WIDTH;
     self.layer.cornerRadius = 12;
@@ -232,13 +233,16 @@
 
 	deleteButton.frame = CGRectMake(leftSideOfDelete, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 
-	CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
+	//CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
+	CGFloat settingsX = rightSideOfLabel + 10;
 	if (settingsX < rightSideOfLabel) {
 		settingsX = rightSideOfLabel;
 	}
 	settingsButton.frame = CGRectMake(settingsX, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 
-	connectButton.frame = CGRectMake(settingsX + DELETE_BUTTON_SIZE, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
+	CGFloat rightSizeOfSettings = settingsX + DELETE_BUTTON_SIZE;
+	CGFloat connectX = rightSizeOfSettings + ((leftSideOfDelete - rightSizeOfSettings) / 2) - (connectButton.frame.size.width / 2);
+	connectButton.frame = CGRectMake(connectX, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 	
 	[CATransaction commit];
 }
@@ -248,6 +252,23 @@
 	[deleteButton setNeedsDisplay];
 	[self setNeedsLayout];
 	[self setNeedsDisplay];
+}
+
+- (void)setConceptSize:(CGSize)newSize {
+	concept.width = [NSNumber numberWithFloat:newSize.width];
+	concept.height = [NSNumber numberWithFloat:newSize.height];
+	
+	CGRect bounds = self.bounds;
+	bounds.size = newSize;
+
+	[CATransaction flush];
+	[CATransaction begin];
+	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+	self.bounds = bounds;
+	[CATransaction commit];
+	
+//	[self setNeedsDisplay];
+//	[self setNeedsLayout];	
 }
 
 #pragma mark Handling touches 
