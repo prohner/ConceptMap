@@ -22,6 +22,7 @@
 @interface ConceptObject : UIView <UIAlertViewDelegate, UITextViewDelegate, UIPopoverControllerDelegate> {
 	UIView *myContainingView;
 	BOOL selected;
+	BOOL isConnecting;
 	
 	Concept *concept;
 	
@@ -45,6 +46,7 @@
 }
 
 @property (nonatomic) BOOL selected;
+@property (nonatomic) BOOL isConnecting;
 @property (nonatomic) BOOL isActiveDropTarget;
 @property (nonatomic, retain) id <ConceptObjectDelegate> myDelegate;
 @property (nonatomic, retain) Concept *concept;
@@ -68,6 +70,8 @@
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected;
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender;
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender;
+- (void)conceptObject:(ConceptObject *)conceptObject connecting:(BOOL)isConnecting;
+- (BOOL)conceptObject:(ConceptObject *)conceptObject connected:(BOOL)isConnected;
 
 
 @end

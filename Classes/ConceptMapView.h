@@ -10,12 +10,15 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ConceptObject.h"
 #import "DataController.h"
+#import "ConceptObjectConnections.h"
 
 @interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate> {
 	ConceptObject *selectedConceptObject;
 	ConceptObject *possibleDropTarget;
 	ConceptObject *panningConceptObject;
+	ConceptObject *sourceConceptObject;
 	Document *currentDocument;
+	ConceptObjectConnections *conceptObjectConnections;
 	UIBarButtonItem *propertyInspectorButton;
 	UIToolbar *toolbar;
 }

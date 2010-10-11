@@ -7,7 +7,7 @@
 //
 
 #import "ConceptMapView.h"
-
+#import "ConceptObjectConnections.h"
 
 @implementation ConceptMapView
 
@@ -18,6 +18,13 @@ static int recursionDepth = 0;
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
+		conceptObjectConnections = [ConceptObjectConnections layer];
+		conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
+		//	connectionsLayer.backgroundColor = [[UIColor greenColor] CGColor];
+		conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
+		
+		[self.layer addSublayer:conceptObjectConnections];
+
 		self.currentDocument = [DATABASE currentDocument];
 		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
 		
@@ -30,6 +37,7 @@ static int recursionDepth = 0;
 		doubleTap.numberOfTapsRequired = 2;
 		[self addGestureRecognizer:doubleTap];
 		[doubleTap release];
+		
 	}
 	
 	return self;
@@ -104,6 +112,8 @@ static int recursionDepth = 0;
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender {
 	CGPoint panPoint = [sender locationInView:self];
 	panningConceptObject = conceptObject;
+	
+	[conceptObjectConnections setNeedsDisplay];
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
 	//FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
@@ -193,6 +203,25 @@ static int recursionDepth = 0;
 
 	}
 	possibleDropTarget = nil;
+}
+
+- (void)conceptObject:(ConceptObject *)conceptObject  connecting:(BOOL)isConnecting {
+	FUNCTION_LOG();
+	sourceConceptObject = conceptObject;
+}
+
+- (BOOL)conceptObject:(ConceptObject *)conceptObject connected:(BOOL)isConnected {
+	FUNCTION_LOG();
+	BOOL result = NO;
+	if (sourceConceptObject) {
+		[sourceConceptObject.concept addConnectedConceptsObject:conceptObject.concept];
+		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
+		FUNCTION_LOG(@"Connect %@ to %@", sourceConceptObject.concept.title, conceptObject.concept.title);
+		[conceptObjectConnections addConnectionFrom:sourceConceptObject to:conceptObject];
+		result = YES;
+	}
+	sourceConceptObject = nil;
+	return result;
 }
 
 - (UIImage *)conceptMapAsImage {

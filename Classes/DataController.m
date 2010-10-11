@@ -297,6 +297,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 }
 @end
 
+@implementation Concept(Geometry)
+
+- (CGPoint)centerPoint {
+	CGFloat x = [self.originX floatValue] + ([self.width floatValue] / 2);
+	CGFloat y = [self.originY floatValue] + ([self.height floatValue] / 2);
+	return CGPointMake(x, y);
+}
+
+@end
+
 @implementation Document(AutoPopulateFields)
 - (void)awakeFromInsert {
 	[self setValue:[NSDate date] forKey:@"created"];

@@ -14,7 +14,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects;
+@synthesize selected, isConnecting, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -160,8 +160,7 @@
 	[connectButton setNeedsDisplay];
 }
 
-- (void)setSelected:(BOOL)isSelected {
-	selected = isSelected;
+- (void)manageSelectedAttributes {
 	if (selected) {
 		self.layer.borderColor = [[UIColor yellowColor] CGColor];
 		deleteButton.hidden = NO;
@@ -173,7 +172,7 @@
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteButton.hidden = YES;
 		bodyDisplayString.userInteractionEnabled = NO;
-
+		
 		CGRect labelFrame = conceptObjectLabel.frame;
 		labelFrame.origin.y = 0;
 		[conceptObjectLabel setFrame:labelFrame];
@@ -181,9 +180,26 @@
 	settingsButton.hidden = deleteButton.hidden;
 	connectButton.hidden = deleteButton.hidden;
  	settingsButton.enabled = ! settingsButton.hidden;
-
+	
 	[myDelegate conceptObject:self isSelected:selected];
 	[self setNeedsLayout];
+}
+
+- (void)setSelected:(BOOL)isSelected {
+	selected = isSelected;
+	[self manageSelectedAttributes];
+}
+
+- (void)setIsConnecting:(BOOL)newIsConnecting {
+	isConnecting = newIsConnecting;
+	[self manageSelectedAttributes];
+	if (isConnecting) {
+		self.layer.borderColor = [[UIColor greenColor] CGColor];
+		[myDelegate conceptObject:self connecting:YES];
+	} else {
+		[self manageSelectedAttributes];
+	}
+
 }
 
 - (void)setIsActiveDropTarget:(BOOL)isTarget {
@@ -281,6 +297,10 @@
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
 	if (sender.state == UIGestureRecognizerStateEnded) {
+		if ([myDelegate conceptObject:self connected:YES]) {
+			return;
+		}
+		
 		CGPoint viewPoint = [sender locationInView:self.superview];
 		CALayer *hitLayer = [self.layer hitTest:viewPoint];
 		
@@ -315,6 +335,7 @@
 			[alert release];
 		} else if ([layerName isEqualToString:LAYER_NAME_CONNECT]) {
 			FUNCTION_LOG(@"Connect Button Tapped");
+			self.isConnecting = YES;
 		} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
 			FUNCTION_LOG(@"HIT SETTINGS");
 		} else {

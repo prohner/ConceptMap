@@ -47,6 +47,10 @@
 		E7227CB912616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */; };
 		E7227CBA12616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */; };
 		E7227CBB12616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */; };
+		E7227D911261988E001A0386 /* ConceptObjectConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227D901261988E001A0386 /* ConceptObjectConnections.m */; };
+		E7227D921261988E001A0386 /* ConceptObjectConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227D901261988E001A0386 /* ConceptObjectConnections.m */; };
+		E7227DAC12629F93001A0386 /* ConceptObjectConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227DAB12629F93001A0386 /* ConceptObjectConnection.m */; };
+		E7227DAD12629F93001A0386 /* ConceptObjectConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227DAB12629F93001A0386 /* ConceptObjectConnection.m */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
@@ -142,6 +146,10 @@
 		E7227CB512616628001A0386 /* ConceptObjectShapeChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectShapeChooserViewController.h; sourceTree = "<group>"; };
 		E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectShapeChooserViewController.m; sourceTree = "<group>"; };
 		E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectShapeChooserViewController.xib; path = Classes/ConceptObjectShapeChooserViewController.xib; sourceTree = "<group>"; };
+		E7227D8F1261988E001A0386 /* ConceptObjectConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnections.h; sourceTree = "<group>"; };
+		E7227D901261988E001A0386 /* ConceptObjectConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnections.m; sourceTree = "<group>"; };
+		E7227DAA12629F93001A0386 /* ConceptObjectConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnection.h; sourceTree = "<group>"; };
+		E7227DAB12629F93001A0386 /* ConceptObjectConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnection.m; sourceTree = "<group>"; };
 		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
 		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
 		E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorChooserViewController.h; sourceTree = "<group>"; };
@@ -254,12 +262,16 @@
 				28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */,
 				E7F87E4612388B1C003F63CA /* ConceptMapView.h */,
 				E7F87E4712388B1C003F63CA /* ConceptMapView.m */,
+				E7227DAA12629F93001A0386 /* ConceptObjectConnection.h */,
+				E7227DAB12629F93001A0386 /* ConceptObjectConnection.m */,
+				E7227D8F1261988E001A0386 /* ConceptObjectConnections.h */,
+				E7227D901261988E001A0386 /* ConceptObjectConnections.m */,
 				E783BC5B12545C1C009B0C77 /* DocumentSettingsViewController.h */,
 				E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */,
-				E794E228123DE84E002F0EF8 /* DocumentsViewController.h */,
-				E794E229123DE84E002F0EF8 /* DocumentsViewController.m */,
 				E794E258123F2077002F0EF8 /* DocumentTableViewCell.h */,
 				E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */,
+				E794E228123DE84E002F0EF8 /* DocumentsViewController.h */,
+				E794E229123DE84E002F0EF8 /* DocumentsViewController.m */,
 				E7F87F6A1238B04A003F63CA /* Utility.h */,
 				E7F87F6B1238B04A003F63CA /* Utility.m */,
 			);
@@ -623,6 +635,8 @@
 				E783AC121258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
 				E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
 				E7227CB812616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */,
+				E7227D911261988E001A0386 /* ConceptObjectConnections.m in Sources */,
+				E7227DAC12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +674,8 @@
 				E783AC141258B38100E2F8CB /* ConceptObjectFontChooserViewController.m in Sources */,
 				E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */,
 				E7227CBA12616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */,
+				E7227D921261988E001A0386 /* ConceptObjectConnections.m in Sources */,
+				E7227DAD12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

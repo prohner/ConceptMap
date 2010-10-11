@@ -50,4 +50,7 @@
 - (void)setRect:(CGRect)r;
 @end
 
+@interface Concept(Geometry)
+- (CGPoint)centerPoint;
+@end
 

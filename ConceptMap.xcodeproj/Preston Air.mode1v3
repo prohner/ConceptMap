@@ -267,7 +267,6 @@
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>E75ABC621239EFFF004A5C76</string>
 								<string>E7F87F4B1238AC7C003F63CA</string>
-								<string>E792D3721247189D00873C15</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>E722790E125AEA1E001A0386</string>
 								<string>E722790F125AEA1E001A0386</string>
@@ -281,14 +280,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>29</integer>
-									<integer>14</integer>
+									<integer>35</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 137}, {338, 755}}</string>
+							<string>{{0, 0}, {338, 684}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -300,14 +298,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {355, 773}}</string>
+						<string>{{0, 0}, {355, 702}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>338</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 364 1205 814 0 0 1920 1178 </string>
+						<string>0 435 1101 743 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -325,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptObjectConnections.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,15 +331,14 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptObjectConnections.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7227D5312618201001A0386</string>
+										<string>E7227E661262C9F2001A0386</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
-											<string>E716CD9D123F2631003F21D3</string>
 											<string>E7FA6BC8124330EA00E1084F</string>
 											<string>E7FA6BC9124330EA00E1084F</string>
 											<string>E774F6F21249BD8A00CC1918</string>
@@ -353,7 +350,6 @@
 											<string>E783AA3E1255AB1700E2F8CB</string>
 											<string>E783AC1C1258B42E00E2F8CB</string>
 											<string>E783AC1D1258B42E00E2F8CB</string>
-											<string>E783AC861258BABD00E2F8CB</string>
 											<string>E7227934125AEFAD001A0386</string>
 											<string>E7227949125AF0CE001A0386</string>
 											<string>E722794D125AF0CE001A0386</string>
@@ -362,23 +358,16 @@
 											<string>E7227969125AF3C7001A0386</string>
 											<string>E7227979125BBD5E001A0386</string>
 											<string>E722797E125C4205001A0386</string>
-											<string>E722797F125C4205001A0386</string>
 											<string>E7227980125C4205001A0386</string>
 											<string>E7227A51125D8170001A0386</string>
-											<string>E7227A89125D893A001A0386</string>
 											<string>E7227AC8125D8F5B001A0386</string>
 											<string>E7227B0E125D9D8C001A0386</string>
 											<string>E7227B79125EE11C001A0386</string>
 											<string>E7227B7A125EE11C001A0386</string>
 											<string>E7227B7B125EE11C001A0386</string>
-											<string>E7227B87125EE2C0001A0386</string>
 											<string>E7227B96125EE4E8001A0386</string>
-											<string>E7227B9B125EE6F9001A0386</string>
-											<string>E7227BB6125EE838001A0386</string>
-											<string>E7227BC7125EE96C001A0386</string>
 											<string>E7227BC8125EE96C001A0386</string>
 											<string>E7227BCD125EEA70001A0386</string>
-											<string>E7227BF7125EF170001A0386</string>
 											<string>E7227BF8125EF170001A0386</string>
 											<string>E7227BF9125EF170001A0386</string>
 											<string>E7227BFD125EF170001A0386</string>
@@ -390,14 +379,27 @@
 											<string>E7227CC21261670D001A0386</string>
 											<string>E7227CCA12616787001A0386</string>
 											<string>E7227CD612616823001A0386</string>
-											<string>E7227CE3126169EA001A0386</string>
 											<string>E7227CFA12616B4A001A0386</string>
 											<string>E7227CFC12616B4A001A0386</string>
 											<string>E7227D0812616D14001A0386</string>
 											<string>E7227D1C12616F3F001A0386</string>
 											<string>E7227D2A126170F4001A0386</string>
-											<string>E7227D341261727B001A0386</string>
-											<string>E7227D351261727B001A0386</string>
+											<string>E7227D7212619350001A0386</string>
+											<string>E7227D8B12619572001A0386</string>
+											<string>E7227D8C12619572001A0386</string>
+											<string>E7227DBA1262A26C001A0386</string>
+											<string>E7227DBB1262A26C001A0386</string>
+											<string>E7227E0F1262C2BB001A0386</string>
+											<string>E7227E101262C2BB001A0386</string>
+											<string>E7227E281262C53E001A0386</string>
+											<string>E7227E351262C599001A0386</string>
+											<string>E7227E361262C599001A0386</string>
+											<string>E7227E371262C599001A0386</string>
+											<string>E7227E3C1262C5B1001A0386</string>
+											<string>E7227E4C1262C732001A0386</string>
+											<string>E7227E4D1262C732001A0386</string>
+											<string>E7227E5E1262C940001A0386</string>
+											<string>E7227E5F1262C940001A0386</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -409,14 +411,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {845, 690}}</string>
+								<string>{{0, 0}, {741, 619}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 364 1205 814 0 0 1920 1178 </string>
+								<string>0 435 1101 743 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>690pt</string>
+							<string>619pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -429,9 +431,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 695}, {845, 78}}</string>
+								<string>{{0, 624}, {741, 78}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 364 1205 814 0 0 1920 1178 </string>
+								<string>0 435 1101 743 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -440,7 +442,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>845pt</string>
+					<string>741pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -603,7 +605,7 @@
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 364 1205 814 0 0 1920 1178 </string>
+	<string>0 435 1101 743 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -619,14 +621,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapViewController.m</string>
+								<string>ConceptObjectConnections.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -643,6 +643,8 @@
 							<string>559pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

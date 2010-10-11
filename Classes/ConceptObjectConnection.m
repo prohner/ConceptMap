@@ -1,0 +1,29 @@
+//
+//  ConceptObjectConnection.m
+//  ConceptMap
+//
+//  Created by Preston Rohner on 10/10/10.
+//  Copyright 2010 Cool Tool Apps. All rights reserved.
+//
+
+#import "ConceptObjectConnection.h"
+#import "ConceptObject.h"
+
+@implementation ConceptObjectConnection
+
+@synthesize src, dst;
+
+- (void)dealloc {
+	self.src = nil;
+	self.dst = nil;
+	
+    [super dealloc];
+}
+
+- (NSString *)keyString {
+	NSString *s = [[NSString alloc] initWithFormat:@"%i %i", src, dst];
+	return s;
+}
+
+
+@end
