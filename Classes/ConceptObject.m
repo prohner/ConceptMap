@@ -32,11 +32,11 @@
 }
 
 - (void)addConnectButton {
-	connectButton = [[ConceptObjectConnectButton alloc] init];	
-	[connectButton setValue:LAYER_NAME_CONNECT forKey:LAYER_NAME];
-	connectButton.conceptObject = self;
-	connectButton.hidden = YES;
-	[self.layer addSublayer:connectButton];
+//	connectButton = [[ConceptObjectConnectButton alloc] init];	
+//	[connectButton setValue:LAYER_NAME_CONNECT forKey:LAYER_NAME];
+//	connectButton.conceptObject = self;
+//	connectButton.hidden = YES;
+//	[self.layer addSublayer:connectButton];
 }
 
 - (void)addSettingsButton {
@@ -251,8 +251,8 @@
 
 	deleteButton.frame = CGRectMake(leftSideOfDelete, self.layer.borderWidth, DELETE_BUTTON_SIZE, DELETE_BUTTON_SIZE);
 
-	//CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
-	CGFloat settingsX = rightSideOfLabel + 10;
+	CGFloat settingsX = rightSideOfLabel + ((leftSideOfDelete - rightSideOfLabel) / 2) - (settingsButton.frame.size.width / 2);
+	//CGFloat settingsX = rightSideOfLabel + 10;
 	if (settingsX < rightSideOfLabel) {
 		settingsX = rightSideOfLabel;
 	}
