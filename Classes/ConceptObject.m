@@ -197,6 +197,7 @@
 		self.layer.borderColor = [[UIColor greenColor] CGColor];
 		[myDelegate conceptObject:self connecting:YES];
 	} else {
+		self.selected = NO;
 		[self manageSelectedAttributes];
 	}
 
@@ -474,12 +475,14 @@
 	//conceptObjectSettingsViewController.conceptObject = self;
 	UIPopoverController *popover = [[[UIPopoverController alloc] 
 									 initWithContentViewController:navCtrl] retain];
+	conceptObjectSettingsViewController.popover = popover;
 	
 	[popover presentPopoverFromRect:[settingsButton.layer convertRect:settingsButton.bounds  
 													toLayer:self.layer]
 							 inView:self 
 		   permittedArrowDirections:UIPopoverArrowDirectionAny 
 						   animated:YES];
+	[conceptObjectSettingsViewController release];
 	[navCtrl release];
 }
 

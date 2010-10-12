@@ -186,7 +186,7 @@
 	}
 	
 	[conceptObject setConceptSize:CGSizeMake(width, height)];
-
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
