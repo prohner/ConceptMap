@@ -14,7 +14,7 @@
 
 @implementation ConceptObject
 
-@synthesize selected, isConnecting, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects;
+@synthesize selected, isConnecting, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects, rootLayer;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);

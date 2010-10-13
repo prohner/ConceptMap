@@ -36,6 +36,7 @@
 	ConceptObjectSettingsViewController *conceptObjectSettingsViewController;
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
+	CALayer *rootLayer;
 	
 	NSArray *childConceptObjects;
 	
@@ -52,6 +53,7 @@
 @property (nonatomic, retain) Concept *concept;
 @property (nonatomic, retain) ConceptObjectLabel *conceptObjectLabel;
 @property (nonatomic, retain) NSArray *childConceptObjects;
+@property (nonatomic, retain) CALayer *rootLayer;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;

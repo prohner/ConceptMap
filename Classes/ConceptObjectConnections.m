@@ -27,19 +27,22 @@
 	FUNCTION_LOG();
 		
 	CGContextSetLineWidth(context, 3.0);
-	CGPoint pt;
+	CGPoint srcPoint, dstPoint;
 	for (NSString *key in connections) {
 		ConceptObjectConnection *cxn = (ConceptObjectConnection *)[connections valueForKey:key];
-		pt = cxn.src.concept.centerPoint;
-		pt = CGPointMake([cxn.src.concept.originX floatValue], [cxn.src.concept.originY floatValue]);
-		pt = [cxn.src.layer convertPoint:pt toLayer:self];
-		CGContextMoveToPoint(context, pt.x, pt.y);
+
+		srcPoint = cxn.src.concept.centerPoint;
+		FUNCTION_LOG(@"Src (%.2f, %.2f)", srcPoint.x, srcPoint.y);
+		srcPoint = [cxn.src.layer.superlayer convertPoint:srcPoint toLayer:cxn.src.rootLayer];
+		CGContextMoveToPoint(context, srcPoint.x, srcPoint.y);
 		
-		pt = cxn.dst.concept.centerPoint;
-		pt = CGPointMake([cxn.dst.concept.originX floatValue], [cxn.dst.concept.originY floatValue]);
-		pt = [cxn.dst.layer convertPoint:pt toLayer:self];
-		CGContextAddLineToPoint(context, pt.x, pt.y);
+		dstPoint = cxn.dst.concept.centerPoint;
+		FUNCTION_LOG(@"Dst (%.2f, %.2f)", dstPoint.x, dstPoint.y);
+		dstPoint = [cxn.dst.layer.superlayer convertPoint:dstPoint toLayer:cxn.dst.rootLayer];
+		CGContextAddLineToPoint(context, dstPoint.x, dstPoint.y);
+
 		CGContextStrokePath(context);
+		FUNCTION_LOG(@"Draw from (%.2f, %.2f) to (%.2f, %.2f)", srcPoint.x, srcPoint.y, dstPoint.x, dstPoint.y);
 	}
 }
 

@@ -75,6 +75,7 @@ static int recursionDepth = 0;
 	if (view == nil) {
 		view = self;
 	}
+	co.rootLayer = self.layer;
 	[view addSubview:co];
 }
 
@@ -113,6 +114,9 @@ static int recursionDepth = 0;
 	CGPoint panPoint = [sender locationInView:self];
 	panningConceptObject = conceptObject;
 	
+	conceptObject.concept.originX = [NSNumber numberWithFloat:panPoint.x - ([conceptObject.concept.width floatValue] / 2)];
+	conceptObject.concept.originY = [NSNumber numberWithFloat:panPoint.y - ([conceptObject.concept.height floatValue] / 2)];
+	
 	[conceptObjectConnections setNeedsDisplay];
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
@@ -135,7 +139,7 @@ static int recursionDepth = 0;
 - (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view {
 	BOOL foundHome = NO;
 	recursionDepth++;
-	FUNCTION_LOG(@"\t%i %@", recursionDepth, [view isKindOfClass:[ConceptObject class]] ? ((ConceptObject *)view).concept.title : @"non-ConceptObject");
+	//FUNCTION_LOG(@"\t%i %@", recursionDepth, [view isKindOfClass:[ConceptObject class]] ? ((ConceptObject *)view).concept.title : @"non-ConceptObject");
 
 	for (UIView *subview in view.subviews) {
 		if ([subview isKindOfClass:[ConceptObject class]] && panningConceptObject != subview) {
