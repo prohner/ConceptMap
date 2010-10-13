@@ -874,6 +874,10 @@
 			E7227EF512656C00001A0386 /* PBXTextBookmark */ = E7227EF512656C00001A0386 /* PBXTextBookmark */;
 			E7227EF612656C00001A0386 /* PBXTextBookmark */ = E7227EF612656C00001A0386 /* PBXTextBookmark */;
 			E7227EF712656C00001A0386 /* PBXTextBookmark */ = E7227EF712656C00001A0386 /* PBXTextBookmark */;
+			E7227EFF126573B6001A0386 /* PBXTextBookmark */ = E7227EFF126573B6001A0386 /* PBXTextBookmark */;
+			E7227F00126573B6001A0386 /* PBXTextBookmark */ = E7227F00126573B6001A0386 /* PBXTextBookmark */;
+			E7227F01126573B6001A0386 /* PBXTextBookmark */ = E7227F01126573B6001A0386 /* PBXTextBookmark */;
+			E7227F02126573B6001A0386 /* PBXTextBookmark */ = E7227F02126573B6001A0386 /* PBXTextBookmark */;
 			E72A5379124DB8A800FEF168 = E72A5379124DB8A800FEF168 /* PBXTextBookmark */;
 			E72FF74A12599E4400C1C79E = E72FF74A12599E4400C1C79E /* PBXTextBookmark */;
 			E72FF74B12599E4400C1C79E = E72FF74B12599E4400C1C79E /* PBXTextBookmark */;
@@ -8513,10 +8517,10 @@
 	};
 	E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4336, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4387, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4437, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5210}\";\n    s = 0;\n}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4518, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4569, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4619, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 5392}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {1188, 2405}}";
-			sepNavSelRange = "{964, 15}";
-			sepNavVisRange = "{66, 1286}";
+			sepNavSelRange = "{3479, 0}";
+			sepNavVisRange = "{2621, 1420}";
 		};
 	};
 	E7227E9E12641817001A0386 /* PBXTextBookmark */ = {
@@ -8634,7 +8638,7 @@
 		fRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */;
 		name = "ConceptObjectConnectionsViewController.m: 169";
 		rLen = 0;
-		rLoc = 5128;
+		rLoc = 5310;
 		rType = 0;
 		vrLen = 1077;
 		vrLoc = 3870;
@@ -8987,7 +8991,7 @@
 		fRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */;
 		name = "ConceptObjectConnectionsViewController.m: 177";
 		rLen = 0;
-		rLoc = 5178;
+		rLoc = 5360;
 		rType = 0;
 		vrLen = 1101;
 		vrLoc = 4110;
@@ -9091,6 +9095,46 @@
 		rType = 0;
 		vrLen = 1665;
 		vrLoc = 735;
+	};
+	E7227EFF126573B6001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72278FE125AE8D3001A0386 /* en */;
+		name = "Localizable.strings: 78";
+		rLen = 0;
+		rLoc = 2398;
+		rType = 0;
+		vrLen = 1665;
+		vrLoc = 735;
+	};
+	E7227F00126573B6001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E75ABC6D1239F24C004A5C76 /* Concept.h */;
+		name = "Concept.h: 30";
+		rLen = 5;
+		rLoc = 933;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 32;
+	};
+	E7227F01126573B6001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */;
+		name = "ConceptObjectConnectionsViewController.m: 118";
+		rLen = 0;
+		rLoc = 3359;
+		rType = 0;
+		vrLen = 1450;
+		vrLoc = 2469;
+	};
+	E7227F02126573B6001A0386 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */;
+		name = "ConceptObjectConnectionsViewController.m: 119";
+		rLen = 0;
+		rLoc = 3479;
+		rType = 0;
+		vrLen = 1420;
+		vrLoc = 2621;
 	};
 	E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {
 		uiCtxt = {
@@ -9236,9 +9280,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 308636673.577724;
+		modificationTime = 308638645.395212;
 		originalNumberOfMultipleMatches = 1;
-		state = 0;
+		state = 1;
 	};
 	E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */ = {
 		uiCtxt = {
