@@ -27,9 +27,11 @@
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addConnection)];
 	self.editing = YES;
-	self.title = NSLocalizedString(@"Connections", @"");
+	self.title = NSLocalizedString(@"Connected To...", @"");
 
-	self.contentSizeForViewInPopover = CGSizeMake(245.0, 176.0);
+	self.contentSizeForViewInPopover = CGSizeMake(285.0, 176.0);
+	
+	connectedObjects = [[[conceptObject.concept connectedConcepts] allObjects] mutableCopy];
 }
 
 - (void)addConnection {
@@ -77,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return [connectedObjects count];
 }
 
 
@@ -92,7 +94,8 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = @"hi";
+	Concept *concept = [connectedObjects objectAtIndex:indexPath.row];
+    cell.textLabel.text = concept.title;
     return cell;
 }
 
@@ -171,6 +174,7 @@
 
 
 - (void)dealloc {
+	[connectedObjects release];
     [super dealloc];
 }
 

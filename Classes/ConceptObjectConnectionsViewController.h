@@ -14,6 +14,7 @@
 @interface ConceptObjectConnectionsViewController : UITableViewController {
 	ConceptObject *conceptObject;
 	UIPopoverController *popover;
+	NSMutableArray *connectedObjects;
 }
 
 @property (nonatomic, retain) ConceptObject *conceptObject;
