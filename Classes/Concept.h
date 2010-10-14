@@ -8,10 +8,12 @@
 
 #import <CoreData/CoreData.h>
 
-@class Document;
+@class Document, ConceptObject;
 
 @interface Concept :  NSManagedObject  
 {
+	// Pointer to its visual container
+	ConceptObject *conceptObject;
 }
 
 @property (nonatomic, retain) NSString * bodyDisplayString;

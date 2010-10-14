@@ -14,6 +14,8 @@
 #import "Concept.h"
 #import "DataController.h"
 
+@class ConceptObject;
+
 @interface DataController : NSObject <NSFetchedResultsControllerDelegate> {
 	NSManagedObjectModel *managedObjectModel;
 	NSManagedObjectContext *managedObjectContext;		
@@ -50,7 +52,12 @@
 - (void)setRect:(CGRect)r;
 @end
 
-@interface Concept(Geometry)
+@interface Concept(Geometry) 
+
+- (void)setConceptObject:(ConceptObject *)container;
+- (ConceptObject *)conceptObject;
+	
 - (CGPoint)centerPoint;
+
 @end
 

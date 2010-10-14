@@ -9,6 +9,7 @@
 #import "DataController.h"
 #import "SynthesizeSingleton.h"
 #import "ConceptObjectColorSet.h"
+#import "ConceptObject.h"
 
 @implementation DataController
 
@@ -303,6 +304,15 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	CGFloat x = [self.originX floatValue] + ([self.width floatValue] / 2);
 	CGFloat y = [self.originY floatValue] + ([self.height floatValue] / 2);
 	return CGPointMake(x, y);
+}
+
+- (void)setConceptObject:(ConceptObject *)container {
+	FUNCTION_LOG(@"%@ is in %i", self.title, container);
+	conceptObject = container;
+}
+
+- (ConceptObject *)conceptObject {
+	return conceptObject;
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation ConceptObjectConnectionsViewController
 
-@synthesize conceptObject, popover;
+@synthesize conceptObject, popover, conceptObjectConnections;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -31,7 +31,15 @@
 
 	self.contentSizeForViewInPopover = CGSizeMake(285.0, 176.0);
 	
-	connectedObjects = [[[conceptObject.concept connectedConcepts] allObjects] mutableCopy];
+	//connectedObjects = [[[conceptObject.concept connectedConcepts] allObjects] mutableCopy];
+	connectedObjects = [[NSMutableArray alloc] initWithCapacity:[[conceptObject.concept connectedConcepts] count]];
+	NSEnumerator *enumerator = [[conceptObject.concept connectedConcepts] objectEnumerator];
+	id value;
+	
+	while ((value = [enumerator nextObject])) {
+		/* code that acts on the set’s values */
+		[connectedObjects addObject:(Concept *)value];
+	}
 }
 
 - (void)addConnection {
@@ -116,9 +124,14 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
 		Concept *concept = [connectedObjects objectAtIndex:indexPath.row];
+		
+		FUNCTION_LOG(@"delete from %@ (%i) to %@ (%i)", conceptObject.concept.title, conceptObject, concept.title, concept.conceptObject);
+		[conceptObjectConnections removeConnectionFrom:conceptObject to:concept.conceptObject];
+		
 		[conceptObject.concept removeConnectedConceptsObject:concept];
 		[connectedObjects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+		
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -173,6 +186,7 @@
     // For example: self.myOutlet = nil;
 	self.conceptObject = nil;
 	self.popover = nil;
+	self.conceptObjectConnections = nil;
 }
 
 

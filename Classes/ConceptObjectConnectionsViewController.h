@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Utility.h"
+#import "ConceptObjectConnections.h"
 
 @class ConceptObject;
 
@@ -15,8 +16,10 @@
 	ConceptObject *conceptObject;
 	UIPopoverController *popover;
 	NSMutableArray *connectedObjects;
+	ConceptObjectConnections *conceptObjectConnections;
 }
 
 @property (nonatomic, retain) ConceptObject *conceptObject;
 @property (nonatomic, retain) UIPopoverController *popover;
+@property (nonatomic, retain) ConceptObjectConnections *conceptObjectConnections;
 @end

@@ -26,10 +26,12 @@
 @property (nonatomic, retain) Document *currentDocument;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *propertyInspectorButton;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, retain) ConceptObjectConnections *conceptObjectConnections;
 
 - (CGSize)idealContentSize;
 - (void)addConceptObject:(ConceptObject *)co toView:(UIView *)view;
 - (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs;
+- (void)addConnections:(NSSet *)concepts;
 - (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view;
 - (UIImage *)conceptMapAsImage;
 

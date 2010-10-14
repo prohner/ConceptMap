@@ -281,13 +281,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>45</integer>
+									<integer>12</integer>
+									<integer>4</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 246}, {338, 684}}</string>
+							<string>{{0, 0}, {338, 798}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -299,14 +300,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {355, 702}}</string>
+						<string>{{0, 0}, {355, 816}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>338</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 435 1101 743 0 0 1920 1178 </string>
+						<string>0 321 1105 857 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -324,7 +325,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapView.m</string>
+								<string>Concept.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapView.m</string>
+										<string>Concept.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7227F61126583A2001A0386</string>
+										<string>E72280531266B3DC001A0386</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -358,12 +359,9 @@
 											<string>E7227979125BBD5E001A0386</string>
 											<string>E722797E125C4205001A0386</string>
 											<string>E7227980125C4205001A0386</string>
-											<string>E7227A51125D8170001A0386</string>
 											<string>E7227AC8125D8F5B001A0386</string>
 											<string>E7227B0E125D9D8C001A0386</string>
 											<string>E7227B79125EE11C001A0386</string>
-											<string>E7227B7A125EE11C001A0386</string>
-											<string>E7227B7B125EE11C001A0386</string>
 											<string>E7227BF8125EF170001A0386</string>
 											<string>E7227BF9125EF170001A0386</string>
 											<string>E7227BFD125EF170001A0386</string>
@@ -373,12 +371,8 @@
 											<string>E7227CAD125F026E001A0386</string>
 											<string>E7227CAE125F026E001A0386</string>
 											<string>E7227CC21261670D001A0386</string>
-											<string>E7227D0812616D14001A0386</string>
 											<string>E7227D1C12616F3F001A0386</string>
 											<string>E7227DBA1262A26C001A0386</string>
-											<string>E7227E101262C2BB001A0386</string>
-											<string>E7227E351262C599001A0386</string>
-											<string>E7227E361262C599001A0386</string>
 											<string>E7227E4C1262C732001A0386</string>
 											<string>E7227E7212640E30001A0386</string>
 											<string>E7227E9E12641817001A0386</string>
@@ -387,22 +381,29 @@
 											<string>E7227EA212641817001A0386</string>
 											<string>E7227EA312641817001A0386</string>
 											<string>E7227EA412641817001A0386</string>
-											<string>E7227EA712641817001A0386</string>
-											<string>E7227EB51264185D001A0386</string>
-											<string>E7227ED512656A56001A0386</string>
-											<string>E7227ED812656A56001A0386</string>
-											<string>E7227EEA12656BB5001A0386</string>
 											<string>E7227EFF126573B6001A0386</string>
-											<string>E7227F00126573B6001A0386</string>
-											<string>E7227F0C126578B2001A0386</string>
-											<string>E7227F0D126578B2001A0386</string>
-											<string>E7227F0E126578B2001A0386</string>
-											<string>E7227F1712657990001A0386</string>
 											<string>E7227F2C12657CF0001A0386</string>
-											<string>E7227F481265807F001A0386</string>
-											<string>E7227F5F126583A2001A0386</string>
-											<string>E7227F60126583A2001A0386</string>
-											<string>E7227F4D126580DE001A0386</string>
+											<string>E7227F9F126606F3001A0386</string>
+											<string>E7227FA912660885001A0386</string>
+											<string>E7227FD212661D17001A0386</string>
+											<string>E7227FD312661D17001A0386</string>
+											<string>E7227FD712661D17001A0386</string>
+											<string>E7227FDB12661D17001A0386</string>
+											<string>E7227FEC12661EA5001A0386</string>
+											<string>E7227FED12661EA5001A0386</string>
+											<string>E7227FEE12661EA5001A0386</string>
+											<string>E722800A12664A2A001A0386</string>
+											<string>E722801012664A7E001A0386</string>
+											<string>E722802A12664EAB001A0386</string>
+											<string>E722802F1266AFA7001A0386</string>
+											<string>E72280301266AFA7001A0386</string>
+											<string>E722803C1266B225001A0386</string>
+											<string>E722803D1266B225001A0386</string>
+											<string>E722804E1266B3DC001A0386</string>
+											<string>E722804F1266B3DC001A0386</string>
+											<string>E72280501266B3DC001A0386</string>
+											<string>E72280511266B3DC001A0386</string>
+											<string>E72280521266B3DC001A0386</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -414,14 +415,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {741, 619}}</string>
+								<string>{{0, 0}, {745, 733}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 435 1101 743 0 0 1920 1178 </string>
+								<string>0 321 1105 857 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>619pt</string>
+							<string>733pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -434,9 +435,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 624}, {741, 78}}</string>
+								<string>{{0, 738}, {745, 78}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 435 1101 743 0 0 1920 1178 </string>
+								<string>0 321 1105 857 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -445,7 +446,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>741pt</string>
+					<string>745pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -608,7 +609,7 @@
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 435 1101 743 0 0 1920 1178 </string>
+	<string>0 321 1105 857 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

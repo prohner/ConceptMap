@@ -7,6 +7,8 @@
 //
 
 #import "ConceptObject.h"
+#import "ConceptMapView.h"
+
 #define BODY_DISPLAY_STRING_INDENT_X		10
 #define BODY_DISPLAY_STRING_INDENT_Y		10
 #define DELETE_BUTTON_SIZE					20
@@ -20,6 +22,7 @@
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
 	ConceptObject *newCO = [[ConceptObject alloc] initWithFrame:r];
 	newCO.concept = concept;
+	[concept setConceptObject:newCO];
 	return newCO;
 }
  
@@ -471,8 +474,12 @@
 //	self.layer.anchorPoint = CGPointMake(0.0f, 0.0f);
 	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
 	conceptObjectSettingsViewController.conceptObject = self;
+	
+	ConceptMapView *v = (ConceptMapView *)self.superview;
+	conceptObjectSettingsViewController.conceptObjectConnections = v.conceptObjectConnections;
+	
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
-	//conceptObjectSettingsViewController.conceptObject = self;
+
 	UIPopoverController *popover = [[[UIPopoverController alloc] 
 									 initWithContentViewController:navCtrl] retain];
 	conceptObjectSettingsViewController.popover = popover;

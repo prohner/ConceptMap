@@ -13,12 +13,12 @@
 
 static int recursionDepth = 0;
 
-@synthesize currentDocument, propertyInspectorButton, toolbar;
+@synthesize currentDocument, propertyInspectorButton, toolbar, conceptObjectConnections;
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         // Initialization code
-		conceptObjectConnections = [ConceptObjectConnections layer];
+		self.conceptObjectConnections = [ConceptObjectConnections layer];
 		conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
 		//	connectionsLayer.backgroundColor = [[UIColor greenColor] CGColor];
 		conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
@@ -27,6 +27,7 @@ static int recursionDepth = 0;
 
 		self.currentDocument = [DATABASE currentDocument];
 		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
+//		[self addConnections:[currentDocument concepts]];
 		
 		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
@@ -47,6 +48,16 @@ static int recursionDepth = 0;
     [super dealloc];
 }
 
+- (void)addConnections:(NSSet *)concepts {
+	// ConceptObjects are all loaded and now draw connections
+	for (Concept *concept in [concepts allObjects]) {
+		for (Concept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
+			[self addConnections:[concept connectedConcepts]];
+		}
+	}
+}
+
 - (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs{
 	for (Concept *concept in concepts) {
 		if (conceptObject.concept == concept.parentConcept) {
@@ -64,6 +75,7 @@ static int recursionDepth = 0;
 			NSString *tabs2 = [[NSString alloc] initWithFormat:@"%@\t", tabs];
 			[self addConceptObject:co toView:conceptObject];
 			[self addSetOfConcepts:concept.concepts toConceptObject:co withTabs:tabs2];
+			
 			[co release];
 		}
 

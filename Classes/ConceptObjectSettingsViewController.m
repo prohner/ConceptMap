@@ -15,7 +15,7 @@
 
 @implementation ConceptObjectSettingsViewController
 
-@synthesize conceptObject, popover;
+@synthesize conceptObject, popover, conceptObjectConnections;
 
 #define ROW_COLOR		0
 #define ROW_FONT		1
@@ -202,6 +202,7 @@
 			ConceptObjectConnectionsViewController *ctrl = [[ConceptObjectConnectionsViewController alloc] initWithNibName:@"ConceptObjectConnectionsViewController" bundle:nil];
 			ctrl.conceptObject = conceptObject;
 			ctrl.popover = popover;
+			ctrl.conceptObjectConnections = conceptObjectConnections;
 			[self.navigationController pushViewController:ctrl animated:YES];
 			[ctrl release];
 		}
@@ -235,6 +236,7 @@
     // For example: self.myOutlet = nil;
 	self.conceptObject = nil;
 	self.popover = nil;
+	self.conceptObjectConnections = nil;
 }
 
 

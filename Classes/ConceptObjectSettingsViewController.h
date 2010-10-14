@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConceptObjectConnections.h"
 
 @class ConceptObject;
 
 @interface ConceptObjectSettingsViewController : UITableViewController {
 	ConceptObject *conceptObject;
 	UIPopoverController *popover;
+	ConceptObjectConnections *conceptObjectConnections;
 }
 
 @property (nonatomic, retain) ConceptObject *conceptObject;
 @property (nonatomic, retain) UIPopoverController *popover;
+@property (nonatomic, retain) ConceptObjectConnections *conceptObjectConnections;
 
 @end
