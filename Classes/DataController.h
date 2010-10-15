@@ -40,6 +40,7 @@
 - (Document *)newDocument;
 - (Document *)newDocumentTitled:(NSString *)name;
 - (Concept *)newConceptTitled:(NSString *)name toDocument:(Document *)doc;
+- (Concept *)newConceptTitled:(NSString *)name toDocument:(Document *)doc withRect:(CGRect)r;
 
 #ifdef AUTOMATED_TESTING
 - (void)deletePersistentStore;

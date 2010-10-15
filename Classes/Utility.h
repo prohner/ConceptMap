@@ -37,6 +37,12 @@
 	#define LOG_POINT(pt) /* */
 #endif
 
+#if FUNCTION_LOGGING
+	#define LOG_CONCEPTOBJECT(co) NSLog(@"%s %@ o=(%@, %@), sz=(%@, %@)", __FUNCTION__, co.concept.title, co.concept.originX, co.concept.originY, co.concept.width, co.concept.height)
+#else
+	#define LOG_CONCEPTOBJECT(co) /* */
+#endif
+
 #define DATABASE	[DataController sharedDataController]
 
 #define LAYER_NAME			@"layerName"

@@ -27,7 +27,7 @@ static int recursionDepth = 0;
 
 		self.currentDocument = [DATABASE currentDocument];
 		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
-//		[self addConnections:[currentDocument concepts]];
+		[self addConnections:[currentDocument concepts]];
 		
 		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
 		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
@@ -51,9 +51,12 @@ static int recursionDepth = 0;
 - (void)addConnections:(NSSet *)concepts {
 	// ConceptObjects are all loaded and now draw connections
 	for (Concept *concept in [concepts allObjects]) {
+		FUNCTION_LOG(@"Connecting %@", concept.title);
 		for (Concept *connectedConcept in [[concept connectedConcepts] allObjects]) {
 			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
-			[self addConnections:[concept connectedConcepts]];
+			if (concepts != [concept connectedConcepts]) {
+				[self addConnections:[concept connectedConcepts]];
+			}
 		}
 	}
 }
@@ -66,7 +69,7 @@ static int recursionDepth = 0;
 
 			CGPoint pt = CGPointMake([concept.originX intValue], [concept.originY intValue]);
 //			if (conceptObject != nil) {
-//				pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+				pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
 //			}
 			LOG_POINT(pt);
 			[co setFrame:CGRectMake(pt.x, pt.y, [concept.width intValue], [concept.height intValue])];
@@ -132,9 +135,8 @@ static int recursionDepth = 0;
 	[conceptObjectConnections setNeedsDisplay];
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
-	//FUNCTION_LOG(@"(%.2f, %.2f) %i", panPoint.x, panPoint.y, [conceptObjects count]);
+	FUNCTION_LOG(@"Panning(%.2f, %.2f)", panPoint.x, panPoint.y);
 	
-	FUNCTION_LOG(@"\nSearching tree");
 	recursionDepth = 0;
 	if ( ! [self setPossibleDropTargetForPoint:panPoint inConceptObject:self]) {
 		possibleDropTarget.isActiveDropTarget = NO;
@@ -145,6 +147,7 @@ static int recursionDepth = 0;
 		FUNCTION_LOG(@"Found possibleDropTarget %@", possibleDropTarget.concept.title);
 	}
 #endif
+	LOG_CONCEPTOBJECT(conceptObject);
 	
 }
 
@@ -179,6 +182,7 @@ static int recursionDepth = 0;
 
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
 	FUNCTION_LOG(@"possibleDropTarget %@", possibleDropTarget.concept.title);
+	LOG_CONCEPTOBJECT(conceptObject);
 	if (possibleDropTarget /*&& possibleDropTarget != conceptObject.superview*/) {
 		// TODO keep track of items inside drop target so it knows who it owns
 		
@@ -218,6 +222,8 @@ static int recursionDepth = 0;
 		}
 
 	}
+	
+	LOG_CONCEPTOBJECT(conceptObject);
 	possibleDropTarget = nil;
 }
 
@@ -231,7 +237,7 @@ static int recursionDepth = 0;
 	BOOL result = NO;
 	if (sourceConceptObject) {
 		[sourceConceptObject.concept addConnectedConceptsObject:conceptObject.concept];
-		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
+//		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
 		FUNCTION_LOG(@"Connect %@ to %@", sourceConceptObject.concept.title, conceptObject.concept.title);
 		[conceptObjectConnections addConnectionFrom:sourceConceptObject to:conceptObject];
 		result = YES;

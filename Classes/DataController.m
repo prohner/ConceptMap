@@ -259,6 +259,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	
 }
 
+- (Concept *)newConceptTitled:(NSString *)name toDocument:(Document *)doc withRect:(CGRect)r {
+	Concept *concept = [self newConceptTitled:name toDocument:doc];
+	concept.originX = [NSNumber numberWithInt: r.origin.x];
+	concept.originY = [NSNumber numberWithInt: r.origin.y];
+	concept.height = [NSNumber numberWithInt: r.size.height];
+	concept.width = [NSNumber numberWithInt: r.size.width];
+	
+	return concept;
+}
+
+
 @end
 
 @implementation Concept(AutoPopulateFields)
@@ -267,7 +278,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	[self setValue:[NSDate date] forKey:@"created"];
 }
 - (void)willSave {
-	FUNCTION_LOG(@"%@ is color %@. origin=(%@, %@)", self.title, self.colorSchemeConstant, self.originX, self.originY);
+	FUNCTION_LOG(@"%@ is color %@. origin=(%@, %@) (%i connected concepts)", self.title, self.colorSchemeConstant, self.originX, self.originY, [self.connectedConcepts count]);
 	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
 }
 - (ConceptObjectColorSet *)colorSet {
@@ -307,7 +318,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 }
 
 - (void)setConceptObject:(ConceptObject *)container {
-	FUNCTION_LOG(@"%@ is in %i", self.title, container);
+	//FUNCTION_LOG(@"%@ is in %i", self.title, container);
 	conceptObject = container;
 }
 

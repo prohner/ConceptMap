@@ -447,10 +447,12 @@
 			self.layer.shadowColor = [UIColor clearColor].CGColor;
 			[self.layer setValue:[NSNumber numberWithFloat:1.0f] forKeyPath:@"transform.scale"];
 			
-			CGRect rect = self.bounds;
-			rect.origin.x = dragLastPoint.x;
-			rect.origin.y = dragLastPoint.y;
-			[concept setRect:self.frame];
+//			CGRect rect = self.bounds;
+//			rect.origin.x = dragLastPoint.x;
+//			rect.origin.y = dragLastPoint.y;
+//			LOG_CONCEPTOBJECT(self);
+//			[concept setRect:self.frame];
+//			LOG_CONCEPTOBJECT(self);
 			
 			[myDelegate conceptObject:self panningEnded:sender];
 

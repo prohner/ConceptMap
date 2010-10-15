@@ -55,8 +55,8 @@
 	concept.bodyDisplayString = NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"");
 	
 	drives = [DATABASE newConceptTitled:NSLocalizedString(@"Disk Drives", @"") toDocument:doc];
-	drives.originX = [NSNumber numberWithInt: 85];
-	drives.originY = [NSNumber numberWithInt: 70];
+	drives.originX = [NSNumber numberWithInt: 295];
+	drives.originY = [NSNumber numberWithInt: 440];
 	drives.height = [NSNumber numberWithInt:150];
 	drives.width = [NSNumber numberWithInt:200];
 	drives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
@@ -64,8 +64,8 @@
 	[concept addConcept:drives];
 	
 	idrives = [DATABASE newConceptTitled:NSLocalizedString(@"Internal Drives", @"") toDocument:doc];
-	idrives.originX = [NSNumber numberWithInt: 10];
-	idrives.originY = [NSNumber numberWithInt: 20];
+	idrives.originX = [NSNumber numberWithInt: 305];
+	idrives.originY = [NSNumber numberWithInt: 460];
 	idrives.height = [NSNumber numberWithInt:50];
 	idrives.width = [NSNumber numberWithInt:180];
 	idrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
@@ -73,8 +73,8 @@
 	[drives addConcept:idrives];
 	
 	edrives = [DATABASE newConceptTitled:NSLocalizedString(@"External Drives", @"") toDocument:doc];
-	edrives.originX = [NSNumber numberWithInt: 10];
-	edrives.originY = [NSNumber numberWithInt: 75];
+	edrives.originX = [NSNumber numberWithInt: 305];
+	edrives.originY = [NSNumber numberWithInt: 525];
 	edrives.height = [NSNumber numberWithInt:50];
 	edrives.width = [NSNumber numberWithInt:180];
 	edrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
@@ -82,8 +82,8 @@
 	[drives addConcept:edrives];
 	
 	ips = [DATABASE newConceptTitled:NSLocalizedString(@"IP Addresses", @"") toDocument:doc];
-	ips.originX = [NSNumber numberWithInt: 85];
-	ips.originY = [NSNumber numberWithInt: 225];
+	ips.originX = [NSNumber numberWithInt: 295];
+	ips.originY = [NSNumber numberWithInt: 600];
 	ips.height = [NSNumber numberWithInt:70];
 	ips.width = [NSNumber numberWithInt:200];
 	ips.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
@@ -114,81 +114,63 @@
 	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image2" ofType:@"jpeg"]];
 	doc.image = UIImageJPEGRepresentation(image, 1.0);
 	
-	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Garage", @"") toDocument:doc];
-	concept.originX = [NSNumber numberWithInt: 100];
-	concept.originY = [NSNumber numberWithInt:  50];
-	concept.height = [NSNumber numberWithInt: 400];
-	concept.width = [NSNumber numberWithInt: 425];
+	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Garage", @"") 
+							  toDocument:doc 
+								withRect:CGRectMake(100, 50, 425, 425)];
 	concept.bodyDisplayString = @" ";
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
 
-	cabLeft = [DATABASE newConceptTitled:NSLocalizedString(@"Left Cabinet", @"") toDocument:doc];
-	cabLeft.originX = [NSNumber numberWithInt: 10];
-	cabLeft.originY = [NSNumber numberWithInt: 30];
-	cabLeft.height = [NSNumber numberWithInt: 350];
-	cabLeft.width = [NSNumber numberWithInt: 200];
+	cabLeft = [DATABASE newConceptTitled:NSLocalizedString(@"Left Cabinet", @"") 
+							  toDocument:doc 
+								withRect:CGRectMake(110, 130, 200, 200)];
 	cabLeft.bodyDisplayString = @" ";
 	cabLeft.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
 	[concept addConcept:cabLeft];
 	
-	c = [DATABASE newConceptTitled:NSLocalizedString(@"Soccer ball", @"") toDocument:doc];
-	c.originX = [NSNumber numberWithInt: 10];
-	c.originY = [NSNumber numberWithInt: 30];
-	c.height = [NSNumber numberWithInt: 25];
-	c.width = [NSNumber numberWithInt: 110];
+	c = [DATABASE newConceptTitled:NSLocalizedString(@"Soccer ball", @"") 
+						toDocument:doc 
+						  withRect:CGRectMake(120, 150, 110, 25)];
 	c.bodyDisplayString = @" ";
 	c.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 	[cabLeft addConcept:c];
 	
-	c = [DATABASE newConceptTitled:NSLocalizedString(@"Green Duffle", @"") toDocument:doc];
-	c.originX = [NSNumber numberWithInt: 10];
-	c.originY = [NSNumber numberWithInt: 68];
-	c.height = [NSNumber numberWithInt: 100];
-	c.width = [NSNumber numberWithInt: 180];
+	c = [DATABASE newConceptTitled:NSLocalizedString(@"Green Duffle", @"") 
+						toDocument:doc 
+						  withRect:CGRectMake(120, 185, 180, 100)];
 	c.bodyDisplayString = @" ";
 	c.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
 	[cabLeft addConcept:c];
 	
-	c2 = [DATABASE newConceptTitled:NSLocalizedString(@"Medicine Kit", @"") toDocument:doc];
-	c2.originX = [NSNumber numberWithInt: 10];
-	c2.originY = [NSNumber numberWithInt: 30];
-	c2.height = [NSNumber numberWithInt: 55];
-	c2.width = [NSNumber numberWithInt: 160];
+	c2 = [DATABASE newConceptTitled:NSLocalizedString(@"Medicine Kit", @"") 
+						 toDocument:doc 
+						   withRect:CGRectMake(130, 205, 120, 55)];
 	c2.bodyDisplayString = NSLocalizedString(@"Bandages\nGauze\nTape", @"");
 	c2.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBrown];
 	[c addConcept:c2];
 	
-	cabRight = [DATABASE newConceptTitled:NSLocalizedString(@"Right Cabinet", @"") toDocument:doc];
-	cabRight.originX = [NSNumber numberWithInt:215];
-	cabRight.originY = [NSNumber numberWithInt: 30];
-	cabRight.height = [NSNumber numberWithInt: 350];
-	cabRight.width = [NSNumber numberWithInt: 200];
+	cabRight = [DATABASE newConceptTitled:NSLocalizedString(@"Right Cabinet", @"") 
+							   toDocument:doc 
+								 withRect:CGRectMake(315, 130, 200, 200)];
 	cabRight.bodyDisplayString = @" ";
 	cabRight.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
 	[concept addConcept:cabRight];
 
-	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Hall Closet", @"") toDocument:doc];
-	concept.originX = [NSNumber numberWithInt: 75];
-	concept.originY = [NSNumber numberWithInt: 550];
-	concept.height = [NSNumber numberWithInt: 350];
-	concept.width = [NSNumber numberWithInt: 525];
+	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Hall Closet", @"") 
+							  toDocument:doc
+								withRect:CGRectMake(75, 550, 525, 350)];
 	concept.bodyDisplayString = @" ";
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 	
-	c = [DATABASE newConceptTitled:NSLocalizedString(@"Board Games", @"") toDocument:doc];
-	c.originX = [NSNumber numberWithInt: 10];
-	c.originY = [NSNumber numberWithInt: 48];
-	c.height = [NSNumber numberWithInt: 100];
-	c.width = [NSNumber numberWithInt: 180];
+	c = [DATABASE newConceptTitled:NSLocalizedString(@"Board Games", @"") 
+						toDocument:doc
+						  withRect:CGRectMake(85, 625, 180, 100)];
 	c.bodyDisplayString = NSLocalizedString(@"All of them", @"");
 	c.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantGreen];
 	[concept addConcept:c];
 	
-	c = [DATABASE newConceptTitled:NSLocalizedString(@"iPhone Box", @"") toDocument:doc];
-	c.originX = [NSNumber numberWithInt: 220];
-	c.originY = [NSNumber numberWithInt: 48];
-	c.height = [NSNumber numberWithInt: 25];
-	c.width = [NSNumber numberWithInt: 110];
+	c = [DATABASE newConceptTitled:NSLocalizedString(@"iPhone Box", @"") 
+						toDocument:doc
+						  withRect:CGRectMake(295, 625, 110, 25)];
 	c.bodyDisplayString = @" ";
 	c.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantGreen];
 	[concept addConcept:c];
