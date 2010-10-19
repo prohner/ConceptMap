@@ -9,11 +9,9 @@
 #import <CoreData/CoreData.h>
 
 @class Document;
-@class ConceptObject;
 
 @interface Concept :  NSManagedObject  
 {
-	ConceptObject *conceptObject;
 }
 
 @property (nonatomic, retain) NSString * bodyDisplayString;
@@ -28,7 +26,6 @@
 @property (nonatomic, retain) NSNumber * originX;
 @property (nonatomic, retain) NSDate * lastSaved;
 @property (nonatomic, retain) NSSet* concepts;
-@property (nonatomic, retain) Concept * parentConcept;
 @property (nonatomic, retain) NSSet* connectedConcepts;
 @property (nonatomic, retain) Document * document;
 

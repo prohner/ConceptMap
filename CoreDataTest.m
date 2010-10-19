@@ -90,6 +90,15 @@
 	
 }
 
+- (void)testThatConceptHasConceptObjectMember {
+	Document *doc;
+	Concept *concept;
+	
+    doc = [DATABASE newDocumentTitled:@"doc 1"];
+	concept = [DATABASE newConceptTitled:@"concept 1" toDocument:doc];
+    STAssertNotNil(concept.created, @"The created date should have been set.");
+}
+
 - (void)testAddingConcepts {
 	Document *doc;
 	Concept *concept;

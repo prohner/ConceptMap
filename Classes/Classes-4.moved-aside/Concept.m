@@ -10,7 +10,11 @@
 
 #import "Document.h"
 
-@implementation Concept 
+@implementation Concept {
+	// Pointer to its visual container
+	ConceptObject *conceptObject;
+
+}
 
 @dynamic bodyDisplayString;
 @dynamic fontSize;
@@ -24,7 +28,6 @@
 @dynamic originX;
 @dynamic lastSaved;
 @dynamic concepts;
-@dynamic parentConcept;
 @dynamic connectedConcepts;
 @dynamic document;
 

@@ -51,12 +51,13 @@ static int recursionDepth = 0;
 - (void)addConnections:(NSSet *)concepts {
 	// ConceptObjects are all loaded and now draw connections
 	for (Concept *concept in [concepts allObjects]) {
-		FUNCTION_LOG(@"Connecting %@", concept.title);
+		FUNCTION_LOG(@"Connecting %@ to ....", concept.title);
 		for (Concept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+			FUNCTION_LOG(@"\t\t %@.", connectedConcept.title);
 			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
-			if (concepts != [concept connectedConcepts]) {
-				[self addConnections:[concept connectedConcepts]];
-			}
+//			if (concepts != [concept connectedConcepts]) {
+//				[self addConnections:[concept connectedConcepts]];
+//			}
 		}
 	}
 }
@@ -68,9 +69,13 @@ static int recursionDepth = 0;
 			FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@) %i, color=%@", tabs, concept.title, concept.originX, concept.originY, concept.width, concept.height, co, concept.colorSchemeConstant);
 
 			CGPoint pt = CGPointMake([concept.originX intValue], [concept.originY intValue]);
-//			if (conceptObject != nil) {
+			if (conceptObject == nil) {
+				FUNCTION_LOG(@"\t\tConvert to CO");
+				//pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
+			} else {
+				FUNCTION_LOG(@"\t\tConvert to self");
 				pt = [self.layer convertPoint:pt toLayer:conceptObject.layer];
-//			}
+			}
 			LOG_POINT(pt);
 			[co setFrame:CGRectMake(pt.x, pt.y, [concept.width intValue], [concept.height intValue])];
 			
@@ -224,7 +229,21 @@ static int recursionDepth = 0;
 	}
 	
 	LOG_CONCEPTOBJECT(conceptObject);
+	[self adjustChildCoordinates:conceptObject.concept];
 	possibleDropTarget = nil;
+}
+
+- (void)adjustChildCoordinates:(Concept *)mainConcept {
+	for (Concept *concept in [mainConcept concepts]) {
+		CGRect frame = concept.conceptObject.frame;
+		CGPoint pt = frame.origin;
+		pt = [self.layer convertPoint:pt fromLayer:concept.conceptObject.layer];
+		concept.originX = [NSNumber numberWithFloat:pt.x];
+		concept.originY = [NSNumber numberWithFloat:pt.y];
+
+		LOG_CONCEPTOBJECT(concept.conceptObject);
+		[self adjustChildCoordinates:concept];
+	}
 }
 
 - (void)conceptObject:(ConceptObject *)conceptObject  connecting:(BOOL)isConnecting {

@@ -55,6 +55,7 @@
 		E7227E8112640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227E7F12640EC4001A0386 /* ConceptObjectConnectionsViewController.xib */; };
 		E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */; };
 		E7227E8312640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227E7F12640EC4001A0386 /* ConceptObjectConnectionsViewController.xib */; };
+		E722819F12688EB4001A0386 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783AB341256FE2900E2F8CB /* MessageUI.framework */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
@@ -244,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E722819F12688EB4001A0386 /* MessageUI.framework in Frameworks */,
 				E75ABDD61239F5F7004A5C76 /* QuartzCore.framework in Frameworks */,
 				E75ABDD71239F5F7004A5C76 /* UIKit.framework in Frameworks */,
 				E75ABDD81239F5F7004A5C76 /* Foundation.framework in Frameworks */,

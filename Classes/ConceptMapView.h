@@ -33,6 +33,7 @@
 - (void)addSetOfConcepts:(NSSet *)concepts toConceptObject:(ConceptObject *)conceptObject withTabs:(NSString *)tabs;
 - (void)addConnections:(NSSet *)concepts;
 - (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view;
+- (void)adjustChildCoordinates:(Concept *)mainConcept;
 - (UIImage *)conceptMapAsImage;
 
 @end
