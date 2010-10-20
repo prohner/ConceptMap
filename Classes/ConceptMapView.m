@@ -237,7 +237,7 @@ static int recursionDepth = 0;
 	for (Concept *concept in [mainConcept concepts]) {
 		CGRect frame = concept.conceptObject.frame;
 		CGPoint pt = frame.origin;
-		pt = [self.layer convertPoint:pt fromLayer:concept.conceptObject.layer];
+		pt = [self.layer convertPoint:pt fromLayer:mainConcept.conceptObject.layer];
 		concept.originX = [NSNumber numberWithFloat:pt.x];
 		concept.originY = [NSNumber numberWithFloat:pt.y];
 
