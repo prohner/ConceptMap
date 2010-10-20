@@ -56,7 +56,7 @@
 	
 	drives = [DATABASE newConceptTitled:NSLocalizedString(@"Disk Drives", @"") toDocument:doc];
 	drives.originX = [NSNumber numberWithInt: 295];
-	drives.originY = [NSNumber numberWithInt: 440];
+	drives.originY = [NSNumber numberWithInt: 390];
 	drives.height = [NSNumber numberWithInt:150];
 	drives.width = [NSNumber numberWithInt:200];
 	drives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
@@ -65,7 +65,7 @@
 	
 	idrives = [DATABASE newConceptTitled:NSLocalizedString(@"Internal Drives", @"") toDocument:doc];
 	idrives.originX = [NSNumber numberWithInt: 305];
-	idrives.originY = [NSNumber numberWithInt: 460];
+	idrives.originY = [NSNumber numberWithInt: 410];
 	idrives.height = [NSNumber numberWithInt:50];
 	idrives.width = [NSNumber numberWithInt:180];
 	idrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
@@ -74,7 +74,7 @@
 	
 	edrives = [DATABASE newConceptTitled:NSLocalizedString(@"External Drives", @"") toDocument:doc];
 	edrives.originX = [NSNumber numberWithInt: 305];
-	edrives.originY = [NSNumber numberWithInt: 525];
+	edrives.originY = [NSNumber numberWithInt: 475];
 	edrives.height = [NSNumber numberWithInt:50];
 	edrives.width = [NSNumber numberWithInt:180];
 	edrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
@@ -83,7 +83,7 @@
 	
 	ips = [DATABASE newConceptTitled:NSLocalizedString(@"IP Addresses", @"") toDocument:doc];
 	ips.originX = [NSNumber numberWithInt: 295];
-	ips.originY = [NSNumber numberWithInt: 600];
+	ips.originY = [NSNumber numberWithInt: 550];
 	ips.height = [NSNumber numberWithInt:70];
 	ips.width = [NSNumber numberWithInt:200];
 	ips.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];

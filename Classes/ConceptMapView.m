@@ -96,6 +96,7 @@ static int recursionDepth = 0;
 		view = self;
 	}
 	co.rootLayer = self.layer;
+	co.conceptMapView = self;
 	[view addSubview:co];
 }
 

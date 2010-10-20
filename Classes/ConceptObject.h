@@ -17,6 +17,8 @@
 #import "ConceptObjectDeleteButton.h"
 #import "ConceptObjectConnectButton.h"
 
+@class ConceptMapView;
+
 @protocol ConceptObjectDelegate;
 
 @interface ConceptObject : UIView <UIAlertViewDelegate, UITextViewDelegate, UIPopoverControllerDelegate> {
@@ -25,6 +27,7 @@
 	BOOL isConnecting;
 	
 	Concept *concept;
+	ConceptMapView *conceptMapView;
 	
     id <ConceptObjectDelegate> myDelegate;
 	
@@ -54,6 +57,7 @@
 @property (nonatomic, retain) ConceptObjectLabel *conceptObjectLabel;
 @property (nonatomic, retain) NSArray *childConceptObjects;
 @property (nonatomic, retain) CALayer *rootLayer;
+@property (nonatomic, retain) ConceptMapView *conceptMapView;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;

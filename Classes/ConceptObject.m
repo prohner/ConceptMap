@@ -17,6 +17,7 @@
 @implementation ConceptObject
 
 @synthesize selected, isConnecting, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects, rootLayer;
+@synthesize conceptMapView;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -477,8 +478,8 @@
 	conceptObjectSettingsViewController = [[ConceptObjectSettingsViewController alloc] initWithNibName:@"ConceptObjectSettingsViewController" bundle:nil];
 	conceptObjectSettingsViewController.conceptObject = self;
 	
-	ConceptMapView *v = (ConceptMapView *)self.superview;
-	conceptObjectSettingsViewController.conceptObjectConnections = v.conceptObjectConnections;
+	//ConceptMapView *v = (ConceptMapView *)self.superview;
+	conceptObjectSettingsViewController.conceptObjectConnections = self.conceptMapView.conceptObjectConnections;
 	
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
 
