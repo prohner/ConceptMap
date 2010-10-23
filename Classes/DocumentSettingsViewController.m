@@ -7,10 +7,11 @@
 //
 
 #import "DocumentSettingsViewController.h"
-
+#import "ConceptMapViewController.h"
 
 @implementation DocumentSettingsViewController
 
+@synthesize conceptMapViewController;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -19,13 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	self.title = @"Document Settings";
+	self.title = NSLocalizedString(@"Desktop", @"");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 210.0);
+	self.contentSizeForViewInPopover = CGSizeMake(180.0, 210.0);
 }
 
 
@@ -68,9 +69,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 11;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 90;
+}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,11 +87,17 @@
     }
     
     // Configure the cell...
-	cell.textLabel.text = @"Background Color";
+	cell.imageView.image = [self imageForRow:indexPath.row];
     
     return cell;
 }
 
+- (UIImage *)imageForRow:(int)indexPathRow {
+	NSString *imageName = [[NSString alloc] initWithFormat:@"desktop_%i", (indexPathRow + 1)];
+	UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg"]];
+	[imageName release];
+	return image;
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -113,22 +123,6 @@
 */
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark -
 #pragma mark Table view delegate
 
@@ -141,6 +135,9 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	conceptMapViewController.conceptMapView.layer.contents = (id)[[self imageForRow:indexPath.row] CGImage];
+	
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

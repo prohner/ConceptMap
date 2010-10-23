@@ -35,5 +35,8 @@
 - (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view;
 - (void)adjustChildCoordinates:(Concept *)mainConcept;
 - (UIImage *)conceptMapAsImage;
+- (void)rotated;
+
+- (void)initializeContents;
 
 @end

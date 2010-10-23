@@ -1,54 +1,41 @@
 //
-//  DocumentsViewController.m
+//  AddConceptObjectViewController.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/12/10.
+//  Created by Preston Rohner on 10/20/10.
 //  Copyright 2010 Cool Tool Apps. All rights reserved.
 //
 
-#import "DocumentsViewController.h"
-#import "DocumentTableViewCell.h"
-#import "conceptMapViewController.h"
+#import "AddConceptObjectViewController.h"
+#import "Utility.h"
 
-@implementation DocumentsViewController
+@implementation AddConceptObjectViewController
 
-@synthesize conceptMapViewController;
+typedef enum AddConceptTemplateChoices {
+	AddTemplateSquare,
+	AddTemplateVerticalRectangle,
+	AddTemplateHorizontalRectangle,
+	AddTemplateComputer,
+	AddTemplateMAX
+} AddConceptTemplateChoices;
+
 
 #pragma mark -
 #pragma mark View lifecycle
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 210.0);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-	self.title = NSLocalizedString(@"Documents", @"");
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addDocument)];
-
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.title = NSLocalizedString(@"Add Template", @"");
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 332.0);
 }
 
-- (void) addDocument {
-	Document *doc = [DATABASE newDocumentTitled:NSLocalizedString(@"New Document", @"")];
-	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(@"Your New Doc", @"") toDocument:doc];
-	concept.originX = [NSNumber numberWithInt: 100];
-	concept.originY = [NSNumber numberWithInt:  50];
-	concept.height = [NSNumber numberWithInt: 400];
-	concept.width = [NSNumber numberWithInt: 425];
-	concept.bodyDisplayString = @"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess";
-	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
-
-	DATABASE.fetchedResultsController = nil;
-	[self.tableView reloadData];
-	
-	[DATABASE application].currentDocument = doc;
-	[conceptMapViewController resetConceptMapView];
-	
-	[conceptMapViewController.popover dismissPopoverAnimated:YES];
-}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -88,75 +75,65 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[DATABASE documents] count];
+    // Return the number of rows in the section.
+    return AddTemplateMAX;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return 70;
-}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
     
-    DocumentTableViewCell *cell = (DocumentTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-
-//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-
-		NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"DocumentTableViewCell" owner:self options:nil];
-		cell = (DocumentTableViewCell *)[[topLevelObjects objectAtIndex:0] retain];
-		
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-	//cell.textLabel.text = [[NSString alloc]initWithFormat:@"cell %i.%i", indexPath.section, indexPath.row];
-	Document *doc;
-	doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
-	cell.title.text = doc.title;
-	UIImage *image = [UIImage imageWithData:doc.image];
-	cell.imageView.image = image;
-    
+	switch (indexPath.row) {
+		case AddTemplateSquare:
+			cell.textLabel.text = NSLocalizedString(@"Square", "");
+			break;
+		case AddTemplateVerticalRectangle:
+			cell.textLabel.text = NSLocalizedString(@"Vertical Rectangle", "");
+			break;
+		case AddTemplateHorizontalRectangle:
+			cell.textLabel.text = NSLocalizedString(@"Horizontal Rectangle", "");
+			break;
+		case AddTemplateComputer:
+			cell.textLabel.text = NSLocalizedString(@"Computer", "");
+			break;
+		default:
+			break;
+	}
+	
     return cell;
 }
 
 
-
+/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-	Document *doc;
-	doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
-	if (doc != [DATABASE currentDocument]) {
-		return YES;
-	}
-    return NO;
+    return YES;
 }
+*/
 
 
-
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-		Document *doc = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
-		[[DATABASE application] removeDocumentsObject:doc];
-        [[DATABASE managedObjectContext] deleteObject:doc];
-		DATABASE.fetchedResultsController = nil;
-//		[DATABASE saveManagedObjectContext];
-//		[[DATABASE documents] removeObjectAtIndex:indexPath.row];
-		[tableView reloadData];
-		//[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-		
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-
+*/
 
 
 /*
@@ -187,10 +164,23 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	[DATABASE application].currentDocument = (Document *)[[DATABASE documents] objectAtIndex:indexPath.row];
-	[conceptMapViewController resetConceptMapView];
+	switch (indexPath.row) {
+		case AddTemplateSquare:
+			FUNCTION_LOG(@"Square");
+			break;
+		case AddTemplateVerticalRectangle:
+			FUNCTION_LOG(@"Vertical Rectangle");
+			break;
+		case AddTemplateHorizontalRectangle:
+			FUNCTION_LOG(@"Horizontal Rectangle");
+			break;
+		case AddTemplateComputer:
+			FUNCTION_LOG(@"Computer");
+			break;
+		default:
+			break;
+	}
 	
-	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
@@ -207,7 +197,6 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
-	self.conceptMapViewController = nil;
 }
 
 

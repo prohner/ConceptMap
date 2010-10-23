@@ -26,9 +26,11 @@
 @property (nonatomic, retain) IBOutlet UITextField *documentTitle;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *documentTitleHolder;
 @property (nonatomic, retain) IBOutlet UIPopoverController *popover;
+@property (nonatomic, retain) IBOutlet ConceptMapView *conceptMapView;
 
 - (IBAction)documentButtonTapped:(id)sender;
-- (IBAction)addConcept:(id)sender;
+- (IBAction)addButtonTapped:(id)sender;
+- (void)addConcept:(id)sender;
 - (IBAction)documentTitleChanged:(id)sender;
 - (IBAction)actionButtonTapped:(id)sender;
 - (IBAction)settingsButtonTapped:(id)sender;
@@ -36,7 +38,7 @@
 - (IBAction)sliderChanged:(id)sender;
 - (IBAction)sliderStopped:(id)sender;
 
-- (void)setConceptMapView;
+- (void)resetConceptMapView;
 - (UIPopoverController *)popoverControllerFor:(UIViewController *)vc;
 @end
 

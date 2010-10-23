@@ -25,7 +25,7 @@
 
 - (void)drawInContext:(CGContextRef)context {
 	FUNCTION_LOG();
-		
+
 	CGContextSetLineWidth(context, 3.0);
 	CGPoint srcPoint, dstPoint;
 	for (NSString *key in connections) {
@@ -33,17 +33,18 @@
 
 		srcPoint = cxn.src.concept.centerPoint;
 		FUNCTION_LOG(@"Src (%.2f, %.2f) %@", srcPoint.x, srcPoint.y, cxn.src.concept.title);
-		if (cxn.src.rootLayer != cxn.src.layer.superlayer) {
-			srcPoint = [cxn.src.layer.superlayer convertPoint:srcPoint toLayer:cxn.src.rootLayer];
-		}
+//		if (cxn.src.rootLayer != cxn.src.layer.superlayer) {
+//			srcPoint = [cxn.src.layer.superlayer convertPoint:srcPoint toLayer:cxn.src.rootLayer];
+//		}
 		CGContextMoveToPoint(context, srcPoint.x, srcPoint.y);
 		
 		dstPoint = cxn.dst.concept.centerPoint;
-		FUNCTION_LOG(@"Dst (%.2f, %.2f) %@", dstPoint.x, dstPoint.y, cxn.dst.concept.title);
-		if (cxn.dst.rootLayer != cxn.dst.layer.superlayer) {
-			dstPoint = [cxn.dst.layer.superlayer convertPoint:dstPoint toLayer:cxn.dst.rootLayer];
-		}
-		//		dstPoint = [cxn.dst.layer.superlayer convertPoint:dstPoint toLayer:self];
+		FUNCTION_LOG(@"Dst 1 (%.2f, %.2f) %@", dstPoint.x, dstPoint.y, cxn.dst.concept.title);
+//		if (cxn.dst.rootLayer != cxn.dst.layer.superlayer) {
+//			dstPoint = [cxn.dst.layer.superlayer convertPoint:dstPoint toLayer:cxn.dst.rootLayer];
+//		}
+//		FUNCTION_LOG(@"Dst 2 (%.2f, %.2f) %@", dstPoint.x, dstPoint.y, cxn.dst.concept.title);
+//		dstPoint = [cxn.dst.layer.superlayer convertPoint:dstPoint toLayer:self];
 
 //		CALayer *next = cxn.dst.layer.superlayer; 
 //		while (self != next && next) {

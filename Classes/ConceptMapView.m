@@ -15,33 +15,77 @@ static int recursionDepth = 0;
 
 @synthesize currentDocument, propertyInspectorButton, toolbar, conceptObjectConnections;
 
-- (id)initWithFrame:(CGRect)frame {
-    if ((self = [super initWithFrame:frame])) {
-        // Initialization code
-		self.conceptObjectConnections = [ConceptObjectConnections layer];
-		conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
-		//	connectionsLayer.backgroundColor = [[UIColor greenColor] CGColor];
-		conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
-		
-		[self.layer addSublayer:conceptObjectConnections];
+//- (id)initWithFrame:(CGRect)frame {
+//    if ((self = [super initWithFrame:frame])) {
+//        // Initialization code
+//		self.conceptObjectConnections = [ConceptObjectConnections layer];
+//		conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
+//		//	connectionsLayer.backgroundColor = [[UIColor greenColor] CGColor];
+//		conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
+//		
+//		[self.layer addSublayer:conceptObjectConnections];
+//
+//		self.currentDocument = [DATABASE currentDocument];
+//		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
+//		[self addConnections:[currentDocument concepts]];
+//		
+//		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
+//		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+//		[self addGestureRecognizer:singleTap];
+//		[singleTap release];
+//
+//		UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+//		doubleTap.numberOfTapsRequired = 2;
+//		[self addGestureRecognizer:doubleTap];
+//		[doubleTap release];
+//		
+//	}
+//	
+//	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//	//conceptObjectConnections.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//	return self;
+//}
 
-		self.currentDocument = [DATABASE currentDocument];
-		[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
-		[self addConnections:[currentDocument concepts]];
-		
-		FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
-		UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-		[self addGestureRecognizer:singleTap];
-		[singleTap release];
-
-		UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
-		doubleTap.numberOfTapsRequired = 2;
-		[self addGestureRecognizer:doubleTap];
-		[doubleTap release];
-		
-	}
+- (void)initializeContents {
+	self.conceptObjectConnections = [ConceptObjectConnections layer];
+	conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
+	conceptObjectConnections.backgroundColor = [[UIColor clearColor] CGColor];
+	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
-	return self;
+	self.layer.contents = (id)[[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"desktop_1" ofType:@"jpg"]] CGImage];
+	[self.layer addSublayer:conceptObjectConnections];
+	
+	self.currentDocument = [DATABASE currentDocument];
+	[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
+	[self addConnections:[currentDocument concepts]];
+	
+	FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
+	UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+	[self addGestureRecognizer:singleTap];
+	[singleTap release];
+	
+	UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
+	doubleTap.numberOfTapsRequired = 2;
+	[self addGestureRecognizer:doubleTap];
+	[doubleTap release];
+	
+	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+}
+
+- (void)rotated {
+//	[super setFrame:frame];
+	CGRect frame = self.frame;
+	frame.origin.x = 0;
+	frame.origin.y = 0;
+
+	[CATransaction begin];
+    [CATransaction setValue:[NSNumber numberWithFloat:.1] forKey:kCATransactionAnimationDuration];
+
+	[conceptObjectConnections setFrame:frame];
+	[conceptObjectConnections setNeedsDisplay];
+
+    [CATransaction commit];
 }
 
 - (void)dealloc {
@@ -113,6 +157,11 @@ static int recursionDepth = 0;
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
     // single tap does nothing for now
 	FUNCTION_LOG(@"zoom scale == %.2f", self.zoomScale);
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	FUNCTION_LOG();
+    return YES;
 }
 
 #pragma mark ConceptObjectDelegate
@@ -256,6 +305,7 @@ static int recursionDepth = 0;
 	FUNCTION_LOG();
 	BOOL result = NO;
 	if (sourceConceptObject) {
+		sourceConceptObject.isConnecting = NO;
 		[sourceConceptObject.concept addConnectedConceptsObject:conceptObject.concept];
 //		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
 		FUNCTION_LOG(@"Connect %@ to %@", sourceConceptObject.concept.title, conceptObject.concept.title);

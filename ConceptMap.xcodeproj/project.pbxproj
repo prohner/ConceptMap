@@ -56,6 +56,10 @@
 		E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */; };
 		E7227E8312640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7227E7F12640EC4001A0386 /* ConceptObjectConnectionsViewController.xib */; };
 		E722819F12688EB4001A0386 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E783AB341256FE2900E2F8CB /* MessageUI.framework */; };
+		E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */; };
+		E7228359126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7228357126FADF9001A0386 /* AddConceptObjectViewController.xib */; };
+		E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */; };
+		E722835B126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7228357126FADF9001A0386 /* AddConceptObjectViewController.xib */; };
 		E72A5321124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A5322124C5F7000FEF168 /* ConceptObjectColorSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */; };
 		E72A53C0124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72A53BE124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.m */; };
@@ -113,6 +117,28 @@
 		E794E22D123DE84E002F0EF8 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
 		E794E22E123DE84E002F0EF8 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E794E25B123F2077002F0EF8 /* DocumentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */; };
+		E7A83726127296DE00A16F30 /* desktop_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371B127296DE00A16F30 /* desktop_1.jpg */; };
+		E7A83727127296DE00A16F30 /* desktop_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371C127296DE00A16F30 /* desktop_10.jpg */; };
+		E7A83728127296DE00A16F30 /* desktop_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371D127296DE00A16F30 /* desktop_11.jpg */; };
+		E7A83729127296DE00A16F30 /* desktop_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371E127296DE00A16F30 /* desktop_2.jpg */; };
+		E7A8372A127296DE00A16F30 /* desktop_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371F127296DE00A16F30 /* desktop_3.jpg */; };
+		E7A8372B127296DE00A16F30 /* desktop_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83720127296DE00A16F30 /* desktop_4.jpg */; };
+		E7A8372C127296DE00A16F30 /* desktop_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83721127296DE00A16F30 /* desktop_5.jpg */; };
+		E7A8372D127296DE00A16F30 /* desktop_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83722127296DE00A16F30 /* desktop_6.jpg */; };
+		E7A8372E127296DE00A16F30 /* desktop_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83723127296DE00A16F30 /* desktop_7.jpg */; };
+		E7A8372F127296DE00A16F30 /* desktop_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83724127296DE00A16F30 /* desktop_8.jpg */; };
+		E7A83730127296DE00A16F30 /* desktop_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83725127296DE00A16F30 /* desktop_9.jpg */; };
+		E7A83731127296DE00A16F30 /* desktop_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371B127296DE00A16F30 /* desktop_1.jpg */; };
+		E7A83732127296DE00A16F30 /* desktop_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371C127296DE00A16F30 /* desktop_10.jpg */; };
+		E7A83733127296DE00A16F30 /* desktop_11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371D127296DE00A16F30 /* desktop_11.jpg */; };
+		E7A83734127296DE00A16F30 /* desktop_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371E127296DE00A16F30 /* desktop_2.jpg */; };
+		E7A83735127296DE00A16F30 /* desktop_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A8371F127296DE00A16F30 /* desktop_3.jpg */; };
+		E7A83736127296DE00A16F30 /* desktop_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83720127296DE00A16F30 /* desktop_4.jpg */; };
+		E7A83737127296DE00A16F30 /* desktop_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83721127296DE00A16F30 /* desktop_5.jpg */; };
+		E7A83738127296DE00A16F30 /* desktop_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83722127296DE00A16F30 /* desktop_6.jpg */; };
+		E7A83739127296DE00A16F30 /* desktop_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83723127296DE00A16F30 /* desktop_7.jpg */; };
+		E7A8373A127296DE00A16F30 /* desktop_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83724127296DE00A16F30 /* desktop_8.jpg */; };
+		E7A8373B127296DE00A16F30 /* desktop_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83725127296DE00A16F30 /* desktop_9.jpg */; };
 		E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
 		E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */; };
 		E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
@@ -158,6 +184,9 @@
 		E7227E7D12640EC4001A0386 /* ConceptObjectConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnectionsViewController.h; sourceTree = "<group>"; };
 		E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnectionsViewController.m; sourceTree = "<group>"; };
 		E7227E7F12640EC4001A0386 /* ConceptObjectConnectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectConnectionsViewController.xib; path = Classes/ConceptObjectConnectionsViewController.xib; sourceTree = "<group>"; };
+		E7228355126FADF9001A0386 /* AddConceptObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddConceptObjectViewController.h; sourceTree = "<group>"; };
+		E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddConceptObjectViewController.m; sourceTree = "<group>"; };
+		E7228357126FADF9001A0386 /* AddConceptObjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddConceptObjectViewController.xib; path = Classes/AddConceptObjectViewController.xib; sourceTree = "<group>"; };
 		E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorSet.h; sourceTree = "<group>"; };
 		E72A5320124C5F7000FEF168 /* ConceptObjectColorSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectColorSet.m; sourceTree = "<group>"; };
 		E72A53BD124DBB3F00FEF168 /* ConceptObjectColorChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectColorChooserViewController.h; sourceTree = "<group>"; };
@@ -215,6 +244,17 @@
 		E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentsViewController.xib; path = Classes/DocumentsViewController.xib; sourceTree = "<group>"; };
 		E794E258123F2077002F0EF8 /* DocumentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentTableViewCell.h; sourceTree = "<group>"; };
 		E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentTableViewCell.m; sourceTree = "<group>"; };
+		E7A8371B127296DE00A16F30 /* desktop_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_1.jpg; sourceTree = "<group>"; };
+		E7A8371C127296DE00A16F30 /* desktop_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_10.jpg; sourceTree = "<group>"; };
+		E7A8371D127296DE00A16F30 /* desktop_11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_11.jpg; sourceTree = "<group>"; };
+		E7A8371E127296DE00A16F30 /* desktop_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_2.jpg; sourceTree = "<group>"; };
+		E7A8371F127296DE00A16F30 /* desktop_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_3.jpg; sourceTree = "<group>"; };
+		E7A83720127296DE00A16F30 /* desktop_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_4.jpg; sourceTree = "<group>"; };
+		E7A83721127296DE00A16F30 /* desktop_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_5.jpg; sourceTree = "<group>"; };
+		E7A83722127296DE00A16F30 /* desktop_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_6.jpg; sourceTree = "<group>"; };
+		E7A83723127296DE00A16F30 /* desktop_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_7.jpg; sourceTree = "<group>"; };
+		E7A83724127296DE00A16F30 /* desktop_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_8.jpg; sourceTree = "<group>"; };
+		E7A83725127296DE00A16F30 /* desktop_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_9.jpg; sourceTree = "<group>"; };
 		E7E6EB45124B115000276DA9 /* ConceptObjectSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectSettingsViewController.h; sourceTree = "<group>"; };
 		E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectSettingsViewController.m; sourceTree = "<group>"; };
 		E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectSettingsViewController.xib; path = Classes/ConceptObjectSettingsViewController.xib; sourceTree = "<group>"; };
@@ -265,6 +305,8 @@
 				E7F87F4B1238AC7C003F63CA /* Concept Object */,
 				E783BC361254597E009B0C77 /* ActionsViewController.h */,
 				E783BC371254597E009B0C77 /* ActionsViewController.m */,
+				E7228355126FADF9001A0386 /* AddConceptObjectViewController.h */,
+				E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */,
 				1D3623240D0F684500981E51 /* ConceptMapAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* ConceptMapViewController.h */,
@@ -327,6 +369,7 @@
 				E72278FC125AE8D3001A0386 /* en.lproj */,
 				E72278FF125AE8D3001A0386 /* fr.lproj */,
 				E716CDD6123F2983003F21D3 /* Images */,
+				E7228357126FADF9001A0386 /* AddConceptObjectViewController.xib */,
 				E783BC381254597E009B0C77 /* ActionsViewController.xib */,
 				E783BC5D12545C1C009B0C77 /* DocumentSettingsViewController.xib */,
 				E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */,
@@ -359,6 +402,7 @@
 		E716CDD6123F2983003F21D3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E7A8371A127296DE00A16F30 /* wallpapers */,
 				E774F6981249B80C00CC1918 /* delete.png */,
 				E716CDD8123F2A55003F21D3 /* image2.jpeg */,
 				E716CDD9123F2A55003F21D3 /* image1.jpeg */,
@@ -461,6 +505,25 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		E7A8371A127296DE00A16F30 /* wallpapers */ = {
+			isa = PBXGroup;
+			children = (
+				E7A8371B127296DE00A16F30 /* desktop_1.jpg */,
+				E7A8371C127296DE00A16F30 /* desktop_10.jpg */,
+				E7A8371D127296DE00A16F30 /* desktop_11.jpg */,
+				E7A8371E127296DE00A16F30 /* desktop_2.jpg */,
+				E7A8371F127296DE00A16F30 /* desktop_3.jpg */,
+				E7A83720127296DE00A16F30 /* desktop_4.jpg */,
+				E7A83721127296DE00A16F30 /* desktop_5.jpg */,
+				E7A83722127296DE00A16F30 /* desktop_6.jpg */,
+				E7A83723127296DE00A16F30 /* desktop_7.jpg */,
+				E7A83724127296DE00A16F30 /* desktop_8.jpg */,
+				E7A83725127296DE00A16F30 /* desktop_9.jpg */,
+			);
+			name = wallpapers;
+			path = Images/wallpapers;
+			sourceTree = "<group>";
+		};
 		E7F87F4B1238AC7C003F63CA /* Concept Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +588,7 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ConceptMap" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -571,6 +635,18 @@
 				E722792E125AEED3001A0386 /* InfoPlist.strings in Resources */,
 				E7227CB912616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 				E7227E8112640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */,
+				E7228359126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */,
+				E7A83726127296DE00A16F30 /* desktop_1.jpg in Resources */,
+				E7A83727127296DE00A16F30 /* desktop_10.jpg in Resources */,
+				E7A83728127296DE00A16F30 /* desktop_11.jpg in Resources */,
+				E7A83729127296DE00A16F30 /* desktop_2.jpg in Resources */,
+				E7A8372A127296DE00A16F30 /* desktop_3.jpg in Resources */,
+				E7A8372B127296DE00A16F30 /* desktop_4.jpg in Resources */,
+				E7A8372C127296DE00A16F30 /* desktop_5.jpg in Resources */,
+				E7A8372D127296DE00A16F30 /* desktop_6.jpg in Resources */,
+				E7A8372E127296DE00A16F30 /* desktop_7.jpg in Resources */,
+				E7A8372F127296DE00A16F30 /* desktop_8.jpg in Resources */,
+				E7A83730127296DE00A16F30 /* desktop_9.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +675,18 @@
 				E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */,
 				E7227CBB12616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 				E7227E8312640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */,
+				E722835B126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */,
+				E7A83731127296DE00A16F30 /* desktop_1.jpg in Resources */,
+				E7A83732127296DE00A16F30 /* desktop_10.jpg in Resources */,
+				E7A83733127296DE00A16F30 /* desktop_11.jpg in Resources */,
+				E7A83734127296DE00A16F30 /* desktop_2.jpg in Resources */,
+				E7A83735127296DE00A16F30 /* desktop_3.jpg in Resources */,
+				E7A83736127296DE00A16F30 /* desktop_4.jpg in Resources */,
+				E7A83737127296DE00A16F30 /* desktop_5.jpg in Resources */,
+				E7A83738127296DE00A16F30 /* desktop_6.jpg in Resources */,
+				E7A83739127296DE00A16F30 /* desktop_7.jpg in Resources */,
+				E7A8373A127296DE00A16F30 /* desktop_8.jpg in Resources */,
+				E7A8373B127296DE00A16F30 /* desktop_9.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +740,7 @@
 				E7227D911261988E001A0386 /* ConceptObjectConnections.m in Sources */,
 				E7227DAC12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 				E7227E8012640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
+				E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +781,7 @@
 				E7227D921261988E001A0386 /* ConceptObjectConnections.m in Sources */,
 				E7227DAD12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 				E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
+				E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

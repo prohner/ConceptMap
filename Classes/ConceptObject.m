@@ -242,6 +242,8 @@
 	conceptObjectLabel.borderColor		= concept.conceptObjectColorSet.titleBorderColor.CGColor; 
 	conceptObjectLabel.backgroundColor	= concept.conceptObjectColorSet.titleBackgroundColor.CGColor;
 	
+	bodyDisplayString.textColor			= concept.conceptObjectColorSet.foregroundColor;
+	
 	[CATransaction flush];
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];

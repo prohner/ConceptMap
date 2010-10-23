@@ -9,10 +9,13 @@
 #import "ConceptMapViewController.h"
 #import "ActionsViewController.h"
 #import "DocumentSettingsViewController.h"
+#import "AddConceptObjectViewController.h"
+
 
 @implementation ConceptMapViewController
 
 @synthesize toolbar, documentsButton, documentTitle, documentTitleHolder, popover;
+@synthesize conceptMapView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -41,7 +44,7 @@
 	documentTitle.borderStyle = UITextBorderStyleRoundedRect;
 	documentTitle.textColor = [UIColor blackColor];
 	documentTitle.font = [UIFont systemFontOfSize:17.0];
-	documentTitle.placeholder = @"<Enter Document Title>";
+	documentTitle.placeholder = NSLocalizedString(@"<Enter Document Title>", @"");
 	documentTitle.backgroundColor = [UIColor blackColor];
 	//documentTitle.autocorrectionType = UITextAutocorrectionTypeNo;	// no auto correction support
 	documentTitle.autocapitalizationType = UITextAutocapitalizationTypeWords;
@@ -61,11 +64,11 @@
 	
 	[documentsButton setTitle:NSLocalizedString(@"Documents", @"")];
 	
-	[self setConceptMapView];
+	[self resetConceptMapView];
 }
 
-- (void)setConceptMapView {
-	if (conceptMapView) {
+- (void)resetConceptMapView {
+	if (0 && conceptMapView) {
 		[conceptMapView removeFromSuperview];
 		[conceptMapView release];
 		conceptMapView = nil;
@@ -75,15 +78,18 @@
     CGRect viewFrame = self.view.frame;
     viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
-    conceptMapView.contentSize = [conceptMapView idealContentSize];
-	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    conceptMapView.contentSize = [conceptMapView idealContentSize];
+//	[conceptMapView initWithFrame:conceptMapView.frame];
+//	
+//	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 //	[conceptMapView setZoomScale:4.0f];
 //	conceptMapView.delegate = self;
 //	conceptMapView.layer.masksToBounds = NO;
 	
-	conceptMapView.backgroundColor = [UIColor lightGrayColor];
+	conceptMapView.backgroundColor = [UIColor redColor];
+	[conceptMapView initializeContents];
 	
-    [self.view addSubview:conceptMapView];
+	[self.view addSubview:conceptMapView];
 	
 }
 
@@ -93,13 +99,14 @@
     return YES;
 }
 
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//	FUNCTION_LOG();
-//	//	if (popoverController) {
-//	//		CGPoint point = [mapView convertCoordinate:[selectedAnnotation coordinate] toPointToView:mapView];
-//	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-//	//	}
-//}
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+	FUNCTION_LOG();
+	//	if (popoverController) {
+	//		CGPoint point = [mapView convertCoordinate:[selectedAnnotation coordinate] toPointToView:mapView];
+	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	//	}
+	[conceptMapView rotated];
+}
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -141,7 +148,7 @@
 
 - (IBAction)actionButtonTapped:(id)sender {
 	ActionsViewController *actionsViewController = [[ActionsViewController alloc] initWithNibName:@"ActionsViewController" bundle:nil];
-	actionsViewController.conceptMapView = (ConceptMapView *)self.view;
+	actionsViewController.conceptMapView = conceptMapView;
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:actionsViewController];
 	[actionsViewController release];
 	
@@ -155,6 +162,8 @@
 - (IBAction)settingsButtonTapped:(id)sender {
 	DocumentSettingsViewController *documentSettingsViewController = [[DocumentSettingsViewController alloc] initWithNibName:@"DocumentSettingsViewController" bundle:nil];
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:documentSettingsViewController];
+	documentSettingsViewController.conceptMapViewController = self;
+	
 	[documentSettingsViewController release];
 	
 	self.popover = [self popoverControllerFor:navCtrl];
@@ -168,6 +177,15 @@
 	[self.popover dismissPopoverAnimated:YES];
 	return [[UIPopoverController alloc] initWithContentViewController:vc];
 	
+}
+
+- (IBAction)addButtonTapped:(id)sender {
+	AddConceptObjectViewController *ctrl = [[AddConceptObjectViewController alloc] initWithNibName:@"AddConceptObjectViewController" bundle:nil];	
+	self.popover = [self popoverControllerFor:ctrl];
+	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
+					permittedArrowDirections:UIPopoverArrowDirectionAny 
+									animated:YES];
+	[ctrl release];
 }
 
 - (IBAction)addConcept:(id)sender {
