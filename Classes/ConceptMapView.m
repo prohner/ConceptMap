@@ -52,7 +52,7 @@ static int recursionDepth = 0;
 	conceptObjectConnections.backgroundColor = [[UIColor clearColor] CGColor];
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
-	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].image] CGImage];
+	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].desktopImage] CGImage];
 	[self.layer addSublayer:conceptObjectConnections];
 	
 	self.currentDocument = [DATABASE currentDocument];
@@ -166,7 +166,7 @@ static int recursionDepth = 0;
 
 - (void)setDesktopImageTo:(UIImage *)image {
 	self.layer.contents = (id)[image CGImage];
-	[DATABASE currentDocument].image = UIImageJPEGRepresentation(image, 1.0);
+	[DATABASE currentDocument].desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	
 }
 

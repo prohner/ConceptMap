@@ -2,7 +2,7 @@
 //  Document.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/13/10.
+//  Created by Preston Rohner on 10/22/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,13 +13,12 @@
 
 @implementation Document 
 
-@dynamic created;
 @dynamic title;
-@dynamic lastSaved;
 @dynamic image;
+@dynamic created;
+@dynamic lastSaved;
+@dynamic desktopImage;
 @dynamic application;
 @dynamic concepts;
-
-
 
 @end

@@ -276,7 +276,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>35</integer>
+									<integer>29</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -319,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DocumentSettingsViewController.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DocumentSettingsViewController.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7A838071272A58600A16F30</string>
+										<string>E7A838211272A83500A16F30</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -390,16 +390,15 @@
 											<string>E7A8374B127297F800A16F30</string>
 											<string>E7A837E01272A0A900A16F30</string>
 											<string>E7A837EA1272A33500A16F30</string>
-											<string>E7A837EB1272A33500A16F30</string>
 											<string>E7A837EC1272A33500A16F30</string>
 											<string>E7A837ED1272A33500A16F30</string>
-											<string>E7A837EE1272A33500A16F30</string>
-											<string>E7A837EF1272A33500A16F30</string>
 											<string>E7A838021272A58600A16F30</string>
-											<string>E7A838031272A58600A16F30</string>
 											<string>E7A838041272A58600A16F30</string>
 											<string>E7A838051272A58600A16F30</string>
-											<string>E7A838061272A58600A16F30</string>
+											<string>E7A838161272A7F500A16F30</string>
+											<string>E7A8381C1272A82600A16F30</string>
+											<string>E7A8381D1272A82600A16F30</string>
+											<string>E7A838031272A58600A16F30</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

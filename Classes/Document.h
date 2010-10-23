@@ -2,7 +2,7 @@
 //  Document.h
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/13/10.
+//  Created by Preston Rohner on 10/22/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -15,10 +15,11 @@
 {
 }
 
-@property (nonatomic, retain) NSDate * created;
 @property (nonatomic, retain) NSString * title;
-@property (nonatomic, retain) NSDate * lastSaved;
 @property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSDate * created;
+@property (nonatomic, retain) NSDate * lastSaved;
+@property (nonatomic, retain) NSData * desktopImage;
 @property (nonatomic, retain) Application * application;
 @property (nonatomic, retain) NSSet* concepts;
 
