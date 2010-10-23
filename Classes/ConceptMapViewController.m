@@ -175,6 +175,7 @@
 
 - (IBAction)addButtonTapped:(id)sender {
 	AddConceptObjectViewController *ctrl = [[AddConceptObjectViewController alloc] initWithNibName:@"AddConceptObjectViewController" bundle:nil];	
+	ctrl.conceptMapViewController = self;
 	self.popover = [self popoverControllerFor:ctrl];
 	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
@@ -203,6 +204,42 @@
 	theAnimation.toValue=[NSNumber numberWithFloat:45];
 	[co.layer addAnimation:theAnimation forKey:@"animateLayer"];	
 	[conceptMapView addConceptObject:co toView:conceptMapView];
+}
+
+- (void)addConceptTemplate:(ConceptObject *)newConceptObject {
+	CABasicAnimation *theAnimation;	
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+	theAnimation.duration=0.15;
+	theAnimation.repeatCount=2;
+	theAnimation.autoreverses=YES;
+	theAnimation.fromValue=[NSNumber numberWithFloat:20];
+	theAnimation.toValue=[NSNumber numberWithFloat:45];
+	[newConceptObject.layer addAnimation:theAnimation forKey:@"animateLayer"];	
+	[conceptMapView addConceptObject:newConceptObject toView:conceptMapView];
+}
+
+- (void)addSquare {
+	CGRect r = CGRectMake(40, 40, 250, 250);
+	[self newConceptObjectTitled:@"New Square" inRect:r];
+}
+
+- (void)addVerticalRectangle {
+	CGRect r = CGRectMake(40, 40, 200, 300);
+	[self newConceptObjectTitled:@"New Rectangle" inRect:r];
+}
+
+- (void)addHorizontalRectangle {
+	CGRect r = CGRectMake(40, 40, 300, 200);
+	[self newConceptObjectTitled:@"New Rectangle" inRect:r];
+}
+
+- (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r {
+	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(title, @"") toDocument:conceptMapView.currentDocument];
+	[concept setRect:r];
+	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+	[co setFrame:r];
+	[self addConceptTemplate:co];
+	return co;
 }
 
 - (IBAction)documentTitleChanged:(id)sender {

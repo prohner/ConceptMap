@@ -62,6 +62,36 @@ typedef enum ColorSchemeConstantValues {
 	ColorSchemeConstantMAX
 } ColorSchemeConstant;
 
+typedef enum AddConceptTemplateCategories {
+	AddConceptTemplateCategoryGeneral,
+	AddConceptTemplateCategoryComputer,
+	AddConceptTemplateCategoryHome,
+	AddConceptTemplateCategoriesMAX
+} AddConceptTemplateCategories;
+
+typedef enum AddConceptTemplatesGeneral {
+	AddTemplatesGeneralSquare,
+	AddTemplatesGeneralVerticalRectangle,
+	AddTemplatesGeneralHorizontalRectangle,
+	AddTemplatesGeneralMAX
+} AddConceptTemplatesGeneral;
+
+typedef enum AddConceptTemplatesComputer {
+	AddTemplatesComputerServer,
+	AddTemplatesComputerDesktop,
+	AddTemplatesComputerSwitch,
+	AddTemplatesComputerRouter,
+	AddTemplatesComputerFirewall,
+	AddTemplatesComputerConcentrator,
+	AddTemplatesComputerMAX
+} AddConceptTemplatesComputer;
+
+typedef enum AddConceptTemplatesHome {
+	AddTemplatesHomeGarage,
+	AddTemplatesHomeMAX
+} AddConceptTemplatesHome;
+
+
 @interface Utility : NSObject {
 
 }

@@ -8,17 +8,11 @@
 
 #import "AddConceptObjectViewController.h"
 #import "Utility.h"
+#import "ConceptMapViewController.h"
 
 @implementation AddConceptObjectViewController
 
-typedef enum AddConceptTemplateChoices {
-	AddTemplateSquare,
-	AddTemplateVerticalRectangle,
-	AddTemplateHorizontalRectangle,
-	AddTemplateComputer,
-	AddTemplateMAX
-} AddConceptTemplateChoices;
-
+@synthesize conceptMapViewController;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -33,7 +27,7 @@ typedef enum AddConceptTemplateChoices {
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.title = NSLocalizedString(@"Add Template", @"");
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 332.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 500.0);
 }
 
 
@@ -70,13 +64,39 @@ typedef enum AddConceptTemplateChoices {
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return AddConceptTemplateCategoriesMAX;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	switch (section) {
+		case AddConceptTemplateCategoryGeneral:
+			return NSLocalizedString(@"General Items", @"");
+			break;
+		case AddConceptTemplateCategoryComputer:
+			return NSLocalizedString(@"Computers", @"");
+			break;
+		case AddConceptTemplateCategoryHome:
+			return NSLocalizedString(@"Home", @"");
+			break;
+	}
+	return @"What's this?";
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return AddTemplateMAX;
+	switch (section) {
+		case AddConceptTemplateCategoryGeneral:
+			return AddTemplatesGeneralMAX;
+			break;
+		case AddConceptTemplateCategoryComputer:
+			return AddTemplatesComputerMAX;
+			break;
+		case AddConceptTemplateCategoryHome:
+			return AddTemplatesHomeMAX;
+		default:
+			break;
+	}
+    return 0;
 }
 
 
@@ -91,18 +111,54 @@ typedef enum AddConceptTemplateChoices {
     }
     
     // Configure the cell...
-	switch (indexPath.row) {
-		case AddTemplateSquare:
-			cell.textLabel.text = NSLocalizedString(@"Square", "");
+	switch (indexPath.section) {
+		case AddConceptTemplateCategoryGeneral:
+			switch (indexPath.row) {
+				case AddTemplatesGeneralSquare:
+					cell.textLabel.text = NSLocalizedString(@"Square", "");
+					break;
+				case AddTemplatesGeneralVerticalRectangle:
+					cell.textLabel.text = NSLocalizedString(@"Vertical Rectangle", "");
+					break;
+				case AddTemplatesGeneralHorizontalRectangle:
+					cell.textLabel.text = NSLocalizedString(@"Horizontal Rectangle", "");
+					break;
+				default:
+					break;
+			}
 			break;
-		case AddTemplateVerticalRectangle:
-			cell.textLabel.text = NSLocalizedString(@"Vertical Rectangle", "");
+		case AddConceptTemplateCategoryComputer:
+			switch (indexPath.row) {
+				case AddTemplatesComputerServer:
+					cell.textLabel.text = NSLocalizedString(@"Server", "");
+					break;
+				case AddTemplatesComputerDesktop:
+					cell.textLabel.text = NSLocalizedString(@"Desktop", "");
+					break;
+				case AddTemplatesComputerSwitch:
+					cell.textLabel.text = NSLocalizedString(@"Switch", "");
+					break;
+				case AddTemplatesComputerRouter:
+					cell.textLabel.text = NSLocalizedString(@"Router", "");
+					break;
+				case AddTemplatesComputerFirewall:
+					cell.textLabel.text = NSLocalizedString(@"Firewall", "");
+					break;
+				case AddTemplatesComputerConcentrator:
+					cell.textLabel.text = NSLocalizedString(@"Concentrator", "");
+					break;
+				default:
+					break;
+			}
 			break;
-		case AddTemplateHorizontalRectangle:
-			cell.textLabel.text = NSLocalizedString(@"Horizontal Rectangle", "");
-			break;
-		case AddTemplateComputer:
-			cell.textLabel.text = NSLocalizedString(@"Computer", "");
+		case AddConceptTemplateCategoryHome:
+			switch (indexPath.row) {
+				case AddTemplatesHomeGarage:
+					cell.textLabel.text = NSLocalizedString(@"Garage", "");
+					break;
+				default:
+					break;
+			}
 			break;
 		default:
 			break;
@@ -164,18 +220,55 @@ typedef enum AddConceptTemplateChoices {
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	switch (indexPath.row) {
-		case AddTemplateSquare:
-			FUNCTION_LOG(@"Square");
+
+	switch (indexPath.section) {
+		case AddConceptTemplateCategoryGeneral:
+			switch (indexPath.row) {
+				case AddTemplatesGeneralSquare:
+					[conceptMapViewController addSquare];
+					break;
+				case AddTemplatesGeneralVerticalRectangle:
+					[conceptMapViewController addVerticalRectangle];
+					break;
+				case AddTemplatesGeneralHorizontalRectangle:
+					[conceptMapViewController addHorizontalRectangle];
+					break;
+				default:
+					break;
+			}
 			break;
-		case AddTemplateVerticalRectangle:
-			FUNCTION_LOG(@"Vertical Rectangle");
+		case AddConceptTemplateCategoryComputer:
+			switch (indexPath.row) {
+				case AddTemplatesComputerServer:
+					FUNCTION_LOG(@"Server");
+					break;
+				case AddTemplatesComputerDesktop:
+					FUNCTION_LOG(@"Desktop");
+					break;
+				case AddTemplatesComputerSwitch:
+					FUNCTION_LOG(@"Switch");
+					break;
+				case AddTemplatesComputerRouter:
+					FUNCTION_LOG(@"Router");
+					break;
+				case AddTemplatesComputerFirewall:
+					FUNCTION_LOG(@"Firewall");
+					break;
+				case AddTemplatesComputerConcentrator:
+					FUNCTION_LOG(@"Concentrator");
+					break;
+				default:
+					break;
+			}
 			break;
-		case AddTemplateHorizontalRectangle:
-			FUNCTION_LOG(@"Horizontal Rectangle");
-			break;
-		case AddTemplateComputer:
-			FUNCTION_LOG(@"Computer");
+		case AddConceptTemplateCategoryHome:
+			switch (indexPath.row) {
+				case AddTemplatesHomeGarage:
+					FUNCTION_LOG(@"Garage");
+					break;
+				default:
+					break;
+			}
 			break;
 		default:
 			break;

@@ -82,8 +82,20 @@
 "Square" = "Square";
 "Vertical Rectangle" = "Vertical Rectangle";
 "Horizontal Rectangle" = "Horizontal Rectangle";
-"Computer" = "Computer";
+"Server" = "Server";
+"Desktop" = "Desktop";
+"Switch" = "Switch";
+"Router" = "Router";
+"Firewall" = "Firewall";
+"Concentrator" = "Concentrator";
+"Garage" = "Garage";
+
 
 // 2010-10-22 9:07pm
 "Desktop" = "Desktop";
 "<Enter Document Title>" = "<Enter Document Title>";
+"General Items" = "General Items";
+"Computers" = "Computers";
+"Home" = "Home";
+"New Square" = "New Square";
+"New Rectangle" = "New Rectangle";

@@ -43,8 +43,8 @@
 	UIImage *image;
 
 	doc = [DATABASE newDocumentTitled:NSLocalizedString(@"Welcome Document", @"")];
-	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image1" ofType:@"jpeg"]];
-	doc.image = UIImageJPEGRepresentation(image, 1.0);
+	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"desktop_2" ofType:@"jpg"]];
+	doc.desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	
 	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Computer Template", @"") toDocument:doc];
 	concept.originX = [NSNumber numberWithInt:170];
@@ -98,6 +98,8 @@
 	concept.fontSize = [NSNumber numberWithInt:14];
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 	concept.bodyDisplayString = NSLocalizedString(@"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess", @"");
+
+	[DATABASE currentDocument].desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	[DATABASE saveManagedObjectContext];
 }
 
@@ -111,8 +113,8 @@
 	UIImage *image;
 
 	doc = [DATABASE newDocumentTitled:NSLocalizedString(@"Home Inventory", @"")];
-	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image2" ofType:@"jpeg"]];
-	doc.image = UIImageJPEGRepresentation(image, 1.0);
+	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"desktop_1" ofType:@"jpg"]];
+	doc.desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	
 	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Garage", @"") 
 							  toDocument:doc 

@@ -42,5 +42,13 @@
 
 - (void)resetConceptMapView;
 - (UIPopoverController *)popoverControllerFor:(UIViewController *)vc;
+
+- (void)addConceptTemplate:(ConceptObject *)newConceptObject;
+- (void)addSquare;
+- (void)addVerticalRectangle;
+- (void)addHorizontalRectangle;
+- (void)addSquare;
+- (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r;
+	
 @end
 

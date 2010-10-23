@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ConceptMapViewController;
 
 @interface AddConceptObjectViewController : UITableViewController {
-
+	ConceptMapViewController *conceptMapViewController;
 }
+
+@property (nonatomic, retain) ConceptMapViewController *conceptMapViewController;
 
 @end
