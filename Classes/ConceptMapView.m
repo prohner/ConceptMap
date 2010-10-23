@@ -13,7 +13,7 @@
 
 static int recursionDepth = 0;
 
-@synthesize currentDocument, propertyInspectorButton, toolbar, conceptObjectConnections;
+@synthesize currentDocument, toolbar, conceptObjectConnections;
 
 //- (id)initWithFrame:(CGRect)frame {
 //    if ((self = [super initWithFrame:frame])) {
@@ -52,7 +52,7 @@ static int recursionDepth = 0;
 	conceptObjectConnections.backgroundColor = [[UIColor clearColor] CGColor];
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
-	self.layer.contents = (id)[[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"desktop_1" ofType:@"jpg"]] CGImage];
+	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].image] CGImage];
 	[self.layer addSublayer:conceptObjectConnections];
 	
 	self.currentDocument = [DATABASE currentDocument];
@@ -164,6 +164,12 @@ static int recursionDepth = 0;
     return YES;
 }
 
+- (void)setDesktopImageTo:(UIImage *)image {
+	self.layer.contents = (id)[image CGImage];
+	[DATABASE currentDocument].image = UIImageJPEGRepresentation(image, 1.0);
+	
+}
+
 #pragma mark ConceptObjectDelegate
 
 - (void)conceptObject:(ConceptObject *)conceptObject isSelected:(BOOL)isSelected {
@@ -176,8 +182,6 @@ static int recursionDepth = 0;
 	} else {
 		selectedConceptObject = nil;
 	}
-	
-	propertyInspectorButton.enabled = isSelected;
 }
 
 - (void)conceptObject:(ConceptObject *)conceptObject isPanning:(UIPanGestureRecognizer *)sender {

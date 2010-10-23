@@ -135,8 +135,7 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
-	conceptMapViewController.conceptMapView.layer.contents = (id)[[self imageForRow:indexPath.row] CGImage];
-	
+	[conceptMapViewController.conceptMapView setDesktopImageTo:[self imageForRow:indexPath.row]];
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

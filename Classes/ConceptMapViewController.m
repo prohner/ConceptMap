@@ -15,7 +15,7 @@
 @implementation ConceptMapViewController
 
 @synthesize toolbar, documentsButton, documentTitle, documentTitleHolder, popover;
-@synthesize conceptMapView;
+@synthesize propertyInspectorButton, conceptMapView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -63,6 +63,7 @@
 	[documentTitleHolder release];
 	
 	[documentsButton setTitle:NSLocalizedString(@"Documents", @"")];
+	[propertyInspectorButton setTitle:NSLocalizedString(@"Desktop", @"")];
 	
 	[self resetConceptMapView];
 }
@@ -78,13 +79,6 @@
     CGRect viewFrame = self.view.frame;
     viewFrame.origin = CGPointMake(0, toolbar.bounds.size.height);
     conceptMapView = [[ConceptMapView alloc] initWithFrame:viewFrame];
-//    conceptMapView.contentSize = [conceptMapView idealContentSize];
-//	[conceptMapView initWithFrame:conceptMapView.frame];
-//	
-//	conceptMapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//	[conceptMapView setZoomScale:4.0f];
-//	conceptMapView.delegate = self;
-//	conceptMapView.layer.masksToBounds = NO;
 	
 	conceptMapView.backgroundColor = [UIColor redColor];
 	[conceptMapView initializeContents];

@@ -19,12 +19,10 @@
 	ConceptObject *sourceConceptObject;
 	Document *currentDocument;
 	ConceptObjectConnections *conceptObjectConnections;
-	UIBarButtonItem *propertyInspectorButton;
 	UIToolbar *toolbar;
 }
 
 @property (nonatomic, retain) Document *currentDocument;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *propertyInspectorButton;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) ConceptObjectConnections *conceptObjectConnections;
 
@@ -36,6 +34,7 @@
 - (void)adjustChildCoordinates:(Concept *)mainConcept;
 - (UIImage *)conceptMapAsImage;
 - (void)rotated;
+- (void)setDesktopImageTo:(UIImage *)image;
 
 - (void)initializeContents;
 

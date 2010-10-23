@@ -19,6 +19,7 @@
 	ConceptMapView *conceptMapView;
 	UIPopoverController *popover;
 	id conceptMapViewDelegateHold;
+	UIBarButtonItem *propertyInspectorButton;
 }
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
@@ -27,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *documentTitleHolder;
 @property (nonatomic, retain) IBOutlet UIPopoverController *popover;
 @property (nonatomic, retain) IBOutlet ConceptMapView *conceptMapView;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *propertyInspectorButton;
 
 - (IBAction)documentButtonTapped:(id)sender;
 - (IBAction)addButtonTapped:(id)sender;
