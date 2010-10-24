@@ -307,6 +307,14 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 //	FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@)", self, self.title, self.originX, self.originY, self.width, self.height);
 	
 }
+
+- (void)removeConceptAndConnections:(Concept *)conceptToRemove {
+	[[DATABASE currentDocument] removeConceptsObject:conceptToRemove];
+	for (Concept *concept in [[[DATABASE currentDocument] concepts] allObjects]) {
+		[concept removeConnectedConceptsObject:conceptToRemove];
+	}
+}
+
 @end
 
 @implementation Concept(Geometry)

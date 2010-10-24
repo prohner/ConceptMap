@@ -207,7 +207,9 @@ static int recursionDepth = 0;
 	}
 #endif
 	LOG_CONCEPTOBJECT(conceptObject);
-	
+
+	[self adjustChildCoordinates:conceptObject.concept];
+
 }
 
 - (BOOL)setPossibleDropTargetForPoint:(CGPoint)pt inConceptObject:(UIView *)view {
@@ -284,6 +286,7 @@ static int recursionDepth = 0;
 	
 	LOG_CONCEPTOBJECT(conceptObject);
 	[self adjustChildCoordinates:conceptObject.concept];
+	[self.conceptObjectConnections setNeedsDisplay];
 	possibleDropTarget = nil;
 }
 

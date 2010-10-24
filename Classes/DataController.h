@@ -51,6 +51,7 @@
 @interface Concept(SettingData)
 - (void)addConcept:(Concept *)newConcept;
 - (void)setRect:(CGRect)r;
+- (void)removeConceptAndConnections:(Concept *)conceptToRemove;
 @end
 
 @interface Concept(Geometry) 

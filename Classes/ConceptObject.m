@@ -368,7 +368,7 @@
 	FUNCTION_LOG(@"Chose item %i", buttonIndex);
 	if (buttonIndex == 1) {
 		[self removeFromSuperview];
-		[[concept document] removeConceptsObject:self.concept];
+		[self.concept removeConceptAndConnections:self.concept];
 		[conceptMapView.conceptObjectConnections removeConnectionsToAndFrom:self];
 		// TODO is a pointer to this ConceptObject being held still in ConceptMapView?
 	}
