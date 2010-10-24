@@ -332,12 +332,12 @@
 		} else if ([layerName isEqualToString:LAYER_NAME_DELETE]) {
 			FUNCTION_LOG(@"Delete tapped");
 			self.selected = YES;
-			NSString *msg = [[NSString alloc] initWithFormat:@"Are you sure you want to delete %@?", concept.title];
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete Item"
+			NSString *msg = [[NSString alloc] initWithFormat:NSLocalizedString(@"Are you sure you want to delete %@?", @""), concept.title];
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Delete Item", @"")
 															message:msg
 														   delegate:self 
-												  cancelButtonTitle:@"No" 
-												  otherButtonTitles:@"Yes", nil];
+												  cancelButtonTitle:NSLocalizedString(@"No", @"") 
+												  otherButtonTitles:NSLocalizedString(@"Yes", @""), nil];
 			[alert show];
 			[alert release];
 		} else if ([layerName isEqualToString:LAYER_NAME_CONNECT]) {
@@ -369,6 +369,7 @@
 	if (buttonIndex == 1) {
 		[self removeFromSuperview];
 		[[concept document] removeConceptsObject:self.concept];
+		[conceptMapView.conceptObjectConnections removeConnectionsToAndFrom:self];
 		// TODO is a pointer to this ConceptObject being held still in ConceptMapView?
 	}
 }

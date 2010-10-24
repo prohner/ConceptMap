@@ -20,5 +20,6 @@
 
 - (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
 - (void)removeConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
+- (void)removeConnectionsToAndFrom:(ConceptObject *)conceptObject;
 
 @end

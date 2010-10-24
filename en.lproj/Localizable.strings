@@ -99,3 +99,9 @@
 "Home" = "Home";
 "New Square" = "New Square";
 "New Rectangle" = "New Rectangle";
+
+// 2010-10-24 5am
+"Are you sure you want to delete %@?" = "Are you sure you want to delete %@?";
+"Delete Item" = "Delete Item";
+"Yes" = "Yes";
+"No" = "No";

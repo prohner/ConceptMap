@@ -82,4 +82,13 @@
 //	[cxn release];
 }
 
+- (void)removeConnectionsToAndFrom:(ConceptObject *)conceptObject {
+	for (ConceptObjectConnection *connection in [connections allValues]) {
+		if (connection.src == conceptObject || connection.dst == conceptObject) {
+			[connections removeObjectForKey:connection.keyString];
+		}
+	}
+	[self setNeedsDisplay];
+}
+
 @end
