@@ -102,8 +102,9 @@
     }
     
     // Configure the cell...
-	Concept *concept = [connectedObjects objectAtIndex:indexPath.row];
-    cell.textLabel.text = concept.title;
+	ConnectedConcept *connectedConcept = [connectedObjects objectAtIndex:indexPath.row];
+	Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
+    cell.textLabel.text = childConcept.title;
     return cell;
 }
 
@@ -123,12 +124,14 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-		Concept *concept = [connectedObjects objectAtIndex:indexPath.row];
+		ConnectedConcept *connectedConcept = [connectedObjects objectAtIndex:indexPath.row];
+		Concept *concept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
 		
 		FUNCTION_LOG(@"delete from %@ (%i) to %@ (%i)", conceptObject.concept.title, conceptObject, concept.title, concept.conceptObject);
 		[conceptObjectConnections removeConnectionFrom:conceptObject to:concept.conceptObject];
 		
 		[conceptObject.concept removeConnectedConceptsObject:concept];
+		[conceptObject.concept removeConnectedConceptsObject:connectedConcept];
 		[connectedObjects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
 		

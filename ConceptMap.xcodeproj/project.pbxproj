@@ -139,6 +139,8 @@
 		E7A83739127296DE00A16F30 /* desktop_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83723127296DE00A16F30 /* desktop_7.jpg */; };
 		E7A8373A127296DE00A16F30 /* desktop_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83724127296DE00A16F30 /* desktop_8.jpg */; };
 		E7A8373B127296DE00A16F30 /* desktop_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83725127296DE00A16F30 /* desktop_9.jpg */; };
+		E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A839F91277E9B300A16F30 /* ConnectedConcept.m */; };
+		E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A839F91277E9B300A16F30 /* ConnectedConcept.m */; };
 		E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
 		E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */; };
 		E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
@@ -255,6 +257,8 @@
 		E7A83723127296DE00A16F30 /* desktop_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_7.jpg; sourceTree = "<group>"; };
 		E7A83724127296DE00A16F30 /* desktop_8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_8.jpg; sourceTree = "<group>"; };
 		E7A83725127296DE00A16F30 /* desktop_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_9.jpg; sourceTree = "<group>"; };
+		E7A839F81277E9B300A16F30 /* ConnectedConcept.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedConcept.h; sourceTree = "<group>"; };
+		E7A839F91277E9B300A16F30 /* ConnectedConcept.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedConcept.m; sourceTree = "<group>"; };
 		E7E6EB45124B115000276DA9 /* ConceptObjectSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectSettingsViewController.h; sourceTree = "<group>"; };
 		E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectSettingsViewController.m; sourceTree = "<group>"; };
 		E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectSettingsViewController.xib; path = Classes/ConceptObjectSettingsViewController.xib; sourceTree = "<group>"; };
@@ -441,14 +445,16 @@
 			isa = PBXGroup;
 			children = (
 				E75ABC631239F054004A5C76 /* ApplicationData.xcdatamodel */,
-				E72DD76E1239FB0800B73998 /* DataController.h */,
-				E72DD76F1239FB0800B73998 /* DataController.m */,
 				E75ABC691239F24C004A5C76 /* Application.h */,
 				E75ABC6A1239F24C004A5C76 /* Application.m */,
-				E75ABC6B1239F24C004A5C76 /* Document.h */,
-				E75ABC6C1239F24C004A5C76 /* Document.m */,
 				E75ABC6D1239F24C004A5C76 /* Concept.h */,
 				E75ABC6E1239F24C004A5C76 /* Concept.m */,
+				E7A839F81277E9B300A16F30 /* ConnectedConcept.h */,
+				E7A839F91277E9B300A16F30 /* ConnectedConcept.m */,
+				E72DD76E1239FB0800B73998 /* DataController.h */,
+				E72DD76F1239FB0800B73998 /* DataController.m */,
+				E75ABC6B1239F24C004A5C76 /* Document.h */,
+				E75ABC6C1239F24C004A5C76 /* Document.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -741,6 +747,7 @@
 				E7227DAC12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 				E7227E8012640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
+				E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +789,7 @@
 				E7227DAD12629F93001A0386 /* ConceptObjectConnection.m in Sources */,
 				E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
+				E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +880,7 @@
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

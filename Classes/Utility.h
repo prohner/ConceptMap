@@ -10,7 +10,7 @@
 
 #define APPLICATION_NAME	NSLocalizedString(@"Concept Map", @"")
 
-#define FUNCTION_LOGGING			0
+#define FUNCTION_LOGGING			1
 #define MEMORY_WARNING_LOGGING		1
 
 #if MEMORY_WARNING_LOGGING

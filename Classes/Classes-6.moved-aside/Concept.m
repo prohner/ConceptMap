@@ -2,8 +2,8 @@
 //  Concept.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/10/10.
-//  Copyright 2010 Cool Tool Apps. All rights reserved.
+//  Created by Preston Rohner on 10/15/10.
+//  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import "Concept.h"
@@ -12,17 +12,20 @@
 
 @implementation Concept 
 
+@dynamic bodyDisplayString;
+@dynamic fontSize;
+@dynamic width;
+@dynamic originY;
 @dynamic title;
-@dynamic document;
-@dynamic parentConcept;
+@dynamic height;
+@dynamic created;
+@dynamic colorSchemeConstant;
+@dynamic fontName;
+@dynamic originX;
+@dynamic lastSaved;
 @dynamic concepts;
-
-- (void)awakeFromInsert {
-	[self setValue:[NSDate date] forKey:@"created"];
-}
-
-- (void)willSave {
-    [self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
-}
+@dynamic parentConcept;
+@dynamic connectedConcepts;
+@dynamic document;
 
 @end

@@ -9,6 +9,7 @@
 #import "ConceptMapAppDelegate.h"
 #import "ConceptMapViewController.h"
 #import "Utility.h"
+#import "Concept.h"
 
 @implementation ConceptMapAppDelegate
 
@@ -203,7 +204,17 @@
      See also applicationDidEnterBackground:.
      */
 	FUNCTION_LOG(@"Saving object context");
+
 	[DATABASE saveManagedObjectContext];
+
+#ifdef DEBUG
+	for (Concept *concept in [[DATABASE currentDocument].concepts allObjects]) {
+		FUNCTION_LOG(@"Connecting %@ (%@) to ....", concept.title, concept.objectID);
+		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+			FUNCTION_LOG(@"\t\t %@ (%@).", connectedConcept.objectURL, connectedConcept.objectID);
+		}
+	}
+#endif
 }
 
 

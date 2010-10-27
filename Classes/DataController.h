@@ -13,6 +13,7 @@
 #import "Utility.h"
 #import "Concept.h"
 #import "DataController.h"
+#import "ConnectedConcept.h"
 
 @class ConceptObject;
 
@@ -52,6 +53,7 @@
 - (void)addConcept:(Concept *)newConcept;
 - (void)setRect:(CGRect)r;
 - (void)removeConceptAndConnections:(Concept *)conceptToRemove;
+- (void)addConnectionTo:(Concept *)concept;
 @end
 
 @interface Concept(Geometry) 
@@ -63,3 +65,6 @@
 
 @end
 
+@interface  NSManagedObjectContext (FetchedObjectFromURI)
+- (NSManagedObject *)objectWithURI:(NSURL *)uri;
+@end

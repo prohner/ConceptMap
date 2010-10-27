@@ -57,6 +57,19 @@ static int recursionDepth = 0;
 	
 	self.currentDocument = [DATABASE currentDocument];
 	[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
+	
+#ifdef DEBUG
+	for (Concept *concept in [[DATABASE currentDocument].concepts allObjects]) {
+		FUNCTION_LOG(@"Connecting %@ (%@) to ....", concept.title, concept.objectID);
+		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+			FUNCTION_LOG(@"\t\t %@ (%@).", connectedConcept.objectURL, connectedConcept.objectID);
+		}
+	}
+#endif
+	
+	
+	
+	
 	[self addConnections:[currentDocument concepts]];
 	
 	FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
@@ -96,9 +109,12 @@ static int recursionDepth = 0;
 	// ConceptObjects are all loaded and now draw connections
 	for (Concept *concept in [concepts allObjects]) {
 		FUNCTION_LOG(@"Connecting %@ to ....", concept.title);
-		for (Concept *connectedConcept in [[concept connectedConcepts] allObjects]) {
-			FUNCTION_LOG(@"\t\t %@.", connectedConcept.title);
-			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
+		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+			FUNCTION_LOG(@"\t\t %@.", connectedConcept.objectURL);
+			Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
+			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:childConcept.conceptObject];
+
+//			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
 //			if (concepts != [concept connectedConcepts]) {
 //				[self addConnections:[concept connectedConcepts]];
 //			}
@@ -313,7 +329,7 @@ static int recursionDepth = 0;
 	BOOL result = NO;
 	if (sourceConceptObject) {
 		sourceConceptObject.isConnecting = NO;
-		[sourceConceptObject.concept addConnectedConceptsObject:conceptObject.concept];
+		[sourceConceptObject.concept addConnectionTo:conceptObject.concept];
 //		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
 		FUNCTION_LOG(@"Connect %@ to %@", sourceConceptObject.concept.title, conceptObject.concept.title);
 		[conceptObjectConnections addConnectionFrom:sourceConceptObject to:conceptObject];

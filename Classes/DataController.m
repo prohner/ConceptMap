@@ -315,6 +315,16 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	}
 }
 
+- (void)addConnectionTo:(Concept *)concept {
+	// TODO Should look to see if objectID is already in this set
+	NSURL *objectURL = [[concept objectID] URIRepresentation];
+	ConnectedConcept *connectedConcept;
+    connectedConcept = [NSEntityDescription insertNewObjectForEntityForName:@"ConnectedConcept" inManagedObjectContext:[self managedObjectContext]];
+	connectedConcept.objectURL = [objectURL absoluteString];
+	[self addConnectedConceptsObject:connectedConcept];
+	
+}
+
 @end
 
 @implementation Concept(Geometry)
@@ -360,4 +370,48 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	return topLevelObj;
 }
 
+@end
+
+@implementation NSManagedObjectContext (FetchedObjectFromURI)
+- (NSManagedObject *)objectWithURI:(NSURL *)uri
+{
+    NSManagedObjectID *objectID =
+	[[self persistentStoreCoordinator]
+	 managedObjectIDForURIRepresentation:uri];
+    
+    if (!objectID)
+    {
+        return nil;
+    }
+    
+    NSManagedObject *objectForID = [self objectWithID:objectID];
+    if (![objectForID isFault])
+    {
+        return objectForID;
+    }
+	
+    NSFetchRequest *request = [[[NSFetchRequest alloc] init] autorelease];
+    [request setEntity:[objectID entity]];
+    
+    // Equivalent to
+    // predicate = [NSPredicate predicateWithFormat:@"SELF = %@", objectForID];
+    NSPredicate *predicate =
+	[NSComparisonPredicate
+	 predicateWithLeftExpression:
+	 [NSExpression expressionForEvaluatedObject]
+	 rightExpression:
+	 [NSExpression expressionForConstantValue:objectForID]
+	 modifier:NSDirectPredicateModifier
+	 type:NSEqualToPredicateOperatorType
+	 options:0];
+    [request setPredicate:predicate];
+	
+    NSArray *results = [self executeFetchRequest:request error:nil];
+    if ([results count] > 0 )
+    {
+        return [results objectAtIndex:0];
+    }
+	
+    return nil;
+}
 @end
