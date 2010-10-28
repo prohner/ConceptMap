@@ -233,6 +233,65 @@
 	[self newConceptObjectTitled:@"New Rectangle" inRect:r];
 }
 
+- (void)addComputerServer {
+	int originX = 30;
+	int originY = 30;
+	
+	ConceptObject *computerTemplate = [self newConceptObjectTitled:NSLocalizedString(@"Computer Template", @"") inRect:CGRectMake(originX, originY, 300, 350)];
+	computerTemplate.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBrown];
+	[computerTemplate setBodyDisplayStringText: NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"")];
+	
+//	ConceptObject *drives = //[self newConceptObjectTitled:NSLocalizedString(@"Disk Drives", @"") inRect:CGRectMake(originX + 55, originY + 60, 200, 150)];
+//							[self newConceptObject:@" " titled:(NSString *)title at:CGPointMake(originX + 55, originY + 60) sized:CGSizeMake(200, 150) insideOf:computerTemplate];
+//	drives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+//	[drives setBodyDisplayStringText: NSLocalizedString(@" ", @"")];
+
+	ConceptObject *drives = [self newConceptObject:@" " 
+											titled:NSLocalizedString(@"Disk Drives", @"")
+												at:CGPointMake(55, 60) 
+											 sized:CGSizeMake(200, 150) 
+										  insideOf:computerTemplate 
+										   colored:ColorSchemeConstantBlue];
+
+	
+//	ConceptObject *idrives = [self newConceptObjectTitled:NSLocalizedString(@"Internal Drives", @"") inRect:CGRectMake(originX + 135, originY + 70, 180, 50)];
+//	idrives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+//	idrives.concept.bodyDisplayString = NSLocalizedString(@"300gb - SATA", @"");
+//	[drives addConceptObject:idrives];
+//
+//	ConceptObject *edrives = [self newConceptObjectTitled:NSLocalizedString(@"External Drives", @"") inRect:CGRectMake(originX + 135, originY + 145, 180, 50)];
+//	edrives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+//	edrives.concept.bodyDisplayString = NSLocalizedString(@"RAID - 3tb", @"");
+//	[drives addConceptObject:edrives];
+//	
+//	ConceptObject *ips = [self newConceptObjectTitled:NSLocalizedString(@"IP Addresses", @"") inRect:CGRectMake(originX + 125, originY + 220, 200, 70)];
+//	ips.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+//	ips.concept.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
+//	[computerTemplate addConceptObject:ips];
+	
+	[computerTemplate setNeedsDisplay];
+	[drives setNeedsDisplay];
+}
+
+- (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color {
+	LOG_POINT(origin);
+	origin = [conceptMapView.layer convertPoint:origin toLayer:containerObject.layer];
+	LOG_POINT(origin);
+	CGRect r = CGRectMake(origin.x, origin.y, size.width, size.height);
+	
+	Concept *concept = [DATABASE newConceptTitled:title toDocument:conceptMapView.currentDocument];
+	[concept setRect:r];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:color];;
+
+	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+	[co setFrame:r];
+	[co setBodyDisplayStringText:body];
+//	[self addConceptTemplate:co];
+	
+	[containerObject addConceptObject:co];
+	return co;
+}
+
 - (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r {
 	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(title, @"") toDocument:conceptMapView.currentDocument];
 	[concept setRect:r];

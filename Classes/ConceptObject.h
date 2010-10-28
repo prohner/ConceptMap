@@ -66,6 +66,7 @@
 - (void)setConceptColorScheme:(ColorSchemeConstant)newColor;
 - (void)bodyDisplayStringBecameActive:(id)sender;
 - (void)setBodyDisplayStringFont;
+- (void)setBodyDisplayStringText:(NSString *)newText;
 - (void)setLayerTreeFrom:(CALayer *)layer toMasksToBounds:(BOOL)newValue;
 - (void)setConceptSize:(CGSize)newSize;
 

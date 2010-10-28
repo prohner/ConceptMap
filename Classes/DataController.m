@@ -304,7 +304,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	self.height = [NSNumber numberWithInt: r.size.height];
 	self.width = [NSNumber numberWithInt: r.size.width];
 
-//	FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@)", self, self.title, self.originX, self.originY, self.width, self.height);
+	FUNCTION_LOG(@"%@ %@ (%@, %@) (%@, %@)", self, self.title, self.originX, self.originY, self.width, self.height);
 	
 }
 

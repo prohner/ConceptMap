@@ -240,7 +240,7 @@
 		case AddConceptTemplateCategoryComputer:
 			switch (indexPath.row) {
 				case AddTemplatesComputerServer:
-					FUNCTION_LOG(@"Server");
+					[conceptMapViewController addComputerServer];
 					break;
 				case AddTemplatesComputerDesktop:
 					FUNCTION_LOG(@"Desktop");

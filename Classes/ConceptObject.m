@@ -128,6 +128,12 @@
 	
 }
 
+- (void)setBodyDisplayStringText:(NSString *)newText {
+	bodyDisplayString.text = newText;
+	concept.bodyDisplayString = newText;
+	
+}
+
 - (void)viewDidUnload {
 	self.childConceptObjects = nil;
 }
@@ -170,15 +176,22 @@
 		deleteButton.hidden = NO;
 		CGRect labelFrame = conceptObjectLabel.frame;
 		labelFrame.origin.y = self.layer.borderWidth;
+		self.layer.zPosition = 5;
+
+//		self.layer.shadowOffset = CGSizeMake(20, 20);
+		self.layer.shadowOpacity = 0.9f;
+//		self.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 		[conceptObjectLabel setFrame:labelFrame];
 	} else {
 		// self.layer.borderColor = self.concept.conceptObjectColorSet.borderColor.CGColor;
 		self.layer.borderColor = [[UIColor clearColor] CGColor];
 		deleteButton.hidden = YES;
+		self.layer.zPosition = 0;
 		bodyDisplayString.userInteractionEnabled = NO;
 		
 		CGRect labelFrame = conceptObjectLabel.frame;
 		labelFrame.origin.y = 0;
+
 		[conceptObjectLabel setFrame:labelFrame];
 	}
 	settingsButton.hidden = deleteButton.hidden;
@@ -191,6 +204,7 @@
 
 - (void)setSelected:(BOOL)isSelected {
 	selected = isSelected;
+	FUNCTION_LOG(@"I am z==%i, and selected==%i", self.layer.zPosition, isSelected);
 	[self manageSelectedAttributes];
 }
 

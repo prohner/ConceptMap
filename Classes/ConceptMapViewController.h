@@ -48,7 +48,9 @@
 - (void)addVerticalRectangle;
 - (void)addHorizontalRectangle;
 - (void)addSquare;
+- (void)addComputerServer;
 - (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r;
+- (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color;
 	
 @end
 
