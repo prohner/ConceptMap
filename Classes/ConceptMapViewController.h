@@ -50,6 +50,10 @@
 - (void)addSquare;
 - (void)addComputerServer;
 - (void)addComputerDesktop;
+- (void)addComputerSwitch;
+- (void)addComputerRouter;
+- (void)addComputerFirewall;
+- (void)addComputerConcentrator;
 - (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r;
 - (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color;
 	

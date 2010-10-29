@@ -304,6 +304,42 @@
 	[computerTemplate setNeedsDisplay];
 }
 
+- (void)addComputerSwitch {
+	int originX = 60;
+	int originY = 60;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Switch", @"") inRect:CGRectMake(originX, originY, 300, 280)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
+}
+
+- (void)addComputerRouter {
+	int originX = 70;
+	int originY = 70;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Router", @"") inRect:CGRectMake(originX, originY, 300, 280)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
+}
+
+- (void)addComputerFirewall {
+	int originX = 80;
+	int originY = 80;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Firewall", @"") inRect:CGRectMake(originX, originY, 300, 280)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
+}
+
+- (void)addComputerConcentrator {
+	int originX = 90;
+	int originY = 90;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Concentrator", @"") inRect:CGRectMake(originX, originY, 300, 280)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
+}
+
 - (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color {
 	LOG_POINT(origin);
 //	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];

@@ -246,16 +246,16 @@
 					[conceptMapViewController addComputerDesktop];
 					break;
 				case AddTemplatesComputerSwitch:
-					FUNCTION_LOG(@"Switch");
+					[conceptMapViewController addComputerSwitch];
 					break;
 				case AddTemplatesComputerRouter:
-					FUNCTION_LOG(@"Router");
+					[conceptMapViewController addComputerRouter];
 					break;
 				case AddTemplatesComputerFirewall:
-					FUNCTION_LOG(@"Firewall");
+					[conceptMapViewController addComputerFirewall];
 					break;
 				case AddTemplatesComputerConcentrator:
-					FUNCTION_LOG(@"Concentrator");
+					[conceptMapViewController addComputerConcentrator];
 					break;
 				default:
 					break;
