@@ -96,4 +96,6 @@ typedef enum AddConceptTemplatesHome {
 
 }
 
++ (ColorSchemeConstant)nextColorScheme;
+
 @end

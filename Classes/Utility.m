@@ -11,4 +11,15 @@
 
 @implementation Utility
 
+static ColorSchemeConstant lastColorSchemeUsed = ColorSchemeConstantBlue;
+
++ (ColorSchemeConstant)nextColorScheme {
+	if (lastColorSchemeUsed < ColorSchemeConstantMAX - 1) {
+		lastColorSchemeUsed++;
+	} else {
+		lastColorSchemeUsed = ColorSchemeConstantBlue;
+	}
+	return lastColorSchemeUsed;
+}
+
 @end

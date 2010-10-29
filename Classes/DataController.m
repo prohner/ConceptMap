@@ -309,9 +309,21 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 }
 
 - (void)removeConceptAndConnections:(Concept *)conceptToRemove {
+	
+	[self removeContentsOfConcept:conceptToRemove];
 	[[DATABASE currentDocument] removeConceptsObject:conceptToRemove];
 	for (Concept *concept in [[[DATABASE currentDocument] concepts] allObjects]) {
 		[concept removeConnectedConceptsObject:conceptToRemove];
+	}
+}
+
+- (void)removeContentsOfConcept:(Concept *)outerConcept {
+	for (Concept *concept in [outerConcept.concepts allObjects]) {
+		FUNCTION_LOG(@"removing %@ from %@", concept.title, outerConcept.title);
+		[self removeContentsOfConcept:concept];
+		[[DATABASE currentDocument] removeConceptsObject:concept];
+//		[outerConcept removeConceptsObject:concept];
+		FUNCTION_LOG(@"\tfinished removing %@ from %@", concept.title, outerConcept.title);
 	}
 }
 

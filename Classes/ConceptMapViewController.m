@@ -309,7 +309,7 @@
 	int originY = 60;
 	
 	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Switch", @"") inRect:CGRectMake(originX, originY, 300, 280)];
-	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
 	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 }
 
@@ -318,7 +318,7 @@
 	int originY = 70;
 	
 	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Router", @"") inRect:CGRectMake(originX, originY, 300, 280)];
-	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
 	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 }
 
@@ -327,7 +327,7 @@
 	int originY = 80;
 	
 	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Firewall", @"") inRect:CGRectMake(originX, originY, 300, 280)];
-	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
 	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 }
 
@@ -336,7 +336,7 @@
 	int originY = 90;
 	
 	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Concentrator", @"") inRect:CGRectMake(originX, originY, 300, 280)];
-	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
 	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 }
 
