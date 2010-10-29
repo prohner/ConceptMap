@@ -122,7 +122,7 @@
 
 - (void)setBodyDisplayStringFont {
 	UIFont *f = [UIFont fontWithName:concept.fontName size:[concept.fontSize intValue]];
-	FUNCTION_LOG(@"Font size = %@, font name = %@", concept.fontSize, concept.fontName);
+//	FUNCTION_LOG(@"Font size = %@, font name = %@", concept.fontSize, concept.fontName);
 	
 	bodyDisplayString.font = f;
 	
@@ -178,9 +178,6 @@
 		labelFrame.origin.y = self.layer.borderWidth;
 		self.layer.zPosition = 5;
 
-//		self.layer.shadowOffset = CGSizeMake(20, 20);
-		self.layer.shadowOpacity = 0.9f;
-//		self.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 		[conceptObjectLabel setFrame:labelFrame];
 	} else {
 		// self.layer.borderColor = self.concept.conceptObjectColorSet.borderColor.CGColor;

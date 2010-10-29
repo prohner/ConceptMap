@@ -243,7 +243,7 @@
 					[conceptMapViewController addComputerServer];
 					break;
 				case AddTemplatesComputerDesktop:
-					FUNCTION_LOG(@"Desktop");
+					[conceptMapViewController addComputerDesktop];
 					break;
 				case AddTemplatesComputerSwitch:
 					FUNCTION_LOG(@"Switch");

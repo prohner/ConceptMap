@@ -58,7 +58,7 @@ static int recursionDepth = 0;
 	self.currentDocument = [DATABASE currentDocument];
 	[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
 	
-#ifdef DEBUG
+#ifdef DEBUG && 0
 	for (Concept *concept in [[DATABASE currentDocument].concepts allObjects]) {
 		FUNCTION_LOG(@"Connecting %@ (%@) to ....", concept.title, concept.objectID);
 		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {

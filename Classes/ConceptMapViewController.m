@@ -237,56 +237,92 @@
 	int originX = 30;
 	int originY = 30;
 	
-	ConceptObject *computerTemplate = [self newConceptObjectTitled:NSLocalizedString(@"Computer Template", @"") inRect:CGRectMake(originX, originY, 300, 350)];
+	ConceptObject *computerTemplate = [self newConceptObjectTitled:NSLocalizedString(@"Server", @"") inRect:CGRectMake(originX, originY, 300, 350)];
 	computerTemplate.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBrown];
 	[computerTemplate setBodyDisplayStringText: NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"")];
 	
-//	ConceptObject *drives = //[self newConceptObjectTitled:NSLocalizedString(@"Disk Drives", @"") inRect:CGRectMake(originX + 55, originY + 60, 200, 150)];
-//							[self newConceptObject:@" " titled:(NSString *)title at:CGPointMake(originX + 55, originY + 60) sized:CGSizeMake(200, 150) insideOf:computerTemplate];
-//	drives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
-//	[drives setBodyDisplayStringText: NSLocalizedString(@" ", @"")];
-
-	ConceptObject *drives = [self newConceptObject:@" " 
+	ConceptObject *drives = [self newConceptObject:@" "  
 											titled:NSLocalizedString(@"Disk Drives", @"")
-												at:CGPointMake(55, 60) 
+												at:CGPointMake(90, 90) 
 											 sized:CGSizeMake(200, 150) 
 										  insideOf:computerTemplate 
 										   colored:ColorSchemeConstantBlue];
-
 	
-//	ConceptObject *idrives = [self newConceptObjectTitled:NSLocalizedString(@"Internal Drives", @"") inRect:CGRectMake(originX + 135, originY + 70, 180, 50)];
-//	idrives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
-//	idrives.concept.bodyDisplayString = NSLocalizedString(@"300gb - SATA", @"");
-//	[drives addConceptObject:idrives];
-//
-//	ConceptObject *edrives = [self newConceptObjectTitled:NSLocalizedString(@"External Drives", @"") inRect:CGRectMake(originX + 135, originY + 145, 180, 50)];
-//	edrives.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
-//	edrives.concept.bodyDisplayString = NSLocalizedString(@"RAID - 3tb", @"");
-//	[drives addConceptObject:edrives];
-//	
-//	ConceptObject *ips = [self newConceptObjectTitled:NSLocalizedString(@"IP Addresses", @"") inRect:CGRectMake(originX + 125, originY + 220, 200, 70)];
-//	ips.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
-//	ips.concept.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
-//	[computerTemplate addConceptObject:ips];
+	[self newConceptObject:NSLocalizedString(@"300gb - SATA", @"") 
+					titled:NSLocalizedString(@"Internal Drives", @"")
+						at:CGPointMake(10, 20) 
+					 sized:CGSizeMake(180, 50) 
+				  insideOf:drives 
+				   colored:ColorSchemeConstantLightGreen];
+	
+	[self newConceptObject:NSLocalizedString(@"RAID - 3tb", @"")
+					titled:NSLocalizedString(@"External Drives", @"")
+						at:CGPointMake(10, 80) 
+					 sized:CGSizeMake(180, 50) 
+				  insideOf:drives 
+				   colored:ColorSchemeConstantLightGreen];
+	
+	[self newConceptObject:NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"")
+					titled:NSLocalizedString(@"IP Addresses", @"")
+						at:CGPointMake(90, 250) 
+					 sized:CGSizeMake(200, 70) 
+				  insideOf:computerTemplate 
+				   colored:ColorSchemeConstantBlue];
 	
 	[computerTemplate setNeedsDisplay];
-	[drives setNeedsDisplay];
+}
+
+- (void)addComputerDesktop {
+	int originX = 50;
+	int originY = 50;
+	
+	ConceptObject *computerTemplate = [self newConceptObjectTitled:NSLocalizedString(@"Desktop", @"") inRect:CGRectMake(originX, originY, 300, 280)];
+	computerTemplate.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
+	[computerTemplate setBodyDisplayStringText: NSLocalizedString(@"Model 760 - Windows 7", @"")];
+	
+	ConceptObject *drives = [self newConceptObject:@" "  
+											titled:NSLocalizedString(@"Disk Drives", @"")
+												at:CGPointMake(90, 90) 
+											 sized:CGSizeMake(200, 80) 
+										  insideOf:computerTemplate 
+										   colored:ColorSchemeConstantBlue];
+	
+	[self newConceptObject:NSLocalizedString(@"300gb - SATA", @"") 
+					titled:NSLocalizedString(@"Internal Drives", @"")
+						at:CGPointMake(10, 20) 
+					 sized:CGSizeMake(180, 50) 
+				  insideOf:drives 
+				   colored:ColorSchemeConstantLightGreen];
+	
+	[self newConceptObject:NSLocalizedString(@"192.168.1.17", @"")
+					titled:NSLocalizedString(@"IP Addresses", @"")
+						at:CGPointMake(90, 200) 
+					 sized:CGSizeMake(200, 70) 
+				  insideOf:computerTemplate 
+				   colored:ColorSchemeConstantBlue];
+	
+	[computerTemplate setNeedsDisplay];
 }
 
 - (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color {
 	LOG_POINT(origin);
-	origin = [conceptMapView.layer convertPoint:origin toLayer:containerObject.layer];
+//	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
+//	origin = [self.view.layer convertPoint:origin fromLayer:containerObject.layer];
 	LOG_POINT(origin);
 	CGRect r = CGRectMake(origin.x, origin.y, size.width, size.height);
 	
 	Concept *concept = [DATABASE newConceptTitled:title toDocument:conceptMapView.currentDocument];
 	[concept setRect:r];
-	concept.colorSchemeConstant = [NSNumber numberWithInt:color];;
+	concept.colorSchemeConstant = [NSNumber numberWithInt:color];
 
 	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
 	[co setFrame:r];
 	[co setBodyDisplayStringText:body];
 //	[self addConceptTemplate:co];
+	
+	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
+	r = CGRectMake(origin.x, origin.y, size.width, size.height);
+	[concept setRect:r];
 	
 	[containerObject addConceptObject:co];
 	return co;

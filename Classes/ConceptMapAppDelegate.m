@@ -209,9 +209,9 @@
 
 #ifdef DEBUG
 	for (Concept *concept in [[DATABASE currentDocument].concepts allObjects]) {
-		FUNCTION_LOG(@"Connecting %@ (%@) to ....", concept.title, concept.objectID);
+		FUNCTION_LOG(@"Connecting %@ to ....", concept.title);
 		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
-			FUNCTION_LOG(@"\t\t %@ (%@).", connectedConcept.objectURL, connectedConcept.objectID);
+			FUNCTION_LOG(@"\t\t %@.", connectedConcept.objectURL);
 		}
 	}
 #endif
