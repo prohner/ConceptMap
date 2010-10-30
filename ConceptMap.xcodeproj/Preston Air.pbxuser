@@ -29,15 +29,15 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* ConceptMapViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 5538}}";
-			sepNavSelRange = "{4536, 0}";
-			sepNavVisRange = "{3692, 1831}";
+			sepNavIntBoundsRect = "{{0, 0}, {1370, 5369}}";
+			sepNavSelRange = "{14261, 0}";
+			sepNavVisRange = "{12905, 1999}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = E7F87E1D12388404003F63CA /* ConceptMap */;
-		activeSDKPreference = iphonesimulator3.2;
+		activeSDKPreference = iphoneos3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ConceptMap */;
 		addToTargets = (
 			E75ABCAD1239F42B004A5C76 /* ApplicationTesting */,
@@ -50,7 +50,7 @@
 			E783ABAB1257AA6000E2F8CB /* ActionsViewController.m:237 */,
 			E783ACED1258C86700E2F8CB /* ConceptObjectFontChooserViewController.m:177 */,
 			E783AD081258C90A00E2F8CB /* ConceptObjectFontChooserViewController.m:38 */,
-			E72279D9125C484B001A0386 /* ConceptMapViewController.m:400 */,
+			E72279D9125C484B001A0386 /* ConceptMapViewController.m:401 */,
 			E7227FDE12661D40001A0386 /* ConceptObjectConnectionsViewController.m:131 */,
 			E72282FD126EB5F0001A0386 /* ConceptObject.m:330 */,
 			E722830E126EB678001A0386 /* ConceptObject.m:498 */,
@@ -58,6 +58,7 @@
 			E7A839A212767C1B00A16F30 /* ConceptMapView.m:328 */,
 			E747643B127A80EB005AB564 /* ConceptMapViewController.m:350 */,
 			E74764E7127B215F005AB564 /* DataController.m:314 */,
+			E711F931127BE08E0098F450 /* ConceptObject.m:318 */,
 		);
 		codeSenseManager = E7F87E3612388412003F63CA /* Code sense */;
 		executables = (
@@ -152,6 +153,7 @@
 			E711F911127BDAB50098F450 /* PBXTextBookmark */ = E711F911127BDAB50098F450 /* PBXTextBookmark */;
 			E711F916127BDAF40098F450 /* PBXTextBookmark */ = E711F916127BDAF40098F450 /* PBXTextBookmark */;
 			E711F919127BDAFB0098F450 /* PBXTextBookmark */ = E711F919127BDAFB0098F450 /* PBXTextBookmark */;
+			E711F926127BDCF90098F450 /* PBXTextBookmark */ = E711F926127BDCF90098F450 /* PBXTextBookmark */;
 			E7227949125AF0CE001A0386 = E7227949125AF0CE001A0386 /* PBXTextBookmark */;
 			E7227950125AF0CE001A0386 = E7227950125AF0CE001A0386 /* PBXTextBookmark */;
 			E7227968125AF3C7001A0386 = E7227968125AF3C7001A0386 /* PBXTextBookmark */;
@@ -428,7 +430,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 395";
 		rLen = 0;
-		rLoc = 14148;
+		rLoc = 14152;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 13077;
@@ -512,6 +514,34 @@
 		rType = 0;
 		vrLen = 2044;
 		vrLoc = 9774;
+	};
+	E711F926127BDCF90098F450 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72DD76F1239FB0800B73998 /* DataController.m */;
+		name = "DataController.m: 314";
+		rLen = 0;
+		rLoc = 9937;
+		rType = 0;
+		vrLen = 2079;
+		vrLoc = 9774;
+	};
+	E711F931127BE08E0098F450 /* ConceptObject.m:318 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
+		functionName = "-handleObjectTapGesture:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 318;
+		location = ConceptMap;
+		modificationTime = 310108393.754475;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
 	};
 	E72278FE125AE8D3001A0386 /* en */ = {
 		uiCtxt = {
@@ -615,7 +645,7 @@
 		vrLen = 773;
 		vrLoc = 0;
 	};
-	E72279D9125C484B001A0386 /* ConceptMapViewController.m:400 */ = {
+	E72279D9125C484B001A0386 /* ConceptMapViewController.m:401 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -627,9 +657,9 @@
 		functionName = "-sliderStopped:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 400;
+		lineNumber = 401;
 		location = ConceptMap;
-		modificationTime = 310103035.726574;
+		modificationTime = 310108381.424208;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -829,7 +859,7 @@
 		ignoreCount = 0;
 		lineNumber = 131;
 		location = ConceptMap;
-		modificationTime = 310103035.7266129;
+		modificationTime = 310108381.4517;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -847,7 +877,7 @@
 		ignoreCount = 0;
 		lineNumber = 330;
 		location = ConceptMap;
-		modificationTime = 310103035.72676;
+		modificationTime = 310108381.099298;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -865,7 +895,7 @@
 		ignoreCount = 0;
 		lineNumber = 498;
 		location = ConceptMap;
-		modificationTime = 310103035.7268161;
+		modificationTime = 310108381.099349;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -947,9 +977,9 @@
 	};
 	E72DD76F1239FB0800B73998 /* DataController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1237, 5668}}";
-			sepNavSelRange = "{9937, 0}";
-			sepNavVisRange = "{9774, 2044}";
+			sepNavIntBoundsRect = "{{0, 0}, {2343, 5512}}";
+			sepNavSelRange = "{8557, 0}";
+			sepNavVisRange = "{7394, 1844}";
 		};
 	};
 	E747643B127A80EB005AB564 /* ConceptMapViewController.m:350 */ = {
@@ -966,7 +996,7 @@
 		ignoreCount = 0;
 		lineNumber = 350;
 		location = ConceptMap;
-		modificationTime = 310103035.7269601;
+		modificationTime = 310108381.517446;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1040,11 +1070,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E72DD76F1239FB0800B73998 /* DataController.m */;
 		functionName = "-removeConceptAndConnections:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 314;
 		location = ConceptMap;
-		modificationTime = 310103046.80143;
+		modificationTime = 310108381.545233;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1204,7 +1234,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 385";
 		rLen = 0;
-		rLoc = 13769;
+		rLoc = 13773;
 		rType = 0;
 		vrLen = 1636;
 		vrLoc = 12916;
@@ -1263,7 +1293,7 @@
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = ConceptMap;
-		modificationTime = 310103035.726328;
+		modificationTime = 310108381.310902;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1280,7 +1310,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 310103035.726258;
+		modificationTime = 310108381.099052;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -1619,7 +1649,7 @@
 		ignoreCount = 0;
 		lineNumber = 237;
 		location = ConceptMap;
-		modificationTime = 310103035.726445;
+		modificationTime = 310108381.364117;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1663,7 +1693,7 @@
 		ignoreCount = 0;
 		lineNumber = 177;
 		location = ConceptMap;
-		modificationTime = 310103035.7264611;
+		modificationTime = 310108381.380383;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1681,7 +1711,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = ConceptMap;
-		modificationTime = 310103035.7265069;
+		modificationTime = 310108381.407879;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1826,7 +1856,7 @@
 		ignoreCount = 0;
 		lineNumber = 139;
 		location = ConceptMap;
-		modificationTime = 310103035.72689;
+		modificationTime = 310108381.473377;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1914,7 +1944,7 @@
 		ignoreCount = 0;
 		lineNumber = 328;
 		location = ConceptMap;
-		modificationTime = 310103035.7269239;
+		modificationTime = 310108381.495923;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2031,7 +2061,7 @@
 		ignoreCount = 0;
 		lineNumber = 153;
 		location = ConceptMap;
-		modificationTime = 310103035.726362;
+		modificationTime = 310108381.335195;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2090,9 +2120,9 @@
 	};
 	E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 4667}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 4706}}";
 			sepNavSelRange = "{11747, 80}";
-			sepNavVisRange = "{11113, 1656}";
+			sepNavVisRange = "{11063, 1726}";
 		};
 	};
 	E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {

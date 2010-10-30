@@ -170,21 +170,18 @@
 			height = originalWidth;
 			break;
 		case ROW_VERT_RECT:
-			if (originalHeight <= originalWidth) {
-				height = originalWidth * 1.5;
-				width = originalWidth;
-			}
+			height = originalWidth * 1.5;
+			width = originalWidth;
 			break;
 		case ROW_HORZ_RECT:
-			if (originalHeight >= originalWidth) {
-				width = originalHeight * 1.5;
-				height = originalHeight;
-			}
+			width = originalHeight * 1.5;
+			height = originalHeight;
 			break;
 		default:
 			break;
 	}
 	
+	FUNCTION_LOG(@"Setting size to %i x %i", width, height);
 	[conceptObject setConceptSize:CGSizeMake(width, height)];
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

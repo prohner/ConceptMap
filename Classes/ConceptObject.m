@@ -359,10 +359,10 @@
 		} else if (hitLayer == settingsButton.layer || [settingsButton.layer containsPoint:viewPoint]) {
 			FUNCTION_LOG(@"HIT SETTINGS");
 		} else {
-			if (!self.selected) {
-				self.selected = YES;
-			}
-//			self.selected = !self.selected;
+//			if (!self.selected) {
+//				self.selected = YES;
+//			}
+			self.selected = !self.selected;
 //			FUNCTION_LOG(@"Toggle selected to %i", self.selected);
 		}
 	}

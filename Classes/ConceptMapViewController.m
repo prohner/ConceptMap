@@ -367,6 +367,7 @@
 - (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r {
 	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(title, @"") toDocument:conceptMapView.currentDocument];
 	[concept setRect:r];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
 	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
 	[co setFrame:r];
 	[self addConceptTemplate:co];
