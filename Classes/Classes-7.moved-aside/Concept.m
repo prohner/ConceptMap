@@ -2,7 +2,7 @@
 //  Concept.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 9/13/10.
+//  Created by Preston Rohner on 10/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,21 +12,21 @@
 
 @implementation Concept 
 
-@dynamic height;
-@dynamic title;
-@dynamic created;
+@dynamic bodyDisplayString;
 @dynamic width;
 @dynamic originY;
+@dynamic title;
+@dynamic height;
+@dynamic created;
+@dynamic fontSize;
+@dynamic colorSchemeConstant;
+@dynamic fontName;
 @dynamic originX;
+@dynamic lastSaved;
+@dynamic concepts;
 @dynamic parentConcept;
 @dynamic document;
-@dynamic concepts;
+@dynamic connectedConcepts;
 
-- (void)awakeFromInsert {
-	[self setValue:[NSDate date] forKey:@"created"];
-}
-- (void)willSave {
-	[self setPrimitiveValue: [NSDate date] forKey: @"lastSaved"];
-}
-
+@synthesize conceptObject;
 @end

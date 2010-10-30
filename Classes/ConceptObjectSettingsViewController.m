@@ -21,6 +21,7 @@
 #define ROW_FONT		1
 #define ROW_CONNECTIONS	2
 #define ROW_SHAPE		3
+#define ROW_PICTURE		4
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -35,7 +36,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 176.0);
+	self.contentSizeForViewInPopover = CGSizeMake(235.0, 220.0);
 }
 
 
@@ -78,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    return 5;
 }
 
 
@@ -106,6 +107,9 @@
 			break;
 		case ROW_SHAPE:
 			cell.textLabel.text = NSLocalizedString(@"Shapes", @"");
+			break;
+		case ROW_PICTURE:
+			cell.textLabel.text = NSLocalizedString(@"Background Picture", @"");
 			break;
 		default:
 			break;
@@ -207,7 +211,9 @@
 			[ctrl release];
 		}
 			break;
-
+		case ROW_PICTURE:
+			[self chooseBackgroundImage];
+			break;
 		default:
 			FUNCTION_LOG(@"At row %i", indexPath.row);
 			break;
@@ -220,6 +226,35 @@
 	return indexPath;
 }
 
+#pragma mark -
+#pragma mark Image management
+- (void)chooseBackgroundImage {
+	UIImagePickerController* picker = [[UIImagePickerController alloc] init];
+	picker.delegate = self;
+	picker.allowsEditing = YES;
+	
+	[popover initWithContentViewController:picker];
+	self.title = @"";
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker
+		didFinishPickingImage:(UIImage *)image
+				  editingInfo:(NSDictionary *)editingInfo {
+
+	conceptObject.layer.contents = (id)image.CGImage;
+	conceptObject.concept.backgroundImage = UIImageJPEGRepresentation(image, 1.0);
+	
+    // Remove the picker interface and release the picker object.
+//    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [picker release];
+	[popover dismissPopoverAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [picker release];
+	[popover dismissPopoverAnimated:YES];
+}
 
 #pragma mark -
 #pragma mark Memory management

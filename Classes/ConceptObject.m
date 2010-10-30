@@ -24,6 +24,8 @@
 	ConceptObject *newCO = [[ConceptObject alloc] initWithFrame:r];
 	newCO.concept = concept;
 	[concept setConceptObject:newCO];
+	newCO.layer.contents = 	(id)[[UIImage imageWithData:concept.backgroundImage] CGImage];
+
 	return newCO;
 }
  

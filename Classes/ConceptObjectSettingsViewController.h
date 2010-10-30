@@ -11,7 +11,7 @@
 
 @class ConceptObject;
 
-@interface ConceptObjectSettingsViewController : UITableViewController {
+@interface ConceptObjectSettingsViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
 	ConceptObject *conceptObject;
 	UIPopoverController *popover;
 	ConceptObjectConnections *conceptObjectConnections;
@@ -20,5 +20,7 @@
 @property (nonatomic, retain) ConceptObject *conceptObject;
 @property (nonatomic, retain) UIPopoverController *popover;
 @property (nonatomic, retain) ConceptObjectConnections *conceptObjectConnections;
+
+- (void)chooseBackgroundImage;
 
 @end

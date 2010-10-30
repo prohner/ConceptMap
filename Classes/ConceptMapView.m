@@ -68,8 +68,6 @@ static int recursionDepth = 0;
 #endif
 	
 	
-	
-	
 	[self addConnections:[currentDocument concepts]];
 	
 	FUNCTION_LOG(@"View=(%i), Doc=(%i)", self, self.currentDocument);
@@ -146,7 +144,6 @@ static int recursionDepth = 0;
 			
 			[co release];
 		}
-
 	}
 }
 

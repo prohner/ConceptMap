@@ -99,7 +99,7 @@
 	concept.fontSize = [NSNumber numberWithInt:14];
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 	concept.bodyDisplayString = NSLocalizedString(@"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess", @"");
-
+	
 	[DATABASE currentDocument].desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	[DATABASE saveManagedObjectContext];
 }
