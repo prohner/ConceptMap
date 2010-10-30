@@ -54,6 +54,7 @@
 - (void)setRect:(CGRect)r;
 - (void)removeConceptAndConnections:(Concept *)conceptToRemove;
 - (void)removeContentsOfConcept:(Concept *)outerConcept;
+- (void)removeConnectionsTo:(Concept *)concept;
 - (void)addConnectionTo:(Concept *)concept;
 @end
 

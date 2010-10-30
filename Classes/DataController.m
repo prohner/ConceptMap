@@ -311,6 +311,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 - (void)removeConceptAndConnections:(Concept *)conceptToRemove {
 	
 	[self removeContentsOfConcept:conceptToRemove];
+	[self removeConnectionsTo:conceptToRemove];
 	[[DATABASE currentDocument] removeConceptsObject:conceptToRemove];
 }
 
@@ -320,7 +321,26 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 		[self removeContentsOfConcept:concept];
 		[[DATABASE currentDocument] removeConceptsObject:concept];
 //		[outerConcept removeConceptsObject:concept];
+		[self removeConnectionsTo:concept];
 		FUNCTION_LOG(@"\tfinished removing %@ from %@", concept.title, outerConcept.title);
+	}
+}
+
+- (void)removeConnectionsTo:(Concept *)concept {
+	NSFetchRequest * allConnections = [[NSFetchRequest alloc] init];
+	[allConnections setEntity:[NSEntityDescription entityForName:@"ConnectedConcept" inManagedObjectContext:[DATABASE managedObjectContext]]];
+	[allConnections setIncludesPropertyValues:YES]; //only fetch the managedObjectID
+	
+	NSError * error = nil;
+	NSArray * connections = [[DATABASE managedObjectContext] executeFetchRequest:allConnections error:&error];
+	[allConnections release];
+	//error handling goes here
+	for (ConnectedConcept *connection in connections) {
+		NSURL *objectURL = [[concept objectID] URIRepresentation];
+		if ([connection.objectURL isEqualToString:[objectURL absoluteString]]) {
+			FUNCTION_LOG(@"Deleting CXN: %@", [objectURL absoluteString]);
+			[[DATABASE managedObjectContext] deleteObject:connection];
+		}
 	}
 }
 

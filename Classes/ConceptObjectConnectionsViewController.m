@@ -130,7 +130,7 @@
 		FUNCTION_LOG(@"delete from %@ (%i) to %@ (%i)", conceptObject.concept.title, conceptObject, concept.title, concept.conceptObject);
 		[conceptObjectConnections removeConnectionFrom:conceptObject to:concept.conceptObject];
 		
-		[conceptObject.concept removeConnectedConceptsObject:concept];
+//		[conceptObject.concept removeConnectedConceptsObject:concept];
 		[conceptObject.concept removeConnectedConceptsObject:connectedConcept];
 		[connectedObjects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
