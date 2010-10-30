@@ -312,9 +312,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	
 	[self removeContentsOfConcept:conceptToRemove];
 	[[DATABASE currentDocument] removeConceptsObject:conceptToRemove];
-	for (Concept *concept in [[[DATABASE currentDocument] concepts] allObjects]) {
-		[concept removeConnectedConceptsObject:conceptToRemove];
-	}
 }
 
 - (void)removeContentsOfConcept:(Concept *)outerConcept {
