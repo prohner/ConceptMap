@@ -10,6 +10,7 @@
 #import "ConceptMapViewController.h"
 #import "Utility.h"
 #import "Concept.h"
+#import "UIApplication+ScreenMirroring.h"
 
 @implementation ConceptMapAppDelegate
 
@@ -27,7 +28,8 @@
 		[self createHomeInventoryDocument];
 		[self createWelcomeDocument];
 	}
-	
+
+	[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:20.0];
     [window addSubview:viewController.view];
     [window makeKeyAndVisible];
 

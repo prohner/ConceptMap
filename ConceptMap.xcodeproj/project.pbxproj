@@ -18,6 +18,8 @@
 		E70D56F7123B2C6C00280E65 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6A1239F24C004A5C76 /* Application.m */; };
 		E70D56F8123B2C6C00280E65 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
 		E70D56F9123B2C6C00280E65 /* Concept.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6E1239F24C004A5C76 /* Concept.m */; };
+		E711F977127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */; };
+		E711F978127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */; };
 		E716CD95123F25B2003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
 		E716CDDA123F2A55003F21D3 /* image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD8123F2A55003F21D3 /* image2.jpeg */; };
 		E716CDDB123F2A55003F21D3 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD9123F2A55003F21D3 /* image1.jpeg */; };
@@ -165,6 +167,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ConceptMap_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMap_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ConceptMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConceptMap-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E711F975127BF2E00098F450 /* UIApplication+ScreenMirroring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ScreenMirroring.h"; sourceTree = "<group>"; };
+		E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ScreenMirroring.m"; sourceTree = "<group>"; };
 		E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentTableViewCell.xib; path = Classes/DocumentTableViewCell.xib; sourceTree = "<group>"; };
 		E716CDD8123F2A55003F21D3 /* image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpeg; path = Images/image2.jpeg; sourceTree = "<group>"; };
 		E716CDD9123F2A55003F21D3 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpeg; path = Images/image1.jpeg; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E711F974127BF2E00098F450 /* iphoneos-screen-mirroring-read-only */,
 				E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */,
 				E75ABC621239EFFF004A5C76 /* Data */,
 				E7F87F4B1238AC7C003F63CA /* Concept Object */,
@@ -402,6 +407,15 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		E711F974127BF2E00098F450 /* iphoneos-screen-mirroring-read-only */ = {
+			isa = PBXGroup;
+			children = (
+				E711F975127BF2E00098F450 /* UIApplication+ScreenMirroring.h */,
+				E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */,
+			);
+			path = "iphoneos-screen-mirroring-read-only";
+			sourceTree = SOURCE_ROOT;
 		};
 		E716CDD6123F2983003F21D3 /* Images */ = {
 			isa = PBXGroup;
@@ -748,6 +762,7 @@
 				E7227E8012640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
+				E711F978127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +805,7 @@
 				E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
+				E711F977127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
