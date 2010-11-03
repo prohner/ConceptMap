@@ -2,7 +2,7 @@
 //  ConnectedConcept.h
 //  ConceptMap
 //
-//  Created by Preston Rohner on 11/3/10.
+//  Created by Preston Rohner on 10/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 {
 }
 
-@property (nonatomic, retain) NSString * connectionDescription;
 @property (nonatomic, retain) NSString * objectURL;
 @property (nonatomic, retain) Concept * connectedConcept;
 

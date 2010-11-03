@@ -350,6 +350,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	ConnectedConcept *connectedConcept;
     connectedConcept = [NSEntityDescription insertNewObjectForEntityForName:@"ConnectedConcept" inManagedObjectContext:[self managedObjectContext]];
 	connectedConcept.objectURL = [objectURL absoluteString];
+	connectedConcept.connectionDescription = concept.title;
 	[self addConnectedConceptsObject:connectedConcept];
 	
 }

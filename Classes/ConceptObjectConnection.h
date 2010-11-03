@@ -13,10 +13,12 @@
 @interface ConceptObjectConnection : NSObject {
 	ConceptObject *src;
 	ConceptObject *dst;
+	NSString *connectionDescription;
 }
 
 @property (nonatomic, retain) ConceptObject *src;
 @property (nonatomic, retain) ConceptObject *dst;
+@property (nonatomic, retain) NSString *connectionDescription;
 @property (nonatomic, readonly) NSString *keyString;
 
 @end

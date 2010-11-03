@@ -110,7 +110,7 @@ static int recursionDepth = 0;
 		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
 			FUNCTION_LOG(@"\t\t %@.", connectedConcept.objectURL);
 			Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
-			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:childConcept.conceptObject];
+			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:childConcept.conceptObject with:connectedConcept.connectionDescription];
 
 //			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
 //			if (concepts != [concept connectedConcepts]) {
@@ -329,7 +329,7 @@ static int recursionDepth = 0;
 		[sourceConceptObject.concept addConnectionTo:conceptObject.concept];
 //		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];
 		FUNCTION_LOG(@"Connect %@ to %@", sourceConceptObject.concept.title, conceptObject.concept.title);
-		[conceptObjectConnections addConnectionFrom:sourceConceptObject to:conceptObject];
+		[conceptObjectConnections addConnectionFrom:sourceConceptObject to:conceptObject with:conceptObject.concept.title];
 		result = YES;
 	}
 	sourceConceptObject = nil;

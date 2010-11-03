@@ -18,7 +18,7 @@
 	NSMutableDictionary *connections;
 }
 
-- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
+- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(NSString *)description;
 - (void)removeConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
 - (void)removeConnectionsToAndFrom:(ConceptObject *)conceptObject;
 

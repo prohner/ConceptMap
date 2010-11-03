@@ -26,7 +26,7 @@
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(180.0, 210.0);
+	self.contentSizeForViewInPopover = CGSizeMake(180.0, 510.0);
 }
 
 

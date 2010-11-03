@@ -47,7 +47,7 @@
 		//FUNCTION_LOG(@"Draw from (%.2f, %.2f) to (%.2f, %.2f)", srcPoint.x, srcPoint.y, dstPoint.x, dstPoint.y);
 		// ========================================================
 		UIGraphicsPushContext(context);
-		NSString *title = [[NSString alloc] initWithFormat:@"%@  ", cxn.dst.concept.title];
+		NSString *title = [[NSString alloc] initWithFormat:@"%@  ", cxn.connectionDescription];
 //		NSString *title = @"x";
 		UIFont *font = [UIFont systemFontOfSize:12];
 		CGSize size = [title sizeWithFont:font];
@@ -269,10 +269,11 @@
 	}
 }
 
-- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst {
+- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(NSString *)description{
 	ConceptObjectConnection *cxn = [[ConceptObjectConnection alloc] init];
 	cxn.src = src;
 	cxn.dst = dst;
+	cxn.connectionDescription = description;
 	[connections setObject:cxn forKey:cxn.keyString];
 	FUNCTION_LOG(@"Key %@ (%i), %i connections now exist", cxn.keyString, cxn.keyString, [connections count]);
 	[self setNeedsDisplay];

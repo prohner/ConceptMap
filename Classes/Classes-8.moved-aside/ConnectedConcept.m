@@ -2,7 +2,7 @@
 //  ConnectedConcept.m
 //  ConceptMap
 //
-//  Created by Preston Rohner on 11/3/10.
+//  Created by Preston Rohner on 10/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -12,7 +12,6 @@
 
 @implementation ConnectedConcept 
 
-@dynamic connectionDescription;
 @dynamic objectURL;
 @dynamic connectedConcept;
 

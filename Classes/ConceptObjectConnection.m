@@ -11,11 +11,12 @@
 
 @implementation ConceptObjectConnection
 
-@synthesize src, dst;
+@synthesize src, dst, connectionDescription;;
 
 - (void)dealloc {
 	self.src = nil;
 	self.dst = nil;
+	self.connectionDescription = nil;
 	
     [super dealloc];
 }
