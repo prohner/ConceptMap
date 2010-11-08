@@ -14,7 +14,7 @@
 @class ConceptObject;
 
 
-@interface ConceptObjectConnections : CAShapeLayer {
+@interface ConceptObjectConnections : UIView {
 	NSMutableDictionary *connections;
 }
 

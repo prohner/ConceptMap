@@ -47,13 +47,12 @@ static int recursionDepth = 0;
 //}
 
 - (void)initializeContents {
-	self.conceptObjectConnections = [ConceptObjectConnections layer];
-	conceptObjectConnections.frame = CGRectMake(0, 0, 768, 1024);
-	conceptObjectConnections.backgroundColor = [[UIColor clearColor] CGColor];
+	self.conceptObjectConnections = [[ConceptObjectConnections alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
+	conceptObjectConnections.backgroundColor = [UIColor clearColor];
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
 	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].desktopImage] CGImage];
-	[self.layer addSublayer:conceptObjectConnections];
+	[self.layer addSublayer:conceptObjectConnections.layer];
 	
 	self.currentDocument = [DATABASE currentDocument];
 	[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
@@ -207,7 +206,7 @@ static int recursionDepth = 0;
 	[conceptObjectConnections setNeedsDisplay];
 	//viewPoint = [self convertPoint:viewPoint toView:self];
 
-	FUNCTION_LOG(@"Panning(%.2f, %.2f)", panPoint.x, panPoint.y);
+	//FUNCTION_LOG(@"Panning(%.2f, %.2f)", panPoint.x, panPoint.y);
 	
 	recursionDepth = 0;
 	if ( ! [self setPossibleDropTargetForPoint:panPoint inConceptObject:self]) {
@@ -219,9 +218,10 @@ static int recursionDepth = 0;
 		FUNCTION_LOG(@"Found possibleDropTarget %@", possibleDropTarget.concept.title);
 	}
 #endif
-	LOG_CONCEPTOBJECT(conceptObject);
+	//LOG_CONCEPTOBJECT(conceptObject);
 
 	[self adjustChildCoordinates:conceptObject.concept];
+	[self.conceptObjectConnections.layer setNeedsDisplay];
 
 }
 
@@ -299,7 +299,7 @@ static int recursionDepth = 0;
 	
 	LOG_CONCEPTOBJECT(conceptObject);
 	[self adjustChildCoordinates:conceptObject.concept];
-	[self.conceptObjectConnections setNeedsDisplay];
+	[self.conceptObjectConnections.layer setNeedsDisplay];
 	possibleDropTarget = nil;
 }
 
