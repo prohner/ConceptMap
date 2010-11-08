@@ -29,6 +29,10 @@
 		E716CE1D123F3296003F21D3 /* ConceptMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */; };
 		E716CE26123F33D1003F21D3 /* DocumentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E259123F2077002F0EF8 /* DocumentTableViewCell.m */; };
 		E716CE27123F33D6003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
+		E71BD43C1287BAE70061354D /* ConnectionLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD43B1287BAE70061354D /* ConnectionLabelViewController.m */; };
+		E71BD43D1287BAE70061354D /* ConnectionLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71BD43B1287BAE70061354D /* ConnectionLabelViewController.m */; };
+		E71BD43F1287BAF80061354D /* ConnectionLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71BD43E1287BAF80061354D /* ConnectionLabelViewController.xib */; };
+		E71BD4401287BAF80061354D /* ConnectionLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E71BD43E1287BAF80061354D /* ConnectionLabelViewController.xib */; };
 		E721DBC7123F359F00B39962 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
 		E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E7227900125AE8D3001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E72278FD125AE8D3001A0386 /* Localizable.strings */; };
@@ -172,6 +176,9 @@
 		E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentTableViewCell.xib; path = Classes/DocumentTableViewCell.xib; sourceTree = "<group>"; };
 		E716CDD8123F2A55003F21D3 /* image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpeg; path = Images/image2.jpeg; sourceTree = "<group>"; };
 		E716CDD9123F2A55003F21D3 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpeg; path = Images/image1.jpeg; sourceTree = "<group>"; };
+		E71BD43A1287BAE70061354D /* ConnectionLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionLabelViewController.h; sourceTree = "<group>"; };
+		E71BD43B1287BAE70061354D /* ConnectionLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionLabelViewController.m; sourceTree = "<group>"; };
+		E71BD43E1287BAF80061354D /* ConnectionLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConnectionLabelViewController.xib; path = Classes/ConnectionLabelViewController.xib; sourceTree = "<group>"; };
 		E72278FE125AE8D3001A0386 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227903125AE8DF001A0386 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227910125AEA1E001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
@@ -326,6 +333,8 @@
 				E7227DAB12629F93001A0386 /* ConceptObjectConnection.m */,
 				E7227D8F1261988E001A0386 /* ConceptObjectConnections.h */,
 				E7227D901261988E001A0386 /* ConceptObjectConnections.m */,
+				E71BD43A1287BAE70061354D /* ConnectionLabelViewController.h */,
+				E71BD43B1287BAE70061354D /* ConnectionLabelViewController.m */,
 				E783BC5B12545C1C009B0C77 /* DocumentSettingsViewController.h */,
 				E783BC5C12545C1C009B0C77 /* DocumentSettingsViewController.m */,
 				E794E258123F2077002F0EF8 /* DocumentTableViewCell.h */,
@@ -390,6 +399,7 @@
 				E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */,
 				E7227CB712616628001A0386 /* ConceptObjectShapeChooserViewController.xib */,
 				E792D375124718CA00873C15 /* ConceptObjectTitleViewController.xib */,
+				E71BD43E1287BAF80061354D /* ConnectionLabelViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ConceptMap-Info.plist */,
 			);
@@ -667,6 +677,7 @@
 				E7A8372E127296DE00A16F30 /* desktop_7.jpg in Resources */,
 				E7A8372F127296DE00A16F30 /* desktop_8.jpg in Resources */,
 				E7A83730127296DE00A16F30 /* desktop_9.jpg in Resources */,
+				E71BD4401287BAF80061354D /* ConnectionLabelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +718,7 @@
 				E7A83739127296DE00A16F30 /* desktop_7.jpg in Resources */,
 				E7A8373A127296DE00A16F30 /* desktop_8.jpg in Resources */,
 				E7A8373B127296DE00A16F30 /* desktop_9.jpg in Resources */,
+				E71BD43F1287BAF80061354D /* ConnectionLabelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +775,7 @@
 				E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
 				E711F978127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
+				E71BD43D1287BAE70061354D /* ConnectionLabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +819,7 @@
 				E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
 				E711F977127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
+				E71BD43C1287BAE70061354D /* ConnectionLabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

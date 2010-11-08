@@ -55,7 +55,7 @@
 - (void)removeConceptAndConnections:(Concept *)conceptToRemove;
 - (void)removeContentsOfConcept:(Concept *)outerConcept;
 - (void)removeConnectionsTo:(Concept *)concept;
-- (void)addConnectionTo:(Concept *)concept;
+- (ConnectedConcept *)addConnectionTo:(Concept *)concept;
 @end
 
 @interface Concept(Geometry) 

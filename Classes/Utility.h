@@ -45,11 +45,12 @@
 
 #define DATABASE	[DataController sharedDataController]
 
-#define LAYER_NAME			@"layerName"
-#define LAYER_NAME_OBJECT	@"conceptObject"
-#define LAYER_NAME_TITLE	@"titleLayer"
-#define LAYER_NAME_DELETE	@"deleteLayer"
-#define LAYER_NAME_CONNECT	@"connectLayer"
+#define LAYER_NAME				@"layerName"
+#define LAYER_NAME_OBJECT		@"conceptObject"
+#define LAYER_NAME_TITLE		@"titleLayer"
+#define LAYER_NAME_DELETE		@"deleteLayer"
+#define LAYER_NAME_CONNECT		@"connectLayer"
+#define LAYER_NAME_CONNECTLABEL	@"connectLabelLayer"
 
 typedef enum ColorSchemeConstantValues {
 	ColorSchemeConstantBlue			= 0,

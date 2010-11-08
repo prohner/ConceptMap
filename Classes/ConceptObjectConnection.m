@@ -12,13 +12,14 @@
 
 @implementation ConceptObjectConnection
 
-@synthesize src, dst, connectionDescription, layer;
+@synthesize src, dst, connectionDescription, layer, connectedConcept;
 
 - (void)dealloc {
 	self.src = nil;
 	self.dst = nil;
 	self.connectionDescription = nil;
 	self.layer = nil;
+	self.connectedConcept = nil;
 	
     [super dealloc];
 }
@@ -28,17 +29,23 @@
 	return s;
 }
 
-- (void)initSource:(ConceptObject *)source dest:(ConceptObject *)dest label:(NSString *)label {
+- (NSString *)connectionDescription {
+	return connectedConcept.connectionDescription;
+}
+
+- (void)initSource:(ConceptObject *)source dest:(ConceptObject *)dest label:(ConnectedConcept *)connectedConceptObject {
 	self.src = source;
 	self.dst = dest;
-	self.connectionDescription = label;
+	self.connectionDescription = connectedConceptObject.connectionDescription;
+	self.connectedConcept = connectedConceptObject;
 	
 	self.layer = [CATextLayer layer];
-	self.layer.string = label;
+	self.layer.string = self.connectionDescription;
 	self.layer.font = [UIFont systemFontOfSize:12];
-	self.layer.foregroundColor = [UIColor darkGrayColor].CGColor;
+	self.layer.foregroundColor = [UIColor lightGrayColor].CGColor;
 	self.layer.backgroundColor = [UIColor clearColor].CGColor;
 	self.layer.cornerRadius = 3;
+	[self.layer setValue:LAYER_NAME_CONNECTLABEL forKey:LAYER_NAME];
 
 //	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
 //										  initWithTarget:self action:@selector(handleObjectTapGesture:)];

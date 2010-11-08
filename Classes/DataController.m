@@ -344,7 +344,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	}
 }
 
-- (void)addConnectionTo:(Concept *)concept {
+- (ConnectedConcept *)addConnectionTo:(Concept *)concept {
 	// TODO Should look to see if objectID is already in this set
 	NSURL *objectURL = [[concept objectID] URIRepresentation];
 	ConnectedConcept *connectedConcept;
@@ -352,7 +352,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	connectedConcept.objectURL = [objectURL absoluteString];
 	connectedConcept.connectionDescription = concept.title;
 	[self addConnectedConceptsObject:connectedConcept];
-	
+	return connectedConcept;
 }
 
 @end

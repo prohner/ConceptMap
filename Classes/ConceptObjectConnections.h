@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "ConceptObjectConnection.h"
+#import "ConnectionLabelViewController.h"
 
 @class Concept;
 @class ConceptObject;
@@ -16,9 +17,12 @@
 
 @interface ConceptObjectConnections : UIView {
 	NSMutableDictionary *connections;
+	ConnectionLabelViewController *connectionLabelViewController;
 }
 
-- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(NSString *)description;
+@property (nonatomic, retain) ConnectionLabelViewController *connectionLabelViewController;
+
+- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(ConnectedConcept *)connectedConcept;
 - (void)removeConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
 - (void)removeConnectionsToAndFrom:(ConceptObject *)conceptObject;
 

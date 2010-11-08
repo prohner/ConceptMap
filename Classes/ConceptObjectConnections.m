@@ -17,15 +17,48 @@
 
 @implementation ConceptObjectConnections
 
+@synthesize connectionLabelViewController;
 
 - (id) initWithFrame:(CGRect)r {
 	[super initWithFrame:r];
 	FUNCTION_LOG();
 	
 	connections = [[NSMutableDictionary alloc] init];
+
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+										  initWithTarget:self action:@selector(handleObjectTapGesture:)];
+	[self addGestureRecognizer:tapGesture];
+	[tapGesture release];
 	
 	return self;
 }
+
+- (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
+	FUNCTION_LOG();
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		CGPoint viewPoint = [sender locationInView:self];
+		CALayer *hitLayer = [self.layer hitTest:viewPoint];
+		FUNCTION_LOG(@"Tapped in layer: %@", [hitLayer valueForKey:LAYER_NAME]);
+
+		self.connectionLabelViewController = [[ConnectionLabelViewController alloc] initWithNibName:@"ConnectionLabelViewController" bundle:nil];
+		
+		for (NSString *key in connections) {
+			ConceptObjectConnection *cxn = (ConceptObjectConnection *)[connections valueForKey:key];
+			if (cxn.layer == hitLayer) {
+				connectionLabelViewController.connectedConcept = cxn.connectedConcept;
+			}
+		}
+		
+		UIPopoverController *popover = [[[UIPopoverController alloc] 
+										 initWithContentViewController:connectionLabelViewController] retain];
+		
+		[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
+								 inView:self 
+			   permittedArrowDirections:UIPopoverArrowDirectionAny 
+							   animated:YES];
+	}
+}
+
 
 //- (void)drawInContext:(CGContextRef)context {
 - (void)resetTheConnectionLabels {
@@ -297,10 +330,13 @@
 		CGContextStrokePath(context);
 		//FUNCTION_LOG(@"Draw from (%.2f, %.2f) to (%.2f, %.2f)", srcPoint.x, srcPoint.y, dstPoint.x, dstPoint.y);
 		// ========================================================
-		NSString *title = [[NSString alloc] initWithFormat:@"%@  ", cxn.connectionDescription];
+		NSString *title = [[NSString alloc] initWithFormat:@" %@ ", cxn.connectionDescription];
 //		NSString *title = @"x";
+		FUNCTION_LOG(@"Title = (%@)", title);
 		UIFont *font = [UIFont systemFontOfSize:12];
 		CGSize size = [title sizeWithFont:font];
+		
+		cxn.layer.string = title;
 		
 		[cxn.layer setBounds:CGRectMake(0, 0, size.width, size.height)];
 		
@@ -495,9 +531,9 @@
 }
 
 
-- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(NSString *)description{
+- (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(ConnectedConcept *)connectedConcept{
 	ConceptObjectConnection *cxn = [[ConceptObjectConnection alloc] init];
-	[cxn initSource:src dest:dst label:description];
+	[cxn initSource:src dest:dst label:connectedConcept];
 	[self.layer addSublayer:cxn.layer];
 	
 	[connections setObject:cxn forKey:cxn.keyString];
