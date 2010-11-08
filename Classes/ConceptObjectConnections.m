@@ -51,6 +51,7 @@
 		
 		UIPopoverController *popover = [[[UIPopoverController alloc] 
 										 initWithContentViewController:connectionLabelViewController] retain];
+		popover.delegate = self;
 		
 		[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
 								 inView:self 
@@ -564,4 +565,8 @@
 	[self setNeedsDisplay];
 }
 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)aPopoverController {
+	FUNCTION_LOG();
+	[self.layer setNeedsDisplay];
+}
 @end

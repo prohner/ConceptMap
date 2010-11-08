@@ -15,7 +15,7 @@
 @class ConceptObject;
 
 
-@interface ConceptObjectConnections : UIView {
+@interface ConceptObjectConnections : UIView <UIPopoverControllerDelegate> {
 	NSMutableDictionary *connections;
 	ConnectionLabelViewController *connectionLabelViewController;
 }

@@ -279,7 +279,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>43</integer>
+									<integer>47</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -322,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObjectConnection.m</string>
+								<string>ConnectionLabelViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObjectConnection.m</string>
+										<string>ConnectionLabelViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD4CC1287C4F10061354D</string>
+										<string>E71BD50D1287C8A30061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -406,13 +406,13 @@
 											<string>E71BD4841287C1490061354D</string>
 											<string>E71BD4851287C1490061354D</string>
 											<string>E71BD4861287C1490061354D</string>
-											<string>E71BD4881287C1490061354D</string>
 											<string>E71BD4A51287C2080061354D</string>
 											<string>E71BD4AF1287C2B50061354D</string>
-											<string>E71BD4C81287C4F10061354D</string>
-											<string>E71BD4C91287C4F10061354D</string>
 											<string>E71BD4CA1287C4F10061354D</string>
-											<string>E71BD4CB1287C4F10061354D</string>
+											<string>E71BD4D31287C6180061354D</string>
+											<string>E71BD4FB1287C79E0061354D</string>
+											<string>E71BD5081287C8870061354D</string>
+											<string>E71BD5091287C8870061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

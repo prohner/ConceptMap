@@ -8,6 +8,7 @@
 
 #import "ConnectionLabelViewController.h"
 #import "ConnectedConcept.h"
+#import "ConceptObjectConnections.h"
 
 @implementation ConnectionLabelViewController
 
@@ -69,6 +70,9 @@
 - (IBAction)titleTextHasChanged:(id)sender {
 	connectedConcept.connectionDescription = objectTitle.text;
 	FUNCTION_LOG(@"Title is now (%@)", connectedConcept.connectionDescription);
+	
+//	ConceptObjectConnections *coc = (ConceptObjectConnections *)((UIPopoverController *)self.parentViewController).delegate;
+//	[coc.layer setNeedsDisplay];
 }
 
 @end
