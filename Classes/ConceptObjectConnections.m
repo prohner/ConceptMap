@@ -39,24 +39,25 @@
 		CGPoint viewPoint = [sender locationInView:self];
 		CALayer *hitLayer = [self.layer hitTest:viewPoint];
 		FUNCTION_LOG(@"Tapped in layer: %@", [hitLayer valueForKey:LAYER_NAME]);
-
-		self.connectionLabelViewController = [[ConnectionLabelViewController alloc] initWithNibName:@"ConnectionLabelViewController" bundle:nil];
-		
-		for (NSString *key in connections) {
-			ConceptObjectConnection *cxn = (ConceptObjectConnection *)[connections valueForKey:key];
-			if (cxn.layer == hitLayer) {
-				connectionLabelViewController.connectedConcept = cxn.connectedConcept;
+		if ([hitLayer valueForKey:LAYER_NAME] != nil) {
+			self.connectionLabelViewController = [[ConnectionLabelViewController alloc] initWithNibName:@"ConnectionLabelViewController" bundle:nil];
+			
+			for (NSString *key in connections) {
+				ConceptObjectConnection *cxn = (ConceptObjectConnection *)[connections valueForKey:key];
+				if (cxn.layer == hitLayer) {
+					connectionLabelViewController.connectedConcept = cxn.connectedConcept;
+				}
 			}
+			
+			UIPopoverController *popover = [[[UIPopoverController alloc] 
+											 initWithContentViewController:connectionLabelViewController] retain];
+			popover.delegate = self;
+			
+			[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
+									 inView:self 
+				   permittedArrowDirections:UIPopoverArrowDirectionAny 
+								   animated:YES];
 		}
-		
-		UIPopoverController *popover = [[[UIPopoverController alloc] 
-										 initWithContentViewController:connectionLabelViewController] retain];
-		popover.delegate = self;
-		
-		[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
-								 inView:self 
-			   permittedArrowDirections:UIPopoverArrowDirectionAny 
-							   animated:YES];
 	}
 }
 
