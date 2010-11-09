@@ -7,7 +7,7 @@
  */
 
 "Documents" = "Documents";
-"Concept Map" = "Concept Map";
+"APP_NAME" = "Concept Map";
 
 "Actions" = "Actions";
 "Email as Image" = "Email as Image";
@@ -64,7 +64,7 @@
 
 "New Document" = "New Document";
 "Your New Doc" = "Your New Doc";
-"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess" = "Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess";
+"DEFAULT OBJECT BODY STRING" = "Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n";
 
 // 2010-10-09 8:15pm
 "Shapes" = "Shapes";	// controller title

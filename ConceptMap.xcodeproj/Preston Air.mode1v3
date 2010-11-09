@@ -280,13 +280,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>47</integer>
-									<integer>7</integer>
-									<integer>0</integer>
+									<integer>110</integer>
+									<integer>109</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 452}, {346, 614}}</string>
+							<string>{{0, 1358}, {346, 614}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -323,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ActionsViewController.m</string>
+								<string>Utility.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ActionsViewController.m</string>
+										<string>Utility.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD5531289062F0061354D</string>
+										<string>E71BD55C1289098A0061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -376,10 +375,8 @@
 											<string>E711F8FD127BDA790098F450</string>
 											<string>E711F8FE127BDA790098F450</string>
 											<string>E711F985127CCC550098F450</string>
-											<string>E711F986127CCC550098F450</string>
 											<string>E711F993127CCCEA0098F450</string>
 											<string>E711F99B127CCD940098F450</string>
-											<string>E711FC411281AD620098F450</string>
 											<string>E711FC6A1281B1470098F450</string>
 											<string>E711FC6E1281B1470098F450</string>
 											<string>E711FC6F1281B1470098F450</string>
@@ -409,11 +406,13 @@
 											<string>E71BD4FB1287C79E0061354D</string>
 											<string>E71BD5081287C8870061354D</string>
 											<string>E71BD5121288FF0A0061354D</string>
-											<string>E71BD534128901970061354D</string>
 											<string>E71BD535128901970061354D</string>
 											<string>E71BD536128901970061354D</string>
 											<string>E71BD537128901970061354D</string>
-											<string>E71BD538128901970061354D</string>
+											<string>E71BD5581289098A0061354D</string>
+											<string>E71BD5591289098A0061354D</string>
+											<string>E71BD55A1289098A0061354D</string>
+											<string>E71BD55B1289098A0061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -425,14 +424,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {745, 571}}</string>
+								<string>{{0, 0}, {745, 494}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 505 1113 673 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>571pt</string>
+							<string>494pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -445,14 +444,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 576}, {745, 56}}</string>
+								<string>{{0, 499}, {745, 133}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 505 1113 673 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>56pt</string>
+							<string>133pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -616,6 +615,7 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7F87E2C12388412003F63CA</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -916,8 +916,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>E7A839C312767F9C00A16F30</string>
-				<string>E7A839C412767F9C00A16F30</string>
+				<string>E71BD55D1289098A0061354D</string>
+				<string>E71BD55E1289098A0061354D</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>

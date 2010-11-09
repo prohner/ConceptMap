@@ -38,9 +38,12 @@
 	concept.originY = [NSNumber numberWithInt:  50];
 	concept.height = [NSNumber numberWithInt: 400];
 	concept.width = [NSNumber numberWithInt: 425];
-	concept.bodyDisplayString = @"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess";
-	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+	concept.bodyDisplayString = NSLocalizedString(@"DEFAULT OBJECT BODY STRING", @"");
+	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 
+	UIImage *image = [UIImage imageNamed:@"desktop_1.jpg"];
+	doc.desktopImage = UIImageJPEGRepresentation(image, 1.0);
+	
 	DATABASE.fetchedResultsController = nil;
 	[self.tableView reloadData];
 	

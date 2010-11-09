@@ -49,58 +49,59 @@
 	image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"desktop_2" ofType:@"jpg"]];
 	doc.desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	
-	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Computer Template", @"") toDocument:doc];
-	concept.originX = [NSNumber numberWithInt:170];
-	concept.originY = [NSNumber numberWithInt:330];
-	concept.height = [NSNumber numberWithInt: 300];
-	concept.width = [NSNumber numberWithInt: 350];
-	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBrown];
-	concept.bodyDisplayString = NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"");
+//	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Computer Template", @"") toDocument:doc];
+//	concept.originX = [NSNumber numberWithInt:170];
+//	concept.originY = [NSNumber numberWithInt:330];
+//	concept.height = [NSNumber numberWithInt: 300];
+//	concept.width = [NSNumber numberWithInt: 350];
+//	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBrown];
+//	concept.bodyDisplayString = NSLocalizedString(@"Power Comp - Windows Server 2008 SP 2", @"");
+//	
+//	drives = [DATABASE newConceptTitled:NSLocalizedString(@"Disk Drives", @"") toDocument:doc];
+//	drives.originX = [NSNumber numberWithInt: 295];
+//	drives.originY = [NSNumber numberWithInt: 390];
+//	drives.height = [NSNumber numberWithInt:150];
+//	drives.width = [NSNumber numberWithInt:200];
+//	drives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+//	drives.bodyDisplayString = @" ";
+//	[concept addConcept:drives];
+//	
+//	idrives = [DATABASE newConceptTitled:NSLocalizedString(@"Internal Drives", @"") toDocument:doc];
+//	idrives.originX = [NSNumber numberWithInt: 305];
+//	idrives.originY = [NSNumber numberWithInt: 410];
+//	idrives.height = [NSNumber numberWithInt:50];
+//	idrives.width = [NSNumber numberWithInt:180];
+//	idrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+//	idrives.bodyDisplayString = NSLocalizedString(@"300gb - SATA", @"");
+//	[drives addConcept:idrives];
+//	
+//	edrives = [DATABASE newConceptTitled:NSLocalizedString(@"External Drives", @"") toDocument:doc];
+//	edrives.originX = [NSNumber numberWithInt: 305];
+//	edrives.originY = [NSNumber numberWithInt: 475];
+//	edrives.height = [NSNumber numberWithInt:50];
+//	edrives.width = [NSNumber numberWithInt:180];
+//	edrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
+//	edrives.bodyDisplayString = NSLocalizedString(@"RAID - 3tb", @"");
+//	[drives addConcept:edrives];
+//	
+//	ips = [DATABASE newConceptTitled:NSLocalizedString(@"IP Addresses", @"") toDocument:doc];
+//	ips.originX = [NSNumber numberWithInt: 295];
+//	ips.originY = [NSNumber numberWithInt: 550];
+//	ips.height = [NSNumber numberWithInt:70];
+//	ips.width = [NSNumber numberWithInt:200];
+//	ips.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
+//	ips.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
+//	[concept addConcept:ips];
 	
-	drives = [DATABASE newConceptTitled:NSLocalizedString(@"Disk Drives", @"") toDocument:doc];
-	drives.originX = [NSNumber numberWithInt: 295];
-	drives.originY = [NSNumber numberWithInt: 390];
-	drives.height = [NSNumber numberWithInt:150];
-	drives.width = [NSNumber numberWithInt:200];
-	drives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
-	drives.bodyDisplayString = @" ";
-	[concept addConcept:drives];
-	
-	idrives = [DATABASE newConceptTitled:NSLocalizedString(@"Internal Drives", @"") toDocument:doc];
-	idrives.originX = [NSNumber numberWithInt: 305];
-	idrives.originY = [NSNumber numberWithInt: 410];
-	idrives.height = [NSNumber numberWithInt:50];
-	idrives.width = [NSNumber numberWithInt:180];
-	idrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
-	idrives.bodyDisplayString = NSLocalizedString(@"300gb - SATA", @"");
-	[drives addConcept:idrives];
-	
-	edrives = [DATABASE newConceptTitled:NSLocalizedString(@"External Drives", @"") toDocument:doc];
-	edrives.originX = [NSNumber numberWithInt: 305];
-	edrives.originY = [NSNumber numberWithInt: 475];
-	edrives.height = [NSNumber numberWithInt:50];
-	edrives.width = [NSNumber numberWithInt:180];
-	edrives.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightGreen];
-	edrives.bodyDisplayString = NSLocalizedString(@"RAID - 3tb", @"");
-	[drives addConcept:edrives];
-	
-	ips = [DATABASE newConceptTitled:NSLocalizedString(@"IP Addresses", @"") toDocument:doc];
-	ips.originX = [NSNumber numberWithInt: 295];
-	ips.originY = [NSNumber numberWithInt: 550];
-	ips.height = [NSNumber numberWithInt:70];
-	ips.width = [NSNumber numberWithInt:200];
-	ips.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantBlue];
-	ips.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
-	[concept addConcept:ips];
-	
-	concept = [DATABASE newConceptTitled:NSLocalizedString(@"Welcome to Concept Map", @"") toDocument:doc];
+	NSString *title = [[NSString alloc] initWithFormat:@"%@ %@", NSLocalizedString(@"Welcome to ", @""), NSLocalizedString(@"APP_NAME", @"")];
+	concept = [DATABASE newConceptTitled:title toDocument:doc];
 	concept.originX = [NSNumber numberWithInt:380];
 	concept.originY = [NSNumber numberWithInt: 50];
 	concept.height = [NSNumber numberWithInt: 220];
 	concept.width = [NSNumber numberWithInt: 300];
 	concept.fontSize = [NSNumber numberWithInt:14];
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
-	concept.bodyDisplayString = NSLocalizedString(@"Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n\nTo Do:\nConnect objects\nCleanup all the coordinate mess", @"");
+	concept.bodyDisplayString = NSLocalizedString(@"DEFAULT OBJECT BODY STRING", @"");
 	
 	[DATABASE currentDocument].desktopImage = UIImageJPEGRepresentation(image, 1.0);
 	[DATABASE saveManagedObjectContext];
