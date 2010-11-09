@@ -264,7 +264,7 @@
 }
 
 - (NSString *)borderInfoWithColor:(ConceptObjectColorSet *)conceptObjectColorSet {
-	return [[NSString alloc] initWithFormat:@"xborder-top-color:#%@;border-left-color:#%@;border-top-style:none;border-left-style:solid;border-width:medium;", 
+	return [[NSString alloc] initWithFormat:@"xborder-top-color:#%@;border-left-color:#%@;border-top-style:none;border-left-style:solid;border-width:8px;", 
 			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor],
 			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor]];
 	

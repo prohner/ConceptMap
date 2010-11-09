@@ -208,12 +208,15 @@
 
 - (void)addConceptTemplate:(ConceptObject *)newConceptObject {
 	CABasicAnimation *theAnimation;	
-	theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-	theAnimation.duration=0.15;
-	theAnimation.repeatCount=2;
-	theAnimation.autoreverses=YES;
-	theAnimation.fromValue=[NSNumber numberWithFloat:20];
-	theAnimation.toValue=[NSNumber numberWithFloat:45];
+//	theAnimation=[CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+//	theAnimation.autoreverses=YES;
+//	theAnimation.duration=0.15;
+//	theAnimation.repeatCount=2;
+//	theAnimation.fromValue=[NSNumber numberWithFloat:20];
+//	theAnimation.toValue=[NSNumber numberWithFloat:45];
+	theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+	theAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+	theAnimation.toValue = [NSNumber numberWithFloat:1.0f];
 	[newConceptObject.layer addAnimation:theAnimation forKey:@"animateLayer"];	
 	[conceptMapView addConceptObject:newConceptObject toView:conceptMapView];
 }
@@ -383,7 +386,7 @@
 
 	FUNCTION_LOG(@"min=%.2f, max=%.2f", conceptMapView.minimumZoomScale, conceptMapView.maximumZoomScale);
 	[conceptMapView setMinimumZoomScale:1.00f];
-	[conceptMapView setMaximumZoomScale:5.00f];
+	[conceptMapView setMaximumZoomScale:3.00f];
 //	[conceptMapView setZoomScale:1.0f];
 	conceptMapView.delegate = self;
 }
@@ -391,7 +394,7 @@
 - (IBAction)sliderChanged:(id)sender {
 	UISlider *slider = (UISlider *)sender;
 	[conceptMapView setZoomScale:slider.value];
-	FUNCTION_LOG(@"zomm scale: %.2f", slider.value);
+	FUNCTION_LOG(@"zoom scale: %.2f", slider.value);
 	[conceptMapView setNeedsDisplay];
 }
 

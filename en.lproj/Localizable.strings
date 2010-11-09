@@ -42,7 +42,6 @@
 "300gb - SATA" = "300gb - SATA";
 "IP Addresses" = "IP Addresses";
 "192.168.1.17\n192.168.12.11" = "192.168.1.17\n192.168.12.11";
-"Welcome to Concept Map" = "Welcome to Concept Map";
 
 "Welcome Document" = "Welcome Document";
 "Home Inventory" = "Home Inventory";
@@ -64,7 +63,7 @@
 
 "New Document" = "New Document";
 "Your New Doc" = "New Note";
-"DEFAULT OBJECT BODY STRING" = "Some tips:\n- Tap an object to highlight then use the 'info' button or delete button\n- Tap and move an object\n- Use the 'pinch' gesture to resize an object\n";
+"DEFAULT OBJECT BODY STRING" = "Some tips:\n\n- Tap an object to highlight then use the 'info' button or delete button\n\n- Tap and move an object\n\n- Use the 'pinch' gesture to resize an object\n";
 
 // 2010-10-09 8:15pm
 "Shapes" = "Shapes";	// controller title
@@ -112,4 +111,7 @@
 
 // 2010-10-29 4:00pm
 "Background Picture" = "Background Picture";
+
+// 2010-11-08 9:00pm
+"Welcome to" = "Welcome to";
 

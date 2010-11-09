@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
+			<integer value="30"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -58,7 +58,7 @@
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<float key="IBUIValue">1</float>
 								<float key="IBUIMinValue">1</float>
-								<float key="IBUIMaxValue">5</float>
+								<float key="IBUIMaxValue">3</float>
 							</object>
 						</object>
 						<string key="NSFrameSize">{768, 44}</string>

@@ -52,7 +52,7 @@ static int recursionDepth = 0;
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
 	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].desktopImage] CGImage];
-	[self.layer addSublayer:conceptObjectConnections.layer];
+	[self addSubview:conceptObjectConnections];
 	
 	self.currentDocument = [DATABASE currentDocument];
 	[self addSetOfConcepts:[currentDocument concepts] toConceptObject:nil withTabs:@"\t"];
@@ -316,7 +316,7 @@ static int recursionDepth = 0;
 	}
 }
 
-- (void)conceptObject:(ConceptObject *)conceptObject  connecting:(BOOL)isConnecting {
+- (void)conceptObject:(ConceptObject *)conceptObject connecting:(BOOL)isConnecting {
 	FUNCTION_LOG();
 	sourceConceptObject = conceptObject;
 }

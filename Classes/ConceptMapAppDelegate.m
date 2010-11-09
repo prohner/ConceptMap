@@ -93,13 +93,13 @@
 //	ips.bodyDisplayString = NSLocalizedString(@"192.168.1.17\n192.168.12.11", @"");
 //	[concept addConcept:ips];
 	
-	NSString *title = [[NSString alloc] initWithFormat:@"%@ %@", NSLocalizedString(@"Welcome to ", @""), NSLocalizedString(@"APP_NAME", @"")];
+	NSString *title = [[NSString alloc] initWithFormat:@"%@ %@", NSLocalizedString(@"Welcome to", @""), NSLocalizedString(@"APP_NAME", @"")];
 	concept = [DATABASE newConceptTitled:title toDocument:doc];
-	concept.originX = [NSNumber numberWithInt:380];
+	concept.originX = [NSNumber numberWithInt:300];
 	concept.originY = [NSNumber numberWithInt: 50];
 	concept.height = [NSNumber numberWithInt: 220];
-	concept.width = [NSNumber numberWithInt: 300];
-	concept.fontSize = [NSNumber numberWithInt:14];
+	concept.width = [NSNumber numberWithInt: 380];
+	concept.fontSize = [NSNumber numberWithInt:16];
 	concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantLightBlue];
 	concept.bodyDisplayString = NSLocalizedString(@"DEFAULT OBJECT BODY STRING", @"");
 	
