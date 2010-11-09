@@ -236,8 +236,7 @@
 	NSMutableString *messageBody = [[NSMutableString alloc] initWithString:@"<dl>"];
 	for (Concept *concept in [DATABASE currentDocument].concepts) {
 		if (concept.parentConcept == nil) {
-			ConceptObjectColorSet *conceptObjectColorSet = concept.conceptObjectColorSet;
-			[messageBody appendFormat:@"<div style=\"margin-left:5px;background-color:#%@;color:#%@;\">\n", [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor], [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.foregroundColor]];
+			[messageBody appendFormat:@"<div style=\"margin-left:5px;margin-top:5px;%@\">\n", [self borderInfoWithColor:concept.conceptObjectColorSet]];
 			[messageBody appendString:[self stringForConcept:concept withIndent:@""]];
 			[messageBody appendString:[self concepts:concept.concepts indented:@"&nbsp;"]];
 			[messageBody appendString:@"</div>\n"];
@@ -255,8 +254,7 @@
 	int indentations = [listItems count];
 	
 	for (Concept *concept in concepts) {
-		ConceptObjectColorSet *conceptObjectColorSet = concept.conceptObjectColorSet;
-		[s appendFormat:@"<div style=\"margin-left:%ipx;background-color:#%@;color:#%@;\">\n", (indentations * 5), [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor], [ConceptObjectColorSet colorToHexString:conceptObjectColorSet.foregroundColor]];
+		[s appendFormat:@"<div style=\"margin-left:%ipx;%@\">\n", (indentations * 5), [self borderInfoWithColor:concept.conceptObjectColorSet]];
 		[s appendString:[self stringForConcept:concept withIndent:indent]];
 		[s appendString:[self concepts:concept.concepts indented:nextIndent]];
 		[s appendString:@"</div>\n"];
@@ -265,8 +263,15 @@
 	return s;
 }
 
+- (NSString *)borderInfoWithColor:(ConceptObjectColorSet *)conceptObjectColorSet {
+	return [[NSString alloc] initWithFormat:@"xborder-top-color:#%@;border-left-color:#%@;border-top-style:none;border-left-style:solid;border-width:medium;", 
+			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor],
+			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor]];
+	
+}
+
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent {
-	return [[NSString alloc] initWithFormat:@"<dt style=\"font-weight:bold;\">%@</dt><dd>%@</dd>\n", concept.title, concept.bodyDisplayString];
+	return [[NSString alloc] initWithFormat:@"<dt style=\"font-weight:bold;\">%@</dt><dd>%@</dd>\n", concept.title, [concept.bodyDisplayString stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"]];
 	
 }
 

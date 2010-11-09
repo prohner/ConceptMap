@@ -89,7 +89,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					484,
+					506,
 					20,
 					48,
 					43,
@@ -321,6 +321,24 @@
 			E71BD5091287C8870061354D /* PBXTextBookmark */ = E71BD5091287C8870061354D /* PBXTextBookmark */;
 			E71BD50A1287C8870061354D /* PBXTextBookmark */ = E71BD50A1287C8870061354D /* PBXTextBookmark */;
 			E71BD50D1287C8A30061354D /* PBXTextBookmark */ = E71BD50D1287C8A30061354D /* PBXTextBookmark */;
+			E71BD5121288FF0A0061354D /* PBXTextBookmark */ = E71BD5121288FF0A0061354D /* PBXTextBookmark */;
+			E71BD5131288FF0A0061354D /* PBXTextBookmark */ = E71BD5131288FF0A0061354D /* PBXTextBookmark */;
+			E71BD5141288FF0A0061354D /* PBXTextBookmark */ = E71BD5141288FF0A0061354D /* PBXTextBookmark */;
+			E71BD5171288FF4B0061354D /* PBXTextBookmark */ = E71BD5171288FF4B0061354D /* PBXTextBookmark */;
+			E71BD51C1288FFAC0061354D /* PBXTextBookmark */ = E71BD51C1288FFAC0061354D /* PBXTextBookmark */;
+			E71BD51F1288FFC30061354D /* PBXTextBookmark */ = E71BD51F1288FFC30061354D /* PBXTextBookmark */;
+			E71BD524128900080061354D /* PBXTextBookmark */ = E71BD524128900080061354D /* PBXTextBookmark */;
+			E71BD5291289002F0061354D /* PBXTextBookmark */ = E71BD5291289002F0061354D /* PBXTextBookmark */;
+			E71BD534128901970061354D /* PBXTextBookmark */ = E71BD534128901970061354D /* PBXTextBookmark */;
+			E71BD535128901970061354D /* PBXTextBookmark */ = E71BD535128901970061354D /* PBXTextBookmark */;
+			E71BD536128901970061354D /* PBXTextBookmark */ = E71BD536128901970061354D /* PBXTextBookmark */;
+			E71BD537128901970061354D /* PBXTextBookmark */ = E71BD537128901970061354D /* PBXTextBookmark */;
+			E71BD538128901970061354D /* PBXTextBookmark */ = E71BD538128901970061354D /* PBXTextBookmark */;
+			E71BD539128901970061354D /* PBXTextBookmark */ = E71BD539128901970061354D /* PBXTextBookmark */;
+			E71BD53E128901B50061354D /* PBXTextBookmark */ = E71BD53E128901B50061354D /* PBXTextBookmark */;
+			E71BD543128901C40061354D /* PBXTextBookmark */ = E71BD543128901C40061354D /* PBXTextBookmark */;
+			E71BD548128903270061354D /* PBXTextBookmark */ = E71BD548128903270061354D /* PBXTextBookmark */;
+			E71BD5531289062F0061354D /* PBXTextBookmark */ = E71BD5531289062F0061354D /* PBXTextBookmark */;
 			E7227949125AF0CE001A0386 = E7227949125AF0CE001A0386 /* PBXTextBookmark */;
 			E7227950125AF0CE001A0386 = E7227950125AF0CE001A0386 /* PBXTextBookmark */;
 			E7227968125AF3C7001A0386 = E7227968125AF3C7001A0386 /* PBXTextBookmark */;
@@ -1397,7 +1415,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1146, 1027}}";
 			sepNavSelRange = "{2079, 156}";
-			sepNavVisRange = "{1149, 1094}";
+			sepNavVisRange = "{1030, 1213}";
 		};
 	};
 	E71BD4541287BC970061354D /* PBXTextBookmark */ = {
@@ -2403,6 +2421,186 @@
 		vrLen = 1094;
 		vrLoc = 1149;
 	};
+	E71BD5121288FF0A0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E71BD43B1287BAE70061354D /* ConnectionLabelViewController.m */;
+		name = "ConnectionLabelViewController.m: 74";
+		rLen = 156;
+		rLoc = 2079;
+		rType = 0;
+		vrLen = 1213;
+		vrLoc = 1030;
+	};
+	E71BD5131288FF0A0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 238";
+		rLen = 13;
+		rLoc = 7001;
+		rType = 0;
+		vrLen = 1371;
+		vrLoc = 3807;
+	};
+	E71BD5141288FF0A0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 240";
+		rLen = 0;
+		rLoc = 7102;
+		rType = 0;
+		vrLen = 2086;
+		vrLoc = 6725;
+	};
+	E71BD5171288FF4B0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 241";
+		rLen = 0;
+		rLoc = 7166;
+		rType = 0;
+		vrLen = 1987;
+		vrLoc = 6725;
+	};
+	E71BD51C1288FFAC0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 240";
+		rLen = 0;
+		rLoc = 7100;
+		rType = 0;
+		vrLen = 1966;
+		vrLoc = 6770;
+	};
+	E71BD51F1288FFC30061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 240";
+		rLen = 0;
+		rLoc = 7100;
+		rType = 0;
+		vrLen = 1970;
+		vrLoc = 6770;
+	};
+	E71BD524128900080061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 240";
+		rLen = 0;
+		rLoc = 7100;
+		rType = 0;
+		vrLen = 1994;
+		vrLoc = 6772;
+	};
+	E71BD5291289002F0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 242";
+		rLen = 0;
+		rLoc = 7166;
+		rType = 0;
+		vrLen = 2100;
+		vrLoc = 6773;
+	};
+	E71BD534128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87F6A1238B04A003F63CA /* Utility.h */;
+		name = "Utility.h: 53";
+		rLen = 23;
+		rLoc = 1470;
+		rType = 0;
+		vrLen = 1934;
+		vrLoc = 809;
+	};
+	E71BD535128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
+		name = "ActionsViewController.h: 15";
+		rLen = 0;
+		rLoc = 330;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 0;
+	};
+	E71BD536128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */;
+		name = "AddConceptObjectViewController.m: 258";
+		rLen = 8;
+		rLoc = 7559;
+		rType = 0;
+		vrLen = 2036;
+		vrLoc = 5804;
+	};
+	E71BD537128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7228355126FADF9001A0386 /* AddConceptObjectViewController.h */;
+		name = "AddConceptObjectViewController.h: 17";
+		rLen = 24;
+		rLoc = 400;
+		rType = 0;
+		vrLen = 432;
+		vrLoc = 0;
+	};
+	E71BD538128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 239";
+		rLen = 0;
+		rLoc = 7025;
+		rType = 0;
+		vrLen = 2995;
+		vrLoc = 6228;
+	};
+	E71BD539128901970061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 257";
+		rLen = 0;
+		rLoc = 7795;
+		rType = 0;
+		vrLen = 1552;
+		vrLoc = 6228;
+	};
+	E71BD53E128901B50061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 267";
+		rLen = 0;
+		rLoc = 8276;
+		rType = 0;
+		vrLen = 1645;
+		vrLoc = 7362;
+	};
+	E71BD543128901C40061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 267";
+		rLen = 0;
+		rLoc = 8340;
+		rType = 0;
+		vrLen = 1644;
+		vrLoc = 7362;
+	};
+	E71BD548128903270061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 239";
+		rLen = 0;
+		rLoc = 7100;
+		rType = 0;
+		vrLen = 1600;
+		vrLoc = 6546;
+	};
+	E71BD5531289062F0061354D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E783BC371254597E009B0C77 /* ActionsViewController.m */;
+		name = "ActionsViewController.m: 274";
+		rLen = 0;
+		rLoc = 8845;
+		rType = 0;
+		vrLen = 1839;
+		vrLoc = 7247;
+	};
 	E72278FE125AE8D3001A0386 /* en */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {3106, 1508}}";
@@ -2470,7 +2668,7 @@
 		fRef = E783BC361254597E009B0C77 /* ActionsViewController.h */;
 		name = "ActionsViewController.h: 23";
 		rLen = 0;
-		rLoc = 607;
+		rLoc = 637;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 0;
@@ -2732,7 +2930,7 @@
 	};
 	E7228355126FADF9001A0386 /* AddConceptObjectViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {718, 597}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1491, 911}}";
 			sepNavSelRange = "{400, 24}";
 			sepNavVisRange = "{0, 432}";
 		};
@@ -2740,9 +2938,9 @@
 	E7228356126FADF9001A0386 /* AddConceptObjectViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{6119, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{6170, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{6220, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 8315}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1048, 4004}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1491, 3965}}";
 			sepNavSelRange = "{7502, 8}";
-			sepNavVisRange = "{6035, 1609}";
+			sepNavVisRange = "{5804, 1979}";
 		};
 	};
 	E72A531F124C5F7000FEF168 /* ConceptObjectColorSet.h */ = {
@@ -3428,17 +3626,17 @@
 	};
 	E783BC361254597E009B0C77 /* ActionsViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {684, 615}}";
-			sepNavSelRange = "{607, 0}";
-			sepNavVisRange = "{0, 765}";
+			sepNavIntBoundsRect = "{{0, 0}, {1491, 911}}";
+			sepNavSelRange = "{330, 0}";
+			sepNavVisRange = "{0, 877}";
 		};
 	};
 	E783BC371254597E009B0C77 /* ActionsViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4280, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4331, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4381, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9023}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1937, 3484}}";
-			sepNavSelRange = "{6944, 13}";
-			sepNavVisRange = "{4274, 634}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4280, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4331, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4381, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9093}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1475, 3471}}";
+			sepNavSelRange = "{8788, 0}";
+			sepNavVisRange = "{7190, 1839}";
 		};
 	};
 	E783BC5B12545C1C009B0C77 /* DocumentSettingsViewController.h */ = {
@@ -3725,9 +3923,9 @@
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 1339}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1491, 1339}}";
 			sepNavSelRange = "{1470, 23}";
-			sepNavVisRange = "{769, 1332}";
+			sepNavVisRange = "{809, 1934}";
 		};
 	};
 	E7F87F6B1238B04A003F63CA /* Utility.m */ = {

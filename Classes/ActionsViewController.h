@@ -12,6 +12,7 @@
 #import "Concept.h"
 
 @class ConceptMapView;
+@class ConceptObjectColorSet;
 
 @interface ActionsViewController : UITableViewController <MFMailComposeViewControllerDelegate> {
 	ConceptMapView *conceptMapView;
@@ -23,5 +24,6 @@
 - (NSString *)conceptMapAsList;
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent;
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent;
+- (NSString *)borderInfoWithColor:(ConceptObjectColorSet *)conceptObjectColorSet;
 
 @end
