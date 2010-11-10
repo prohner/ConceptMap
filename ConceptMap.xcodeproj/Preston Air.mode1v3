@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>251</real>
+								<real>226</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -267,10 +267,16 @@
 								<string>E75ABCB41239F44B004A5C76</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>E75ABC621239EFFF004A5C76</string>
+								<string>E7F87F4B1238AC7C003F63CA</string>
+								<string>E792D3721247189D00873C15</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>E72278FC125AE8D3001A0386</string>
 								<string>E72278FD125AE8D3001A0386</string>
+								<string>E7227924125AEE6E001A0386</string>
+								<string>E72278FF125AE8D3001A0386</string>
+								<string>E7227928125AEEAC001A0386</string>
+								<string>E716CDD6123F2983003F21D3</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
@@ -278,13 +284,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>32</integer>
+									<integer>49</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 179}, {251, 662}}</string>
+							<string>{{0, 735}, {226, 662}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -296,11 +302,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {268, 680}}</string>
+						<string>{{0, 0}, {243, 680}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>251</real>
+							<real>226</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 457 1104 721 0 0 1920 1178 </string>
@@ -308,7 +314,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>268pt</string>
+					<string>243pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -321,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapView.m</string>
+								<string>AddConceptObjectViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapView.m</string>
+										<string>AddConceptObjectViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD5C8128918AC0061354D</string>
+										<string>E71BD668128A740A0061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -345,8 +351,6 @@
 											<string>E783AC1C1258B42E00E2F8CB</string>
 											<string>E7227949125AF0CE001A0386</string>
 											<string>E7227950125AF0CE001A0386</string>
-											<string>E7227969125AF3C7001A0386</string>
-											<string>E722797E125C4205001A0386</string>
 											<string>E7227980125C4205001A0386</string>
 											<string>E7227BF9125EF170001A0386</string>
 											<string>E7227C57125EFB42001A0386</string>
@@ -358,10 +362,7 @@
 											<string>E7A83743127297C600A16F30</string>
 											<string>E7A839BB12767F9C00A16F30</string>
 											<string>E7A839DC127691EF00A16F30</string>
-											<string>E74764C1127A8EE3005AB564</string>
-											<string>E74765B0127B82D1005AB564</string>
 											<string>E74765B2127B82D1005AB564</string>
-											<string>E74765D1127B8991005AB564</string>
 											<string>E747663A127BC80D005AB564</string>
 											<string>E747663D127BC80D005AB564</string>
 											<string>E747663F127BC80D005AB564</string>
@@ -377,28 +378,22 @@
 											<string>E711FC861281B2DA0098F450</string>
 											<string>E711FD4D12821EF50098F450</string>
 											<string>E711FD4E12821EF50098F450</string>
-											<string>E711FD5012821EF50098F450</string>
 											<string>E71BD4261287B8970061354D</string>
 											<string>E71BD4541287BC970061354D</string>
 											<string>E71BD4551287BC970061354D</string>
 											<string>E71BD4561287BC970061354D</string>
 											<string>E71BD4571287BC970061354D</string>
 											<string>E71BD4581287BC970061354D</string>
-											<string>E71BD4591287BC970061354D</string>
 											<string>E71BD45A1287BC970061354D</string>
 											<string>E71BD45C1287BC970061354D</string>
-											<string>E71BD45D1287BC970061354D</string>
 											<string>E71BD4841287C1490061354D</string>
 											<string>E71BD4851287C1490061354D</string>
 											<string>E71BD4861287C1490061354D</string>
 											<string>E71BD4AF1287C2B50061354D</string>
 											<string>E71BD4CA1287C4F10061354D</string>
 											<string>E71BD4D31287C6180061354D</string>
-											<string>E71BD5121288FF0A0061354D</string>
 											<string>E71BD535128901970061354D</string>
-											<string>E71BD536128901970061354D</string>
 											<string>E71BD537128901970061354D</string>
-											<string>E71BD56912890D1A0061354D</string>
 											<string>E71BD56E12890D1A0061354D</string>
 											<string>E71BD56F12890D1A0061354D</string>
 											<string>E71BD57012890D1A0061354D</string>
@@ -413,15 +408,28 @@
 											<string>E71BD57912890D1A0061354D</string>
 											<string>E71BD57A12890D1A0061354D</string>
 											<string>E71BD57B12890D1A0061354D</string>
-											<string>E71BD59512890F540061354D</string>
 											<string>E71BD59D1289106C0061354D</string>
-											<string>E71BD59E1289106C0061354D</string>
 											<string>E71BD5B91289185B0061354D</string>
 											<string>E71BD5BA1289185B0061354D</string>
-											<string>E71BD5BB1289185B0061354D</string>
-											<string>E71BD5BC1289185B0061354D</string>
 											<string>E71BD5BD1289185B0061354D</string>
-											<string>E71BD5BE1289185B0061354D</string>
+											<string>E71BD5D212891DAC0061354D</string>
+											<string>E71BD5D312891DAC0061354D</string>
+											<string>E71BD5DB12891E6C0061354D</string>
+											<string>E71BD5DC12891E6C0061354D</string>
+											<string>E71BD5F11289F8E70061354D</string>
+											<string>E71BD5F21289F8E70061354D</string>
+											<string>E71BD5FE128A1E710061354D</string>
+											<string>E71BD5FF128A1E710061354D</string>
+											<string>E71BD600128A1E710061354D</string>
+											<string>E71BD613128A1F750061354D</string>
+											<string>E71BD630128A6D330061354D</string>
+											<string>E71BD63B128A70190061354D</string>
+											<string>E71BD63C128A70190061354D</string>
+											<string>E71BD663128A740A0061354D</string>
+											<string>E71BD664128A740A0061354D</string>
+											<string>E71BD665128A740A0061354D</string>
+											<string>E71BD666128A740A0061354D</string>
+											<string>E71BD667128A740A0061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -433,7 +441,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {831, 542}}</string>
+								<string>{{0, 0}, {856, 542}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -453,7 +461,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 547}, {831, 133}}</string>
+								<string>{{0, 547}, {856, 133}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -464,7 +472,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>831pt</string>
+					<string>856pt</string>
 				</dict>
 			</array>
 			<key>Name</key>

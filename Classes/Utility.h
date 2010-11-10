@@ -10,7 +10,7 @@
 
 #define APPLICATION_NAME	NSLocalizedString(@"APP_NAME", @"")
 
-#define FUNCTION_LOGGING			1
+#define FUNCTION_LOGGING			0
 #define MEMORY_WARNING_LOGGING		1
 
 #if MEMORY_WARNING_LOGGING
@@ -84,11 +84,13 @@ typedef enum AddConceptTemplatesComputer {
 	AddTemplatesComputerRouter,
 	AddTemplatesComputerFirewall,
 	AddTemplatesComputerConcentrator,
+	AddTemplatesComputerRack,
 	AddTemplatesComputerMAX
 } AddConceptTemplatesComputer;
 
 typedef enum AddConceptTemplatesHome {
 	AddTemplatesHomeGarage,
+	AddTemplatesHomeCloset,
 	AddTemplatesHomeMAX
 } AddConceptTemplatesHome;
 

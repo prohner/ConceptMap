@@ -27,7 +27,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.title = NSLocalizedString(@"Add Template", @"");
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 500.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 620.0);
 }
 
 
@@ -147,6 +147,9 @@
 				case AddTemplatesComputerConcentrator:
 					cell.textLabel.text = NSLocalizedString(@"Concentrator", "");
 					break;
+				case AddTemplatesComputerRack:
+					cell.textLabel.text = NSLocalizedString(@"Rack", "");
+					break;
 				default:
 					break;
 			}
@@ -155,6 +158,9 @@
 			switch (indexPath.row) {
 				case AddTemplatesHomeGarage:
 					cell.textLabel.text = NSLocalizedString(@"Garage", "");
+					break;
+				case AddTemplatesHomeCloset:
+					cell.textLabel.text = NSLocalizedString(@"Closet", "");
 					break;
 				default:
 					break;
@@ -257,6 +263,9 @@
 				case AddTemplatesComputerConcentrator:
 					[conceptMapViewController addComputerConcentrator];
 					break;
+				case AddTemplatesComputerRack:
+					[conceptMapViewController addComputerRack];
+					break;
 				default:
 					break;
 			}
@@ -264,7 +273,10 @@
 		case AddConceptTemplateCategoryHome:
 			switch (indexPath.row) {
 				case AddTemplatesHomeGarage:
-					FUNCTION_LOG(@"Garage");
+					[conceptMapViewController addHomeGarage];
+					break;
+				case AddTemplatesHomeCloset:
+					[conceptMapViewController addHomeCloset];
 					break;
 				default:
 					break;
@@ -273,7 +285,7 @@
 		default:
 			break;
 	}
-	
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

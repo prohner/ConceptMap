@@ -7,7 +7,7 @@
  */
 
 "Documents" = "Documents";
-"APP_NAME" = "Concept Map";
+"APP_NAME" = "Thought Cloud";
 
 "Actions" = "Actions";
 "Email as Image" = "Email as Image";
@@ -63,7 +63,7 @@
 
 "New Document" = "New Document";
 "Your New Doc" = "New Note";
-"DEFAULT OBJECT BODY STRING" = "Some tips:\n\n- Tap an object to highlight then use the 'info' button or delete button\n\n- Tap and move an object\n\n- Use the 'pinch' gesture to resize an object\n";
+"DEFAULT OBJECT BODY STRING" = "Some tips:\n\n- Tap an object to highlight then use the 'info' button or delete button\n\n- Tap and move an object\n\n- Use the 'pinch' gesture to resize an object\n\n- Double-tap here to edit this box";
 
 // 2010-10-09 8:15pm
 "Shapes" = "Shapes";	// controller title
@@ -115,3 +115,18 @@
 // 2010-11-08 9:00pm
 "Welcome to" = "Welcome to";
 
+// 2010-11-09 10:00pm
+"Rack" = "Server Rack";
+"Closet" = "Closet";
+"Purpose 1" = "Purpose 1";
+"Computer 1" = "Computer 1";
+"Purpose 2" = "Purpose 2";
+"Computer 2" = "Computer 2";
+"Purpose 3" = "Purpose 3";
+"Computer 3" = "Computer 3";
+
+"Garage Cabinet" = "Garage Cabinet";
+"Stuff stored in cabinet" = "Stuff stored in cabinet";
+"Closet" = "Closet";
+"Upper Shelf" = "Upper Shelf";
+"Closet Floor" = "Closet Floor";

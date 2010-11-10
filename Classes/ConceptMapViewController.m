@@ -183,6 +183,47 @@
 	[ctrl release];
 }
 
+- (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color {
+	LOG_POINT(origin);
+	//	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
+	//	origin = [self.view.layer convertPoint:origin fromLayer:containerObject.layer];
+	LOG_POINT(origin);
+	CGRect r = CGRectMake(origin.x, origin.y, size.width, size.height);
+	
+	Concept *concept = [DATABASE newConceptTitled:title toDocument:conceptMapView.currentDocument];
+	[concept setRect:r];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:color];
+	
+	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+	[co setFrame:r];
+	[co setBodyDisplayStringText:body];
+	//	[self addConceptTemplate:co];
+	
+	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
+	r = CGRectMake(origin.x, origin.y, size.width, size.height);
+	[concept setRect:r];
+	
+	[containerObject addConceptObject:co];
+	return co;
+}
+
+- (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r {
+	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(title, @"") toDocument:conceptMapView.currentDocument];
+	[concept setRect:r];
+	concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
+	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
+	[co setFrame:r];
+	[self addConceptTemplate:co];
+	return co;
+}
+
+- (IBAction)documentTitleChanged:(id)sender {
+	[DATABASE currentDocument].title = documentTitle.text;
+}
+
+
+#pragma mark Add Items 
+
 - (IBAction)addConcept:(id)sender {
 	FUNCTION_LOG(@"View=(%i), Doc=(%i)", conceptMapView, conceptMapView.currentDocument);
 
@@ -343,44 +384,70 @@
 	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 }
 
-- (ConceptObject *)newConceptObject:(NSString *)body titled:(NSString *)title at:(CGPoint)origin sized:(CGSize)size insideOf:(ConceptObject *)containerObject colored:(ColorSchemeConstant)color {
-	LOG_POINT(origin);
-//	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
-//	origin = [self.view.layer convertPoint:origin fromLayer:containerObject.layer];
-	LOG_POINT(origin);
-	CGRect r = CGRectMake(origin.x, origin.y, size.width, size.height);
+- (void)addComputerRack {
+	int originX = 100;
+	int originY = 100;
 	
-	Concept *concept = [DATABASE newConceptTitled:title toDocument:conceptMapView.currentDocument];
-	[concept setRect:r];
-	concept.colorSchemeConstant = [NSNumber numberWithInt:color];
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Rack", @"") inRect:CGRectMake(originX, originY, 200, 300)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
 
-	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-	[co setFrame:r];
-	[co setBodyDisplayStringText:body];
-//	[self addConceptTemplate:co];
+	[self newConceptObject:NSLocalizedString(@"Purpose 1", @"")
+					titled:NSLocalizedString(@"Computer 1", @"")
+						at:CGPointMake(20, 30) 
+					 sized:CGSizeMake(160, 70) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantBlue];
 	
-	origin = [conceptMapView.layer convertPoint:origin fromLayer:containerObject.layer];
-	r = CGRectMake(origin.x, origin.y, size.width, size.height);
-	[concept setRect:r];
-	
-	[containerObject addConceptObject:co];
-	return co;
+	[self newConceptObject:NSLocalizedString(@"Purpose 2", @"")
+					titled:NSLocalizedString(@"Computer 2", @"")
+						at:CGPointMake(20, 110) 
+					 sized:CGSizeMake(160, 70) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantBlue];
+
+	[self newConceptObject:NSLocalizedString(@"Purpose 3", @"")
+					titled:NSLocalizedString(@"Computer 3", @"")
+						at:CGPointMake(20, 190) 
+					 sized:CGSizeMake(160, 70) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantBlue];
 }
 
-- (ConceptObject *)newConceptObjectTitled:(NSString *)title inRect:(CGRect)r {
-	Concept *concept = [DATABASE newConceptTitled:NSLocalizedString(title, @"") toDocument:conceptMapView.currentDocument];
-	[concept setRect:r];
-	concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
-	ConceptObject *co = [ConceptObject conceptObjectWithConcept:concept];
-	[co setFrame:r];
-	[self addConceptTemplate:co];
-	return co;
+- (void)addHomeGarage {
+	int originX = 110;
+	int originY = 110;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Garage Cabinet", @"") inRect:CGRectMake(originX, originY, 200, 400)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
+	[template setBodyDisplayStringText: NSLocalizedString(@"Stuff stored in cabinet", @"")];
 }
 
-- (IBAction)documentTitleChanged:(id)sender {
-	[DATABASE currentDocument].title = documentTitle.text;
+
+- (void)addHomeCloset {
+	int originX = 120;
+	int originY = 120;
+	
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Closet", @"") inRect:CGRectMake(originX, originY, 300, 500)];
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:[Utility nextColorScheme]];
+	[template setBodyDisplayStringText: NSLocalizedString(@"", @"")];
+
+	[self newConceptObject:@" "
+					titled:NSLocalizedString(@"Upper Shelf", @"")
+						at:CGPointMake(20, 30) 
+					 sized:CGSizeMake(260, 150) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantBlue];
+	
+	[self newConceptObject:@" "
+					titled:NSLocalizedString(@"Closet Floor", @"")
+						at:CGPointMake(20, 200) 
+					 sized:CGSizeMake(260, 200) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantBlue];
 }
 
+#pragma mark Slider Updates
 - (IBAction)sliderStarted:(id)sender {
 	conceptMapViewDelegateHold = conceptMapView.delegate;
 

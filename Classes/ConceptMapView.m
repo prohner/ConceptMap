@@ -93,7 +93,7 @@ static int recursionDepth = 0;
     [CATransaction setValue:[NSNumber numberWithFloat:.1] forKey:kCATransactionAnimationDuration];
 
 	[conceptObjectConnections setFrame:frame];
-	[conceptObjectConnections setNeedsDisplay];
+	[conceptObjectConnections.layer setNeedsDisplay];
 
     [CATransaction commit];
 }

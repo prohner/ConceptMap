@@ -39,10 +39,10 @@
 - (void)createWelcomeDocument {
 	Document *doc;
 	Concept *concept;
-	Concept *drives;
-	Concept *edrives;
-	Concept *idrives;
-	Concept *ips;
+//	Concept *drives;
+//	Concept *edrives;
+//	Concept *idrives;
+//	Concept *ips;
 	UIImage *image;
 
 	doc = [DATABASE newDocumentTitled:NSLocalizedString(@"Welcome Document", @"")];
