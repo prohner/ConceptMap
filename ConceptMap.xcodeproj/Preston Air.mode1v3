@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>226</real>
+								<real>272</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -273,7 +273,6 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>E72278FC125AE8D3001A0386</string>
 								<string>E72278FD125AE8D3001A0386</string>
-								<string>E7227924125AEE6E001A0386</string>
 								<string>E72278FF125AE8D3001A0386</string>
 								<string>E7227928125AEEAC001A0386</string>
 								<string>E716CDD6123F2983003F21D3</string>
@@ -284,13 +283,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>49</integer>
+									<integer>53</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 735}, {226, 662}}</string>
+							<string>{{0, 834}, {272, 662}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -302,11 +301,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {243, 680}}</string>
+						<string>{{0, 0}, {289, 680}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>226</real>
+							<real>272</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 457 1104 721 0 0 1920 1178 </string>
@@ -314,7 +313,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>243pt</string>
+					<string>289pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -327,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AddConceptObjectViewController.m</string>
+								<string>ConceptMapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AddConceptObjectViewController.m</string>
+										<string>ConceptMapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD668128A740A0061354D</string>
+										<string>E71BD6CC128B2D8F0061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -385,7 +384,6 @@
 											<string>E71BD4571287BC970061354D</string>
 											<string>E71BD4581287BC970061354D</string>
 											<string>E71BD45A1287BC970061354D</string>
-											<string>E71BD45C1287BC970061354D</string>
 											<string>E71BD4841287C1490061354D</string>
 											<string>E71BD4851287C1490061354D</string>
 											<string>E71BD4861287C1490061354D</string>
@@ -424,12 +422,13 @@
 											<string>E71BD613128A1F750061354D</string>
 											<string>E71BD630128A6D330061354D</string>
 											<string>E71BD63B128A70190061354D</string>
-											<string>E71BD63C128A70190061354D</string>
 											<string>E71BD663128A740A0061354D</string>
-											<string>E71BD664128A740A0061354D</string>
-											<string>E71BD665128A740A0061354D</string>
-											<string>E71BD666128A740A0061354D</string>
-											<string>E71BD667128A740A0061354D</string>
+											<string>E71BD683128B12060061354D</string>
+											<string>E71BD684128B12060061354D</string>
+											<string>E71BD690128B12C10061354D</string>
+											<string>E71BD691128B12C10061354D</string>
+											<string>E71BD6CA128B2D8F0061354D</string>
+											<string>E71BD6CB128B2D8F0061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -441,7 +440,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {856, 542}}</string>
+								<string>{{0, 0}, {810, 542}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -461,7 +460,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 547}, {856, 133}}</string>
+								<string>{{0, 547}, {810, 133}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -472,7 +471,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>856pt</string>
+					<string>810pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -652,12 +651,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>AddConceptObjectViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -674,8 +675,6 @@
 							<string>559pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

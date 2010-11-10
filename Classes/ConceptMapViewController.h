@@ -47,6 +47,7 @@
 - (void)addSquare;
 - (void)addVerticalRectangle;
 - (void)addHorizontalRectangle;
+- (void)addHelp;
 - (void)addSquare;
 - (void)addComputerServer;
 - (void)addComputerDesktop;

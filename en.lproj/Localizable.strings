@@ -83,7 +83,7 @@
 "Horizontal Rectangle" = "Horizontal Rectangle";
 "Server" = "Server";
 "Desktop" = "Desktop";
-"Switch" = "Switch";
+"Switch" = "Switch / Router / Firewall";
 "Router" = "Router";
 "Firewall" = "Firewall";
 "Concentrator" = "Concentrator";
@@ -130,3 +130,18 @@
 "Closet" = "Closet";
 "Upper Shelf" = "Upper Shelf";
 "Closet Floor" = "Closet Floor";
+
+// 2010-11-10 9:30am
+"New Square" = "New Square";
+"New Rectangle" = "New Rectangle";
+"Help / Instructions" = "Help / Instructions";
+"Arranging Thoughts" = "Arranging Thoughts";
+"ARRANGING_THOUGHTS" = "- Tap and move an object\n\n- Use the 'pinch' gesture to resize an object";
+"Add / Delete" = "Add / Delete";
+"ADDING_THOUGHTS" = "- Add a thought using '+' on the menu\n\n- Delete a thought by selecting and tapping 'x' button";
+"Changing Properties" = "Changing Properties";
+"CHANGING_PROPERTIES" = "Tap on a thought box to select it.  Then tap the info button (little italics 'i').  Change the properties and see them live.  Note that you can change the background image.";
+"Editing" = "Editing";
+"EDITING_CONTENTS" = "Tap on the title of thought to change the title (little box on top).  Double-tap on the thought itself to change the main text";
+"Changing Connections" = "Changing Connections";
+"CHANGING_CONNECTIONS" = "Go to Connections in the Settings of a thought.  Tap '+' to initiate a connection and then tap the connected thought.  Tap the label on the connection line to change the label.";

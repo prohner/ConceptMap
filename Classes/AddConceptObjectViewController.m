@@ -27,7 +27,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.title = NSLocalizedString(@"Add Template", @"");
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 620.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 500.0);
 }
 
 
@@ -123,6 +123,9 @@
 				case AddTemplatesGeneralHorizontalRectangle:
 					cell.textLabel.text = NSLocalizedString(@"Horizontal Rectangle", "");
 					break;
+				case AddTemplatesGeneralHelp:
+					cell.textLabel.text = NSLocalizedString(@"Help / Instructions", "");
+					break;
 				default:
 					break;
 			}
@@ -138,18 +141,18 @@
 				case AddTemplatesComputerSwitch:
 					cell.textLabel.text = NSLocalizedString(@"Switch", "");
 					break;
-				case AddTemplatesComputerRouter:
-					cell.textLabel.text = NSLocalizedString(@"Router", "");
-					break;
-				case AddTemplatesComputerFirewall:
-					cell.textLabel.text = NSLocalizedString(@"Firewall", "");
-					break;
-				case AddTemplatesComputerConcentrator:
-					cell.textLabel.text = NSLocalizedString(@"Concentrator", "");
-					break;
-				case AddTemplatesComputerRack:
-					cell.textLabel.text = NSLocalizedString(@"Rack", "");
-					break;
+//				case AddTemplatesComputerRouter:
+//					cell.textLabel.text = NSLocalizedString(@"Router", "");
+//					break;
+//				case AddTemplatesComputerFirewall:
+//					cell.textLabel.text = NSLocalizedString(@"Firewall", "");
+//					break;
+//				case AddTemplatesComputerConcentrator:
+//					cell.textLabel.text = NSLocalizedString(@"Concentrator", "");
+//					break;
+//				case AddTemplatesComputerRack:
+//					cell.textLabel.text = NSLocalizedString(@"Rack", "");
+//					break;
 				default:
 					break;
 			}
@@ -239,6 +242,9 @@
 				case AddTemplatesGeneralHorizontalRectangle:
 					[conceptMapViewController addHorizontalRectangle];
 					break;
+				case AddTemplatesGeneralHelp:
+					[conceptMapViewController addHelp];
+					break;
 				default:
 					break;
 			}
@@ -254,18 +260,18 @@
 				case AddTemplatesComputerSwitch:
 					[conceptMapViewController addComputerSwitch];
 					break;
-				case AddTemplatesComputerRouter:
-					[conceptMapViewController addComputerRouter];
-					break;
-				case AddTemplatesComputerFirewall:
-					[conceptMapViewController addComputerFirewall];
-					break;
-				case AddTemplatesComputerConcentrator:
-					[conceptMapViewController addComputerConcentrator];
-					break;
-				case AddTemplatesComputerRack:
-					[conceptMapViewController addComputerRack];
-					break;
+//				case AddTemplatesComputerRouter:
+//					[conceptMapViewController addComputerRouter];
+//					break;
+//				case AddTemplatesComputerFirewall:
+//					[conceptMapViewController addComputerFirewall];
+//					break;
+//				case AddTemplatesComputerConcentrator:
+//					[conceptMapViewController addComputerConcentrator];
+//					break;
+//				case AddTemplatesComputerRack:
+//					[conceptMapViewController addComputerRack];
+//					break;
 				default:
 					break;
 			}

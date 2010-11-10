@@ -74,6 +74,7 @@ typedef enum AddConceptTemplatesGeneral {
 	AddTemplatesGeneralSquare,
 	AddTemplatesGeneralVerticalRectangle,
 	AddTemplatesGeneralHorizontalRectangle,
+	AddTemplatesGeneralHelp,
 	AddTemplatesGeneralMAX
 } AddConceptTemplatesGeneral;
 
@@ -81,10 +82,10 @@ typedef enum AddConceptTemplatesComputer {
 	AddTemplatesComputerServer,
 	AddTemplatesComputerDesktop,
 	AddTemplatesComputerSwitch,
-	AddTemplatesComputerRouter,
-	AddTemplatesComputerFirewall,
-	AddTemplatesComputerConcentrator,
-	AddTemplatesComputerRack,
+//	AddTemplatesComputerRouter,
+//	AddTemplatesComputerFirewall,
+//	AddTemplatesComputerConcentrator,
+//	AddTemplatesComputerRack,
 	AddTemplatesComputerMAX
 } AddConceptTemplatesComputer;
 

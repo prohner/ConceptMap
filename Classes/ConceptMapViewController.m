@@ -264,17 +264,61 @@
 
 - (void)addSquare {
 	CGRect r = CGRectMake(40, 40, 250, 250);
-	[self newConceptObjectTitled:@"New Square" inRect:r];
+	[self newConceptObjectTitled:NSLocalizedString(@"New Square", @"") inRect:r];
 }
 
 - (void)addVerticalRectangle {
 	CGRect r = CGRectMake(40, 40, 200, 300);
-	[self newConceptObjectTitled:@"New Rectangle" inRect:r];
+	[self newConceptObjectTitled:NSLocalizedString(@"New Rectangle", @"") inRect:r];
 }
 
 - (void)addHorizontalRectangle {
 	CGRect r = CGRectMake(40, 40, 300, 200);
-	[self newConceptObjectTitled:@"New Rectangle" inRect:r];
+	[self newConceptObjectTitled:NSLocalizedString(@"New Rectangle", @"") inRect:r];
+}
+
+- (void)addHelp {
+	CGRect r = CGRectMake(10, 10, 600, 600);
+	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Help", @"") inRect:r];
+	template.concept.bodyDisplayString = @"  ";
+	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantPurple];
+
+	[self newConceptObject:NSLocalizedString(@"ARRANGING_THOUGHTS", @"") 
+					titled:NSLocalizedString(@"Arranging Thoughts", @"")
+						at:CGPointMake(15, 25) 
+					 sized:CGSizeMake(260, 170) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantLightBlue];
+	
+	[self newConceptObject:NSLocalizedString(@"ADDING_THOUGHTS", @"") 
+					titled:NSLocalizedString(@"Add / Delete", @"")
+						at:CGPointMake(325, 25) 
+					 sized:CGSizeMake(260, 170) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantLightBlue];
+	
+	[self newConceptObject:NSLocalizedString(@"EDITING_CONTENTS", @"") 
+					titled:NSLocalizedString(@"Editing", @"")
+						at:CGPointMake(15, 205) 
+					 sized:CGSizeMake(570, 120) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantLightBlue];
+	
+	[self newConceptObject:NSLocalizedString(@"CHANGING_PROPERTIES", @"") 
+					titled:NSLocalizedString(@"Changing Properties", @"")
+						at:CGPointMake(15, 335) 
+					 sized:CGSizeMake(570, 120) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantLightBlue];
+	
+	[self newConceptObject:NSLocalizedString(@"CHANGING_CONNECTIONS", @"") 
+					titled:NSLocalizedString(@"Changing Connections", @"")
+						at:CGPointMake(15, 465) 
+					 sized:CGSizeMake(570, 120) 
+				  insideOf:template 
+				   colored:ColorSchemeConstantLightBlue];
+	
+	template.selected = YES;
 }
 
 - (void)addComputerServer {
