@@ -15,6 +15,7 @@
 #define ROW_EMAIL_AS_IMAGE		0
 #define ROW_EMAIL_AS_LIST		1
 #define ROW_EMAIL_AS_COMBO		2
+#define ROW_EMAIL_FEEDBACK		3
 
 @implementation ActionsViewController
 
@@ -33,7 +34,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(320.0, 132.0);
+	self.contentSizeForViewInPopover = CGSizeMake(320.0, 176.0);
 }
 
 
@@ -76,7 +77,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 3;
+    return 4;
 }
 
 
@@ -101,6 +102,10 @@
 		case ROW_EMAIL_AS_COMBO:
 			cell.textLabel.text = NSLocalizedString(@"Email as List + Image", @"");
 			break;
+		case ROW_EMAIL_FEEDBACK:
+			cell.textLabel.text = NSLocalizedString(@"Email Feedback", @"");
+			break;
+
 		default:
 			break;
 	}
@@ -170,6 +175,9 @@
 			break;
 		case ROW_EMAIL_AS_COMBO:
 			[self sendEmailIncludingImage:YES andList:YES];
+			break;
+		case ROW_EMAIL_FEEDBACK:
+			[self sendEmailFeedback];
 			break;
 		default:
 			break;
@@ -281,6 +289,20 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)sendEmailFeedback {
+	MFMailComposeViewController* composerController = [[MFMailComposeViewController alloc] init];
+	composerController.mailComposeDelegate = self;
+	NSString *subject = [[NSString alloc] initWithFormat:@"%@ %@", NSLocalizedString(@"APP_NAME", @""), NSLocalizedString(@"Email Feedback", @"")];
+	NSString *body = [[NSString alloc] initWithFormat:@"%@", NSLocalizedString(@"Please describe your feedback", @"")];
+	[composerController setToRecipients:[NSArray arrayWithObject:@"prestonrohner@me.com"]];
+	[composerController setSubject:subject];
+	[composerController setMessageBody:body isHTML:YES]; 
+	[self presentModalViewController:composerController animated:YES];
+	[composerController release];
+	[subject release];
+	[body release];
+	
+}
 
 @end
 

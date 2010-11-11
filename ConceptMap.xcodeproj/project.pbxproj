@@ -37,6 +37,8 @@
 		E71BD5FA128A1E390061354D /* MainLogo_72.png in Resources */ = {isa = PBXBuildFile; fileRef = E71BD5F8128A1E390061354D /* MainLogo_72.png */; };
 		E71BD6C6128B2A0D0061354D /* SampleConnections.png in Resources */ = {isa = PBXBuildFile; fileRef = E71BD6C5128B2A0D0061354D /* SampleConnections.png */; };
 		E71BD6C7128B2A0D0061354D /* SampleConnections.png in Resources */ = {isa = PBXBuildFile; fileRef = E71BD6C5128B2A0D0061354D /* SampleConnections.png */; };
+		E71BD746128BBC450061354D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E71BD745128BBC450061354D /* Default.png */; };
+		E71BD747128BBC450061354D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E71BD745128BBC450061354D /* Default.png */; };
 		E721DBC7123F359F00B39962 /* DocumentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E794E229123DE84E002F0EF8 /* DocumentsViewController.m */; };
 		E721DBC8123F35A600B39962 /* DocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E794E22A123DE84E002F0EF8 /* DocumentsViewController.xib */; };
 		E7227900125AE8D3001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E72278FD125AE8D3001A0386 /* Localizable.strings */; };
@@ -185,6 +187,7 @@
 		E71BD43E1287BAF80061354D /* ConnectionLabelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConnectionLabelViewController.xib; path = Classes/ConnectionLabelViewController.xib; sourceTree = "<group>"; };
 		E71BD5F8128A1E390061354D /* MainLogo_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo_72.png; sourceTree = "<group>"; };
 		E71BD6C5128B2A0D0061354D /* SampleConnections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleConnections.png; sourceTree = "<group>"; };
+		E71BD745128BBC450061354D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E72278FE125AE8D3001A0386 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227903125AE8DF001A0386 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227910125AEA1E001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
@@ -389,6 +392,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E71BD745128BBC450061354D /* Default.png */,
 				E722790E125AEA1E001A0386 /* es.lproj */,
 				E72278FC125AE8D3001A0386 /* en.lproj */,
 				E72278FF125AE8D3001A0386 /* fr.lproj */,
@@ -688,6 +692,7 @@
 				E71BD4401287BAF80061354D /* ConnectionLabelViewController.xib in Resources */,
 				E71BD5FA128A1E390061354D /* MainLogo_72.png in Resources */,
 				E71BD6C7128B2A0D0061354D /* SampleConnections.png in Resources */,
+				E71BD747128BBC450061354D /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +736,7 @@
 				E71BD43F1287BAF80061354D /* ConnectionLabelViewController.xib in Resources */,
 				E71BD5F9128A1E390061354D /* MainLogo_72.png in Resources */,
 				E71BD6C6128B2A0D0061354D /* SampleConnections.png in Resources */,
+				E71BD746128BBC450061354D /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,13 +926,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Preston Rohner (L2LG3DHA7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Preston Rohner (L2LG3DHA7J)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = "Thought Cloud";
+				PROVISIONING_PROFILE = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -936,13 +945,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Preston Rohner (L2LG3DHA7J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Preston Rohner (L2LG3DHA7J)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				PRODUCT_NAME = "Thought Cloud";
+				PROVISIONING_PROFILE = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				SDKROOT = iphoneos3.2;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

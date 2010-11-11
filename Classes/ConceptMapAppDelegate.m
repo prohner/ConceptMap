@@ -25,7 +25,7 @@
     
     // Override point for customization after app launch. 
 	if ([[DATABASE documents] count] <= 0) {
-		[self createHomeInventoryDocument];
+		//[self createHomeInventoryDocument];
 		[self createWelcomeDocument];
 	}
 

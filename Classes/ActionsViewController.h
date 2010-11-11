@@ -25,5 +25,6 @@
 - (NSString *)concepts:(NSSet *)concepts indented:(NSString *)indent;
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent;
 - (NSString *)borderInfoWithColor:(ConceptObjectColorSet *)conceptObjectColorSet;
+- (void)sendEmailFeedback;
 
 @end
