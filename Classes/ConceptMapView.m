@@ -51,7 +51,10 @@ static int recursionDepth = 0;
 	conceptObjectConnections.backgroundColor = [UIColor clearColor];
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
-	self.layer.contents = (id)[[UIImage imageWithData:[DATABASE currentDocument].desktopImage] CGImage];
+	UIImage *desktopImage = [UIImage imageWithData:[DATABASE currentDocument].desktopImage];
+	self.layer.contents = (id)[desktopImage CGImage];
+	//[desktopImage release];
+	
 	[self addSubview:conceptObjectConnections];
 	
 	self.currentDocument = [DATABASE currentDocument];
@@ -140,6 +143,7 @@ static int recursionDepth = 0;
 			NSString *tabs2 = [[NSString alloc] initWithFormat:@"%@\t", tabs];
 			[self addConceptObject:co toView:conceptObject];
 			[self addSetOfConcepts:concept.concepts toConceptObject:co withTabs:tabs2];
+			[tabs2 release];
 			
 			[co release];
 		}

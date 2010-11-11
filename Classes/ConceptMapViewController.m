@@ -133,7 +133,7 @@
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:documentsViewController];
 	[documentsViewController release];
 	
-	self.popover = [self popoverControllerFor:navCtrl];
+	[self setPopoverControllerFor:navCtrl];
 	[popover presentPopoverFromBarButtonItem:documentsButton 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
@@ -146,7 +146,7 @@
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:actionsViewController];
 	[actionsViewController release];
 	
-	self.popover = [self popoverControllerFor:navCtrl];
+	[self setPopoverControllerFor:navCtrl];
 	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
@@ -160,23 +160,25 @@
 	
 	[documentSettingsViewController release];
 	
-	self.popover = [self popoverControllerFor:navCtrl];
+	[self setPopoverControllerFor:navCtrl];
 	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];
 	[navCtrl release];
 }
 
-- (UIPopoverController *)popoverControllerFor:(UIViewController *)vc {
+- (void)setPopoverControllerFor:(UIViewController *)vc {
 	[self.popover dismissPopoverAnimated:YES];
-	return [[UIPopoverController alloc] initWithContentViewController:vc];
+	[popover release];
+	self.popover = [[UIPopoverController alloc] initWithContentViewController:vc];
+	return;
 	
 }
 
 - (IBAction)addButtonTapped:(id)sender {
 	AddConceptObjectViewController *ctrl = [[AddConceptObjectViewController alloc] initWithNibName:@"AddConceptObjectViewController" bundle:nil];	
 	ctrl.conceptMapViewController = self;
-	self.popover = [self popoverControllerFor:ctrl];
+	[self setPopoverControllerFor:ctrl];
 	[popover presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender 
 					permittedArrowDirections:UIPopoverArrowDirectionAny 
 									animated:YES];

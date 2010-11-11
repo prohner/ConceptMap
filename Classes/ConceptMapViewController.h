@@ -41,7 +41,7 @@
 - (IBAction)sliderStopped:(id)sender;
 
 - (void)resetConceptMapView;
-- (UIPopoverController *)popoverControllerFor:(UIViewController *)vc;
+- (void)setPopoverControllerFor:(UIViewController *)vc;
 
 - (void)addConceptTemplate:(ConceptObject *)newConceptObject;
 - (void)addSquare;

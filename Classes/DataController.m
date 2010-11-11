@@ -218,6 +218,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	} else {
 		app = (Application *)[NSEntityDescription insertNewObjectForEntityForName:@"Application" inManagedObjectContext:[self managedObjectContext]];
 	}
+	[request release];
 	return app;
 }
 

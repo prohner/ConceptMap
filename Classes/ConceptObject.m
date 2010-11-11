@@ -510,6 +510,7 @@
 						   animated:YES];
 	[conceptObjectSettingsViewController release];
 	[navCtrl release];
+	[popover release];
 }
 
 #pragma mark UITextFieldDelegate
@@ -530,13 +531,14 @@
 #pragma mark UIPopoverControllerDelegate
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
 //	self.layer.anchorPoint = CGPointMake(0.5f, 0.5f);
+	[popoverController release];
 }
 
 @end
 
 @implementation Concept(UserInterface)
 - (ConceptObjectColorSet *)conceptObjectColorSet {
-	ConceptObjectColorSet *newColorSet = [[ConceptObjectColorSet alloc] init];
+	ConceptObjectColorSet *newColorSet = [[[ConceptObjectColorSet alloc] init] autorelease];
 	newColorSet.colorSchemeConstant = [self.colorSchemeConstant intValue];
 	return newColorSet;
 }

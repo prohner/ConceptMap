@@ -252,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>272</real>
+								<real>363</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -283,13 +283,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>53</integer>
+									<integer>39</integer>
+									<integer>22</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 834}, {272, 662}}</string>
+							<string>{{0, 356}, {363, 662}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -301,11 +302,11 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {289, 680}}</string>
+						<string>{{0, 0}, {380, 680}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>272</real>
+							<real>363</real>
 						</array>
 						<key>RubberWindowFrame</key>
 						<string>0 457 1104 721 0 0 1920 1178 </string>
@@ -313,7 +314,7 @@
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>289pt</string>
+					<string>380pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
@@ -326,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptMapViewController.m</string>
+								<string>ConceptObject.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -334,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptMapViewController.m</string>
+										<string>ConceptObject.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD6CC128B2D8F0061354D</string>
+										<string>E71BD72E128BB10D0061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -362,10 +363,7 @@
 											<string>E7A839BB12767F9C00A16F30</string>
 											<string>E7A839DC127691EF00A16F30</string>
 											<string>E74765B2127B82D1005AB564</string>
-											<string>E747663A127BC80D005AB564</string>
 											<string>E747663D127BC80D005AB564</string>
-											<string>E747663F127BC80D005AB564</string>
-											<string>E747664C127BC997005AB564</string>
 											<string>E747665B127BCB8E005AB564</string>
 											<string>E711F8FD127BDA790098F450</string>
 											<string>E711F8FE127BDA790098F450</string>
@@ -385,7 +383,6 @@
 											<string>E71BD4581287BC970061354D</string>
 											<string>E71BD45A1287BC970061354D</string>
 											<string>E71BD4841287C1490061354D</string>
-											<string>E71BD4851287C1490061354D</string>
 											<string>E71BD4861287C1490061354D</string>
 											<string>E71BD4AF1287C2B50061354D</string>
 											<string>E71BD4CA1287C4F10061354D</string>
@@ -414,9 +411,7 @@
 											<string>E71BD5D312891DAC0061354D</string>
 											<string>E71BD5DB12891E6C0061354D</string>
 											<string>E71BD5DC12891E6C0061354D</string>
-											<string>E71BD5F11289F8E70061354D</string>
 											<string>E71BD5F21289F8E70061354D</string>
-											<string>E71BD5FE128A1E710061354D</string>
 											<string>E71BD5FF128A1E710061354D</string>
 											<string>E71BD600128A1E710061354D</string>
 											<string>E71BD613128A1F750061354D</string>
@@ -424,11 +419,17 @@
 											<string>E71BD63B128A70190061354D</string>
 											<string>E71BD663128A740A0061354D</string>
 											<string>E71BD683128B12060061354D</string>
-											<string>E71BD684128B12060061354D</string>
 											<string>E71BD690128B12C10061354D</string>
-											<string>E71BD691128B12C10061354D</string>
 											<string>E71BD6CA128B2D8F0061354D</string>
-											<string>E71BD6CB128B2D8F0061354D</string>
+											<string>E71BD6DF128B88670061354D</string>
+											<string>E71BD6EB128B89BD0061354D</string>
+											<string>E71BD6F5128B8A3F0061354D</string>
+											<string>E71BD70E128B9EA00061354D</string>
+											<string>E71BD722128BB0760061354D</string>
+											<string>E71BD723128BB0760061354D</string>
+											<string>E71BD724128BB0760061354D</string>
+											<string>E71BD72C128BB10D0061354D</string>
+											<string>E71BD72D128BB10D0061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -440,7 +441,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {810, 542}}</string>
+								<string>{{0, 0}, {719, 542}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -460,7 +461,7 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 547}, {810, 133}}</string>
+								<string>{{0, 547}, {719, 133}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 457 1104 721 0 0 1920 1178 </string>
 							</dict>
@@ -471,7 +472,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>810pt</string>
+					<string>719pt</string>
 				</dict>
 			</array>
 			<key>Name</key>

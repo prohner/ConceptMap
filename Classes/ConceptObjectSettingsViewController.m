@@ -234,6 +234,7 @@
 	picker.allowsEditing = YES;
 	
 	[popover initWithContentViewController:picker];
+	[picker release];
 	self.title = @"";
 }
 
