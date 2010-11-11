@@ -283,14 +283,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>39</integer>
+									<integer>25</integer>
+									<integer>23</integer>
 									<integer>22</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 356}, {363, 662}}</string>
+							<string>{{0, 225}, {363, 662}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -327,7 +328,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObject.m</string>
+								<string>ConceptObjectColorSet.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObject.m</string>
+										<string>ConceptObjectColorSet.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E71BD72E128BB10D0061354D</string>
+										<string>E71BD740128BB6C00061354D</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -353,12 +354,10 @@
 											<string>E7227950125AF0CE001A0386</string>
 											<string>E7227980125C4205001A0386</string>
 											<string>E7227BF9125EF170001A0386</string>
-											<string>E7227C57125EFB42001A0386</string>
 											<string>E7227CC21261670D001A0386</string>
 											<string>E7227D1C12616F3F001A0386</string>
 											<string>E7227FA912660885001A0386</string>
 											<string>E7227FDB12661D17001A0386</string>
-											<string>E7A83742127297C600A16F30</string>
 											<string>E7A83743127297C600A16F30</string>
 											<string>E7A839BB12767F9C00A16F30</string>
 											<string>E7A839DC127691EF00A16F30</string>
@@ -418,9 +417,7 @@
 											<string>E71BD630128A6D330061354D</string>
 											<string>E71BD63B128A70190061354D</string>
 											<string>E71BD663128A740A0061354D</string>
-											<string>E71BD683128B12060061354D</string>
 											<string>E71BD690128B12C10061354D</string>
-											<string>E71BD6CA128B2D8F0061354D</string>
 											<string>E71BD6DF128B88670061354D</string>
 											<string>E71BD6EB128B89BD0061354D</string>
 											<string>E71BD6F5128B8A3F0061354D</string>
@@ -429,7 +426,11 @@
 											<string>E71BD723128BB0760061354D</string>
 											<string>E71BD724128BB0760061354D</string>
 											<string>E71BD72C128BB10D0061354D</string>
-											<string>E71BD72D128BB10D0061354D</string>
+											<string>E71BD73B128BB6C00061354D</string>
+											<string>E71BD73C128BB6C00061354D</string>
+											<string>E71BD73D128BB6C00061354D</string>
+											<string>E71BD73E128BB6C00061354D</string>
+											<string>E71BD73F128BB6C00061354D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

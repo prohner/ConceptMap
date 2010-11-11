@@ -145,3 +145,5 @@
 "EDITING_CONTENTS" = "Tap on the title of thought to change the title (little box on top).  Double-tap on the thought itself to change the main text";
 "Changing Connections" = "Changing Connections";
 "CHANGING_CONNECTIONS" = "Go to Connections in the Settings of a thought.  Tap '+' to initiate a connection and then tap the connected thought.  Tap the label on the connection line to change the label.";
+
+"Black & White" = "Black & White";

@@ -93,6 +93,16 @@
 			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x853d35);	// middle top
 			titleForegroundColor	= OPAQUE_HEXCOLOR(0xaaaaaa);	// bottom
 			break;
+		case ColorSchemeConstantWhite:
+			// 
+			colorSchemeName			= NSLocalizedString(@"Black & White", @"");
+			borderColor				= OPAQUE_HEXCOLOR(0x2222ff);	
+			backgroundColor			= OPAQUE_HEXCOLOR(0xffffff);	
+			foregroundColor			= OPAQUE_HEXCOLOR(0x000000);	
+			titleBorderColor		= OPAQUE_HEXCOLOR(0x000000);	
+			titleBackgroundColor	= OPAQUE_HEXCOLOR(0x2222ff);	
+			titleForegroundColor	= OPAQUE_HEXCOLOR(0xffffff);	
+			break;
 		default:
 			// based on 0x0B61A4
 			colorSchemeName			= NSLocalizedString(@"Blue", @"");

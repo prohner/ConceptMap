@@ -60,6 +60,7 @@ typedef enum ColorSchemeConstantValues {
 	ColorSchemeConstantLightGreen	= 4,
 	ColorSchemeConstantLightBlue	= 5,
 	ColorSchemeConstantLightBrown	= 6,
+	ColorSchemeConstantWhite		= 7,
 	ColorSchemeConstantMAX
 } ColorSchemeConstant;
 
