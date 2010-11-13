@@ -17,7 +17,7 @@
 
 @implementation ConceptObjectConnections
 
-@synthesize connectionLabelViewController;
+@synthesize connectionLabelViewController, myDelegate;
 
 - (id) initWithFrame:(CGRect)r {
 	[super initWithFrame:r];
@@ -57,7 +57,11 @@
 									 inView:self 
 				   permittedArrowDirections:UIPopoverArrowDirectionAny 
 								   animated:YES];
+		} else {
+			// If we're not handling the tap, then offer the delegate a chance
+			[myDelegate handleObjectTapGesture:sender];
 		}
+
 	}
 }
 
@@ -83,7 +87,7 @@
 		CGFloat angle_A = atan(m);
 		CGFloat side_a = [cxn.src.concept.height floatValue] / 2;
 		CGFloat side_b = side_a / tan(angle_A);
-		CGFloat side_c = sqrt(side_a * side_a + side_b * side_b);
+		//CGFloat side_c = sqrt(side_a * side_a + side_b * side_b);
 		
 		
 		CGFloat side_a_to_corner = [cxn.src.concept.height floatValue] / 2;
@@ -237,7 +241,7 @@
 			}
 		}
 		
-		FUNCTION_LOG(@"origin=(%.2f, %.2f) Slope = %.2f, angle = %.2f, c=%.2f", cxn.src.concept.centerPoint.x, cxn.src.concept.centerPoint.y, m, rotationRadians, side_c);
+		FUNCTION_LOG(@"origin=(%.2f, %.2f) Slope = %.2f, angle = %.2f", cxn.src.concept.centerPoint.x, cxn.src.concept.centerPoint.y, m, rotationRadians);
 		
 		/*
 		 We might only know one side but we also know an angle. For example, if the side a = 15 and the angle A = 41°, 
@@ -354,7 +358,7 @@
 		CGFloat angle_A = atan(m);
 		CGFloat side_a = [cxn.src.concept.height floatValue] / 2;
 		CGFloat side_b = side_a / tan(angle_A);
-		CGFloat side_c = sqrt(side_a * side_a + side_b * side_b);
+		//CGFloat side_c = sqrt(side_a * side_a + side_b * side_b);
 		
 		
 		CGFloat side_a_to_corner = [cxn.src.concept.height floatValue] / 2;
@@ -508,7 +512,7 @@
 			}
 		}
 
-		FUNCTION_LOG(@"origin=(%.2f, %.2f) Slope = %.2f, angle = %.2f, c=%.2f", cxn.src.concept.centerPoint.x, cxn.src.concept.centerPoint.y, m, rotationRadians, side_c);
+		FUNCTION_LOG(@"origin=(%.2f, %.2f) Slope = %.2f, angle = %.2f", cxn.src.concept.centerPoint.x, cxn.src.concept.centerPoint.y, m, rotationRadians);
 
 		/*
 		 We might only know one side but we also know an angle. For example, if the side a = 15 and the angle A = 41°, 
@@ -548,10 +552,10 @@
 	ConceptObjectConnection *cxn = [[ConceptObjectConnection alloc] init];
 	cxn.src = src;
 	cxn.dst = dst;
-	ConceptObjectConnection *cxn2delete = [connections objectForKey:cxn.keyString];
+	//ConceptObjectConnection *cxn2delete = [connections objectForKey:cxn.keyString];
 	[connections removeObjectForKey:cxn.keyString];
 	
-	FUNCTION_LOG(@"Key %@ (%i), %i connections remain (%i)", cxn.keyString, cxn.keyString, [connections count], cxn2delete);
+	FUNCTION_LOG(@"Key %@ (%i), %i connections remain", cxn.keyString, cxn.keyString, [connections count]);
 	FUNCTION_LOG(@"From %@ to %@", src.concept.title, dst.concept.title);
 	[self setNeedsDisplay];
 	[cxn release];

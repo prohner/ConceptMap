@@ -45,14 +45,10 @@
 		E7227901125AE8D3001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E72278FD125AE8D3001A0386 /* Localizable.strings */; };
 		E7227904125AE8DF001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227902125AE8DF001A0386 /* Localizable.strings */; };
 		E7227905125AE8DF001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227902125AE8DF001A0386 /* Localizable.strings */; };
-		E7227911125AEA1E001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722790F125AEA1E001A0386 /* Localizable.strings */; };
-		E7227912125AEA1E001A0386 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722790F125AEA1E001A0386 /* Localizable.strings */; };
 		E7227926125AEE6E001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227924125AEE6E001A0386 /* InfoPlist.strings */; };
 		E7227927125AEE6E001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227924125AEE6E001A0386 /* InfoPlist.strings */; };
 		E722792A125AEEAC001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227928125AEEAC001A0386 /* InfoPlist.strings */; };
 		E722792B125AEEAC001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7227928125AEEAC001A0386 /* InfoPlist.strings */; };
-		E722792E125AEED3001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722792C125AEED3001A0386 /* InfoPlist.strings */; };
-		E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E722792C125AEED3001A0386 /* InfoPlist.strings */; };
 		E7227BE7125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
 		E7227BE8125EEEAC001A0386 /* ConceptObjectConnectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */; };
 		E7227CB812616628001A0386 /* ConceptObjectShapeChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7227CB612616628001A0386 /* ConceptObjectShapeChooserViewController.m */; };
@@ -153,6 +149,10 @@
 		E7A8373B127296DE00A16F30 /* desktop_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7A83725127296DE00A16F30 /* desktop_9.jpg */; };
 		E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A839F91277E9B300A16F30 /* ConnectedConcept.m */; };
 		E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A839F91277E9B300A16F30 /* ConnectedConcept.m */; };
+		E7AC21EC128E05EC00B8C99B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AC21E8128E05EC00B8C99B /* Default.png */; };
+		E7AC21ED128E05EC00B8C99B /* MainLogo_72.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AC21EA128E05EC00B8C99B /* MainLogo_72.png */; };
+		E7AC21EE128E05EC00B8C99B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AC21E8128E05EC00B8C99B /* Default.png */; };
+		E7AC21EF128E05EC00B8C99B /* MainLogo_72.png in Resources */ = {isa = PBXBuildFile; fileRef = E7AC21EA128E05EC00B8C99B /* MainLogo_72.png */; };
 		E7E6EB48124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
 		E7E6EB49124B115000276DA9 /* ConceptObjectSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */; };
 		E7E6EB4A124B115000276DA9 /* ConceptObjectSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */; };
@@ -190,10 +190,8 @@
 		E71BD745128BBC450061354D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E72278FE125AE8D3001A0386 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227903125AE8DF001A0386 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
-		E7227910125AEA1E001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = Localizable.strings; sourceTree = "<group>"; };
 		E7227925125AEE6E001A0386 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E7227929125AEEAC001A0386 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = InfoPlist.strings; sourceTree = "<group>"; };
-		E722792D125AEED3001A0386 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E7227BE5125EEEAC001A0386 /* ConceptObjectConnectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectConnectButton.h; sourceTree = "<group>"; };
 		E7227BE6125EEEAC001A0386 /* ConceptObjectConnectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectConnectButton.m; sourceTree = "<group>"; };
 		E7227CB512616628001A0386 /* ConceptObjectShapeChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectShapeChooserViewController.h; sourceTree = "<group>"; };
@@ -279,6 +277,8 @@
 		E7A83725127296DE00A16F30 /* desktop_9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = desktop_9.jpg; sourceTree = "<group>"; };
 		E7A839F81277E9B300A16F30 /* ConnectedConcept.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectedConcept.h; sourceTree = "<group>"; };
 		E7A839F91277E9B300A16F30 /* ConnectedConcept.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectedConcept.m; sourceTree = "<group>"; };
+		E7AC21E9128E05EC00B8C99B /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = Default.png; sourceTree = "<group>"; };
+		E7AC21EB128E05EC00B8C99B /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = MainLogo_72.png; sourceTree = "<group>"; };
 		E7E6EB45124B115000276DA9 /* ConceptObjectSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptObjectSettingsViewController.h; sourceTree = "<group>"; };
 		E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptObjectSettingsViewController.m; sourceTree = "<group>"; };
 		E7E6EB47124B115000276DA9 /* ConceptObjectSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ConceptObjectSettingsViewController.xib; path = Classes/ConceptObjectSettingsViewController.xib; sourceTree = "<group>"; };
@@ -393,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				E71BD745128BBC450061354D /* Default.png */,
-				E722790E125AEA1E001A0386 /* es.lproj */,
 				E72278FC125AE8D3001A0386 /* en.lproj */,
 				E72278FF125AE8D3001A0386 /* fr.lproj */,
 				E716CDD6123F2983003F21D3 /* Images */,
@@ -462,19 +461,12 @@
 		E72278FF125AE8D3001A0386 /* fr.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				E7AC21E8128E05EC00B8C99B /* Default.png */,
+				E7AC21EA128E05EC00B8C99B /* MainLogo_72.png */,
 				E7227928125AEEAC001A0386 /* InfoPlist.strings */,
 				E7227902125AE8DF001A0386 /* Localizable.strings */,
 			);
 			path = fr.lproj;
-			sourceTree = "<group>";
-		};
-		E722790E125AEA1E001A0386 /* es.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				E722792C125AEED3001A0386 /* InfoPlist.strings */,
-				E722790F125AEA1E001A0386 /* Localizable.strings */,
-			);
-			path = es.lproj;
 			sourceTree = "<group>";
 		};
 		E75ABC621239EFFF004A5C76 /* Data */ = {
@@ -671,10 +663,8 @@
 				E783AC131258B38100E2F8CB /* ConceptObjectFontChooserViewController.xib in Resources */,
 				E7227900125AE8D3001A0386 /* Localizable.strings in Resources */,
 				E7227904125AE8DF001A0386 /* Localizable.strings in Resources */,
-				E7227911125AEA1E001A0386 /* Localizable.strings in Resources */,
 				E7227926125AEE6E001A0386 /* InfoPlist.strings in Resources */,
 				E722792A125AEEAC001A0386 /* InfoPlist.strings in Resources */,
-				E722792E125AEED3001A0386 /* InfoPlist.strings in Resources */,
 				E7227CB912616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 				E7227E8112640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */,
 				E7228359126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */,
@@ -693,6 +683,8 @@
 				E71BD5FA128A1E390061354D /* MainLogo_72.png in Resources */,
 				E71BD6C7128B2A0D0061354D /* SampleConnections.png in Resources */,
 				E71BD747128BBC450061354D /* Default.png in Resources */,
+				E7AC21EE128E05EC00B8C99B /* Default.png in Resources */,
+				E7AC21EF128E05EC00B8C99B /* MainLogo_72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,10 +707,8 @@
 				E783AC151258B38100E2F8CB /* ConceptObjectFontChooserViewController.xib in Resources */,
 				E7227901125AE8D3001A0386 /* Localizable.strings in Resources */,
 				E7227905125AE8DF001A0386 /* Localizable.strings in Resources */,
-				E7227912125AEA1E001A0386 /* Localizable.strings in Resources */,
 				E7227927125AEE6E001A0386 /* InfoPlist.strings in Resources */,
 				E722792B125AEEAC001A0386 /* InfoPlist.strings in Resources */,
-				E722792F125AEED3001A0386 /* InfoPlist.strings in Resources */,
 				E7227CBB12616628001A0386 /* ConceptObjectShapeChooserViewController.xib in Resources */,
 				E7227E8312640EC4001A0386 /* ConceptObjectConnectionsViewController.xib in Resources */,
 				E722835B126FADF9001A0386 /* AddConceptObjectViewController.xib in Resources */,
@@ -737,6 +727,8 @@
 				E71BD5F9128A1E390061354D /* MainLogo_72.png in Resources */,
 				E71BD6C6128B2A0D0061354D /* SampleConnections.png in Resources */,
 				E71BD746128BBC450061354D /* Default.png in Resources */,
+				E7AC21EC128E05EC00B8C99B /* Default.png in Resources */,
+				E7AC21ED128E05EC00B8C99B /* MainLogo_72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,14 +852,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		E722790F125AEA1E001A0386 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7227910125AEA1E001A0386 /* es */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		E7227924125AEE6E001A0386 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -884,12 +868,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E722792C125AEED3001A0386 /* InfoPlist.strings */ = {
+		E7AC21E8128E05EC00B8C99B /* Default.png */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E722792D125AEED3001A0386 /* es */,
+				E7AC21E9128E05EC00B8C99B /* fr */,
 			);
-			name = InfoPlist.strings;
+			name = Default.png;
+			sourceTree = "<group>";
+		};
+		E7AC21EA128E05EC00B8C99B /* MainLogo_72.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7AC21EB128E05EC00B8C99B /* fr */,
+			);
+			name = MainLogo_72.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -936,7 +928,7 @@
 				PRODUCT_NAME = "Thought Cloud";
 				PROVISIONING_PROFILE = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -955,7 +947,7 @@
 				PRODUCT_NAME = "Thought Cloud";
 				PROVISIONING_PROFILE = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;

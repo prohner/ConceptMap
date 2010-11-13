@@ -280,7 +280,7 @@
 }
 
 - (void)addHelp {
-	CGRect r = CGRectMake(20, 20, 600, 600);
+	CGRect r = CGRectMake(40, 40, 600, 600);
 	ConceptObject *template = [self newConceptObjectTitled:NSLocalizedString(@"Help", @"") inRect:r];
 	template.concept.bodyDisplayString = @"  ";
 	template.concept.colorSchemeConstant = [NSNumber numberWithInt:ColorSchemeConstantPurple];
@@ -320,7 +320,7 @@
 				  insideOf:template 
 				   colored:ColorSchemeConstantLightBlue];
 	
-	template.selected = YES;
+	//template.selected = YES;
 }
 
 - (void)addComputerServer {

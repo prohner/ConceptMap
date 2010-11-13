@@ -13,17 +13,27 @@
 
 @class Concept;
 @class ConceptObject;
+@protocol ConnectionTouchSecondaryProcessorDelegate;
 
 
 @interface ConceptObjectConnections : UIView <UIPopoverControllerDelegate> {
 	NSMutableDictionary *connections;
 	ConnectionLabelViewController *connectionLabelViewController;
+    id <ConnectionTouchSecondaryProcessorDelegate> myDelegate;
 }
 
 @property (nonatomic, retain) ConnectionLabelViewController *connectionLabelViewController;
+@property (nonatomic, retain) id <ConnectionTouchSecondaryProcessorDelegate> myDelegate;
 
 - (void)addConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst with:(ConnectedConcept *)connectedConcept;
 - (void)removeConnectionFrom:(ConceptObject *)src to:(ConceptObject *)dst;
 - (void)removeConnectionsToAndFrom:(ConceptObject *)conceptObject;
 
 @end
+
+@protocol ConnectionTouchSecondaryProcessorDelegate 
+
+- (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender;
+
+@end
+

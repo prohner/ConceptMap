@@ -7,30 +7,145 @@
  */
 
 "Documents" = "Documents";
-"Concept Map" = "Carte Conceptuelle";
+"APP_NAME" = "Nuage de pensées";
 
 "Actions" = "Actions";
-"Email as Image" = "Envoyer - L'image";
-"Email as List" = "Envoyer - La liste";
-"Email as List + Image" = "Envoyer - La liste et l'image";
+"Email as Image" = "Envoyer comme Image";
+"Email as List" = "Envoyer comme Liste";
+"Email as List + Image" = "Envoyer comme Liste + Image";
 
 "Blue" = "Bleu";
 "Purple" = "Violet";
 "Yellow" = "Jaune";
 "Green" = "Vert";
-"Light Green" = "Vert Pâle";
-"Light Blue" = "Bleu Pâle";
-"Salmon" = "Couleur Saumon";
+"Light Green" = "Vert Clair";
+"Light Blue" = "Bleu Clair";
+"Salmon" = "Saumon";
 
 "Settings" = "Paramètres";
 "Colors" = "Couleurs";
-"Font" = "Police";
-"Background Picture" = "Image de Fond";
-"Shape" = "Forme";
+"Fonts" = "Polices";
+"Connections" = "Connexions";
+"Shapes" = "Formes";
 
-"Color Scheme" = "Schéma de Couleurs";
+"Color Scheme" = "Jeu de couleurs";
 "Fonts" = "Polices";
 
 "Created using" = "Créé à l'aide de";
 "on my" = "sur mon";
 
+// 2010-10-06 9:30pm
+"Computer Template" = "Modèle d'ordinateur";
+"Power Comp - Windows Server 2008 SP 2" = "Power Comp - Windows Server 2008 SP 2";
+"Internal Drives" = "Disques Internes";
+"External Drives" = "Disques Externes";
+"300gb - SATA" = "300gb - SATA";
+"IP Addresses" = "IP Addresses";
+"192.168.1.17\n192.168.12.11" = "192.168.1.17\n192.168.12.11";
+
+"Welcome Document" = "Document d'accueil";
+"Home Inventory" = "Inventaire de la maison";
+
+"Garage" = "Garage";
+"Left Cabinet" = "Cabinet de gauche";
+"Right Cabinet" = "Cabinet de droite";
+
+// 2010-10-07 9:30pm
+"Soccer ball" = "Ballon de football";
+"Green Duffle" = "Sac de marin Vert";
+"Medicine Kit" = "Kit de médecine";
+"Bandages\nGauze\nTape" = "Bandages\nGaze\nBande";
+"Hall Closet" = "Cabinet de hall";
+
+"Board Games" = "Jeux de société";
+"All of them" = "Tous";
+"iPhone Box" = "Boite d'iPhone";
+
+"New Document" = "Nouveau Document";
+"Your New Doc" = "Nouvelle note";
+"DEFAULT OBJECT BODY STRING" = "Quelques conseils:\n\n- Tappez un object pour le mettre en valeur, puis utilisez le bouton 'info' ou le bouton de suppression\n\n- Tappez et bougez un object\n\n- Utilisez le geste de la 'pincée' pour redimensionner un object\n\n- Double-tappez ici pour éditer cette case";
+
+// 2010-10-09 8:15pm
+"Shapes" = "Formes";	// controller title
+"Fonts" = "Polices";
+"Shapes" = "Formes";	// Menu
+"Square" = "Carré";
+"Vertical Rectangle" = "Rectangle Vertical";
+"Horizontal Rectangle" = "Rectangle Horizontal";
+
+// 2010-10-11 8:36pm
+"Connected To..." = "Connecté à...";
+
+// 2010-10-20 4:14pm
+"Add Template" = "Ajouter un modèle";
+"Square" = "Carré";
+"Vertical Rectangle" = "Rectangle Vertical";
+"Horizontal Rectangle" = "Rectangle Horizontal";
+"Server" = "Server";
+"Desktop" = "Desktop";
+"Switch" = "Switch / Router / Firewall";
+"Router" = "Router";
+"Firewall" = "Firewall";
+"Concentrator" = "Concentrator";
+"Garage" = "Garage";
+
+
+// 2010-10-22 9:07pm
+"Desktop" = "Desktop";
+"<Enter Document Title>" = "<Écrivez le titre du document>";
+"General Items" = "Articles généraux";
+"Computers" = "Ordinateurs";
+"Home" = "Maison";
+"New Square" = "Nouveau carré";
+"New Rectangle" = "Nouveau rectangle";
+
+// 2010-10-24 5am
+"Are you sure you want to delete %@?" = "Etes-vous sûr de vouloir supprimer %@?";
+"Delete Item" = "Supprimer l'article";
+"Yes" = "Oui";
+"No" = "Non";
+
+// 2010-10-28 9:50pm
+"Model 760 - Windows 7" = "Model 760 - Windows 7";
+"192.168.1.17" = "192.168.1.17";
+
+// 2010-10-29 4:00pm
+"Background Picture" = "Image de fond";
+
+// 2010-11-08 9:00pm
+"Welcome to" = "Bienvenue à";
+
+// 2010-11-09 10:00pm
+"Rack" = "Server Rack";
+"Closet" = "Cabinet";
+"Purpose 1" = "Purpose 1";
+"Computer 1" = "Ordinateur 1";
+"Purpose 2" = "Purpose 2";
+"Computer 2" = "Ordinateur 2";
+"Purpose 3" = "Purpose 3";
+"Computer 3" = "Ordinateur 3";
+
+"Garage Cabinet" = "Cabinet du Garage";
+"Stuff stored in cabinet" = "Articles a l'intérieur du cabinet";
+"Closet" = "Cabinet";
+"Upper Shelf" = "Étagère supérieure";
+"Closet Floor" = "Étagère inférieure";
+
+// 2010-11-10 9:30am
+"New Square" = "Nouveau carré";
+"New Rectangle" = "Nouveau rectangle";
+"Help / Instructions" = "Aide / Instructions";
+"Arranging Thoughts" = "Arrangement des pensées";
+"ARRANGING_THOUGHTS" = "- Tapez et bougez un object\n\n- Utilisez le geste de la 'pincée' pour redimensionner un object";
+"Add / Delete" = "Ajouter / Supprimer";
+"ADDING_THOUGHTS" = "- Ajoutez une pensée utilisant '+' sur le menu\n\n- Supprimez une pensée en sélectionnant et en tapan le bouton 'x'";
+"Changing Properties" = "Modification des propriétés";
+"CHANGING_PROPERTIES" = "Tapez sur une case de pensée pour la sélectionner.  Ensuite tapez le bouton info (petit italique 'i').  Modifiez les propriétés et voyez la modification directement.  Notez que vous pouvez changer l'image de fond.";
+"Editing" = "Modification";
+"EDITING_CONTENTS" = "Tapez sur le titre des pensées pour changer le titre (petite case en haut).  Double-tapez sur la pensée pour changer le texte principal";
+"Changing Connections" = "Modifier les connexions";
+"CHANGING_CONNECTIONS" = "Accédez à connexions dans les paramètres d'une pensée.  Tapez '+' pour établir une connexion, puis appuyez sur la pensée connectée.  Tapez sur l'étiquette sur la ligne de connexion pour modifier l'étiquette.";
+
+"Black & White" = "Noir & Blanc";
+"Email Feedback" = "Envoyer commentaires";
+"Please describe your feedback" = "Veuillez décrire vos commentaires";

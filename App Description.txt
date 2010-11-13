@@ -1,0 +1,26 @@
+Thought Cloud is the bridge between mind mapping and network diagramming.
+
+In the old days, we used desktop products to layout a network diagram.  And the screens weren't big enough. You've been stuck in two dimensions. Add depth and reality to your mind maps and network diagrams.
+
+Start with a desktop and toss some thoughts on there.  Add pictures to your thoughts.  Give them depth by putting a thought inside another thought.  Connect thoughts by labeling a line on the desktop between the thoughts.  Move the thoughts around and the sticky connection lines follow the thoughts.
+
+"Thought box"
+
+Thought Boxes have a lot of customizability.  Tap to change colors, shapes and fonts and keep tapping until you like what you see. (Changes happen immediately and visibly)
+
+Email a picture of the Thought Cloud desktop.  Thought Cloud can even transform your cloud into an indented list through email.  
+
+Cette application a également une option de langue française. Merci à Yves Accad pour la traduction.
+
+
+Screen shots:
+   - Planets
+   - Family tree
+   - Network diagram
+   - Unstructured notes (sticky notes)
+
+To Do:
+   - Change to use terms "Thought Pad" and "Thought Box"???
+   - Make desktop larger than the screen...so scroll view actually SCROLLS
+   - English screenshots
+   - French screenshots

@@ -6,4 +6,5 @@
    Copyright 2010 Cool Tool Apps. All rights reserved.
  */
 
-CFBundleDisplayName = "Carte Conceptuelle";
+CFBundleDisplayName = "Nuage de pensées";
+CFBundleIconFile = "MainLogo_72_FR.png";

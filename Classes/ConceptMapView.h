@@ -12,7 +12,7 @@
 #import "DataController.h"
 #import "ConceptObjectConnections.h"
 
-@interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate> {
+@interface ConceptMapView : UIScrollView <UIScrollViewDelegate, ConceptObjectDelegate, ConnectionTouchSecondaryProcessorDelegate> {
 	ConceptObject *selectedConceptObject;
 	ConceptObject *possibleDropTarget;
 	ConceptObject *panningConceptObject;

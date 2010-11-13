@@ -217,7 +217,7 @@
 					  "<div style=\"\">%@: </div>"
 					  "<div>%@</div>"
 					  "<div><p>%@ "
-					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/what-in-the-world-learn\">%@</a></span>"
+					  "<span style=\"background-color:#ffff00\"><a href=\"http://cooltoolapps.appspot.com/thought-cloud\">%@</a></span>"
 					  " %@ %@.</p></div>", 
 					  APPLICATION_NAME,
 					  (includeList ? messageBody : @""),
@@ -272,14 +272,15 @@
 }
 
 - (NSString *)borderInfoWithColor:(ConceptObjectColorSet *)conceptObjectColorSet {
-	return [[NSString alloc] initWithFormat:@"xborder-top-color:#%@;border-left-color:#%@;border-top-style:none;border-left-style:solid;border-width:8px;", 
-			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor],
+	return [[NSString alloc] initWithFormat:@"border-left-color:#%@;border-top-style:none;border-left-style:solid;border-width:8px;", 
 			[ConceptObjectColorSet colorToHexString:conceptObjectColorSet.backgroundColor]];
 	
 }
 
 - (NSString *)stringForConcept:(Concept *)concept withIndent:(NSString *)indent {
-	return [[NSString alloc] initWithFormat:@"<dt style=\"font-weight:bold;\">%@</dt><dd>%@</dd>\n", concept.title, [concept.bodyDisplayString stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"]];
+	return [[NSString alloc] initWithFormat:@"<dt style=\"font-weight:bold;\">%@</dt><dd>%@</dd>\n", 
+			concept.title, 
+			concept.bodyDisplayString ? [concept.bodyDisplayString stringByReplacingOccurrencesOfString:@"\n" withString:@"<br />"] : @""];
 	
 }
 

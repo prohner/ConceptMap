@@ -48,6 +48,7 @@ static int recursionDepth = 0;
 
 - (void)initializeContents {
 	self.conceptObjectConnections = [[ConceptObjectConnections alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
+	conceptObjectConnections.myDelegate = self;
 	conceptObjectConnections.backgroundColor = [UIColor clearColor];
 	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
@@ -165,13 +166,16 @@ static int recursionDepth = 0;
 }
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
-    // single tap does nothing for now
+	FUNCTION_LOG();
+	[selectedConceptObject setSelected:NO];	// Unselect already selected one
+}
+
+- (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
 	[selectedConceptObject setSelected:NO];	// Unselect already selected one
 }
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {
-    // single tap does nothing for now
 	FUNCTION_LOG(@"zoom scale == %.2f", self.zoomScale);
 }
 
