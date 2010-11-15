@@ -332,7 +332,7 @@ static int recursionDepth = 0;
 - (BOOL)conceptObject:(ConceptObject *)conceptObject connected:(BOOL)isConnected {
 	FUNCTION_LOG();
 	BOOL result = NO;
-	if (sourceConceptObject) {
+	if (sourceConceptObject && sourceConceptObject != conceptObject) {
 		sourceConceptObject.isConnecting = NO;
 		ConnectedConcept *connectedConcept = [sourceConceptObject.concept addConnectionTo:conceptObject.concept];
 //		[conceptObject.concept addConnectedConceptsObject:sourceConceptObject.concept];

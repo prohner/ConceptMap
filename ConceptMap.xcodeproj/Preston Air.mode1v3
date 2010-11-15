@@ -284,9 +284,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>12</integer>
-									<integer>11</integer>
+									<integer>44</integer>
 									<integer>7</integer>
 									<integer>0</integer>
 								</array>
@@ -329,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ConceptObjectSettingsViewController.m</string>
+								<string>ConceptMapView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ConceptObjectSettingsViewController.m</string>
+										<string>ConceptMapView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7152E1A1290F2BC00325014</string>
+										<string>E7152E2A1290F4CA00325014</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -430,11 +428,11 @@
 											<string>E7152D6E128FB27000325014</string>
 											<string>E7152D921290E77600325014</string>
 											<string>E7152DA41290E91200325014</string>
-											<string>E7152DD61290EED400325014</string>
-											<string>E7152DD71290EED400325014</string>
 											<string>E7152DFF1290F11D00325014</string>
-											<string>E7152E141290F24600325014</string>
-											<string>E7152E151290F24600325014</string>
+											<string>E7152E201290F49800325014</string>
+											<string>E7152E211290F49800325014</string>
+											<string>E7152E281290F4CA00325014</string>
+											<string>E7152E291290F4CA00325014</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -632,6 +630,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>E7152E2B1290F4CA00325014</string>
 		<string>E7152D47128FA0DD00325014</string>
 		<string>E7152D48128FA0DD00325014</string>
 		<string>1CD10A99069EF8BA00B06720</string>
