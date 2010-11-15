@@ -36,7 +36,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.contentSizeForViewInPopover = CGSizeMake(235.0, 220.0);
+	self.contentSizeForViewInPopover = CGSizeMake(245.0, 225.0);
 }
 
 
@@ -233,28 +233,34 @@
 	picker.delegate = self;
 	picker.allowsEditing = YES;
 	
-	[popover initWithContentViewController:picker];
-	[picker release];
+	[popover setContentViewController:picker animated:YES];
+//	[picker release];
 	self.title = @"";
+	[self retain];	// gotta keep myself around long enough for delegate actions to execute
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker
-		didFinishPickingImage:(UIImage *)image
-				  editingInfo:(NSDictionary *)editingInfo {
-
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	FUNCTION_LOG();
+	UIImage *image = ((UIImage *)[info valueForKey:UIImagePickerControllerEditedImage]);
+	if (!image) {
+		image = ((UIImage *)[info valueForKey:UIImagePickerControllerOriginalImage]);
+	}
 	conceptObject.layer.contents = (id)image.CGImage;
 	conceptObject.concept.backgroundImage = UIImageJPEGRepresentation(image, 1.0);
 	
     // Remove the picker interface and release the picker object.
 //    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
-    [picker release];
+//    [picker release];
 	[popover dismissPopoverAnimated:YES];
+	[self release];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+	FUNCTION_LOG();
     [[picker parentViewController] dismissModalViewControllerAnimated:YES];
     [picker release];
 	[popover dismissPopoverAnimated:YES];
+	[self release];
 }
 
 #pragma mark -

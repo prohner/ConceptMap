@@ -40,6 +40,7 @@
 	CGFloat pinchScale;
 	CGPoint dragLastPoint;
 	CALayer *rootLayer;
+	UIPopoverController *popover;
 	
 	NSArray *childConceptObjects;
 	
@@ -58,6 +59,7 @@
 @property (nonatomic, retain) NSArray *childConceptObjects;
 @property (nonatomic, retain) CALayer *rootLayer;
 @property (nonatomic, retain) ConceptMapView *conceptMapView;
+@property (nonatomic, retain) UIPopoverController *popover;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept;
 - (void)addConceptObject:(ConceptObject *)newConceptObject;

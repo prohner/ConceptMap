@@ -17,7 +17,7 @@
 @implementation ConceptObject
 
 @synthesize selected, isConnecting, myDelegate, concept, isActiveDropTarget, conceptObjectLabel, childConceptObjects, rootLayer;
-@synthesize conceptMapView;
+@synthesize conceptMapView, popover;
 
 + (ConceptObject *)conceptObjectWithConcept:(Concept *)concept {
 	CGRect r = CGRectMake([concept.originX intValue], [concept.originY intValue], [concept.width intValue], [concept.height intValue]);
@@ -138,6 +138,7 @@
 
 - (void)viewDidUnload {
 	self.childConceptObjects = nil;
+	self.popover = nil;
 }
 
 
@@ -145,6 +146,7 @@
 	[deleteButton release];
 	[connectButton release];
 	[conceptObjectLabel release];
+	[popover release];
 	[super dealloc];
 }
 
@@ -333,8 +335,7 @@
 			conceptObjectTitleViewController = [[ConceptObjectTitleViewController alloc] initWithNibName:@"ConceptObjectTitleViewController" bundle:nil];
 			conceptObjectTitleViewController.conceptObject = self;
 			
-			UIPopoverController *popover = [[[UIPopoverController alloc] 
-											 initWithContentViewController:conceptObjectTitleViewController] retain];
+			self.popover = [[[UIPopoverController alloc] initWithContentViewController:conceptObjectTitleViewController] retain];
 			
 			[popover presentPopoverFromRect:[hitLayer convertRect:hitLayer.bounds toLayer:self.layer]
 									 inView:self 
@@ -499,8 +500,7 @@
 	
 	UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:conceptObjectSettingsViewController];
 
-	UIPopoverController *popover = [[[UIPopoverController alloc] 
-									 initWithContentViewController:navCtrl] retain];
+	self.popover = [[[UIPopoverController alloc] initWithContentViewController:navCtrl] retain];
 	conceptObjectSettingsViewController.popover = popover;
 	
 	[popover presentPopoverFromRect:[settingsButton.layer convertRect:settingsButton.bounds  
@@ -510,7 +510,6 @@
 						   animated:YES];
 	[conceptObjectSettingsViewController release];
 	[navCtrl release];
-	[popover release];
 }
 
 #pragma mark UITextFieldDelegate
@@ -530,6 +529,7 @@
 
 #pragma mark UIPopoverControllerDelegate
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+	FUNCTION_LOG();
 //	self.layer.anchorPoint = CGPointMake(0.5f, 0.5f);
 	[popoverController release];
 }

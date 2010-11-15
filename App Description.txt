@@ -20,6 +20,8 @@ Screen shots:
    - Unstructured notes (sticky notes)
 
 To Do:
+   - Choosing background image locks up app
+   - Connecting to a non-existent object crashes app
    - Change to use terms "Thought Pad" and "Thought Box"???
    - Make desktop larger than the screen...so scroll view actually SCROLLS
    - English screenshots

@@ -392,6 +392,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E71BD5F8128A1E390061354D /* MainLogo_72.png */,
 				E71BD745128BBC450061354D /* Default.png */,
 				E72278FC125AE8D3001A0386 /* en.lproj */,
 				E72278FF125AE8D3001A0386 /* fr.lproj */,
@@ -440,7 +441,6 @@
 			isa = PBXGroup;
 			children = (
 				E71BD6C5128B2A0D0061354D /* SampleConnections.png */,
-				E71BD5F8128A1E390061354D /* MainLogo_72.png */,
 				E7A8371A127296DE00A16F30 /* wallpapers */,
 				E774F6981249B80C00CC1918 /* delete.png */,
 				E716CDD8123F2A55003F21D3 /* image2.jpeg */,
