@@ -173,6 +173,7 @@ static int recursionDepth = 0;
 - (IBAction)handleObjectTapGesture:(UITapGestureRecognizer *)sender {
 	FUNCTION_LOG();
 	[selectedConceptObject setSelected:NO];	// Unselect already selected one
+	sourceConceptObject = nil;
 }
 
 - (void)handleDoubleTap:(UIGestureRecognizer *)gestureRecognizer {

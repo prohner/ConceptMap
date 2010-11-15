@@ -20,7 +20,6 @@ Screen shots:
    - Unstructured notes (sticky notes)
 
 To Do:
-   - Connecting to a non-existent object crashes app
    - Change to use terms "Thought Pad" and "Thought Box"???
    - Make desktop larger than the screen...so scroll view actually SCROLLS
    - English screenshots
