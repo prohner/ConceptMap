@@ -21,6 +21,7 @@ Screen shots:
 
 To Do:
    - Change to use terms "Thought Pad" and "Thought Box"???
+   - Resizing a connected item needs to create a redraw
    - Make desktop larger than the screen...so scroll view actually SCROLLS
    - English screenshots
    - French screenshots

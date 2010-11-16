@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 3367}}";
-			sepNavSelRange = "{669, 0}";
-			sepNavVisRange = "{46, 1001}";
+			sepNavIntBoundsRect = "{{0, 0}, {1965, 3042}}";
+			sepNavSelRange = "{8071, 0}";
+			sepNavVisRange = "{7557, 1366}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* ThoughtCloud */ = {
@@ -37,7 +37,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = E7F87E1D12388404003F63CA /* ThoughtCloud */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ThoughtCloud */;
 		addToTargets = (
 			E75ABCAD1239F42B004A5C76 /* ApplicationTesting */,
@@ -58,11 +58,11 @@
 			E747643B127A80EB005AB564 /* ConceptMapViewController.m:497 */,
 			E74764E7127B215F005AB564 /* DataController.m:315 */,
 			E711F931127BE08E0098F450 /* ConceptObject.m:320 */,
-			E711FD4812821EF10098F450 /* ConceptMapView.m:311 */,
 			E71BD3EB1287B53A0061354D /* ConceptObjectConnections.m:284 */,
 			E71BD4931287C1790061354D /* ConnectionLabelViewController.m:39 */,
 			E7152D5C128FB0C600325014 /* ConceptObjectSettingsViewController.m:248 */,
 			E7152DBE1290ECD400325014 /* ConceptObjectSettingsViewController.m:232 */,
+			E7152E5712923B0400325014 /* ConceptMapView.m:269 */,
 		);
 		codeSenseManager = E7F87E3612388412003F63CA /* Code sense */;
 		executables = (
@@ -238,6 +238,9 @@
 			E7152E311290F60300325014 /* PBXTextBookmark */ = E7152E311290F60300325014 /* PBXTextBookmark */;
 			E7152E321290F60300325014 /* PBXTextBookmark */ = E7152E321290F60300325014 /* PBXTextBookmark */;
 			E7152E341290F63800325014 /* PBXTextBookmark */ = E7152E341290F63800325014 /* PBXTextBookmark */;
+			E7152E471291B96000325014 /* PlistBookmark */ = E7152E471291B96000325014 /* PlistBookmark */;
+			E7152E481291B96000325014 /* PBXTextBookmark */ = E7152E481291B96000325014 /* PBXTextBookmark */;
+			E7152E491291B96000325014 /* PBXTextBookmark */ = E7152E491291B96000325014 /* PBXTextBookmark */;
 			E71BD4261287B8970061354D = E71BD4261287B8970061354D /* PBXTextBookmark */;
 			E71BD4541287BC970061354D = E71BD4541287BC970061354D /* PBXTextBookmark */;
 			E71BD4551287BC970061354D = E71BD4551287BC970061354D /* PBXTextBookmark */;
@@ -359,7 +362,7 @@
 		ignoreCount = 0;
 		lineNumber = 320;
 		location = ConceptMap;
-		modificationTime = 311490052.295837;
+		modificationTime = 311574339.244368;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -436,24 +439,6 @@
 		rType = 0;
 		vrLen = 1934;
 		vrLoc = 3331;
-	};
-	E711FD4812821EF10098F450 /* ConceptMapView.m:311 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
-		functionName = "-conceptObject:panningEnded:";
-		hitCount = 1;
-		ignoreCount = 0;
-		lineNumber = 311;
-		location = "Thought Cloud";
-		modificationTime = 311490061.303852;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	E711FD4D12821EF50098F450 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -535,7 +520,7 @@
 		ignoreCount = 0;
 		lineNumber = 248;
 		location = "Thought Cloud";
-		modificationTime = 311490052.296104;
+		modificationTime = 311574339.671871;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -840,7 +825,7 @@
 		ignoreCount = 0;
 		lineNumber = 232;
 		location = "Thought Cloud";
-		modificationTime = 311490052.296116;
+		modificationTime = 311574339.720405;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -953,7 +938,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 310";
 		rLen = 0;
-		rLoc = 11362;
+		rLoc = 11400;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 10726;
@@ -1207,7 +1192,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 330";
 		rLen = 0;
-		rLoc = 12049;
+		rLoc = 12087;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 11682;
@@ -1251,7 +1236,7 @@
 		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
 		name = "ConceptMapView.m: 335";
 		rLen = 0;
-		rLoc = 12234;
+		rLoc = 12272;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 11682;
@@ -1293,6 +1278,56 @@
 		vrLen = 1256;
 		vrLoc = 10754;
 	};
+	E7152E471291B96000325014 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ConceptMap-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = "/Users/Preston Air/work/iPad/ConceptMap/ConceptMap-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	E7152E481291B96000325014 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 306";
+		rLen = 0;
+		rLoc = 11305;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 10754;
+	};
+	E7152E491291B96000325014 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		name = "ConceptMapView.m: 307";
+		rLen = 0;
+		rLoc = 11308;
+		rType = 0;
+		vrLen = 1163;
+		vrLoc = 10744;
+	};
+	E7152E5712923B0400325014 /* ConceptMapView.m:269 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
+		functionName = "-conceptObject:panningEnded:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 269;
+		location = "Thought Cloud";
+		modificationTime = 311574345.102961;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
 	E71BD3EB1287B53A0061354D /* ConceptObjectConnections.m:284 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -1307,7 +1342,7 @@
 		ignoreCount = 0;
 		lineNumber = 284;
 		location = "Thought Cloud";
-		modificationTime = 311490052.296072;
+		modificationTime = 311574339.616503;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1429,7 +1464,7 @@
 		ignoreCount = 0;
 		lineNumber = 39;
 		location = "Thought Cloud";
-		modificationTime = 311490052.296088;
+		modificationTime = 311574339.647079;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1763,7 +1798,7 @@
 		ignoreCount = 0;
 		lineNumber = 517;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295617;
+		modificationTime = 311574339.419623;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1836,10 +1871,10 @@
 	};
 	E7227D901261988E001A0386 /* ConceptObjectConnections.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            c =             (\n                                {\n                    r = \"{14787, 164}\";\n                    s = 0;\n                }\n            );\n            r = \"{14708, 529}\";\n            s = 0;\n        },\n                {\n            r = \"{15457, 164}\";\n            s = 0;\n        },\n                {\n            r = \"{15629, 274}\";\n            s = 0;\n        },\n                {\n            r = \"{18215, 950}\";\n            s = 0;\n        },\n                {\n            r = \"{19173, 888}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 22543}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1055, 6695}}";
-			sepNavSelRange = "{1173, 0}";
-			sepNavVisRange = "{568, 1438}";
+			sepNavFolds = "{\n    c =     (\n                {\n            c =             (\n                                {\n                    r = \"{14789, 164}\";\n                    s = 0;\n                }\n            );\n            r = \"{14710, 529}\";\n            s = 0;\n        },\n                {\n            r = \"{15459, 164}\";\n            s = 0;\n        },\n                {\n            r = \"{15631, 274}\";\n            s = 0;\n        },\n                {\n            r = \"{18217, 950}\";\n            s = 0;\n        },\n                {\n            r = \"{19175, 888}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 22547}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {2019, 6448}}";
+			sepNavSelRange = "{18224, 0}";
+			sepNavVisRange = "{17794, 1280}";
 			sepNavWindowFrame = "{{15, 58}, {1554, 1115}}";
 		};
 	};
@@ -1906,7 +1941,7 @@
 		ignoreCount = 0;
 		lineNumber = 131;
 		location = "Thought Cloud";
-		modificationTime = 311490052.29563;
+		modificationTime = 311574339.444653;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1924,7 +1959,7 @@
 		ignoreCount = 0;
 		lineNumber = 332;
 		location = ConceptMap;
-		modificationTime = 311490052.295645;
+		modificationTime = 311574339.244223;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2015,7 +2050,7 @@
 		ignoreCount = 0;
 		lineNumber = 497;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295812;
+		modificationTime = 311574339.551689;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2033,7 +2068,7 @@
 		ignoreCount = 0;
 		lineNumber = 315;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295824;
+		modificationTime = 311574339.589433;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2075,7 +2110,7 @@
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295549;
+		modificationTime = 311574339.269216;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2183,7 +2218,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 311490098.429339;
+		modificationTime = 311574390.465111;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2523,7 +2558,7 @@
 		ignoreCount = 0;
 		lineNumber = 245;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295578;
+		modificationTime = 311574339.327182;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2567,7 +2602,7 @@
 		ignoreCount = 0;
 		lineNumber = 177;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295591;
+		modificationTime = 311574339.345666;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2585,7 +2620,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295606;
+		modificationTime = 311574339.38371;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2720,7 +2755,7 @@
 		ignoreCount = 0;
 		lineNumber = 139;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295658;
+		modificationTime = 311574339.487473;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2738,7 +2773,7 @@
 		ignoreCount = 0;
 		lineNumber = 337;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295673;
+		modificationTime = 311574339.529298;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2867,7 +2902,7 @@
 		ignoreCount = 0;
 		lineNumber = 155;
 		location = "Thought Cloud";
-		modificationTime = 311490052.295563;
+		modificationTime = 311574339.287719;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2878,7 +2913,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -2926,9 +2961,9 @@
 	};
 	E7F87E4712388B1C003F63CA /* ConceptMapView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1307, 4849}}";
-			sepNavSelRange = "{6669, 0}";
-			sepNavVisRange = "{10754, 1256}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 4732}}";
+			sepNavSelRange = "{9745, 0}";
+			sepNavVisRange = "{9404, 1235}";
 		};
 	};
 	E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {
@@ -2940,9 +2975,9 @@
 	};
 	E7F87F4D1238AC90003F63CA /* ConceptObject.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1090, 6838}}";
-			sepNavSelRange = "{12731, 0}";
-			sepNavVisRange = "{12661, 1291}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 7241}}";
+			sepNavSelRange = "{16689, 0}";
+			sepNavVisRange = "{16133, 1137}";
 		};
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {

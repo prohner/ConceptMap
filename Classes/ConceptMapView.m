@@ -266,7 +266,7 @@ static int recursionDepth = 0;
 - (void)conceptObject:(ConceptObject *)conceptObject panningEnded:(UIPanGestureRecognizer *)sender {
 	FUNCTION_LOG(@"possibleDropTarget %@", possibleDropTarget.concept.title);
 	LOG_CONCEPTOBJECT(conceptObject);
-	if (possibleDropTarget /*&& possibleDropTarget != conceptObject.superview*/) {
+	if (possibleDropTarget && conceptObject != possibleDropTarget/*&& possibleDropTarget != conceptObject.superview*/) {
 		// TODO keep track of items inside drop target so it knows who it owns
 		
 		FUNCTION_LOG(@"New position (%i, %i)", conceptObject.layer.position.x, conceptObject.layer.position.y);

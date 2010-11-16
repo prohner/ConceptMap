@@ -319,7 +319,7 @@
 //}
 
 - (void)drawInContext:(CGContextRef)context {
-	FUNCTION_LOG();
+	//FUNCTION_LOG();
 	UIGraphicsPushContext(context);
 
 	CGContextSetLineWidth(context, 3.0);
@@ -532,7 +532,7 @@
 }
 
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx {
-	FUNCTION_LOG();
+	//FUNCTION_LOG();
 	[self drawInContext:ctx];
 }
 

@@ -290,7 +290,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 177}, {311, 662}}</string>
+							<string>{{0, 0}, {311, 662}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -339,7 +339,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>E7152E341290F63800325014</string>
+										<string>E7152E491291B96000325014</string>
 										<key>history</key>
 										<array>
 											<string>E75ABE0C1239F7F7004A5C76</string>
@@ -423,7 +423,6 @@
 											<string>E7152D39128FA0DD00325014</string>
 											<string>E7152D3A128FA0DD00325014</string>
 											<string>E7152D6B128FB27000325014</string>
-											<string>E7152D6C128FB27000325014</string>
 											<string>E7152D6D128FB27000325014</string>
 											<string>E7152D921290E77600325014</string>
 											<string>E7152DA41290E91200325014</string>
@@ -432,7 +431,8 @@
 											<string>E7152E211290F49800325014</string>
 											<string>E7152E281290F4CA00325014</string>
 											<string>E7152E301290F60300325014</string>
-											<string>E7152E311290F60300325014</string>
+											<string>E7152E471291B96000325014</string>
+											<string>E7152E481291B96000325014</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -630,12 +630,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>E7152E4A1291B96000325014</string>
 		<string>E7152D47128FA0DD00325014</string>
 		<string>E7152D48128FA0DD00325014</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E7F87E2C12388412003F63CA</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Preston Air/work/iPad/ConceptMap/ConceptMap.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 457 1104 721 0 0 1920 1178 </string>

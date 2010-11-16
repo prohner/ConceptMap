@@ -897,6 +897,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ConceptMap_Prefix.pch;
 				INFOPLIST_FILE = "ConceptMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = "Thought Cloud";
 			};
 			name = Debug;
@@ -909,6 +910,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ConceptMap_Prefix.pch;
 				INFOPLIST_FILE = "ConceptMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = "Thought Cloud";
 				VALIDATE_PRODUCT = YES;
 			};
