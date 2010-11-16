@@ -408,11 +408,13 @@
 				self.bounds = bounds;
 			}
 //			[self layoutContentsOf:hitLayer];
+			[conceptMapView.conceptObjectConnections.layer setNeedsDisplay];
 			break;
 		case UIGestureRecognizerStateEnded:
 			[concept setRect:self.frame];
 			self.selected = holdSelected;
 			[self setNeedsLayout];
+			[conceptMapView.conceptObjectConnections.layer setNeedsDisplay];
 			break;
 		default:
 			break;

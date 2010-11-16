@@ -62,7 +62,7 @@
 			E71BD4931287C1790061354D /* ConnectionLabelViewController.m:39 */,
 			E7152D5C128FB0C600325014 /* ConceptObjectSettingsViewController.m:248 */,
 			E7152DBE1290ECD400325014 /* ConceptObjectSettingsViewController.m:232 */,
-			E7152E5712923B0400325014 /* ConceptMapView.m:269 */,
+			E7152E71129243EA00325014 /* ConceptObject.m:417 */,
 		);
 		codeSenseManager = E7F87E3612388412003F63CA /* Code sense */;
 		executables = (
@@ -362,7 +362,7 @@
 		ignoreCount = 0;
 		lineNumber = 320;
 		location = ConceptMap;
-		modificationTime = 311574339.244368;
+		modificationTime = 311575649.17142;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -520,7 +520,7 @@
 		ignoreCount = 0;
 		lineNumber = 248;
 		location = "Thought Cloud";
-		modificationTime = 311574339.671871;
+		modificationTime = 311575650.016256;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -646,7 +646,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 510";
 		rLen = 0;
-		rLoc = 17945;
+		rLoc = 18081;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 17616;
@@ -666,7 +666,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 510";
 		rLen = 0;
-		rLoc = 17945;
+		rLoc = 18081;
 		rType = 0;
 		vrLen = 1070;
 		vrLoc = 17616;
@@ -676,7 +676,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 513";
 		rLen = 0;
-		rLoc = 18021;
+		rLoc = 18157;
 		rType = 0;
 		vrLen = 1429;
 		vrLoc = 17038;
@@ -696,7 +696,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 513";
 		rLen = 0;
-		rLoc = 18021;
+		rLoc = 18157;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 16965;
@@ -706,7 +706,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 533";
 		rLen = 0;
-		rLoc = 18585;
+		rLoc = 18721;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 17730;
@@ -726,7 +726,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 502";
 		rLen = 12;
-		rLoc = 17575;
+		rLoc = 17711;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 16930;
@@ -806,7 +806,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 492";
 		rLen = 29;
-		rLoc = 16954;
+		rLoc = 17090;
 		rType = 0;
 		vrLen = 1396;
 		vrLoc = 16767;
@@ -825,7 +825,7 @@
 		ignoreCount = 0;
 		lineNumber = 232;
 		location = "Thought Cloud";
-		modificationTime = 311574339.720405;
+		modificationTime = 311575650.103656;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -834,7 +834,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 512";
 		rLen = 0;
-		rLoc = 18001;
+		rLoc = 18137;
 		rType = 0;
 		vrLen = 1396;
 		vrLoc = 16767;
@@ -883,7 +883,7 @@
 		isa = PBXTextBookmark;
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		rLen = 0;
-		rLoc = 498;
+		rLoc = 500;
 		rType = 1;
 	};
 	E7152DC91290ECFB00325014 /* PBXTextBookmark */ = {
@@ -891,7 +891,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 499";
 		rLen = 0;
-		rLoc = 17329;
+		rLoc = 17465;
 		rType = 0;
 		vrLen = 1396;
 		vrLoc = 16767;
@@ -901,7 +901,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 499";
 		rLen = 0;
-		rLoc = 17329;
+		rLoc = 17465;
 		rType = 0;
 		vrLen = 1396;
 		vrLoc = 16767;
@@ -948,7 +948,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 498";
 		rLen = 0;
-		rLoc = 17290;
+		rLoc = 17426;
 		rType = 0;
 		vrLen = 1396;
 		vrLoc = 16767;
@@ -1310,7 +1310,7 @@
 		vrLen = 1163;
 		vrLoc = 10744;
 	};
-	E7152E5712923B0400325014 /* ConceptMapView.m:269 */ = {
+	E7152E71129243EA00325014 /* ConceptObject.m:417 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1318,13 +1318,13 @@
 		continueAfterActions = 0;
 		countType = 0;
 		delayBeforeContinue = 0;
-		fileReference = E7F87E4712388B1C003F63CA /* ConceptMapView.m */;
-		functionName = "-conceptObject:panningEnded:";
-		hitCount = 1;
+		fileReference = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
+		functionName = "-handlePinchGesture:";
+		hitCount = 2;
 		ignoreCount = 0;
-		lineNumber = 269;
+		lineNumber = 417;
 		location = "Thought Cloud";
-		modificationTime = 311574345.102961;
+		modificationTime = 311575675.060217;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1342,7 +1342,7 @@
 		ignoreCount = 0;
 		lineNumber = 284;
 		location = "Thought Cloud";
-		modificationTime = 311574339.616503;
+		modificationTime = 311575649.962484;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1464,7 +1464,7 @@
 		ignoreCount = 0;
 		lineNumber = 39;
 		location = "Thought Cloud";
-		modificationTime = 311574339.647079;
+		modificationTime = 311575649.98891;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1695,7 +1695,7 @@
 		fRef = E7F87F4D1238AC90003F63CA /* ConceptObject.m */;
 		name = "ConceptObject.m: 521";
 		rLen = 0;
-		rLoc = 18165;
+		rLoc = 18301;
 		rType = 0;
 		vrLen = 1251;
 		vrLoc = 17616;
@@ -1798,7 +1798,7 @@
 		ignoreCount = 0;
 		lineNumber = 517;
 		location = "Thought Cloud";
-		modificationTime = 311574339.419623;
+		modificationTime = 311575649.76831;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1941,7 +1941,7 @@
 		ignoreCount = 0;
 		lineNumber = 131;
 		location = "Thought Cloud";
-		modificationTime = 311574339.444653;
+		modificationTime = 311575649.810101;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1959,7 +1959,7 @@
 		ignoreCount = 0;
 		lineNumber = 332;
 		location = ConceptMap;
-		modificationTime = 311574339.244223;
+		modificationTime = 311575649.171246;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2050,7 +2050,7 @@
 		ignoreCount = 0;
 		lineNumber = 497;
 		location = "Thought Cloud";
-		modificationTime = 311574339.551689;
+		modificationTime = 311575649.905939;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2068,7 +2068,7 @@
 		ignoreCount = 0;
 		lineNumber = 315;
 		location = "Thought Cloud";
-		modificationTime = 311574339.589433;
+		modificationTime = 311575649.930189;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2110,7 +2110,7 @@
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = "Thought Cloud";
-		modificationTime = 311574339.269216;
+		modificationTime = 311575649.629501;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2218,9 +2218,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 311574390.465111;
+		modificationTime = 311575649.171065;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */ = {
 		uiCtxt = {
@@ -2558,7 +2558,7 @@
 		ignoreCount = 0;
 		lineNumber = 245;
 		location = "Thought Cloud";
-		modificationTime = 311574339.327182;
+		modificationTime = 311575649.676069;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2602,7 +2602,7 @@
 		ignoreCount = 0;
 		lineNumber = 177;
 		location = "Thought Cloud";
-		modificationTime = 311574339.345666;
+		modificationTime = 311575649.708432;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2620,7 +2620,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = "Thought Cloud";
-		modificationTime = 311574339.38371;
+		modificationTime = 311575649.748411;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2755,7 +2755,7 @@
 		ignoreCount = 0;
 		lineNumber = 139;
 		location = "Thought Cloud";
-		modificationTime = 311574339.487473;
+		modificationTime = 311575649.829607;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2773,7 +2773,7 @@
 		ignoreCount = 0;
 		lineNumber = 337;
 		location = "Thought Cloud";
-		modificationTime = 311574339.529298;
+		modificationTime = 311575649.8702;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2902,7 +2902,7 @@
 		ignoreCount = 0;
 		lineNumber = 155;
 		location = "Thought Cloud";
-		modificationTime = 311574339.287719;
+		modificationTime = 311575649.647893;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2963,7 +2963,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1090, 4732}}";
 			sepNavSelRange = "{9745, 0}";
-			sepNavVisRange = "{9404, 1235}";
+			sepNavVisRange = "{9404, 1273}";
 		};
 	};
 	E7F87F4C1238AC90003F63CA /* ConceptObject.h */ = {
@@ -2975,9 +2975,9 @@
 	};
 	E7F87F4D1238AC90003F63CA /* ConceptObject.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1090, 7241}}";
-			sepNavSelRange = "{16689, 0}";
-			sepNavVisRange = "{16133, 1137}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 7176}}";
+			sepNavSelRange = "{14707, 0}";
+			sepNavVisRange = "{14160, 954}";
 		};
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {
