@@ -82,6 +82,11 @@
 	
 	conceptMapView.backgroundColor = [UIColor redColor];
 	[conceptMapView initializeContents];
+	[conceptMapView setFrame:viewFrame];
+	conceptMapView.scrollEnabled = YES;
+	viewFrame.size.height = 2000;
+	viewFrame.size.width = 2000;
+	[conceptMapView setContentSize:viewFrame.size];
 	
 	[self.view addSubview:conceptMapView];
 	
@@ -122,7 +127,8 @@
 }
 
 - (IBAction)documentButtonTapped:(id)sender {
-	FUNCTION_LOG();
+//	FUNCTION_LOG();
+	FUNCTION_LOG(@"size is (%.2f, %.2f)", conceptMapView.frame.size.width, conceptMapView.frame.size.height);
 	
 	UIImage *viewImage = [conceptMapView conceptMapAsImage];
 	conceptMapView.currentDocument.image = UIImageJPEGRepresentation(viewImage, 1.0);
