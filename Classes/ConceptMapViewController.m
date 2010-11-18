@@ -65,11 +65,13 @@
 	[documentsButton setTitle:NSLocalizedString(@"Documents", @"")];
 	[propertyInspectorButton setTitle:NSLocalizedString(@"Desktop", @"")];
 	
+	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
 	[self resetConceptMapView];
 }
 
 - (void)resetConceptMapView {
-	if (0 && conceptMapView) {
+	if (conceptMapView) {
 		[conceptMapView removeFromSuperview];
 		[conceptMapView release];
 		conceptMapView = nil;
@@ -84,12 +86,11 @@
 	[conceptMapView initializeContents];
 	[conceptMapView setFrame:viewFrame];
 	conceptMapView.scrollEnabled = YES;
-	viewFrame.size.height = 2000;
-	viewFrame.size.width = 2000;
+	viewFrame.size.height = THOUGHT_PAD_SIZE;
+	viewFrame.size.width = THOUGHT_PAD_SIZE;
 	[conceptMapView setContentSize:viewFrame.size];
 	
 	[self.view addSubview:conceptMapView];
-	
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -104,6 +105,20 @@
 	//		CGPoint point = [mapView convertCoordinate:[selectedAnnotation coordinate] toPointToView:mapView];
 	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	//	}
+	
+	CGRect rect = self.view.bounds;
+//	frame.size.width = THOUGHT_PAD_SIZE;
+//	frame.size.height = THOUGHT_PAD_SIZE;
+	if (UIInterfaceOrientationIsLandscape(fromInterfaceOrientation)) {
+		rect.size.height = 1004;
+		rect.size.width = 768;
+	} else {
+		rect.size.width = 1024;
+		rect.size.height = 768;
+	}
+	FUNCTION_LOG(@"origin (%.2f, %.2f), size (%.2f, %.2f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+
+	[self.view setBounds:rect];
 	[conceptMapView rotated];
 }
 

@@ -23,6 +23,10 @@
 	[super initWithFrame:r];
 	FUNCTION_LOG();
 	
+	self.backgroundColor = [UIColor clearColor];
+	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	//self.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
+
 	connections = [[NSMutableDictionary alloc] init];
 
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -319,7 +323,7 @@
 //}
 
 - (void)drawInContext:(CGContextRef)context {
-	//FUNCTION_LOG();
+	FUNCTION_LOG(@"size (%.2f, %.2f)", self.frame.size.width, self.frame.size.height);
 	UIGraphicsPushContext(context);
 
 	CGContextSetLineWidth(context, 3.0);

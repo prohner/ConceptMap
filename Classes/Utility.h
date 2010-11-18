@@ -13,6 +13,8 @@
 #define FUNCTION_LOGGING			1
 #define MEMORY_WARNING_LOGGING		1
 
+#define THOUGHT_PAD_SIZE			2000
+
 #if MEMORY_WARNING_LOGGING
 	#define MEMORY_LOG(fmt, ...) NSLog(@"%s " fmt, __FUNCTION__, ## __VA_ARGS__)
 #else

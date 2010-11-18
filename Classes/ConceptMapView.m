@@ -49,8 +49,6 @@ static int recursionDepth = 0;
 - (void)initializeContents {
 	self.conceptObjectConnections = [[ConceptObjectConnections alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
 	conceptObjectConnections.myDelegate = self;
-	conceptObjectConnections.backgroundColor = [UIColor clearColor];
-	//conceptObjectConnections.backgroundColor = [[UIColor colorWithRed:.5 green:.5 blue:1 alpha:1] CGColor];
 	
 	UIImage *desktopImage = [UIImage imageWithData:[DATABASE currentDocument].desktopImage];
 	self.layer.contents = (id)[desktopImage CGImage];
@@ -82,8 +80,7 @@ static int recursionDepth = 0;
 	[self addGestureRecognizer:doubleTap];
 	[doubleTap release];
 	
-//	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+	[self rotated];
 }
 
 - (void)rotated {
@@ -91,11 +88,16 @@ static int recursionDepth = 0;
 	CGRect frame = self.frame;
 	frame.origin.x = 0;
 	frame.origin.y = 0;
+	
+	frame.size.height = THOUGHT_PAD_SIZE;
+	frame.size.width = THOUGHT_PAD_SIZE;
 
 	[CATransaction begin];
     [CATransaction setValue:[NSNumber numberWithFloat:.1] forKey:kCATransactionAnimationDuration];
 
-	[conceptObjectConnections setFrame:frame];
+//	[self setFrame:frame];
+	FUNCTION_LOG(@"origin (%.2f, %.2f), size (%.2f, %.2f)", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+	[conceptObjectConnections.layer setFrame:frame];
 	[conceptObjectConnections.layer setNeedsDisplay];
 
     [CATransaction commit];
@@ -161,7 +163,7 @@ static int recursionDepth = 0;
 }
 
 - (CGSize)idealContentSize {
-	return CGSizeMake(2000, 2000);
+	return CGSizeMake(THOUGHT_PAD_SIZE, THOUGHT_PAD_SIZE);
 }
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer {
@@ -346,10 +348,21 @@ static int recursionDepth = 0;
 
 - (UIImage *)conceptMapAsImage {
 	toolbar.hidden = YES;
-	UIGraphicsBeginImageContext(self.bounds.size);	
-	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
+//	UIGraphicsBeginImageContext(self.bounds.size);	
+////	UIGraphicsBeginImageContext(self.contentSize);	
+//	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
+//	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//	UIGraphicsEndImageContext();
+	
+	CGSize pageSize = CGSizeMake(768, 1004);
+	UIGraphicsBeginImageContext(pageSize);
+	CGContextRef resizedContext = UIGraphicsGetCurrentContext();
+	CGContextTranslateCTM(resizedContext, -self.contentOffset.x, -self.contentOffset.y);
+	[self.layer renderInContext:resizedContext];
 	UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
+	
+	
 	toolbar.hidden = NO;
 	return viewImage;
 }
