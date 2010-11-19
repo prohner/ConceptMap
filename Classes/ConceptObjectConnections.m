@@ -338,7 +338,7 @@
 		CGContextAddLineToPoint(context, dstPoint.x, dstPoint.y);
 
 		CGContextStrokePath(context);
-		//FUNCTION_LOG(@"Draw from (%.2f, %.2f) to (%.2f, %.2f)", srcPoint.x, srcPoint.y, dstPoint.x, dstPoint.y);
+		FUNCTION_LOG(@"Draw from (%.2f, %.2f) to (%.2f, %.2f)", srcPoint.x, srcPoint.y, dstPoint.x, dstPoint.y);
 		// ========================================================
 		NSString *title = [[NSString alloc] initWithFormat:@" %@ ", cxn.connectionDescription];
 //		NSString *title = @"x";

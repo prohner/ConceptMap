@@ -65,8 +65,6 @@
 	[documentsButton setTitle:NSLocalizedString(@"Documents", @"")];
 	[propertyInspectorButton setTitle:NSLocalizedString(@"Desktop", @"")];
 	
-	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
 	[self resetConceptMapView];
 }
 
@@ -106,19 +104,19 @@
 	//		[popoverController presentPopoverFromRect:CGRectMake(point.x - 30, point.y - 34, 60, 40) inView:mapView permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	//	}
 	
-	CGRect rect = self.view.bounds;
-//	frame.size.width = THOUGHT_PAD_SIZE;
-//	frame.size.height = THOUGHT_PAD_SIZE;
-	if (UIInterfaceOrientationIsLandscape(fromInterfaceOrientation)) {
-		rect.size.height = 1004;
-		rect.size.width = 768;
-	} else {
-		rect.size.width = 1024;
-		rect.size.height = 768;
-	}
-	FUNCTION_LOG(@"origin (%.2f, %.2f), size (%.2f, %.2f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
-
-	[self.view setBounds:rect];
+//	CGRect rect = self.view.bounds;
+////	frame.size.width = THOUGHT_PAD_SIZE;
+////	frame.size.height = THOUGHT_PAD_SIZE;
+//	if (UIInterfaceOrientationIsLandscape(fromInterfaceOrientation)) {
+//		rect.size.height = 1004;
+//		rect.size.width = 768;
+//	} else {
+//		rect.size.width = 1024;
+//		rect.size.height = 768;
+//	}
+//	FUNCTION_LOG(@"origin (%.2f, %.2f), size (%.2f, %.2f)", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height);
+//
+//	[self.view setBounds:rect];
 	[conceptMapView rotated];
 }
 

@@ -47,6 +47,8 @@ static int recursionDepth = 0;
 //}
 
 - (void)initializeContents {
+	self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	
 	self.conceptObjectConnections = [[ConceptObjectConnections alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
 	conceptObjectConnections.myDelegate = self;
 	
@@ -85,22 +87,25 @@ static int recursionDepth = 0;
 
 - (void)rotated {
 //	[super setFrame:frame];
-	CGRect frame = self.frame;
+	CGRect frame = self.bounds;
 	frame.origin.x = 0;
 	frame.origin.y = 0;
 	
 	frame.size.height = THOUGHT_PAD_SIZE;
 	frame.size.width = THOUGHT_PAD_SIZE;
 
-	[CATransaction begin];
-    [CATransaction setValue:[NSNumber numberWithFloat:.1] forKey:kCATransactionAnimationDuration];
-
-//	[self setFrame:frame];
+//	[CATransaction begin];
+//    [CATransaction setValue:[NSNumber numberWithFloat:.1] forKey:kCATransactionAnimationDuration];
+//	self.frame.size = CGSizeMake(THOUGHT_PAD_SIZE, THOUGHT_PAD_SIZE);
+//	self.frame.size.width = THOUGHT_PAD_SIZE;
+//	self.frame.width.height = THOUGHT_PAD_SIZE;
+//	self.contentSize = CGSizeMake(THOUGHT_PAD_SIZE, THOUGHT_PAD_SIZE);
+//	[self setBounds:frame];
 	FUNCTION_LOG(@"origin (%.2f, %.2f), size (%.2f, %.2f)", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 	[conceptObjectConnections.layer setFrame:frame];
 	[conceptObjectConnections.layer setNeedsDisplay];
 
-    [CATransaction commit];
+//    [CATransaction commit];
 }
 
 - (void)dealloc {
