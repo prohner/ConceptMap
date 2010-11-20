@@ -113,19 +113,41 @@ static int recursionDepth = 0;
 }
 
 - (void)addConnections:(NSSet *)concepts {
-	// ConceptObjects are all loaded and now draw connections
-	for (Concept *concept in [concepts allObjects]) {
-		FUNCTION_LOG(@"Connecting %@ to ....", concept.title);
-		for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
-			FUNCTION_LOG(@"\t\t %@.", connectedConcept.objectURL);
-			Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
-			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:childConcept.conceptObject with:connectedConcept];
+	@try {
+		// ConceptObjects are all loaded and now draw connections
+		for (Concept *concept in [concepts allObjects]) {
+			FUNCTION_LOG(@"Connecting %@ to ....", concept.title);
+			for (ConnectedConcept *connectedConcept in [[concept connectedConcepts] allObjects]) {
+				FUNCTION_LOG(@"\t\t %@.", connectedConcept.objectURL);
+				NSURL *targetObjectURL = nil;
+				
+				if ([[connectedConcept.objectURL substringToIndex:10] isEqualToString:@"x-coredata"]) {
+					targetObjectURL = [NSURL URLWithString:connectedConcept.objectURL];
+				} else {
+					// We found our own temp pointer.  Gotta go find the real object
+					// Probably should do search with Core Data, but I'm not ready to figure it out right now
+					for (Concept *possiblyTempConcept in [[currentDocument concepts] allObjects]) {
+						if (possiblyTempConcept.temporaryConnectionURLForNewConcept) {
+							targetObjectURL = [[possiblyTempConcept objectID] URIRepresentation];
+							connectedConcept.objectURL = [targetObjectURL absoluteString];
+							possiblyTempConcept.temporaryConnectionURLForNewConcept = nil;
+							break;
+						}
+					}
+				}
 
-//			[conceptObjectConnections addConnectionFrom:concept.conceptObject to:connectedConcept.conceptObject];
-//			if (concepts != [concept connectedConcepts]) {
-//				[self addConnections:[concept connectedConcepts]];
-//			}
+				
+				if (targetObjectURL) {
+					Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:targetObjectURL];
+					if (childConcept) {	// this works around the fact that connections between new objects use invalid temporary IDs
+						[conceptObjectConnections addConnectionFrom:concept.conceptObject to:childConcept.conceptObject with:connectedConcept];
+					}
+				}
+			}
 		}
+	}
+	@catch (NSException * e) {
+		NSLog(@"ERROR CONDITION: %@", [e reason]);
 	}
 }
 

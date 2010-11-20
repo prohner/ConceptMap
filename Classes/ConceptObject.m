@@ -384,6 +384,8 @@
 		[self removeFromSuperview];
 		[self.concept removeConceptAndConnections:self.concept];
 		[conceptMapView.conceptObjectConnections removeConnectionsToAndFrom:self];
+		[conceptMapView setNeedsDisplay];
+		[conceptMapView setNeedsLayout];
 		// TODO is a pointer to this ConceptObject being held still in ConceptMapView?
 	}
 }

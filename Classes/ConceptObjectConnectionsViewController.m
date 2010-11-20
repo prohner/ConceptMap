@@ -103,8 +103,7 @@
     
     // Configure the cell...
 	ConnectedConcept *connectedConcept = [connectedObjects objectAtIndex:indexPath.row];
-	Concept *childConcept = (Concept *)[[DATABASE managedObjectContext] objectWithURI:[NSURL URLWithString:connectedConcept.objectURL]];
-    cell.textLabel.text = childConcept.title;
+    cell.textLabel.text = connectedConcept.connectionDescription;
     return cell;
 }
 

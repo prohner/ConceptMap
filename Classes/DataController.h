@@ -56,6 +56,7 @@
 - (void)removeContentsOfConcept:(Concept *)outerConcept;
 - (void)removeConnectionsTo:(Concept *)concept;
 - (ConnectedConcept *)addConnectionTo:(Concept *)concept;
+- (NSString *)generateUuidString;
 @end
 
 @interface Concept(Geometry) 

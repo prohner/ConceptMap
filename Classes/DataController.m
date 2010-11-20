@@ -350,10 +350,29 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataController);
 	NSURL *objectURL = [[concept objectID] URIRepresentation];
 	ConnectedConcept *connectedConcept;
     connectedConcept = [NSEntityDescription insertNewObjectForEntityForName:@"ConnectedConcept" inManagedObjectContext:[self managedObjectContext]];
-	connectedConcept.objectURL = [objectURL absoluteString];
+
+	if ([[concept objectID] isTemporaryID]) {
+		// If it's a temp id (transient) then plug our own identifer.
+		// We'll need fix it when the app starts and new object has a real ID
+		connectedConcept.objectURL = [self generateUuidString];
+		concept.temporaryConnectionURLForNewConcept = connectedConcept.objectURL;
+		FUNCTION_LOG(@"New object connected using %@", connectedConcept.objectURL);
+	} else {
+		connectedConcept.objectURL = [objectURL absoluteString];
+	}
+
 	connectedConcept.connectionDescription = concept.title;
 	[self addConnectedConceptsObject:connectedConcept];
 	return connectedConcept;
+}
+
+- (NSString *)generateUuidString {
+	CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
+	NSString *uuidString = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuid);
+	[uuidString autorelease];
+	CFRelease(uuid);
+	
+	return uuidString;
 }
 
 @end
