@@ -10,7 +10,7 @@
 
 #define APPLICATION_NAME	NSLocalizedString(@"APP_NAME", @"")
 
-#define FUNCTION_LOGGING			1
+#define FUNCTION_LOGGING			0
 #define MEMORY_WARNING_LOGGING		1
 
 #define THOUGHT_PAD_SIZE			2000

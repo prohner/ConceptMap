@@ -35,9 +35,9 @@
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = E7F87E1D12388404003F63CA /* ThoughtCloud */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* ThoughtCloud */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* ThoughtCloud */,
@@ -125,7 +125,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					467,
+					469,
 					60,
 					20,
 					48,
@@ -289,6 +289,14 @@
 			E772CF331298549500D4E8AB /* PBXTextBookmark */ = E772CF331298549500D4E8AB /* PBXTextBookmark */;
 			E772CF341298549500D4E8AB /* PBXTextBookmark */ = E772CF341298549500D4E8AB /* PBXTextBookmark */;
 			E772CF351298549500D4E8AB /* PBXTextBookmark */ = E772CF351298549500D4E8AB /* PBXTextBookmark */;
+			E772CF45129857C900D4E8AB /* PBXTextBookmark */ = E772CF45129857C900D4E8AB /* PBXTextBookmark */;
+			E772CF46129857C900D4E8AB /* PBXTextBookmark */ = E772CF46129857C900D4E8AB /* PBXTextBookmark */;
+			E772CF47129857C900D4E8AB /* PBXTextBookmark */ = E772CF47129857C900D4E8AB /* PBXTextBookmark */;
+			E772CF6E1298836100D4E8AB /* PBXTextBookmark */ = E772CF6E1298836100D4E8AB /* PBXTextBookmark */;
+			E772CF6F1298836100D4E8AB /* PBXTextBookmark */ = E772CF6F1298836100D4E8AB /* PBXTextBookmark */;
+			E772CF701298836100D4E8AB /* PlistBookmark */ = E772CF701298836100D4E8AB /* PlistBookmark */;
+			E772CF711298836100D4E8AB /* PlistBookmark */ = E772CF711298836100D4E8AB /* PlistBookmark */;
+			E772CF721298836100D4E8AB /* PlistBookmark */ = E772CF721298836100D4E8AB /* PlistBookmark */;
 			E774F6F21249BD8A00CC1918 = E774F6F21249BD8A00CC1918 /* PBXTextBookmark */;
 			E774F7141249BF3F00CC1918 = E774F7141249BF3F00CC1918 /* PBXTextBookmark */;
 			E783AA3E1255AB1700E2F8CB = E783AA3E1255AB1700E2F8CB /* PBXTextBookmark */;
@@ -351,7 +359,7 @@
 		ignoreCount = 0;
 		lineNumber = 320;
 		location = ConceptMap;
-		modificationTime = 311972828.966974;
+		modificationTime = 311973014.31104;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -481,7 +489,7 @@
 		ignoreCount = 0;
 		lineNumber = 248;
 		location = "Thought Cloud";
-		modificationTime = 311972828.967005;
+		modificationTime = 311973014.311093;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -517,7 +525,7 @@
 		ignoreCount = 0;
 		lineNumber = 232;
 		location = "Thought Cloud";
-		modificationTime = 311972828.967101;
+		modificationTime = 311973014.311135;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -565,7 +573,7 @@
 		ignoreCount = 0;
 		lineNumber = 419;
 		location = "Thought Cloud";
-		modificationTime = 311972828.967161;
+		modificationTime = 311973014.311173;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -635,7 +643,7 @@
 		ignoreCount = 0;
 		lineNumber = 288;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966986;
+		modificationTime = 311973014.311061;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -737,7 +745,7 @@
 		ignoreCount = 0;
 		lineNumber = 39;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966996;
+		modificationTime = 311973014.311081;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -915,9 +923,9 @@
 	};
 	E72278FE125AE8D3001A0386 /* en */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1657, 2158}}";
-			sepNavSelRange = "{200, 0}";
-			sepNavVisRange = "{42, 878}";
+			sepNavIntBoundsRect = "{{0, 0}, {687, 2132}}";
+			sepNavSelRange = "{170, 0}";
+			sepNavVisRange = "{0, 1313}";
 		};
 	};
 	E7227903125AE8DF001A0386 /* fr */ = {
@@ -1001,7 +1009,7 @@
 		ignoreCount = 0;
 		lineNumber = 536;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966903;
+		modificationTime = 311973014.310749;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1144,7 +1152,7 @@
 		ignoreCount = 0;
 		lineNumber = 130;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966913;
+		modificationTime = 311973014.310804;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1162,7 +1170,7 @@
 		ignoreCount = 0;
 		lineNumber = 332;
 		location = ConceptMap;
-		modificationTime = 311972828.966927;
+		modificationTime = 311973014.31097;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1253,7 +1261,7 @@
 		ignoreCount = 0;
 		lineNumber = 516;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966948;
+		modificationTime = 311973014.310998;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1271,7 +1279,7 @@
 		ignoreCount = 0;
 		lineNumber = 315;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966959;
+		modificationTime = 311973014.311028;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1313,7 +1321,7 @@
 		ignoreCount = 0;
 		lineNumber = 169;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966839;
+		modificationTime = 311973014.310621;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1322,7 +1330,7 @@
 		fRef = E72278FE125AE8D3001A0386 /* en */;
 		name = "Localizable.strings: 11";
 		rLen = 0;
-		rLoc = 200;
+		rLoc = 203;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 42;
@@ -1350,9 +1358,9 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 77;
-		modificationTime = 311973013.204426;
+		modificationTime = 311973014.310572;
 		originalNumberOfMultipleMatches = 1;
-		state = 1;
+		state = 0;
 	};
 	E754AD8F123FCCD2002801A3 /* ConceptObjectLabel.h */ = {
 		uiCtxt = {
@@ -1720,7 +1728,7 @@
 		ignoreCount = 0;
 		lineNumber = 129;
 		location = "Thought Cloud";
-		modificationTime = 311972828.967176;
+		modificationTime = 311973014.311193;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2490,7 +2498,7 @@
 		ignoreCount = 0;
 		lineNumber = 350;
 		location = "Thought Cloud";
-		modificationTime = 311972828.96719;
+		modificationTime = 311973014.311204;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2805,11 +2813,11 @@
 		delayBeforeContinue = 0;
 		fileReference = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */;
 		functionName = "-tableView:didSelectRowAtIndexPath:";
-		hitCount = 0;
+		hitCount = 1;
 		ignoreCount = 0;
 		lineNumber = 206;
 		location = "Thought Cloud";
-		modificationTime = 311972828.967201;
+		modificationTime = 311973028.121963;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2883,6 +2891,91 @@
 		vrLen = 2166;
 		vrLoc = 2353;
 	};
+	E772CF45129857C900D4E8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7227E7E12640EC4001A0386 /* ConceptObjectConnectionsViewController.m */;
+		name = "ConceptObjectConnectionsViewController.m: 106";
+		rLen = 0;
+		rLoc = 3131;
+		rType = 0;
+		vrLen = 2166;
+		vrLoc = 2353;
+	};
+	E772CF46129857C900D4E8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */;
+		name = "ConceptObjectSettingsViewController.m: 206";
+		rLen = 0;
+		rLoc = 6342;
+		rType = 0;
+		vrLen = 1907;
+		vrLoc = 5378;
+	};
+	E772CF47129857C900D4E8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72278FE125AE8D3001A0386 /* en */;
+		name = "Localizable.strings: 9";
+		rLen = 0;
+		rLoc = 170;
+		rType = 0;
+		vrLen = 1313;
+		vrLoc = 0;
+	};
+	E772CF6E1298836100D4E8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E72278FE125AE8D3001A0386 /* en */;
+		name = "Localizable.strings: 9";
+		rLen = 0;
+		rLoc = 170;
+		rType = 0;
+		vrLen = 1313;
+		vrLoc = 0;
+	};
+	E772CF6F1298836100D4E8AB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7F87F6A1238B04A003F63CA /* Utility.h */;
+		name = "Utility.h: 8";
+		rLen = 0;
+		rLoc = 135;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 0;
+	};
+	E772CF701298836100D4E8AB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E75ABCB01239F42B004A5C76 /* ApplicationTesting-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Preston Air/work/iPad/ConceptMap/ApplicationTesting-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	E772CF711298836100D4E8AB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ConceptMap-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/Preston Air/work/iPad/ConceptMap/ConceptMap-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	E772CF721298836100D4E8AB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ConceptMap-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleExecutable,
+		);
+		name = "/Users/Preston Air/work/iPad/ConceptMap/ConceptMap-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	E774F6F21249BD8A00CC1918 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E75ABCBB1239F48E004A5C76 /* GTMUnitTestDevLog.m */;
@@ -2927,7 +3020,7 @@
 		ignoreCount = 0;
 		lineNumber = 245;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966875;
+		modificationTime = 311973014.310694;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2971,7 +3064,7 @@
 		ignoreCount = 0;
 		lineNumber = 177;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966886;
+		modificationTime = 311973014.310706;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -2989,7 +3082,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966894;
+		modificationTime = 311973014.310716;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3114,7 +3207,7 @@
 		ignoreCount = 0;
 		lineNumber = 139;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966939;
+		modificationTime = 311973014.310984;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3277,9 +3370,9 @@
 	E7E6EB46124B115000276DA9 /* ConceptObjectSettingsViewController.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4739, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4790, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4840, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 8957}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1272, 3835}}";
-			sepNavSelRange = "{6528, 24}";
-			sepNavVisRange = "{5282, 1892}";
+			sepNavIntBoundsRect = "{{0, 0}, {1272, 3731}}";
+			sepNavSelRange = "{6285, 0}";
+			sepNavVisRange = "{5321, 1907}";
 		};
 	};
 	E7F5093A124F010A00FD56BA /* CGGeometry.h */ = {
@@ -3303,7 +3396,7 @@
 		ignoreCount = 0;
 		lineNumber = 155;
 		location = "Thought Cloud";
-		modificationTime = 311972828.966863;
+		modificationTime = 311973014.31066;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3314,7 +3407,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -3383,9 +3476,9 @@
 	};
 	E7F87F6A1238B04A003F63CA /* Utility.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 1417}}";
-			sepNavSelRange = "{305, 16}";
-			sepNavVisRange = "{0, 1180}";
+			sepNavIntBoundsRect = "{{0, 0}, {1286, 1391}}";
+			sepNavSelRange = "{135, 0}";
+			sepNavVisRange = "{0, 1492}";
 		};
 	};
 	E7F87F6B1238B04A003F63CA /* Utility.m */ = {

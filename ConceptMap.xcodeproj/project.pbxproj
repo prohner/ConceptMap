@@ -167,7 +167,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ConceptMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Thought Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thought Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConceptMapViewController.xib; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Thought Cloud.app */,
+				1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */,
 				E75ABCAE1239F42B004A5C76 /* ApplicationTesting.app */,
 			);
 			name = Products;
@@ -591,7 +591,7 @@
 			);
 			name = ThoughtCloud;
 			productName = ConceptMap;
-			productReference = 1D6058910D05DD3D006BFB54 /* Thought Cloud.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E75ABCAD1239F42B004A5C76 /* ApplicationTesting */ = {
@@ -911,7 +911,7 @@
 				GCC_PREFIX_HEADER = ConceptMap_Prefix.pch;
 				INFOPLIST_FILE = "ConceptMap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				PRODUCT_NAME = "Thought Cloud";
+				PRODUCT_NAME = ThoughtCloud;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -946,7 +946,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PRODUCT_NAME = "Thought Cloud";
+				PRODUCT_NAME = ThoughtCloud;
 				PROVISIONING_PROFILE = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6901B79-06D4-41E1-82B8-39174AC6A5E4";
 				SDKROOT = iphoneos;
