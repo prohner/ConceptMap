@@ -35,6 +35,7 @@
 - (UIImage *)conceptMapAsImage;
 - (void)rotated;
 - (void)setDesktopImageTo:(UIImage *)image;
+- (UIImage*)screenshot;
 
 - (void)initializeContents;
 
