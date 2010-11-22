@@ -1,0 +1,151 @@
+/* 
+   Localizable.strings
+   ConceptMap
+
+   Created by Preston Rohner on 10/4/10.
+   Copyright 2010 Cool Tool Apps. All rights reserved.
+ */
+
+"Documents" = "Документы";
+"APP_NAME" = "Облако мысли";
+
+"Actions" = "Действия";
+"Email as Image" = "Электронная почта как картинка";
+"Email as List" = "Электронная почта как список";
+"Email as List + Image" = "Электронная почта как список + картинка";
+
+"Blue" = "Синий";
+"Purple" = "Фиолетовый";
+"Yellow" = "Желтый";
+"Green" = "Зеленый";
+"Light Green" = "Светло-зеленый";
+"Light Blue" = "Светло-cиний";
+"Salmon" = "Цвет Лосося";
+
+"Settings" = "Параметры";
+"Colors" = "Цвета";
+"Fonts" = "Шрифты";
+"Connections" = "Соединения";
+"Shapes" = "Фигуры";
+
+"Color Scheme" = "Цветовая Схема";
+"Fonts" = "Шрифты";
+
+"Created using" = "Созданные с помощью";
+"on my" = "на мой";
+
+// 2010-10-06 9:30pm
+"Computer Template" = "Компьютерный Шаблон";
+"Power Comp - Windows Server 2008 SP 2" = "Power Comp - Windows Server 2008 SP 2";
+"Internal Drives" = "Внутренние накопители";
+"External Drives" = "Внешние накопители";
+"300gb - SATA" = "300gb - SATA";
+"IP Addresses" = "IP-адреса";
+"192.168.1.17\n192.168.12.11" = "192.168.1.17\n192.168.12.11";
+
+"Welcome Document" = "Документ приветствия";
+"Home Inventory" = "Инвентаризация дома";
+
+"Garage" = "Гараж";
+"Left Cabinet" = "Левая кабина";
+"Right Cabinet" = "Правая кабина";
+
+// 2010-10-07 9:30pm
+"Soccer ball" = "Футбольный мяч";
+"Green Duffle" = "Зеленый Duffle";
+"Medicine Kit" = "Набор для медицины";	
+"Bandages\nGauze\nTape" = "Бинты\nМарля\nЛента";
+"Hall Closet" = "Hall Closet";
+
+"Board Games" = "Настольные игры";
+"All of them" = "Все";
+"iPhone Box" = "iPhone Box";
+
+"New Document" = "Новый документ";
+"Your New Doc" = "Ваш новый документ";																		
+"DEFAULT OBJECT BODY STRING" = "Некоторые советы:\n\n- Выберите объект, который требуется выделить, а затем Используйте кнопку 'info' или кнопку 'Удалить'\n\n- Коснитесь и переместитe объект\n\n- Пользоваться жестом 'pinch' для изменения размера объекта\n\n- Double-click (Двойное касание) чтобы редактировать это поле";
+
+// 2010-10-09 8:15pm
+"Shapes" = "Фигуры";	// controller title
+"Fonts" = "Шрифты";
+"Shapes" = "Фигуры";    // Menu
+"Square" = "Квадрат";
+"Vertical Rectangle" = "Вертикальный Прямоугольник";
+"Horizontal Rectangle" = "Горизонтальный Прямоугольник";
+
+// 2010-10-11 8:36pm
+"Connected To..." = "Подключен...";
+
+// 2010-10-20 4:14pm
+"Add Template" = "Добавить шаблон";
+"Square" = "Квадрат";
+"Vertical Rectangle" = "Вертикальный Прямоугольник";
+"Horizontal Rectangle" = "Горизонтальный Прямоугольник";
+"Server" = "Сервер";
+"Desktop" = "Desktop";
+"Switch" = "Переключатель / Router / Firewall";
+"Router" = "Router";
+"Firewall" = "Firewall";
+"Concentrator" = "Концентратор";
+"Garage" = "Гараж";
+
+
+// 2010-10-22 9:07pm
+"Desktop" = "Desktop";
+"<Enter Document Title>" = "<Введите заголовок документа>";
+"General Items" = "Общие элементы";
+"Computers" = "Компьютеры";
+"Home" = "Дом";
+"New Square" = "Новый Квадрат";
+"New Rectangle" = "Новый Прямоугольник";
+
+// 2010-10-24 5am
+"Are you sure you want to delete %@?" = "Вы уверены, что хотите удалить %@?";
+"Delete Item" = "Удалить элемент";
+"Yes" = "Да";
+"No" = "Нет";
+
+// 2010-10-28 9:50pm
+"Model 760 - Windows 7" = "Model 760 - Windows 7";
+"192.168.1.17" = "192.168.1.17";
+
+// 2010-10-29 4:00pm
+"Background Picture" = "Фон";
+
+// 2010-11-08 9:00pm
+"Welcome to" = "Добро пожаловать";
+
+// 2010-11-09 10:00pm
+"Rack" = "Server Rack";
+"Closet" = "Шкаф";
+"Purpose 1" = "Цель 1";
+"Computer 1" = "Компьютер 1";
+"Purpose 2" = "Цель 2";
+"Computer 2" = "Компьютер 2";
+"Purpose 3" = "Цель 3";
+"Computer 3" = "Компьютер 3";
+
+"Garage Cabinet" = "Garage Cabinet";
+"Stuff stored in cabinet" = "Вещи, хранящиecя в Шкафу";
+"Closet" = "Шкаф";
+"Upper Shelf" = "Верхняя Полка";
+"Closet Floor" = "Пол Шкафа";
+
+// 2010-11-10 9:30am
+"New Square" = "Новый Квадрат";
+"New Rectangle" = "Новый Прямоугольник";
+"Help / Instructions" = "Справка / инструкции";
+"Arranging Thoughts" = "Упорядочивание мыслeй";
+"ARRANGING_THOUGHTS" = "- Коснитесь и переместитe объект\n\n- Пользоваться жестом 'pinch' для изменения размера объекта";
+"Add / Delete" = "Добавить / Удалить";
+"ADDING_THOUGHTS" = "- Добавтe мысль с помощью '+' в меню\n\n- Удалитe мысль, выбрав и нажав 'x' кнопку";
+"Changing Properties" = "Изменение свойств";
+"CHANGING_PROPERTIES" = "Нажмите на поле мысли, чтобы выбрать его. Затем нажмите кнопку info (маленькая курсив 'i').  Измените свойства и вы увидите изменения.  Обратите внимание, что вы можете изменить фоновое изображение.";
+"Editing" = "Редактирование";
+"EDITING_CONTENTS" = "Нажмите на название мысли, чтобы изменить название (маленькое поле сверху).  Cделаитe двойное касание на мысль для изменения основного текста";
+"Changing Connections" = "Изменение Подключения";
+"CHANGING_CONNECTIONS" = "Перейдите к Подключеннию в Настройках мысли. Нажмите '+' чтобы создать Подключенние и затем коснитесь подключеннoй мысли. Нажмите label на линии связи, чтобы изменить label.";
+
+"Black & White" = "Черный & Белый";
+"Email Feedback" = "Email Обратная связь";
+"Please describe your feedback" = "Пожалуйста опишите ваши отзывы";

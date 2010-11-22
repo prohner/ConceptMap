@@ -94,13 +94,13 @@
     // Configure the cell...
 	switch (indexPath.row) {
 		case ROW_SQUARE:
-			cell.textLabel.text = @"Square";
+			cell.textLabel.text = NSLocalizedString(@"Square", @"");
 			break;
 		case ROW_VERT_RECT:
-			cell.textLabel.text = @"Vertical Rectangle";
+			cell.textLabel.text = NSLocalizedString(@"Vertical Rectangle", @"");
 			break;
 		case ROW_HORZ_RECT:
-			cell.textLabel.text = @"Horizontal Rectangle";
+			cell.textLabel.text = NSLocalizedString(@"Horizontal Rectangle", @"");
 			break;
 		default:
 			break;

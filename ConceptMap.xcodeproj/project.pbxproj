@@ -18,8 +18,10 @@
 		E70D56F7123B2C6C00280E65 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6A1239F24C004A5C76 /* Application.m */; };
 		E70D56F8123B2C6C00280E65 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6C1239F24C004A5C76 /* Document.m */; };
 		E70D56F9123B2C6C00280E65 /* Concept.m in Sources */ = {isa = PBXBuildFile; fileRef = E75ABC6E1239F24C004A5C76 /* Concept.m */; };
-		E711F977127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */; };
-		E711F978127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */; };
+		E711D7F6129B2190007C95FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E711D7F2129B2190007C95FC /* InfoPlist.strings */; };
+		E711D7F7129B2190007C95FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E711D7F4129B2190007C95FC /* Localizable.strings */; };
+		E711D7F8129B2190007C95FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E711D7F2129B2190007C95FC /* InfoPlist.strings */; };
+		E711D7F9129B2190007C95FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E711D7F4129B2190007C95FC /* Localizable.strings */; };
 		E716CD95123F25B2003F21D3 /* DocumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */; };
 		E716CDDA123F2A55003F21D3 /* image2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD8123F2A55003F21D3 /* image2.jpeg */; };
 		E716CDDB123F2A55003F21D3 /* image1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E716CDD9123F2A55003F21D3 /* image1.jpeg */; };
@@ -167,7 +169,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ConceptMapAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMapAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ConceptMapAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConceptMapAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Thought Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thought Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* ConceptMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConceptMapViewController.xib; sourceTree = "<group>"; };
@@ -177,8 +179,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ConceptMap_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConceptMap_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ConceptMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConceptMap-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		E711F975127BF2E00098F450 /* UIApplication+ScreenMirroring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ScreenMirroring.h"; sourceTree = "<group>"; };
-		E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ScreenMirroring.m"; sourceTree = "<group>"; };
+		E711D7F3129B2190007C95FC /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E711D7F5129B2190007C95FC /* ru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ru; path = Localizable.strings; sourceTree = "<group>"; };
 		E716CD93123F25B2003F21D3 /* DocumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DocumentTableViewCell.xib; path = Classes/DocumentTableViewCell.xib; sourceTree = "<group>"; };
 		E716CDD8123F2A55003F21D3 /* image2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image2.jpeg; path = Images/image2.jpeg; sourceTree = "<group>"; };
 		E716CDD9123F2A55003F21D3 /* image1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = image1.jpeg; path = Images/image1.jpeg; sourceTree = "<group>"; };
@@ -324,7 +326,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E711F974127BF2E00098F450 /* iphoneos-screen-mirroring-read-only */,
 				E72DD76D1239FAEA00B73998 /* SynthesizeSingleton.h */,
 				E75ABC621239EFFF004A5C76 /* Data */,
 				E7F87F4B1238AC7C003F63CA /* Concept Object */,
@@ -359,7 +360,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */,
+				1D6058910D05DD3D006BFB54 /* Thought Cloud.app */,
 				E75ABCAE1239F42B004A5C76 /* ApplicationTesting.app */,
 			);
 			name = Products;
@@ -396,6 +397,7 @@
 				E71BD745128BBC450061354D /* Default.png */,
 				E72278FC125AE8D3001A0386 /* en.lproj */,
 				E72278FF125AE8D3001A0386 /* fr.lproj */,
+				E711D7F1129B2190007C95FC /* ru.lproj */,
 				E716CDD6123F2983003F21D3 /* Images */,
 				E7228357126FADF9001A0386 /* AddConceptObjectViewController.xib */,
 				E783BC381254597E009B0C77 /* ActionsViewController.xib */,
@@ -428,14 +430,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E711F974127BF2E00098F450 /* iphoneos-screen-mirroring-read-only */ = {
+		E711D7F1129B2190007C95FC /* ru.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				E711F975127BF2E00098F450 /* UIApplication+ScreenMirroring.h */,
-				E711F976127BF2E00098F450 /* UIApplication+ScreenMirroring.m */,
+				E711D7F2129B2190007C95FC /* InfoPlist.strings */,
+				E711D7F4129B2190007C95FC /* Localizable.strings */,
 			);
-			path = "iphoneos-screen-mirroring-read-only";
-			sourceTree = SOURCE_ROOT;
+			path = ru.lproj;
+			sourceTree = "<group>";
 		};
 		E716CDD6123F2983003F21D3 /* Images */ = {
 			isa = PBXGroup;
@@ -591,7 +593,7 @@
 			);
 			name = ThoughtCloud;
 			productName = ConceptMap;
-			productReference = 1D6058910D05DD3D006BFB54 /* ThoughtCloud.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Thought Cloud.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E75ABCAD1239F42B004A5C76 /* ApplicationTesting */ = {
@@ -632,6 +634,7 @@
 				en,
 				fr,
 				es,
+				ru,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -685,6 +688,8 @@
 				E71BD747128BBC450061354D /* Default.png in Resources */,
 				E7AC21EE128E05EC00B8C99B /* Default.png in Resources */,
 				E7AC21EF128E05EC00B8C99B /* MainLogo_72.png in Resources */,
+				E711D7F6129B2190007C95FC /* InfoPlist.strings in Resources */,
+				E711D7F7129B2190007C95FC /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +734,8 @@
 				E71BD746128BBC450061354D /* Default.png in Resources */,
 				E7AC21EC128E05EC00B8C99B /* Default.png in Resources */,
 				E7AC21ED128E05EC00B8C99B /* MainLogo_72.png in Resources */,
+				E711D7F8129B2190007C95FC /* InfoPlist.strings in Resources */,
+				E711D7F9129B2190007C95FC /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +791,6 @@
 				E7227E8012640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E7228358126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FB1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
-				E711F978127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
 				E71BD43D1287BAE70061354D /* ConnectionLabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -828,7 +834,6 @@
 				E7227E8212640EC4001A0386 /* ConceptObjectConnectionsViewController.m in Sources */,
 				E722835A126FADF9001A0386 /* AddConceptObjectViewController.m in Sources */,
 				E7A839FD1277E9B300A16F30 /* ConnectedConcept.m in Sources */,
-				E711F977127BF2E00098F450 /* UIApplication+ScreenMirroring.m in Sources */,
 				E71BD43C1287BAE70061354D /* ConnectionLabelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -836,6 +841,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E711D7F2129B2190007C95FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E711D7F3129B2190007C95FC /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E711D7F4129B2190007C95FC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E711D7F5129B2190007C95FC /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		E72278FD125AE8D3001A0386 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
